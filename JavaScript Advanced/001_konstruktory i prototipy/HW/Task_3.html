@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	<script>
+		
+		// Задание 3
+		// Разработайте функцию-конструктор, которая будет создавать объект Human (человек), добавьте на свое усмотрение свойства и методы в этот объект. Подумайте, какие методы и свойства следует сделать уровня экземпляра, а какие уровня функции-конструктора.
+
+		var Human = function(name, age){
+			this.name = name;
+			this.age = age;
+			
+			Human.prototype.greeting = function () {
+				return console.log("Hello! My name is " + this.name);
+			}
+			
+
+			Human.prototype.say = function (phrase) {
+				if(phrase == undefined){
+					phrase = 'I can say something';
+				}
+				return console.log(phrase);
+			}
+
+		}
+
+
+		var Vasya = new Human("Vasya", 27);
+		var Peter = new Human("Peter", 33);
+		console.log(Vasya);
+		Vasya.greeting();
+		Peter.greeting();
+		Peter.say("Ola-la");
+
+	</script>
+	
+</body>
+</html>

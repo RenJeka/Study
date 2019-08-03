@@ -1,0 +1,24 @@
+.div1{
+	width: 100px;
+	height: 100px;
+	/* background-color:lightgreen; */
+	position: relative;
+	z-index: 1;
+	background: url('../img/UFO_1.png') round;
+
+	/* top:300px;
+	left:300px; */
+}
+input{
+	width: 50px;
+	height: 35px;
+	font-size: 20px;
+	margin: 1px 10px;
+}
+
+div div{
+	text-align: center;
+	position: relative;
+	z-index: 2;
+}
+

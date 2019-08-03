@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.onload = function(){
+            var myUl = document.getElementById("ul1");
+            var btn1 = document.getElementById("btn1");
+            var inp1 = document.getElementById("input1");
+
+            myUl.style.backgroundColor = "lightgray";
+
+            btn1.onclick = addLiFunct;
+            var counter = 0;
+            function addLiFunct() {
+                
+                var li = document.createElement("li");
+                var inputValue = inp1.value;
+                console.dir(inp1);
+                li.innerHTML = inputValue+ counter;
+                myUl.appendChild(li);
+                counter ++;
+
+            }
+            btn1.onclick = addLiFunct;
+        }
+    </script>
+
+</head>
+<body>
+    <ul id="ul1">
+    </ul>
+
+    <input type="button" name="btn1" id="btn1" value="кнопочка" accesskey="s" title="shortcut: ALT + S">
+
+    <input type="text" value="Введите любой текст" id="input1">
+    
+</body>
+</html>

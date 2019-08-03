@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	<script>
+		
+		// Задание 2
+		// Разработайте функцию-конструктор, которая будет создавать объект Human (человек). Создайте массив объектов и реализуйте функцию, которая будет сортировать элементы массива по значению свойства Age no возрастанию или по убыванию. 
+
+		var Human = function (name, age) {
+			this.name = name;
+			this.age = age;
+		}
+
+		// функция сортировки по принципу BubbleSort.
+		function BubbleSort(sort) {
+
+			if(sort == "smaller first"){
+				for (i = arrayHuman.length -1 ; i > 1; i--) {
+					for ( j = 0; j < i; j++) {
+						if (arrayHuman[j].age > arrayHuman[j+1].age ) {
+							arrayHuman[j+1] = arrayHuman.splice(j,1, arrayHuman[j+1])[0];
+						}
+					}
+				}
+			}
+			
+			if(sort == "bigger first"){
+				for (i = arrayHuman.length -1 ; i > 1; i--) {
+					for ( j = 0; j < i; j++) {
+						if (arrayHuman[j].age < arrayHuman[j+1].age) {
+
+							arrayHuman[j+1] = arrayHuman.splice(j,1, arrayHuman[j+1])[0];
+						}
+					}
+				}
+			}
+			
+		}
+
+		// создаем массив объектов
+		var arrayHuman = new Array();
+
+		arrayHuman [0] = new Human("Alpha", 32);
+		arrayHuman [1] = new Human("Beta", 22);
+		arrayHuman [2] = new Human("Gamma", 49);
+		arrayHuman [3] = new Human("Delta", 33);
+		arrayHuman [4] = new Human("Epsilon", 25);
+
+		// применяем функцию BubbleSort
+		BubbleSort("smaller first");
+		console.log(arrayHuman);
+		
+	</script>
+	
+</body>
+</html>

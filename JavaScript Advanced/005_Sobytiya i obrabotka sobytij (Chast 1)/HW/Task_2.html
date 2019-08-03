@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	
+	<script src="js/Task_2.js">
+		//Задание 2
+		//Разработайте JavaScript модуль, который поможет привязывать обработчики событий для элементов с использованием модели DOM Level 2, если она доступна или с помощью событий ІЕ если DOM Level 2 не поддерживается браузером.
+	</script>
+	
+	<input type="button" value="Кнопка для проверки" id="btn_test">
+
+	<script>
+		window.addEventListener("load", function () {
+			myBtn = document.getElementById("btn_test");
+			function getMessage() {
+				alert("Test is sucsessful. Module works!")
+			}
+	
+			moduleDOM2.addEventListener(myBtn, "click", getMessage);
+		});
+	</script>
+
+
+</body>
+</html>

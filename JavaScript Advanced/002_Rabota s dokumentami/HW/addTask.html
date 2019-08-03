@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Задание - 1</title>
+
+    <script src="js/addTask.js"> </script>
+</head>
+<body>
+        <!-- Создайте страницу, разместите на странице в произвольном порядке несколько параграфов, ссылок и
+        элемент Div с id=test_div. Разместите на странице три кнопки — «выбрать все параграфы», «выбрать все
+        ссылки», «выбрать DIV». При нажатии на каждую кнопку должна запускаться функция обработчик,
+        которая добавит рамку определенного цвета на соответствующие элементы. Сделайте код JS
+        ненавязчивым. -->
+
+        
+    <p> Параграф  №1</p>
+    <p> Параграф  №2</p>
+    <p> Параграф  №3</p>
+
+    <a href="#1">Link #1 </a><br>
+    <a href="#2">Link #2</a><br>
+    <a href="#3">Link #3</a><br><br>
+
+    <div id = "test_ div1">Div 1 </div>
+    <div id = "test_ div2">Div 1</div>
+    <div id = "test_ div3">Div 1</div><br>
+
+    <input type="button" name="btn_1" id="selAllPar" value="Выбрать все параграфы" onclick="onClickParagraph()">
+    <input type="button" name="btn_2" id="selAllLinks" value="Выбрать все ссылки" onclick="onClickLinks()">
+    <input type="button" name="btn_3" id="selAllDiv" value="Выбрать все Div элементы" onclick="onClickDiv()">
+
+</body>
+</html>

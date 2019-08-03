@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	<script>
+		//Дополнительное задание
+		// Задание для урока
+		// Создайте функцию-конструктор Box (коробка) для создания объекта со свойствами Height (высота), Width (ширина), Depth (глубина) и Material (материал). Также, в объекте должны быть методы Volume —для получения объема и equals() — для сравнения объектов, объекты должны считаться равными, если содержат одинаковые значения в свойстве Material.
+
+
+			// создаем конструктор с свойствами и методами 
+			function Box (h, w, d, m) {
+				this.Height	= h;
+				this.Width = w;
+				this.Depth = d;
+				this.Material = m;
+
+				// метод для нахождения объема коробки
+				this.Volume = function () {
+					return this.Height * this.Width * this.Depth ; 
+				}
+
+				// метод для сравнения материалов нашей коробки с другой
+				this.equals = function(OthetObj){
+					if (this.Material === OthetObj.Material) {
+						return true;
+					}
+					return false;
+				}
+			}
+
+
+			var box1 = new Box(10, 11, 12, "wood");
+			box1.Volume();
+			
+			var box2 = new Box(20, 21, 22, "wood");
+
+			console.log(box1.equals(box2)); 
+			
+
+
+	</script>
+	
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	<script>
+		
+		// Задание 4
+		
+		// Создайте пример демонстрирующий назначение метода toString().
+
+		var constructor = function (parametr_a, parametr_b, parametr_c) {
+			this.a = parametr_a;
+			this.b = parametr_b;
+			this.c = parametr_c;
+			
+			constructor.prototype.toString = function () {
+				return document.write("У данного объекта: "+"</br>"+ "параметр a =" + this.a +"</br>"+ "параметр b =" + this.b +"</br>"+ "параметр c =" + this.c );; 
+			}
+		}
+
+		var myObject = new constructor(2,42,999);
+		myObject.toString();
+	
+	</script>
+	
+</body>
+</html>

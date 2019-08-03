@@ -1,1 +1,12 @@
+# тестовый файл для игногирования
 /git_learn/folder for ignore
+
+
+# файлы внутри уроков
+
+*.pdf
+*.jpg
+*.jpeg
+*.png
+*.rar
+*.zip

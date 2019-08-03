@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+	<style>
+		.button{
+			width: 100px;
+			height: 40px;
+		}
+		.input{
+			width: 200px;
+			height: 20px;
+		}
+
+		div{
+			width: 700px;
+			position: relative;
+			margin:10px auto;
+			text-align: center;
+		}
+	</style>
+	<!-- Создайте страницу-калькулятор.
+	Разместите на странице два поля ввода и кнопки для арифметических операций над данными введенными в поля ввода. Реализуйте данную страницу двумя способами — с использованием модели DOM Level О (через свойства) и DOM Level 2. -->
+</head>
+<body>
+	<script src="js/addTask_DOM_L0.js">
+		// Реалтзация DOM Level-0
+	</script>
+	
+	<!-- <script src="js/addTask_DOM_L2.js"> 
+		// Реалтзация DOM Level-2
+	</script> -->
+
+
+
+<div>
+	<input type="text" placeholder="Введите первое число" class="input" id="input_first">
+	<input type="text" placeholder="Введите второе число" class="input" id="input_second">
+</div>
+
+<div>
+	<input type="button" class="button" id="btn_plus" value="+">
+	<input type="button" class="button" id="btn_minus" value="-">
+	<input type="button" class="button" id="btn_mul" value="x">
+	<input type="button" class="button" id="btn_div" value="/">
+</div>
+<div>
+	<p id="result"> </p>
+</div>
+	
+</body>
+</html>

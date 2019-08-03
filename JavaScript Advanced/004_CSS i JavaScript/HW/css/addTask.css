@@ -1,0 +1,15 @@
+div div{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    float: left;
+    margin: 5px 10px;
+}
+
+.divClear::after{
+    content: "";
+    display: block;
+    clear: both;
+
+}

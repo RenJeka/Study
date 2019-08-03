@@ -1,0 +1,18 @@
+div{
+    width: 100px;
+    height: 100px;
+    border: 2px solid navy;
+    position: relative;
+}
+
+.class1{
+    background-color: red;
+}
+.class2{
+    background-color: green;
+
+}
+.class3{
+    background-color: blue;
+
+}

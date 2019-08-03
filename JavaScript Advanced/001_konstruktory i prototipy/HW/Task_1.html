@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	<script>
+		// Задание 1
+		// Создайте функцию конструктор, которая создает объект со свойством экземпляра, свойством функции-конструктора, с методом экземпляра и методом функции-конструктора. Имена выберите произвольно.
+		
+			var Human = function(a, s, o, greeting){
+
+				if (a == undefined) {
+					this.age = 18;
+				}else if(s == undefined){
+					this.sex = "male";
+				}else if(o == undefined){
+					this.occupation = "manager";
+				}
+				this.age = a;
+				this.sex = s;
+				this.occupation = o;
+				Human.prototype.greeting = function () {
+					if (greeting == undefined) {
+						console.log("Hello, I am a new here!");
+					}else {
+						console.log(greeting);
+					}
+					
+				}
+				Human.prototype.say = function(message){
+					if (message == undefined) {
+						console.log("Oh, I don't know what I need to say =))");
+					}else {
+						console.log(message);
+					}
+				}
+			}
+			var Natasha = new Human(22, "female", "secretary")
+			console.log(Natasha);
+			Natasha.greeting();
+			Natasha.say("Something");
+	</script>
+	
+</body>
+</html>

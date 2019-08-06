@@ -5,21 +5,117 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Example</title>
+	<style>
+		body{
+			background-color: ivory;
+		}
+		form div{
+			margin:0 auto;
+			width: 500px;
+			height: 300px;
+		}
+		h1{
+			text-align: center;
+		}
+		.wraper{
+			width: 80%;
+			height: 100%;
+			margin: 0 auto;
+		}
+		input{
+			height: 23px;
+			border-radius: 5px;
+		}
+		.invalidInput{
+			background-color: lightcoral;
+		}
+		.validInput{
+			background-color: lightgreen;
+		}
+		#message{
+			text-align: center;
+			color: brown;
+			font-weight: bold;
+		}
+		/* Как мне не дублировать эти 2 блока кода для "message" и "message1" */
+		#message1{
+			text-align: center;
+			color: brown;
+			font-weight: bold;
+			display: none;
+		}
+		#submit{
+			width: 150px;
+			height: 30px;
+			font-weight: bold;
+			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+			display: block;
+			margin: 5px auto;
+		}
+		
+	</style>
 </head>
 <body>
 	<script src="js/addTask.js">
-			// Разработайте страницу регистрации нового пользователя. Форма должна получать от пользователя следующие данные: имя, фамилия, логин, пароль, подтверждение пароля, email, non (мужчина/женщина).
+			// Разработайте страницу регистрации нового пользователя. Форма должна получать от пользователя следующие данные: имя, фамилия, логин, пароль, подтверждение пароля, email, noл (мужчина/женщина).
 
 			// Форма должна проверять:
 			// 1) Все поля вводов должны быть заполнены.
 			// 2) Пароль и подтверждение пароля должны совпадать.
 			// 3) Email должен быть указан в правильном формате.
 			// При неудовлетворении этих правил форма должна выводить сообщение об ошибке (не через alert).
-
-			
-
-			
+	
 	</script>
+
+	
+	<form action="" name="form1">
+		<div>
+			<h1>Регистрация нового пользователя</h1><br>
+			<p id="message"></p>
+			<p id="message1"></p>
+			
+			<div class="wraper">
+				<table>
+						<tr>
+							<td>Имя</td>
+							<td><input type="text" name="fName" id="fName"></td>
+							<label for="fName"></label>
+						</tr>
+						<tr>
+							<td>Фамилия</td>
+							<td><input type="text" name="lName"></td>
+						</tr>
+						<tr>
+							<td>Логин</td>
+							<td><input type="text" name="login"></td>
+						</tr>
+						<tr>
+							<td>Пароль</td>
+							<td><input type="password" name="pass"></td>
+						</tr>
+						<tr>
+							<td>Подтверждение пароля</td>
+							<td><input type="password" name="passConfirm">
+							</td>
+						</tr>
+						<tr>
+							<td>e-mail</td>
+							<td><input type="email" name="email"></td>
+						</tr>
+						<tr>
+							<td>Пол</td>
+							<td>
+									<input type="radio" name="radio_1" value="male">Мужской
+									<input type="radio" name="radio_1" value="female">Женский
+							</td>
+						</tr>
+				</table>
+				<input type="submit" name="submit" id="submit">
+			</div>
+			
+		</div>
+
+	</form>
 	
 </body>
 </html>

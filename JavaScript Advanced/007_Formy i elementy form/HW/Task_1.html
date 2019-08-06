@@ -5,6 +5,43 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Example</title>
+	<style>
+		h1, h2,h3{
+			text-align: center;
+		}
+		table{
+			/* border: 1px solid brown; */
+			width: 80%;
+			/* height: 700px; */
+			margin: 0 auto;
+		}
+		td{
+			text-align: center;
+		}
+		.right{
+			text-align: right;
+		}
+		.valid{
+			border-radius: 5px;
+			width: 200px;
+			height: 30px;
+			background-color:lightgreen;
+			
+		}
+		.invalid{
+			border-radius: 5px;
+			width: 200px;
+			height: 30px;
+			background-color:lightcoral;
+
+		}
+		.requiredField{
+			border-radius: 5px;
+			width: 200px;
+			height: 30px;
+			background-color: lightgoldenrodyellow;
+		}
+	</style>
 </head>
 <body>
 	<script src="js/Task_1.js">
@@ -20,6 +57,108 @@
 
 			
 	</script>
-	
+	<form action="to_Server" name="form1" method="GET">
+		<h1>Заказ пиццы</h1>
+		<table border="1" >
+			<tr rowspan>
+				<td colspan="3"><h2> Размер пиццы</h2></td>
+			</tr>
+			<tr>
+				<td><h3>Маленькая</h3></td>
+				<td><h3>Средняя</h3></td>
+				<td><h3>Большая</h3></td>
+			</tr>
+			<tr>
+				<td>
+					<label for="pizzaSize1"><img src="img/pizza4.png" alt="small Pizza" width="50px"></label><br>
+					<input type="radio" name="pizzaSize" value="small" id="pizzaSize1">
+				</td>
+
+				<td>
+					<label for="pizzaSize2"><img src="img/pizza4.png" alt="small Pizza" width="100px"></label><br>
+					<input type="radio" name="pizzaSize" value="middle" id="pizzaSize2">
+				</td>
+
+				<td>
+					<label for="pizzaSize3"><img src="img/pizza4.png" alt="small Pizza" width="150px"></label><br>
+					<input type="radio" name="pizzaSize" value="large" id="pizzaSize3">
+				</td>
+			</tr>
+			<tr>
+				<td>$5</td>
+				<td>$10</td>
+				<td>$15</td>
+			</tr>
+			<tr >
+				<td colspan="3"><h2>Доп. ингредиенты</h2></td>
+			</tr>
+			
+				<!-- <table width="100%" border="1" selpadding = 0 selspacing ="0"> -->
+					<tr>
+						<td>Грибы</td>
+						<td>Бекон</td>
+						<td>Помидор</td>
+						<td>Доп. сыр</td>
+						<td>Оливки</td>
+					</tr>
+					<tr>
+						<td>
+							<input type="checkbox" name="addIngredient" value="mushroom" id="ingredient1">
+						</td>
+						<td>
+							<input type="checkbox" name="addIngredient" value="bacon" id="ingredient2">
+						</td>
+						<td>
+							<input type="checkbox" name="addIngredient" value="tomato" id="ingredient3">
+						</td>
+						<td>
+							<input type="checkbox" name="addIngredient" value="addChese" id="ingredient4">
+						</td>
+						<td>
+							<input type="checkbox" name="addIngredient" value="olives" id="ingredient5">
+						</td>
+					</tr>
+					<tr>
+						<td>$ 5</td>
+						<td>$ 7</td>
+						<td>$ 5</td>
+						<td>$ 3</td>
+						<td>$ 5</td>
+					</tr>
+				<!-- </table> -->
+			
+			
+			<tr>
+				<td colspan="2" class="right">Сумма</td>
+				<td> $ <span id="sum"></span></td>
+			</tr>
+
+			<tr>
+				<td colspan="3">
+					<h2>Укажите свои данные</h2> 
+					<p id="message">Вы должны заполнить все поля!</p>
+				</td>
+				
+			</tr>
+			<tr>
+				<td colspan="3"><input type="text"  class="requiredField" id="name" placeholder="Ваше имя"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><input type="text"  class="requiredField" id="phone" placeholder="Укажите номер телефона"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><input type="text"  class="requiredField" id="email" placeholder="Ваш e-mail"></td>
+			</tr>
+			<tr>
+				<td colspan="3"><input type="text"  class="requiredField" id="adress" placeholder="Адрес для доставки"></td>
+			</tr>
+			<tr>
+				<td colspan="3" class="right">
+					<input type="submit" id="submit_btn" value="Заказать">
+				</td>
+			</tr>
+
+		</table>
+	</form>
 </body>
 </html>

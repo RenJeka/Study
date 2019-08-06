@@ -5,6 +5,37 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<title>Example</title>
+	<style>
+		body{
+			background-color: Gainsboro;
+			text-align: center;
+		}
+		textarea{
+			background-color: WhiteSmoke;
+		}
+		div{
+			/* position: relative;
+			float: left; */
+			width: 720px;
+			margin: 0 auto;
+			text-align: left;
+		}
+		.clearfix{
+			clear: both;
+		}
+		input{
+			background-color: beige;
+			border-radius: 5px;
+			width: 150px;
+			height: 30px;
+			/* position: relative; */
+			/* left:43% ; */
+			/* margin-left: 273px; */
+			margin-right: 50px;
+
+		}
+	</style>
+	
 </head>
 <body>
 	<script src="js/Task_1.js">
@@ -13,6 +44,14 @@
 
 			
 	</script>
+
+	<h1>Текстовый редактор 1.0</h1>
+	<textarea name="tArea_1" id="txtArea_1" cols="100" rows="30"></textarea>
+	</div>
+	<div class="divFloat">
+		<input type="button" value="Сохранить" id="btn_save">
+		<span id="warning_1"></span>
+	</div>
 	
 </body>
 </html>

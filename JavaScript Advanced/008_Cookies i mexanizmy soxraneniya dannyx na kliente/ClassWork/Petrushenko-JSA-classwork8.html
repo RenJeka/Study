@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+        window.addEventListener("load", function(){
+            var inp1 =document.getElementById("inp_1");
+            var inp2 =document.getElementById("inp_2");
+            var btn_1 =document.getElementById("btn_1");
+            var pResult =document.getElementById("result");
+            var btnAdd = document.getElementsByName("add");
+
+            var newLocalStorageName = 'val6';
+
+            btn_1.addEventListener("click", function () {   
+                localStorage.val1 = inp1.value;
+                localStorage.val2 = inp2.value;
+            });
+
+            if (localStorage.val1 && localStorage.val2) {
+                var val1 = parseInt(localStorage.val1);
+                var val2 = parseInt(localStorage.val2);
+                pResult.innerHTML = val1 + val2
+            }
+
+            for (let i = 0; i < btnAdd.length; i++) {
+
+                btnAdd[i].addEventListener("click", function () {
+                    if(!localStorage[newLocalStorageName]){
+                        localStorage[newLocalStorageName] = btnAdd[i].value;
+                    }else{
+                        var temp = parseInt(localStorage[newLocalStorageName]);
+                        localStorage[newLocalStorageName] =temp +  parseInt(btnAdd[i].value);
+                        
+                    }
+                });
+
+            }
+                
+            
+
+        });
+
+
+    </script>
+</head>
+<body>
+
+    <input type="text" id="inp_1">
+    <input type="text" id="inp_2">
+    <input type="button" value="Записать в локальное хранилище" id="btn_1"> 
+    <hr>
+    <input type="button" value="5" id="btn2" name="add">
+    <input type="button" value="10" id="btn3" name="add">
+    <input type="button" value="15" id="btn4" name="add">
+    <input type="button" value="20" id="btn5" name="add">
+    <p id="result"></p>
+</body>
+</html>

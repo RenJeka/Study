@@ -8,11 +8,19 @@ window.addEventListener("load", function () {
 		spanWarning1.innerHTML = "Сохранено!";
 		return flag;
 	});
-	window.addEventListener("beforeunload", function () {
+ 
+	window.onbeforeunload = exitHandler;
+
+
+	function exitHandler() {
 		if (flag == false) {
-			return "Вы не сохранили текст!"
+			return "Вы не сохранили текст!";
 		}else{
 			
 		}
-	});
+	}
+	
+	
+
 });
+

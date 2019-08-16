@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        window.onload = function () {
+            var btn1 = document.getElementById("btn_1");
+            var arrayDivs = document.getElementsByTagName("div");
+            var overlay = document.querySelector(".overlay");
+            var modal = document.querySelector(".modal");
+            btn1.addEventListener("click",showModal );
+            // console.dir(overlay);
+            // console.dir(modal);
+            
+
+
+            function showModal() {
+                overlay.style.display = "block";
+            }
+
+            overlay.addEventListener("click", function () {
+                this.style.display = "none";
+            })
+
+            modal.addEventListener("click", function(eee){
+                eee.stopPropagation();
+            })
+
+
+
+        }
+    </script>
+</head>
+
+<style>
+    body{
+        height: 1000px;
+    }
+    .overlay{
+        position: fixed;
+        width: 900px;
+        height: 500px;
+        background-color: #000;
+        display: none;
+    }
+    .modal{
+        margin:100px auto;
+        width: 300px;
+        height: 300px;
+        background-color: lightblue;
+    }
+    .btnClass{
+        position:absolute;
+        right: 20px;
+    }
+
+</style>
+
+
+<body>
+    <div class="overlay">
+        <div class="modal">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita sequi quaerat repellat ea iste earum labore sed consectetur. Nesciunt minima accusamus perferendis adipisci consequatur possimus earum, nobis at tempore quia.
+        </div>
+    </div>
+    <input type="button" value="Появись" class="btnClass" id="btn_1">
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+	<style>
+		body{
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+	<script src="js/Task_3.js">
+			//Задание 3
+			//Используя элемент canvas, напишите модуль, с помощью которого на странице будет отображаться диаграмма в соответствии с данными переданными массивом в модуль
+
+	</script>
+
+	<script>
+		window.addEventListener("load", function(){
+			createDiagram("myCanvas1", 
+				[50, 10, 14, 11, 23, 27, 5, 40,66,50,223,35,190],
+				600,
+				300,
+				"green", "lightgrey", "diagram");
+				
+		});
+	</script>
+
+	<h2>График роста доллара в Украине &#36</h2>
+	<canvas id="myCanvas1" >
+		
+	</canvas>
+	
+</body>
+</html>

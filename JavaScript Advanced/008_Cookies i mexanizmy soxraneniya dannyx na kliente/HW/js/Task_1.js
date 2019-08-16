@@ -1,15 +1,17 @@
 window.addEventListener("load", function(){
     
-
-    
     var color =this.document.getElementById("colSel_1"); 
     var btn_save =this.document.getElementById("btn_save"); 
     var input = this.document.getElementById("font_size"); 
 
-    color.value = getCookies("color");
-    input.value = getCookies("textSize");
-    document.body.style.backgroundColor = color.value;
-    document.body.style.fontSize = input.value + "px";
+    if (getCookies("color") && getCookies("textSize")) {
+        color.value = getCookies("color");
+        input.value = getCookies("textSize");
+        document.body.style.backgroundColor = color.value;
+        document.body.style.fontSize = input.value + "px";
+    }
+    
+    
 
     btn_save.addEventListener("click", function (e) {
         document.body.style.backgroundColor = color.value;
@@ -37,7 +39,6 @@ window.addEventListener("load", function(){
 
         return value;
         
-
     }
 
 });

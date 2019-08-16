@@ -21,6 +21,7 @@ function validate(elem, pattern) {
 function nameOnChange() {
     var pattern = /\S/;
     validate(this, pattern);
+    
 }
 
 function emailOnChange() {

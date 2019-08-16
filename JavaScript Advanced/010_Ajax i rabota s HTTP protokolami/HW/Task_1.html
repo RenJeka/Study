@@ -3,17 +3,48 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+	<style>
+		#animationConteiner{
+			display: none;
+		}
+		span{
+			color: brown;
+			font-weight: bold;
+		}
+	</style>
 	<title>Example</title>
 </head>
 <body>
 	<script src="js/Task_1.js">
 			//Задание1
 			//Разработайте страницу с двумя полями ввода и кнопкой. Пользователь должен вводить в поля вводов целочисленный значения, а нажатие по кнопке должно приводить к асинхронному запросу на сервер.
-			// Запрашивать следует обработчик CacandIer.ashx, который находиться вместе с примерами в уроке номер 10, обработчик принимает два post параметра с именами 'а' и 'Ь'. Результат, который возвращает обработчик выведите на страницу.
-
-			
+			// Запрашивать следует обработчик CacandIer.ashx, который находиться вместе с примерами в уроке номер 10, обработчик принимает два post параметра с именами 'а' и 'b'. Результат, который возвращает обработчик выведите на страницу.
 	</script>
+
+	<form name="form1">
+		<label for="input_a">Введите число А:</label> 
+		<input type="text" name="input_a" 
+		data-id="span_a"
+		data-pattern="\d+" data-message="Вам нужно ввести число А"> 
+		
+		<span id="span_a"></span></br></br>
+		
+		
+		<label for="input_b">Введите число B:</label> 
+		<input type="text" name="input_b" 
+		data-id="span_b"
+		data-pattern="\d+" data-message="Вам нужно ввести число В">
+		
+		<span id="span_b"></span></br></br>
+
+		<input type="button" value="Отправить на сервер" id="btn_1" >
+		
+		<p id="animationConteiner">
+			Считаем...
+			<img src="img/ajax-loader.gif" alt="ЗАГРУЗКА...">
+		</p>
+		<p id="output"></p>
+	</form>	
 	
 </body>
-</html>
+</html> 	

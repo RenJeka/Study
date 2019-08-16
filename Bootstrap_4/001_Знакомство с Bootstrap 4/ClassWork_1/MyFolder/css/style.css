@@ -1,0 +1,22 @@
+/* 
+.row > div:nth-child(odd){
+    background-color: #ccc;
+} */
+.row > div:nth-child(even){
+    background-color: black;
+    color: white;
+}
+.images > div{
+    background-color: greenyellow;
+
+}
+
+.row > div{
+    font-size: 24px;
+}
+
+.image{
+    height: 150px;
+    width: 100%;
+    background-color: lightcoral;
+}

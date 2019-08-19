@@ -12,37 +12,33 @@
 		}
 		.btn-close{
 			position: relative;
+			float: right;
 			width: 80px;
 			height: 80px;
 			background: url(img/btn-close_image.png) 5px 5px no-repeat;
 			background-size: 70px 70px ;
-			/* background-color: blue; */
-			display: inline-block;
+			display: block;
 		}
 		.overlay{
 			height: 700px;
 			width: 98%;
 			position: fixed;
-			background-color: gray;
+			/* Для прозрачности окна используем rgba, т.к. свойство "opacity"— передаеться по наследству и сделает модальное окно тоже прозрачным*/
+			background-color: rgba(0, 0, 0, .3);
 			border-radius: 10px;
-			opacity: .5;
 			margin: 0 auto;
 			text-align: right;
 			display: none;
 
 		}
 
-/* Как сделать, чтобы  модальное окно было не прозрачным*/
 		.modal{
 			position: relative;
-			height: 80%;
-			width: 80%;
-			background-color: lightblue;
+			max-width: 1000px;
+			width: 90%;
+			background-size: 100% 100%!important;
 			border-radius: 10px;
 			margin: 0 auto;
-			
-			/* opacity: .5; */
-
 		}
 	</style>
 	<title>Example</title>
@@ -59,7 +55,10 @@
 <img src="img/image3.jpg" alt="image3">
 <img src="img/image4.jpg" alt="image4">
 <img src="img/image5.jpg" alt="image5">
-
+<img src="img/image6.jpg" alt="image6">
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident sequi quod, porro itaque, fugiat perspiciatis sunt natus deserunt suscipit inventore exercitationem tempore, voluptatem neque iste corporis sapiente asperiores </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident sequi quod, porro itaque, fugiat perspiciatis sunt natus deserunt suscipit inventore exercitationem tempore, voluptatem neque iste corporis sapiente asperiores </p>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis provident sequi quod, porro itaque, fugiat perspiciatis sunt natus deserunt suscipit inventore exercitationem tempore, voluptatem neque iste corporis sapiente asperiores </p>
 <div class="overlay">
 	<div class="btn-close">
 		

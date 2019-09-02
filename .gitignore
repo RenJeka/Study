@@ -5,11 +5,12 @@
 # файлы внутри уроков
 
 *.pdf
-*.jpg
-*.jpeg
-*.png
+#  *.jpg
+#  *.jpeg
+#  *.png
+#  *.gif
 *.rar
 *.zip
 *.exe
-*.gif
+
 

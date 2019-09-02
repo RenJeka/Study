@@ -1,0 +1,49 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Workers</title>
+    <script>
+        window.onload=function(){
+        if (window.Worker) {
+        //Вызов конструктора Worker()
+        var worker = new Worker("worker2.js");
+        var first = document.querySelector('#number1');
+        var second = document.querySelector('#number2');
+        var result = document.querySelector('p');
+           
+        first.onchange = function () {
+            //отправка данных на Worker в ввиде массива
+                worker.postMessage([first.value, second.value]); 
+                console.log('Сообщение отправлено');
+            };
+
+            second.onchange = function () {
+                worker.postMessage([first.value, second.value]);
+                console.log('Сообщение отправлено');
+            };
+
+            worker.onmessage = function (e) {
+                result.textContent = e.data;
+                console.log('Сообщение получено');
+            };
+        }
+        }
+    </script>
+</head>
+<body>
+    <h1>Пример расчета значения в потоке</h1>
+    
+        <form border="1">
+            <div>
+                <label for="number1">Число 1: </label>
+                <input type="text" id="number1" value="0">
+            </div>
+            <div>
+                <label for="number2">Число 2: </label>
+                <input type="text" id="number2" value="0">
+            </div>
+        </form>
+        <p>Результат: 0</p>
+   
+</body>
+</html>

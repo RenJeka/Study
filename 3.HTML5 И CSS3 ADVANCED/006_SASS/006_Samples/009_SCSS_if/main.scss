@@ -1,0 +1,51 @@
+﻿$size: 100;
+$color: #440222 + #111508;
+$color1: #53ab0b;
+$color2: #e6f707;
+$color3: #f58080;
+$color4: #e827ba;
+
+div {
+    width: $size*1.5+px;
+    height: $size+px;
+    border: $size/30+px solid darken($color1, 50%);
+    float: left;
+
+    margin: {
+        left: $size/5+px;
+        top: $size/4+px;
+    }
+}
+
+.item1 {
+    background-color: $color1+$color2;
+    color: $color3/2;
+}
+
+.item2 {
+    background-color: $color3+$color4;
+    color: $color4*2;
+}
+
+.item3 {
+    background-color: $color1+$color4;
+    color: $color2+$color3;
+}
+
+.item4 {
+    background-color: $color2+$color4;
+    color: $color2/3;
+}
+
+.item5 {
+    /*Задаем условие для вычисления*/
+    @if $size>100 {
+        background-color:$color1;
+    } @else if $size<100 {
+           background-color:$color2;
+      }
+      @else {
+          background-color:$color3+$color4;
+          font-size:$size/6+px;
+      }
+}

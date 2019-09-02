@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>All transformations</title>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            color: #fff;
+            font-size: 24px;
+            margin: 12px 45px;
+        }
+
+        .spin {
+            cursor: pointer;
+            transition: 5s linear;
+        }
+
+            .spin:hover {
+                /*Вращение по оси на 360 градусов*/
+                transform: rotateZ(360deg);
+            }
+
+        .cube {
+            position: relative;
+            width: 95px;
+            top: 250px;
+            left: 250px;
+        }
+
+        .side {
+            height: 95px;
+            line-height: 95px;
+            position: absolute;
+            text-align: center;
+            width: 95px;
+        }
+
+        .top {
+            background: #33cc54;
+            transform: rotate(-45deg) skew(15deg, 15deg);
+        }
+
+        .left {
+            background: #2db34a;
+            transform: rotate(15deg) skew(15deg, 15deg) translate(-50%, 100%);
+        }
+
+        .right {
+            background: #26973e;
+            transform: rotate(-15deg) skew(-15deg, -15deg) translate(50%, 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="cube spin">
+        <figure class="side top">1</figure>
+        <figure class="side left">2</figure>
+        <figure class="side right">3</figure>
+    </div>
+</body>
+</html>

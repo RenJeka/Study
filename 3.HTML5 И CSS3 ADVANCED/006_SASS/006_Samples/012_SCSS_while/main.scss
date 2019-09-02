@@ -1,0 +1,27 @@
+﻿$size: 50;
+$color1: #53ab0b;
+
+
+div {
+    width: $size*1.5+px;
+    height: $size+px;
+    border: $size/30+px solid darken($color1, 50%);
+    float: left;
+
+    margin: {
+        left: $size/5+px;
+        top: $size/4+px;
+    }
+}
+
+$i: 1;
+
+/*Директива @while принимает выражение SassScript и циклично выводит вложенные в неё стили, пока выражение вычисляется как true.*/
+/*Пока переменная i -меньше 6, добавляем класс со свойствами стилей, после чего увеличиваем значение на 1*/
+@while $i <6 {
+    .item#{$i} {
+        width: $size *$i+px;
+    }
+
+    $i: $i+1;
+}

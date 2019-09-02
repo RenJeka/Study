@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox flex-wrap</title>
+    <style>
+        .container {
+            /*создаем Flex контейнер */
+            display: flex;
+            background-color: blue;
+            /*- вращаем главную ось */
+            flex-direction: row;
+            /*   flex-wrap - Помогает выполнить многострочность внутри flex-контейнера:
+                nowrap (значение по умолчанию) : блоки расположены в одну линию слева направо
+                wrap: блоки расположены в несколько горизонтальных рядов (если не помещаются в один ряд). Они следуют друг за другом слева направо
+            wrap-reverse: то-же что и wrap, но блоки располагаются в обратном порядке
+                */
+            flex-wrap: wrap;   
+
+            /*flex-flow – удобное сокращение для flex-direction и flex-wrap*/
+            /*flex-flow: row wrap-reverse;*/
+              
+            /*выравниваниваем элементы по главной оси.*/
+            justify-content: center;
+        }
+
+        .item {
+            height: 200px;
+            margin: 5px;
+            color: white;
+        }
+
+
+        .red {
+            width: 200px;
+            background-color: red;
+        }
+
+        .orange {
+            width: 400px;
+            background-color: orange;
+        }
+
+        .green {
+            width: 600px;
+            background-color: green;
+        }
+          .pink {
+            width: 800px;
+            background-color: pink;
+        }
+            .yellow {
+            width: 500px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div class="item orange">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum adipisci eos, sequi quibusdam, ducimus velit aperiam. Officia voluptates architecto doloribus nisi laudantium, aperiam minus amet mollitia labore, quia autem quis.
+        </div>
+        <div class="item green">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+        </div>
+        <div class="item pink">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+        </div>
+        <div class="item yellow">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+        </div>
+    </div>
+</body>
+</html>

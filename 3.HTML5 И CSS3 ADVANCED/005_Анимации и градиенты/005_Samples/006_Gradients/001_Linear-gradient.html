@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>linear-gradient</title>
+    <meta charset="utf-8" />
+    <style>
+        div {
+            width: 400px;
+            height: 320px;
+            /*Линейный градиент создается с помощью двух и более цветов, для которых задано направление, или линия градиента.*/
+            /*Линейный градиент можно определить как в градусах, так и ключевыми словами:
+            to top, to right, to bottom, to left*/
+            background: linear-gradient(90deg,red,yellow,green);
+            /*Процентное соотношение цветов на линии градиента*/
+            /*background:linear-gradient(90deg,red 15%,yellow 25%,green 80%);*/
+            /*Точное определение цветов - без перехода*/
+            /*background:linear-gradient(90deg,green 33%,white 33%, white 66%,red 66%)*/
+            /*Совмещение градиента и фонового рисунка*/
+            /*background: linear-gradient(315deg, rgba(52, 127, 191, 0.29), rgba(29, 193, 216, 0.26)), url("flowers.jpg");
+            background-size: 100% 100%;*/
+        }
+    </style>
+</head>
+<body>
+    <div>Linear-gradient</div>
+</body>
+</html>

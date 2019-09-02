@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Translate</title>
+    <meta charset="utf-8" />
+    <style>
+        .original,
+        .box {
+            border-radius: 6px;
+            background: #3a7feb;
+            height: 95px;
+            line-height: 95px;
+            text-align: center;
+            width: 95px;
+        }
+
+        .original {
+            background: #eaeaed;
+            border: 1px dashed #cecfd5;
+            float: left;
+        }
+
+        .box {
+            transition: all 3s linear;
+       
+        }
+
+            .box:hover {
+                transform: translate(20px, 20px);             
+            }
+    </style>
+</head>
+<body>
+    <div class="original">
+        <div class="box">Box</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Align-Content</title>
+    <style>
+        .container {
+            /*создаем Flex контейнер */
+            display: flex;
+            background-color: blue;
+            /*flex-direction: row;
+             flex-wrap: wrap; - сокращенно*/
+            flex-flow: row wrap;
+            /*align-content -  которое определяет то, каким образом образовавшиеся ряды блоков будут
+                 выровнены по вертикали и как они поделят между собой все пространство flex-контейнера:
+                -flex-start: ряды блоков прижаты к началу flex-контейнера.
+                -flex-end: ряды блоков прижаты к концу flex-контейнера
+                -center: ряды блоков находятся в центре flex-контейнера
+                -space-between: первый ряд блоков располагается в начале flex-контейнера, последний ряд блоков блок –
+                 в конце, все остальные ряды равномерно распределены в оставшемся пространстве
+                -space-around: ряды блоков равномерно распределены в от начала до конца flex-контейнера,
+                 разделяя все свободное пространство поровну.
+                -stretch (значение по умолчанию): Ряды блоков растянуты, дабы занять все имеющееся пространство.
+            */
+            align-content: space-between;
+                /*выравниваниваем элементы по главной оси.*/
+            justify-content: center;
+            height:600px;
+        }
+
+        .item {
+            height: 200px;
+            margin: 5px;
+            color: white;
+        }
+
+
+        .red {
+            width: 200px;
+            background-color: red;
+        }
+
+        .orange {
+            width: 400px;
+            background-color: orange;
+        }
+
+        .green {
+            width: 600px;
+            background-color: green;
+        }
+
+        .pink {
+            width: 800px;
+            background-color: pink;
+        }
+
+        .yellow {
+            width: 500px;
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red">
+            <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+            </ul>
+        </div>
+        <div class="item orange">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum adipisci eos, sequi quibusdam, ducimus velit aperiam. Officia voluptates architecto doloribus nisi laudantium, aperiam minus amet mollitia labore, quia autem quis.
+        </div>
+        <div class="item green">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+        </div>
+        <div class="item pink">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+        </div>
+        <div class="item yellow">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+        </div>
+    </div>
+</body>
+</html>

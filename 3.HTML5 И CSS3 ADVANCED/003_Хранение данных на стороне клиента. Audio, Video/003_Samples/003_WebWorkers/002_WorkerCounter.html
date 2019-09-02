@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Workers</title>
+    <script>
+        window.addEventListener("load", function () {
+            var worker;
+            document.getElementById("start").onclick = function () {
+                if (window.Worker)  {
+                    if (typeof (worker) == "undefined") {
+                        worker = new Worker("demo_workers.js");
+                    }
+                    console.log("Запуск работы Worker")
+                    worker.onmessage = function (e) {
+                        document.getElementById("result").innerHTML = e.data;
+                    };
+                }
+                else {
+                    document.getElementById("result").innerHTML = "К сожалению Ваш брауезер не поддерживает технологию WebWorker";
+                }
+            }
+            document.getElementById("stop").onclick = function () {
+                //termitane()- метод, который останавливает работу Worker и освобождает ресурс потока от работы
+                worker.terminate();
+                console.log("Остановка работы Worker и прекращение работы счетчика")
+                worker = undefined;
+            }
+        }, false)
+    </script>
+</head>
+<body>
+    <p>Count numbers: <output id="result"></output></p>
+    <button id="start">Запустить Worker</button>
+    <button id="stop">Остановить Worker</button>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>matrix</title>
+    <meta charset="utf-8" />
+    <style>
+        div {
+            width: 200px;
+            height: 160px;
+            background-color: rgba(239, 181, 181, 0.61);
+            font-size: 12px;
+            color: #808080;
+            margin: 50px;
+            float: left;
+        }
+
+        img {
+            width: 200px;
+            height: 160px;
+            opacity:0.8;
+        }
+
+            img:active {
+                /*matrix(a, c, b, d, x, y) 
+                a - масштаб по горизонтали,
+                     d - изменяет масштаб по вертикали
+                     b - деформирует (сдвигает) стороны элемента по оси X 
+                    c - деформирует (сдвигает) стороны элемента по оси Y 
+                    x - смещает элемент по оси X 
+                    y - смещает элемент по оси Y;*/
+               transform: matrix(1.5,0,0.5,1.5,70,20)
+            }
+    </style>
+</head>
+<body>
+    <div>
+        <img src="Auto.jpg" />
+    </div>
+
+
+</body>
+</html>

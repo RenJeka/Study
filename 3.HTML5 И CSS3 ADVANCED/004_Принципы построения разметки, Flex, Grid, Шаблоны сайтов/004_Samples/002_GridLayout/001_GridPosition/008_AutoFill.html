@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>AutoFill function</title>
+    <meta charset="utf-8" />
+    <style>
+        .grid {       
+            display: grid;
+            /*При изменении размера окна - элементы остаются с фиксированной шириной, и перемещаются ниже соседних*/
+            grid-template-columns: repeat(auto-fill, 300px);    
+            /*При получении минимальной ширины 80px - колонки начинают перескакивать*/
+            /*grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));*/                
+            grid-gap: 25px;          
+          
+            background-color: lightgray;
+        }
+
+            .grid div {
+                background-color: #1b67a8;
+                border: 1px solid #212941;
+                border-radius: 5px;
+                padding: 8px 15px;
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+                .grid div:nth-child(odd) {
+                    background-color: #1ac66c;
+                }
+    </style>
+</head>
+<body>
+    <div class="grid">
+
+        <div>Item-1</div>
+        <div>item-2</div>
+        <div>item-3</div>
+        <div>item-4</div>
+        <div>item-5</div>
+        <div>item-6</div>
+        <div>item-7</div>
+        <div>item-8</div>
+        <div>item-9</div>
+        <div>item-10</div>
+        <div>Item-11</div>
+        <div>item-12</div>
+        <div>item-13</div>
+        <div>item-14</div>
+        <div>item-15</div>
+        <div>item-16</div>
+        <div>item-17</div>
+        <div>item-18</div>
+        <div>item-19</div>
+        <div>item-20</div>
+    </div>
+</body>
+</html>

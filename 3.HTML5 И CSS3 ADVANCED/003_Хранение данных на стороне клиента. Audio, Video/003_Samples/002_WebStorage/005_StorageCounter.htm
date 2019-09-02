@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        window.onload = function () {
+            document.getElementById('reset').addEventListener('click', reset_counter);
+            function reset_counter() {
+                // удаление данных из локального хранилища
+                localStorage.clear()
+                //localStorage.removeItem('on_load_counter');
+            }
+            var item = localStorage.getItem('on_load_counter');
+            if (item === null) {
+                item = 0;
+            }
+            item++;
+            localStorage.setItem("on_load_counter", item);
+            document.getElementById('counter').innerHTML = 'Вашу страничку посетили: '+ item +" раз";
+
+
+
+
+        }
+    </script>
+</head>
+<body>
+    <div id="counter"></div>
+    <button id="reset">Reset</button>
+</body>
+</html>

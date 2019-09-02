@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>scale</title>
+    <meta charset="utf-8" />
+    <style>
+        div {
+            width: 120px;
+            height: 120px;
+            background-color: lightblue;
+            font-size: 25px;
+            color: #808080;
+            margin: 30px;
+            float: left;
+        }
+
+        .block-scale1:hover {
+            /*scale - увеличивает или уменьшает элемент*/
+            transform: scale(0.7);
+        }
+
+        .block-scale2:hover {
+            transform: scale(1.5);
+        }
+
+        .block-scale3:hover {
+            transform: scale(2, 1);
+        }
+
+        .block-scale4:hover {
+            transform: scale(1, 2);
+        }
+    </style>
+</head>
+<body>
+    <div class="block-scale1">Scale 0.7</div>
+    <div class="block-scale2">Scale 1.5</div>
+    <div class="block-scale3">Scale (2, 1)</div>
+    <div class="block-scale4">Scale(1, 2)</div>
+
+</body>
+</html>

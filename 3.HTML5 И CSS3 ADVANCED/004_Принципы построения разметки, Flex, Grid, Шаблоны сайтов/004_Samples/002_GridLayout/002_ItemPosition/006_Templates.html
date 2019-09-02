@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>grid-template-areas</title>
+    <meta charset="utf-8" />
+    <style>
+        .grid {
+            display: grid;
+            grid-gap: 10px;
+            /*Шаблон для последовательного отображения контента*/
+            grid-template-areas: "header" "article" "aside" "footer";
+        }
+        /*Элементы могут занимать одну или несколько ячеек внутри строки или колонки,*/
+        /*и подобное поведение создает грид-область (grid area).*/
+        /*Задаем области для управляющих элементов разметки*/
+        header {
+            grid-area: header;
+        }
+
+        article {
+            grid-area: article;
+        }
+
+        aside {
+            grid-area: aside;
+        }
+
+        footer {
+            grid-area: footer;
+        }
+        /*Используем медиа-запросы для выбранного девайса*/
+        @media (min-width: 640px) {
+            .grid {
+                grid-template-columns: 1fr 2fr;
+                /*Размещаем наши элементы шаблона, используя колонки*/
+                grid-template-areas: 
+                    "header header" 
+                    "aside article"
+                /*. -символизирует пустоту*/
+                /*"footer ."*/
+                "footer footer"
+            }
+        }
+          @media (min-width: 840px) {
+            .grid {
+                grid-template-columns: 1fr 3fr;      
+                grid-template-areas: 
+                    "header header" 
+                    "aside article"          
+                    "aside footer"
+            }
+        }
+
+
+        .grid > * {
+            background-color: #1b67a8;
+            border: 1px solid #212941;
+            border-radius: 5px;
+            padding: 8px 15px;
+            color: #ffffff;
+            font-size: 18px;
+        }
+
+            .grid > *:nth-child(odd) {
+                background-color: #1ac66c;
+            }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <header>Header of the web App</header>
+        <article>
+            <h1>Heading h1 format</h1>
+            <p>
+                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+                Sapien elit in malesuada semper mi, id sollicitudin urna fermentum.
+            </p>
+        </article>
+        <aside>SideBar</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+</html>

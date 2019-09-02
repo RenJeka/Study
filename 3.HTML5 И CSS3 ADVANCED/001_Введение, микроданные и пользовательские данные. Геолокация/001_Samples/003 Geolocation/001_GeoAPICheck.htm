@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Geolocation API</title>
+    <script type="text/javascript">       
+    //Возможность проверки функций HTML5/CSS3 - https://caniuse.com
+        function checkingNav() {
+            if (window.navigator.geolocation) {
+                document.body.innerHTML = "Ваш браузер поддерживает HTML5 Geolocation API!";
+            }
+            else {
+                document.body.innerHTML = "Ваш браузер НЕ поддерживает HTML5 Geolocation API!";
+            }
+        }
+        window.addEventListener("load", checkingNav);
+    </script>
+</head>
+<body>
+</body>
+</html>

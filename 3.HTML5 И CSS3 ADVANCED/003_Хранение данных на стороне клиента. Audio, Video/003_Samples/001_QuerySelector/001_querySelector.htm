@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>   
+    <title>querySelect function</title>
+    <script>
+        window.addEventListener("load", handler, false);
+
+        function handler() {
+            // Получение первого элемента на странице, который соответствует одному из селекторов указанных в параметрах.
+           var e = document.querySelector("#div");
+            //var e = document.querySelector(".list > li");
+           //var e = document.querySelector("p");
+            e.style.fontSize = "30px";
+            e.style.backgroundColor = "red";
+        }
+    </script>
+    <style type="text/css">
+        .list {
+            color: Green;
+        }
+        #div {
+            width:300px;
+            height:300px;
+            border:1px solid red;
+        }
+    </style>
+</head>
+<body>  
+    <ul class="list">
+        <li>menu item 1</li>
+        <li>menu item 2</li>
+        <li>menu item 3</li>
+    </ul>
+    <div id="div">Div text</div>
+    <p>Hello from HTML5!!!</p>
+    <p>Hello from CSS3  !!!</p>
+</body>
+</html>
+

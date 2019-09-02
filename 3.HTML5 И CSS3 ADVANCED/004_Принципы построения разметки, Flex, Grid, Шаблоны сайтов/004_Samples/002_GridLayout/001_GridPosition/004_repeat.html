@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Repeat function</title>
+    <meta charset="utf-8" />
+    <style>
+        .grid {
+            /*Grid разметка контейнера*/
+            display: grid;
+            /*Функция повторения: 4 колонки по 1 фракции*/            
+            grid-template-columns: repeat(4, 1fr);
+             /*Функция повторения: 1 колонка на 1 фракцию и 1 на 2 фракции. Повторять 4 раза*/  
+           /*grid-template-columns: repeat(4, 1fr 2fr);*/
+           /*Первая колонка в 200px, затем - функция повторения: 1 колонка на 1 фракцию и 1 на 2 фракции. Повторять 4 раза*/  
+           /*grid-template-columns: 200px repeat(4, 1fr 2fr);*/
+            grid-gap: 20px;
+            background-color: lightgray;
+        }
+
+            .grid div {
+                background-color: #1b67a8;
+                border: 1px solid #212941;
+                border-radius: 5px;
+                padding: 8px 15px;
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+                .grid div:nth-child(odd) {
+                    background-color: #1ac66c;
+                }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>item-1</div>
+        <div>item-2</div>
+        <div>item-3</div>
+        <div>item-4</div>
+        <div>item-5</div>
+        <div>item-6</div>
+        <div>item-7</div>
+        <div>item-8</div>
+        <div>item-9</div>   
+        <div>item-10</div> 
+        <div>item-11</div> 
+        <div>item-12</div> 
+        <div>item-13</div> 
+        <div>item-14</div> 
+        <div>item-15</div> 
+        <div>item-16</div> 
+    </div>
+</body>
+</html>

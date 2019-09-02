@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WebStorage</title>
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            var buttonSave = document.querySelector("#save");
+            var buttonGet = document.querySelector("#get");
+            var text = document.querySelector("#storage input");
+            buttonSave.onclick = function () {
+                //Сохранение данных в sessionStorage. После закрытия вкладки или браузера - данные удаляются.
+                //В большинстве браузерах размер контейнера sessionStorage и localStorage составляет 5 Мбайт.
+                sessionStorage.setItem(text.getAttribute("name"), text.value);
+                // 2 вариант
+                //sessionStorage.text.getAttribute("name") = text.value;
+                // 3 вариант
+                //sessionStorage.setItem[text.getAttribute("name")] = text.value;
+            }
+            buttonGet.onclick = function () {
+                //Получение данных из sessionStorage
+                alert(sessionStorage.getItem(text.getAttribute("name")))
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="storage">
+        <input type="text" name="login" />
+        <input type="button" id="save" value="Save in storage" />
+        <input type="button" id="get" value="Get in storage" />
+        <p>
+            <a href=" https://caniuse.com/#feat=namevalue-storage">Ссылка на проверку WebStorage</a>
+        </p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+﻿$size: 100;
+
+div {
+    width: $size*2+px;
+    height: $size*1.3+px;
+    border: $size/30+px solid black;
+    float: left;
+    margin: {
+
+        left: $size/5+px;
+        top: $size/4+px;
+    }
+}
+/*Для прохождения по списку значений, а не просто чисел, можно использовать директиву @each*/
+@each $item in ferrary, bugatti, lamborghini, maserati{
+    .car-#{$item} {
+        background-image: url('../010_SCSS_each/img/#{$item}.jpg');
+        background-size:$size+% $size+%;
+    }
+}

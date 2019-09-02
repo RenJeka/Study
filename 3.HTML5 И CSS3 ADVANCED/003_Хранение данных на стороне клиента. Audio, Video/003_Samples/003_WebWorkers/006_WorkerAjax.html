@@ -1,0 +1,17 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>WebWorkerAjax</title>
+</head>
+<body>
+    <script>
+        if (window.Worker) {
+            var worker = new Worker('worker4.js');
+            worker.postMessage('Hellow World');
+            worker.onmessage = function (e) {
+               alert(e.data);
+            };
+        }
+    </script>
+</body>
+</html>

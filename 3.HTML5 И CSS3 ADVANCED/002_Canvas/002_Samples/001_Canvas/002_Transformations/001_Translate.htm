@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>translate transformation</title>
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            var $ = function (id) {
+                return document.getElementById(id);
+            }           
+            var context = $("canvas").getContext("2d");
+
+            $("btn").onclick = function () {
+                // очистка всего полотна.
+                context.clearRect(0, 0, context.canvas.width, context.canvas.height);
+
+                var x = $("X").value;
+                var y = $("Y").value;
+
+                // сохранение состояния полотна и начала системы координат.
+                context.save();
+                // трансформация перемещения.
+                context.translate(x, y);
+                context.beginPath();
+                context.fillStyle = "green";
+                context.arc(0, 0, 50, 0, Math.PI * 2, true);
+                context.closePath();
+                context.fill();
+                // восстановление сохранённого состояния полотна.
+                context.restore();
+            }
+        }
+    </script>
+    <style>
+        canvas {
+            border: 3px solid black;
+        }
+
+        div {
+            border: 1px solid gray;
+            padding: 8px;
+            margin: 8px;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="canvas" width="400" height="300"></canvas>
+    <div>
+        X координата
+        <input type="text" id="X" />
+        Y координата
+        <input type="text" id="Y" />
+        <input type="button" id="btn" value="translate" />
+    </div>
+</body>
+</html>

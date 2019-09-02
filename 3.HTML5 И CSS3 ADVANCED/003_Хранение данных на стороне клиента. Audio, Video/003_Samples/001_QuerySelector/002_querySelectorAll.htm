@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>querySelectorAll function</title>
+    <script>
+        window.addEventListener("load", handler, false);
+        function handler() {
+            var tdArray = document.querySelectorAll(".testClass td");
+            for (var i = 0; i < tdArray.length; i++) {
+                tdArray[i].style.backgroundColor = "red";
+                tdArray[i].innerHTML = "selector " + i;
+            }
+        }
+    </script>
+   </head>
+<body>
+    <table border="1" cellpadding="5" class="testClass">
+        <tr>
+            <th>First</th>
+            <td>Second</td>
+        </tr>
+        <tr>
+            <th>Second</th>
+            <td>Third</td>
+        </tr>
+        <tr>
+            <th>Third</th>
+            <td>Fourth</td>
+        </tr>
+    </table>
+    <div>
+        <p>
+            First
+        </p>
+        <p>
+            Second
+        </p>
+        <p>
+            Third
+        </p>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,66 @@
+﻿$size: 100px;
+$colorG: green;
+$colorR: red;
+$old: старый;
+$new: новый;
+$box: box;
+
+
+@import 'mixin';
+
+.item {
+    width: $size*6;
+    height: $size*6;
+    background-color: lighten($colorR, 40%);
+    margin: $size/2 auto;
+    border: $size/50 solid $colorG;
+       /*Интерполяция переменной*/
+    box-sizing: border-#{$box};
+    /*Интерполяция — это получение нового значения, используя другие.
+        Для получения нового значение переменной, благодаря интегрирования в значения другой.
+        Без данного преобразования нельзя вставить в строку - переменную.
+    */
+    .back {
+        color: $colorG;
+        &:after {
+            content: "#{$old} контент будет заменен на #{$new}";
+        }
+    }
+
+    h2 {
+        text-align: right;
+        color: lighten($colorG, 50%);
+    }
+
+    .container {
+        width: $size*4;
+        height: $size*3;
+        border: $size/33 solid $colorG;
+        /*Включение mixin в элемент*/
+        @include border(20px);
+        margin: $size/5 auto;
+        /*Интерполяция переменной*/
+        box-sizing: content-#{$box};
+
+        h1 {
+            text-align: center;
+            color: $colorR;
+            opacity: 0.5;
+        }
+
+        .lead {
+            /*Включение mixin в элемент*/
+            @include whiteSpace(pre-wrap);
+            font-size: $size/10;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a {
+            /*Использование mixin и переменной*/
+            text-decoration: none;
+            color: lighten($colorR, 30%);
+            @include border($size/4);
+        }
+    }
+}

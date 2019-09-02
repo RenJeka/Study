@@ -1,0 +1,46 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title> AutoFit function</title>
+    <meta charset="utf-8" />
+    <style>
+        .grid {       
+            display: grid;
+            /*auto-fit - позволяет растянуть элементы на странице, и только при достижении 100px шириной 
+                переходить на нижний ряд*/
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));    
+            grid-template-rows:1fr 2fr 3fr 2fr 2fr;            
+            grid-gap: 15px;          
+          
+            background-color: lightgray;
+        }
+
+            .grid div {
+                background-color: #1b67a8;
+                border: 1px solid #212941;
+                border-radius: 5px;
+                padding: 8px 15px;
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+                .grid div:nth-child(odd) {
+                    background-color: #1ac66c;
+                }
+    </style>
+</head>
+<body>
+    <div class="grid">
+
+        <div>Item-1</div>
+        <div>item-2</div>
+        <div>item-3</div>
+        <div>item-4</div>
+        <div>item-5</div>
+        <div>item-6</div>
+        <div>item-7</div>
+        <div>item-8</div>
+       
+    </div>
+</body>
+</html>

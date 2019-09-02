@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>keyframes</title>
+	<meta charset="utf-8" />
+    <style>
+        div {
+            width:200px;
+            height:200px;
+            background-color:antiquewhite;
+            border:2px solid black;
+            animation: animationName 5s infinite;
+        }
+        /*Правило @keyframes содержит имя анимации элемента, которое связывает правило и блок объявления элемента.*/
+        /*@-moz-keyframes animationName - Для Mozilla Firefox
+        @-webkit-keyframes animationName - Google Chrome
+        @-o-keyframes animationName - Opera*/
+        @keyframes animationName {
+            /*Ключевые кадры создаются с помощью ключевых слов from и to, или процентного соотношения времени*/
+            from, to {
+ border:2px solid black;
+  background-color:antiquewhite;
+            }
+            20% {
+                border:2px solid blue;
+  background-color:#ff0000;
+            }
+             40% {
+                border:2px solid green;
+  background-color:yellow;
+            }
+              60% {
+                border:2px solid pink;
+  background-color:orange;
+            }
+                80% {
+                border:2px solid grey;
+  background-color:#15ebe5;
+            }
+        }
+        /*Создание анимации начинается с установки ключевых кадров правила @keyframes. 
+           Кадры определяют, какие свойства на каком шаге будут анимированы.*/
+    </style>
+</head>
+<body>
+    <div>Animation DIV</div>
+</body>
+</html>

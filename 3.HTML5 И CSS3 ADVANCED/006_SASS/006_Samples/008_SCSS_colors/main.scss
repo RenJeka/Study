@@ -1,0 +1,42 @@
+﻿$size: 100;
+/*Цвета HEX-формата -складываются по трем основным:
+#(44-red, 02-green, 22-blue) + #(11-red, 15-green, 08-blue)=#55172a*/ 
+$color: #440222 + #111508;
+$color1: #53ab0b;
+$color2: #e6f707;
+$color3: #f58080;
+$color4: #e827ba;
+$color5: rgb(225, 32, 32);
+$color6:rgb(47, 233, 233);
+
+div {
+    width: $size*1.5+px;
+    height: $size+px;
+    border: $size/30+px solid darken($color1, 50%);
+    float: left;
+    margin:{
+        left:$size/5+px;
+        top:$size/4+px;
+    }
+}
+.item1 {
+    /*transparentize - функция, задающая альфа канал выбранному элементу*/
+    background-color: transparentize($color1+$color2, 0.4);
+    color:$color1+$color2;
+}
+.item2 {
+    background-color: $color3+$color4;
+    color:$color4*2;
+}
+.item3 {
+    background-color: $color1+$color4;
+    color:$color2+$color3;
+}
+.item4 {
+    background-color: $color5+$color6;
+    color:$color2;
+}
+.item5 {
+    background-color: $color1+$color6;    
+}
+

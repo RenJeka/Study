@@ -1,0 +1,88 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>transform-style</title>
+    <meta charset="utf-8" />
+    <style>
+        div {
+            height: 200px;
+            width: 300px;
+        }
+
+        .container {
+            height: 160px;
+            margin: 150px auto 1em;
+            perspective: 90px;
+            width: 660px;
+            text-align: center;
+            margin: 20px auto 0;
+        }
+
+        .top, .bottom {
+            position: absolute;
+            bottom: 0px;
+            transform: rotateX(5deg);
+            border-radius: 20px;
+            animation: rotate 8s infinite;
+            animation-delay: 0.8s;
+        }
+
+        .top {
+            background-image: url(../Transformation/Auto.jpg);
+            background-size: 100% 100%;
+            top:10px;
+        }
+
+        .bottom {
+            background-image: url(../Transformation/AutoBlack.jpg);
+            transform: rotateX(90deg);
+            background-size: 100% 100%;
+             top:0px;
+        }
+
+        .s3d .top {
+            backface-visibility: hidden;
+        }
+
+        .s3d .top, .s3d .bottom {
+            backface-visibility: hidden;
+            /*transform-style Свойство определяет, как вложенные элементы отрисовываются в трехмерном пространстве.*/
+            transform-style: preserve-3d;
+        }
+
+
+        @keyframes rotate {
+            0% {
+                opacity: 1;
+            }
+
+            35% {
+                opacity: 0.8;
+            }
+
+            50% {
+                opacity: 1;
+                transform: none;
+            }
+
+            65% {
+                opacity: 0.8;
+            }
+
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="s3d">
+            <div class="top">
+                <div class="bottom"></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

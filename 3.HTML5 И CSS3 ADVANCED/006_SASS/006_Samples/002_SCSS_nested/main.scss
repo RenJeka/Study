@@ -1,0 +1,52 @@
+.item {
+    width: 600px;
+    height: 500px;
+    background-color: lightblue;
+    margin: 50px auto;
+    border: 2px solid green;
+
+    h2 {
+        text-align: right;
+        color: greenyellow;
+    }
+
+    .container {
+        width: 400px;
+        height: 300px;        
+        //Вложенность множественных свойств
+        border: {
+            top: 13px solid red;
+            bottom: 23px dashed blue;
+            left: 15px double orange;
+            right: 3px dotted green;
+        }
+
+        margin: 20px auto;
+
+        h1 {
+            text-align: center;
+            color: rgba(230, 50, 50, 0.86);
+        }
+
+        .lead {
+            font-size: 10px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a {
+            text-decoration: none;
+            color: tomato;
+            border-radius: 30%;
+            border: 2px solid blue;
+            //Для расширения используется синтаксис - &
+            // & - обращение к родительскому элементу
+            &:hover {
+                border: none;
+                color: #ff0000;
+                padding-left: 30px;
+                font-size: 2rem;
+            }
+        }
+    }
+}

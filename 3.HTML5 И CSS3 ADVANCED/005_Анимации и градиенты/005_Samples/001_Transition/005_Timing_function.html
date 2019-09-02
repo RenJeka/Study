@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>transition-timing-function</title>
+    <meta charset="utf-8" />
+    <style>
+        .block-linear, .block-ease, .block-ease-in, .block-ease-out {
+            width: 150px;
+            height: 150px;
+            background-color: #00ff90;
+            transition-property: width;
+            transition-duration: 4s;
+            margin: 5px;
+        }
+
+        .block-linear {
+            transition-timing-function: linear;
+        }
+          .block-ease {
+            transition-timing-function:ease;
+        }
+            .block-ease-in {
+            transition-timing-function:ease-in;
+        }
+              .block-ease-out {
+            transition-timing-function:ease-out;
+        }
+            .block-linear:hover, .block-ease:hover, .block-ease-in:hover, .block-ease-out:hover {
+                width: 750px;
+            }
+    </style>
+</head>
+<body>
+    <div class="block-linear">Линейная функция</div>
+    <div class="block-ease">медленный старт, затем ускорение и замедление в конце</div>
+    <div class="block-ease-in"> медленный старт</div>
+    <div class="block-ease-out">замедление в конце</div>
+</body>
+</html>

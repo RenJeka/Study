@@ -1,0 +1,53 @@
+.d-block{
+	display: block;
+}
+
+.text-center{
+	text-align: center;
+}
+
+.font-24{
+	font-size: 24px;
+}
+.font-48{
+	font-size: 48px;
+}
+
+.table{
+
+	position: relative;
+	border-radius: 5px;
+}
+
+.table1{
+	background-color:lightcyan;
+}
+.table2{
+	background-color:lightgreen;
+}
+
+table th,td{
+	padding: 5px;
+}
+table td{
+	padding: 5px;
+	border-top: 1px solid #ccc;
+}
+
+.div1{
+	position: relative;
+	width: 40%;
+	margin: 0 auto;
+	padding: 0 auto;
+	float: left;
+}
+.div1::after{
+	content: "";
+	display: block;
+	clear: both;
+}
+
+.image-small{
+	width: 100px;
+	border-radius: 50%;
+}

@@ -1,0 +1,17 @@
+﻿/*mixin - позволяет единожды написать блок кода и использвать в его свойствах элементов разметки*/
+@mixin whiteSpace($prop) {
+    /*Свойство white-space используется для описания того, как обрабатываются пробелы внутри элемента.*/
+    -webkit-white-space: $prop;
+    -moz-white-space: $prop;
+    -o-white-space: $prop;
+    -ms-white-space: $prop;
+    white-space: $prop;
+}
+
+@mixin border($x) {
+    -webkit-border-radius: $x;
+    -moz-border-radius: $x;
+    -o-border-radius: $x;
+    -ms-border-radius: $x;
+    border-radius: $x;
+}

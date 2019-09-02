@@ -1,0 +1,29 @@
+﻿$size: 50;
+$color1: #53ab0b;
+
+
+div {
+    width: $size*1.5+px;
+    height: $size+px;
+    border: $size/30+px solid darken($color1, 50%);
+    float: left;
+
+    margin: {
+        left: $size/5+px;
+        top: $size/4+px;
+    }
+}
+
+/*Директива @for выводит набор стилей заданное число раз. Для каждого повторения используется переменная-счётчик для изменения вывода.*/
+/*through - включая последнее число
+to - не включая*/
+@for $i from 1 to 6 {
+    //Применяем интерполяцию для подключения счетчика
+    .item#{$i} {
+        background-color: $color1;
+        width: $size*$i+px;
+        &:after {
+            content: " number #{$i}"
+        }
+    }
+}

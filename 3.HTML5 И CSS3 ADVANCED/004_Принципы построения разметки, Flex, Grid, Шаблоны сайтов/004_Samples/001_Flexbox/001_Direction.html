@@ -1,0 +1,60 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox direction</title>
+	<style>
+		.container{
+			/*создаем Flex контейнер */
+            /*Значение display: flex делает контейнер блочным элементом/ display:inline-flex значение превращает его в инлайн-элемент.*/
+			display: flex;
+			/*flex-direction - Позволяет вращать главную ось 
+            row (значение по умолчанию) : слева направо    
+            row-reverse: справа налево
+            column: сверху вниз
+            column-reverse: снизу вверх        
+                */
+			flex-direction:row;			
+			width: 100%;
+			height: auto;
+			background-color: lightblue;
+		}
+		.item{
+			width: 100px;
+			height: 100px;
+			margin: 5px;
+			text-align: center;
+			color: white;
+		}
+
+		.red{
+			background-color: red;
+		}
+		.orange{
+			background-color: orange;
+		}
+		.green{
+			background-color: green;
+		}
+		.cyan{
+			background-color: cyan;
+		}
+		.gold{
+			background-color: gold;
+		}
+		.pink{
+			background-color: pink;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item red">1</div>
+		<div class="item orange">2</div>
+		<div class="item green">3</div>
+		<div class="item cyan">4</div>
+		<div class="item gold">5</div>
+		<div class="item pink">6</div>
+	</div>
+</body>
+</html>

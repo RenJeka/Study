@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Properties</title>
+    <meta charset="utf-8" />
+    <style>
+         #container {
+             border:2px solid red;
+             min-width:500px;
+             min-height:300px;
+         }
+         #container div:hover {
+                         animation-play-state:paused;
+         }
+       #container div {
+            width: 80px;
+            height: 80px;
+            background-color: antiquewhite;
+            border: 2px solid black;
+            position: relative;
+            top: 50px;
+            left: 50px;
+            /*Имя анимации*/
+            animation-name:animate;
+            /*Задержка*/
+            animation-delay:0s;
+            /*Направление анимации*/
+            /*alternate Анимация проигрывается с начала до конца, затем в обратном направлении.
+                alternate-reverse Анимация проигрывается с конца до начала, затем в обратном направлении.
+                reverse	Анимация проигрывается с конца.*/
+            animation-direction:alternate;
+            /*Состояние элемента до и после воспроизведения анимации*/
+            /*forwards Воспроизводит анимацию до последнего кадра по окончанию последнего повтора 
+                и не отматывает ее к первоначальному состоянию.
+                backwards Возвращает состояние элемента после загрузки страницы к первому кадру, 
+                даже если установлена задержка animation-delay, и оставляет его там, пока не начнется анимация*/
+            animation-fill-mode:forwards;
+            /*Повтор анимации*/
+            animation-iteration-count:infinite;
+            /*управляет проигрыванием и остановкой анимации*/
+            animation-play-state:running;
+            /*Функция перехода*/
+            animation-timing-function:linear;
+            /*Продолжительность анимации*/
+            animation-duration:5s;
+            /*Сокращенная запись*/
+            /*animation: animate 5s linear 0s infinite alternate forwards;*/
+        }
+        
+        /*Правило @keyframes содержит имя анимации элемента, которое связывает правило и блок объявления элемента.*/
+        @keyframes animate {
+            /*Ключевые кадры создаются с помощью ключевых слов from и to, или процентного соотношения времени*/
+            0% {
+                top: 50px;
+                left: 50px;
+            }
+
+            25% {
+                top: 100px;
+                left: 100px;
+            }
+
+            50% {
+                top: 200px;
+                left: 200px;
+            }
+
+            75% {
+                top: 100px;
+                left: 300px;
+            }
+
+            100% {
+                top: 50px;
+                left: 400px;
+            }
+        }
+        /*Создание анимации начинается с установки ключевых кадров правила @keyframes.
+           Кадры определяют, какие свойства на каком шаге будут анимированы.*/
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>Animation DIV</div>
+    </div>
+</body>
+</html>

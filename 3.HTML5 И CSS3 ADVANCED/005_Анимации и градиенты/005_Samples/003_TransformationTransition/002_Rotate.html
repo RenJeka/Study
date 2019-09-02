@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>rotate</title>
+    <meta charset="utf-8" />
+    <style>
+        body, html {
+            height: 100%;
+        }
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .element {
+            display: inline-block;
+            background-color: yellow;
+            height: 100px;
+            width: 100px;
+            color: black;
+            text-align: center;
+            opacity: .7;
+            font-family: Verdana, sans-serif;
+            border: 3px solid rgba(0,0,0,.3);
+            margin-bottom: 30px;
+            transition: all 2.2s linear;
+        }
+
+        .one:active, .two:active, .three:active, .four:active  {
+            color:white;
+        }
+
+        .one:active {
+            transform: rotateX(110deg);
+            background-color: #0074d9;
+        }
+
+        .two:active {
+            transform: rotateY(150deg);
+            background-color: #831a4a;
+        }
+
+        .three:active {
+            transform: rotateZ(120deg);
+            background-color: #439772;
+        }
+         .four:active {           
+            background-color: #ff6a00;
+            /*Функция вращает элемент относительно трех осей.*/
+          transform: rotate3d(3, 4, 2, -60deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="element one">
+        RotateX
+    </div>
+    <div class="element two">
+        RotateY
+    </div>
+    <div class="element three">
+        RotateZ
+    </div>
+    <div class="element four">
+        Rotate3D
+    </div>
+</body>
+</html>

@@ -1,0 +1,77 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox order</title>
+    <style>
+        .container {
+            /*создаем Flex контейнер */
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            height: 480px;
+            background-color: lightblue;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+            text-align: center;
+            color: white;
+        }
+
+        .red {
+            /*align-self выравнивание отдельно взятого flex-блока по поперечной оси (flex-start, flex-end, center, stretch, baseline)*/
+            align-self: flex-start;
+            background-color: red;
+            /*order порядок следования отдельно взятого flex-блока внутри flex-контейнера*/
+            order: 5;
+        }
+
+        .orange {
+            align-self: flex-start;
+            background-color: orange;
+            order: 4;
+        }
+
+        .green {
+            align-self: center;
+            background-color: green;
+            order: 2;
+        }
+
+        .cyan {
+            align-self: center;
+            background-color: cyan;
+            order: 6;
+        }
+
+        .gold {
+            align-self: flex-end;
+            background-color: gold;
+            order: 1;
+        }
+
+        .pink {
+            align-self: flex-end;
+            background-color: pink;
+            order: 3;
+            /*Во flexBox выравнивание по горизонтали через margin:auto, работает и по вериткали*/
+            /*margin:auto*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="item red">1</div>
+        <div class="item orange">2</div>
+        <div class="item green">3</div>
+        <div class="item cyan">4</div>
+        <div class="item gold">5</div>
+        <div class="item pink">6</div>
+    </div>
+</body>
+</html>

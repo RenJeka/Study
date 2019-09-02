@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox flex</title>
+	<style>
+		.container{
+			/*создаем Flex контейнер */
+			display: flex;
+			/*позволяет вращать главную ось (column, column-reverse, row-reverse, row)*/
+			flex-direction:row;
+			/*отвечает за выравнивание элементов по главной оси. (flex-start, flex-end, center, space-between, space-around)*/
+			justify-content: center;
+			/*работает с осью, перпендикулярной главной оси. (flex-start, flex-end, center, stretch, baseline)*/
+			align-items: center; 
+			width: 100%;
+			height: 480px;
+			background-color: lightblue;
+		}
+
+		.item{
+            /*сокращенная записть для flex-grow, flex-shrink и flex-basis*/
+			flex: 1 1 150px;
+			height: 400px;
+			margin: 5px;
+			color: white;
+		}
+
+
+		.red{
+			flex: 2 2 250px;
+			background-color: red;
+		}
+		.orange{
+			flex: 1 5 250px;
+			background-color: orange;
+		}
+		.green{
+			flex: 1 2 250px;
+			background-color: green;
+		}
+		
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="item red">
+			<ul>
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+		</div>
+		<div class="item orange">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorum adipisci eos, sequi quibusdam, ducimus velit aperiam. Officia voluptates architecto doloribus nisi laudantium, aperiam minus amet mollitia labore, quia autem quis.
+		</div>
+		<div class="item green">
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus soluta, exercitationem distinctio id repellendus quasi, necessitatibus officia aliquam laudantium sit autem placeat assumenda quaerat! Doloremque unde dolorum soluta error quae!
+		</div>
+	</div>
+</body>
+</html>

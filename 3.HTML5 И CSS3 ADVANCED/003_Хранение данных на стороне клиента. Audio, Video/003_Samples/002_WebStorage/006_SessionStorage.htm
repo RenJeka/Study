@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Сохранение и извлечение данных sessionStorage</title>
+    <script>
+        window.addEventListener("load", init, false);
+        function init() {
+            var nameField = document.getElementById("name"),
+                emailField = document.getElementById("email"),
+                modelField = document.getElementById("model");
+            document.forms[0].onsubmit = function (e) {
+                if (nameField.value == '' && nameField.value == undefined || emailField.value == '' || modelField.value == '') {
+                    e.preventDefault()
+                }
+                else {
+                    var newCustomer = {}
+                    newCustomer.id = Math.floor(Math.random() * 1000)
+                    newCustomer.name = nameField.value;
+                    newCustomer.email = nameField.value;
+                    newCustomer.model = emailField.value;
+                    newCustomer.data = new Date();
+                    sessionStorage.setItem(newCustomer.id, JSON.stringify(newCustomer))
+                }
+            }
+        }
+
+    </script>
+</head>
+<body>
+    <form>
+        <label>Имя</label>
+        <input type="text" id="name" name="name" />
+        <label>Почта</label>
+        <input type="email" id="email" name="mail" />
+        <label>Модель</label>
+        <input name="shop" id="model" list="mobile">
+        <datalist id="mobile">
+            <option value="iPhone 5s">
+            <option value="iPhone 5c">
+            <option value="iPhone 6s">
+            <option value="iPhone 7s">
+            <option value="iPhone X">
+        </datalist>
+        <input type="submit" value="Купить" style="border-radius:40px; width:150px; height:80px; background-color:lightgreen;" />
+    </form>
+</body>
+</html>

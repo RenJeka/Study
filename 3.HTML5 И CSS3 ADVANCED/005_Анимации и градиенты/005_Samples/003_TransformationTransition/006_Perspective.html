@@ -1,0 +1,63 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        
+/*perspective свойство активирует 3D-пространство для элемента. Свойство perspective и функция perspective() 
+    добавляют глубину элементу, увеличивая его размеры по оси Z, сам элемент при этом становится
+     визуально меньше. Чем меньше значение, тем ближе Z-пространство к зрителю и тем больше эффект,
+     заданный с помощью свойства transform*/
+/*Чем больше значение, тем менее выражен эффект. 0 означает отсутствие перспективы*/
+
+.original,
+.box {
+  border-radius: 6px;
+}
+.original {
+  background: #eaeaed;
+  border: 1px dashed #cecfd5;
+  float: left;
+  margin: 50px;
+}
+.box {
+  background: #3b8edd;
+  height: 95px;
+  line-height: 95px;
+  text-align: center;
+  width: 95px;
+}
+.box1, .box2,.box3 {
+    transition-property:transform;
+    transition-duration:3s;
+    transition-delay:0.3s;
+}
+.box1:hover {
+  transform: perspective(100px) translateZ(50px);
+  }
+.box2:hover {
+  transform: perspective(400px) translateZ(50px);
+  }
+.box3:hover {
+  transform: perspective(800px) translateZ(50px);
+  }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="original">   
+            <div class="box box1">Box 1</div>       
+    </div>
+
+    <div class="original">
+        <div class="box box2">Box 2</div>
+    </div>
+
+    <div class="original">
+        <div class="box box3">Box 3</div>
+    </div>
+</body>
+</html>

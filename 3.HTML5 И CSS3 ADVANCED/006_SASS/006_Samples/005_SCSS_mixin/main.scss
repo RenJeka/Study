@@ -1,0 +1,48 @@
+﻿$size: 100px;
+$colorG: green;
+$colorR: red;
+
+@import 'mixin';
+
+.item {
+    width: $size*6;
+    height: $size*6;
+    background-color: lighten($colorR, 40%);
+    margin: $size/2 auto;
+    border: $size/50 solid $colorG;
+
+    h2 {
+        text-align: right;
+        color: lighten($colorG, 50%);
+    }
+
+    .container {
+        width: $size*4;
+        height: $size*3;
+        border: $size/33 solid $colorG;
+        @include border(20px);
+        margin: $size/5 auto;
+
+        h1 {
+            text-align: center;
+            color: $colorR;
+            opacity: 0.5;
+        }
+
+        .lead {
+            /*Включение mixin в элемент*/
+            @include whiteSpace(pre-wrap);
+            font-size: $size/10;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        a {
+            /*Использование mixin и переменной*/
+            text-decoration: none;
+            color: lighten($colorR, 30%);
+            @include border($size/4);
+            border: $size/25 solid blue;
+        }
+    }
+}

@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Geolocation API</title>
+    <!--Скрипт, позволяющий получить доступ к Google Maps API-->
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4agfsdAQEEJGW8HaOj61lWxHjL52PuRI&callback=initMap"></script>
+</head>
+<body>
+    <div id="map" style="height: 300px; width: 600px;">
+    </div>
+    <p id="message">
+    </p>
+    <script type="text/javascript">
+        navigator.geolocation.getCurrentPosition(updatePosition);
+
+        function updatePosition(pos) {
+            // задание координат объекта новой карты (широта, долгота)
+            var position = new google.maps.LatLng(pos.coords.latitude, pos.coords.longitude);
+            document.getElementById("message").innerHTML = "Позиция определена с точностью " + pos.coords.accuracy + " метров.";
+
+            // параметры для карты.
+            var options = {
+                zoom: 15,
+                center: position, // позиция расположения на карте
+                mapTypeId: google.maps.MapTypeId.ROADMAP // тип карты - ROADMAP, SATELLITE, HYBRID and TERRAIN
+            };
+
+            // объект карты.
+            var map = new google.maps.Map(document.getElementById("map"), options);
+
+            // маркер на карте
+            var marker = new google.maps.Marker({
+                position: position,
+                map: map,
+                title: "Это ВЫ!"
+            });
+
+            // объект всплывающей подсказки.
+            var infowindow = new google.maps.InfoWindow({
+                content: "Скорее всего, это Ваше текущее положение"
+            });
+
+            // присвоение обработчика на нажатие по маркеру.
+            google.maps.event.addListener(marker, 'click', function () {
+                infowindow.open(map, marker);
+            });
+        }
+    </script>
+    <!--Возможность добавления своих карт и мест расположения на страницу https://www.google.com/maps-->
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5082.468723865124!2d30.43184944592814!3d50.43673517490792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cc1c66027195%3A0x46b149b15853d43a!2z0LLRg9C70LjRhtGPINCd0ZbQttC40L3RgdGM0LrQsCwgMiwg0JrQuNGX0LIsIDAyMDAw!5e0!3m2!1suk!2sua!4v1527759849025" width="300" height="250"  style="border:10px solid green" ></iframe>
+
+</body>
+</html>

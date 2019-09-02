@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="css/stylye_addTask.css">
+	<title>Document</title>
+
+	<!-- Создайте страницу с разметкой, на которой будет отображаться контактная информация Вашего  учебного заведения или Вашей рабочей организации. Используя микроданные и словарь терминов  http://schema.org/Person добавьте их в разметку. Проверьте разметку на правильность оформления.  -->
+</head>
+<body>
+	<h4 class="d-block text-center font-24"> Контактная информация учебного центра</h4>
+	<h1 class="d-block text-center font-48">CyberBionic Systematics</h1>
+	
+	<hr>
+	<div class="div1" itemscope itemtype="https://schema.org/Organization">
+		<table class="table table1"  >
+			<caption> Организация</caption>
+			<thead>
+				<tr>
+					<th>Название</th>
+					<th>Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Название заведения</td>
+					<td itemprop="name">CyberBionicSystematics</td>
+				</tr>
+				<tr>
+					<td>Адресс</td>
+					<td itemprop="address">улица Евгена Сверстюка, 19, Киев, 02000</td>
+				</tr>
+				<tr>
+					<td>Сайт</td>
+					<td itemprop="url">edu.cbsystematics.com</td>
+				</tr>
+				<tr>
+					<td>Контактный телефон</td>
+					<td itemprop="telephone"> 0800 750 312</td>
+				</tr>
+				<tr>
+					<td>e-mail</td>
+					<td itemprop="email">edu@cbsystematics.com</td>
+				</tr>
+				<tr>
+					<td>Основатели</td>
+					<td itemprop="founder">Александр Шевчук, Дмитрий Охрименко</td>
+				</tr>
+				<tr>
+					<td>Логотип</td>
+					<td itemprop="logo"><img src="img/CBS_logo.svg" alt="CBS-logo" ></td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+
+	<div class="div1" itemscope itemtype="https://schema.org/Person">
+
+		<table class="table table2"  >
+			<caption> Основатель-1</caption>
+			<thead>
+				<tr>
+					<th>Поле</th>
+					<th>Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Имя</td>
+					<td itemprop="givenName">Александр</td>
+				</tr>
+				<tr>
+					<td>Фамилия</td>
+					<td itemprop="familyName">Шевчук</td>
+				</tr>
+				<tr>
+					<td>Организация</td>
+					<td itemprop="worksFor">CyberBionicSystematics</td>
+				</tr>
+				<tr>
+					<td>Должность</td>
+					<td itemprop="worksFor">R&D Engineer</td>
+				</tr>
+				<tr>
+					<td>Изображение</td>
+					<td itemprop="image"><img class="image-small" src="https://media.licdn.com/dms/image/C4D03AQGvz-N-sCHnlA/profile-displayphoto-shrink_800_800/0?e=1573084800&v=beta&t=W2FCo-s4JZ123OPDfyPjZDqbSPo9npl8C-aQgJOmw_E" alt="Alexander Shevchuk" wi ></td>
+				</tr>
+			</tbody>
+		</table>
+		<br>
+		<table class="table table2"  >
+				<caption> Основатель-2</caption>
+				<thead>
+					<tr>
+						<th>Поле</th>
+						<th>Описание</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Имя</td>
+						<td itemprop="givenName">Дмитрий</td>
+					</tr>
+					<tr>
+						<td>Фамилия</td>
+						<td itemprop="familyName">Охрименко</td>
+					</tr>
+					<tr>
+						<td>Организация</td>
+						<td itemprop="worksFor">CyberBionicSystematics</td>
+					</tr>
+					<tr>
+						<td>Должность</td>
+						<td itemprop="worksFor">CEO at CyberBionic Systematics</td>
+					</tr>
+					<tr>
+						<td>Изображение</td>
+						<td itemprop="image"><img class="image-small" src="https://media.licdn.com/dms/image/C4D03AQHClWx_PxTJxA/profile-displayphoto-shrink_800_800/0?e=1573084800&v=beta&t=vJK0yisTRlCewokI0Z34TExo-VhZTAnM6YZ76nFMLyk" alt="Dmitriy Okhrimenko"  ></td>
+					</tr>
+				</tbody>
+			</table>
+
+		<!-- <table class="table table2"  >
+			<caption> Основатель-2</caption>
+			<thead>
+				<tr>
+					<th>Поле</th>
+					<th>Описание</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>Название заведения</td>
+					<td itemprop="name">CyberBionicSystematics</td>
+				</tr>
+
+				</tr>
+			</tbody>
+		</table> -->
+	</div>
+	
+
+	
+</body>
+</html>

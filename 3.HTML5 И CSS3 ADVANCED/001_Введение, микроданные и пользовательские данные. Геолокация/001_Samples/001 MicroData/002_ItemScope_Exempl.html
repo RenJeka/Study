@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Стивен хокинг</title>
+	<style>
+	
+		section{
+            border:1px solid #65bae1;
+			background-image: url(img/space.jpg);
+			background-size: cover;
+   			width: 60%;
+    		height: 700px;    		
+            margin:30px auto;
+		}
+		div.block{
+            margin:20px auto;
+			width: 70%;    		
+   		 	background-color: rgba(255,255,255,0.5);
+                
+    		padding: 40px;
+   		 	color: white;
+            border-radius:20px;
+		}
+
+		img{
+			width: 250px;
+			height: 125px;
+            margin-left:30%;
+		}
+        a {
+            color:aqua;
+            text-decoration:none;
+        }
+        a:hover {
+            border:2px solid red;
+        }
+        h1 {text-align:center}
+
+	
+	</style>
+</head>
+<body>
+	<!-- schema.org — Официальный сайт словаря семантической разметки -->
+	<!-- itemtype="http://schema.org/Person" - указывает что section содержит информацию о человеке -->
+	<section itemscope itemtype="http://schema.org/Person">
+		<div class="block">
+			<!-- itemprop="name" - указывает что, это не просто h1, а элемент в котором находиться имя человека-->
+			<h1 itemprop="name">Стивен Хокинг</h1>
+			<img  itemprop="image" src="img/Stiven.jpg">
+			<!-- itemtype="http://schema.org/Organization" - Элемент содержит данные о организации -->
+			<p itemprop="affiliation" itemscope itemtype="http://schema.org/Organization">
+       	   		<span itemprop="name">Кембриджский университет</span>,
+       	   		<span itemprop="url">http://www.cam.ac.uk/</span>
+       		</p>
+       		<!-- itemprop="description" - указывает описание -->
+       	 	<p itemprop="description">
+        		Английский физик-теоретик и популяризатор науки. Изучал теорию возникновения мира в результате Большого взрыва, а 	также теорию чёрных дыр. Высказал гипотезу, что чёрные дыры малой массы теряют энергию, испуская излучение Хокинга 	по своему горизонту событий, и, в конце концов, «умирают»
+        	</p>
+			<p itemprop="birthDate">Дата рождения: 8 января 1942</p>
+			<p itemprop="deathDate">Дата смерти: 14 марта 2018</p>
+			<a itemprop="url" href="http://www.hawking.org.uk/">http://www.hawking.org.uk/</a>
+		</div>
+		<!-- На сайте schema.org есть огоромная коллекция описывающих атрибутов-->
+	</section>
+	
+</body>
+</html>

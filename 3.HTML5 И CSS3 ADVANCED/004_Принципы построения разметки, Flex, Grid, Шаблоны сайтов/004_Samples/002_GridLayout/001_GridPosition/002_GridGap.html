@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Grid gap</title>
+    <meta charset="utf-8" />
+    <style>
+        .grid {
+            /*Grid разметка контейнера*/
+            display: grid;
+           /*указываем количество колонок (в данном случае 3) по 200px*/
+            /*grid-template-columns: ширина 1 столбца, ширина 2 столбца....*/
+            grid-template-columns: 200px 300px 200px;
+            /*указываем 2 строки по 100px */
+            /*grid-template-rows: высота 1 ряда, ширина 2 ряда....*/
+            grid-template-rows: 200px 100px 100px 100px; 
+            /*Отступы между колонками*/
+          grid-column-gap:25px;
+           /*Отступы между строками*/
+          grid-row-gap: 5px;
+          /*указывает отступ между строками и колонками*/
+			/*grid-gap:5px 25px;*/
+            background-color: lightgray;
+        }
+
+            .grid div {
+                background-color: #1b67a8;
+                border: 1px solid #212941;
+                border-radius: 5px;
+                padding: 8px 15px;
+                color: #ffffff;
+                font-size: 18px;
+            }
+
+                .grid div:nth-child(odd) {
+                    background-color: #1ac66c;
+                }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div>item-1</div>
+        <div>item-2</div>
+        <div>item-3</div>
+        <div>item-4</div>
+        <div>item-5</div>
+        <div>item-6</div>
+        <div>item-7</div>
+        <div>item-8</div>
+        <div>item-9</div>
+        <div>item-10</div>
+    </div>
+</body>
+</html>

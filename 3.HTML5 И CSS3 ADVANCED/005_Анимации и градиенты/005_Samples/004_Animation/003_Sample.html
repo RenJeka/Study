@@ -1,0 +1,72 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>keyframes</title>
+    <meta charset="utf-8" />
+</head>
+<style>
+    .swing {
+        width: 300px;
+        height: 250px;
+        margin: 20px auto;
+        text-align: center;
+        color: white;
+        background-color: gray;
+        font-size: 4em;
+    }
+
+    @keyframes swing {
+        10% {
+            transform: translateX(125px);
+        }
+
+        20% {
+            transform: translateX(-125px);
+        }
+
+        30% {
+            transform: translateX(100px);
+        }
+
+        40% {
+            transform: translateX(-100px);
+        }
+
+        50% {
+            transform: translateX(80px);
+        }
+
+        60% {
+            transform: translateX(-80px);
+        }
+
+        70% {
+            transform: translateX(40px);
+        }
+
+        80% {
+            transform: translateX(-40px);
+        }
+
+        85% {
+            transform: translateX(20px);
+        }
+
+        92% {
+            transform: translateX(-10px);
+        }
+
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+    .swing:hover {
+        animation: swing 5s ease;
+        animation-iteration-count: 1;
+    }
+</style>
+<body>
+    <div class="swing">SWING</div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Атрибуты и функции Web Storage</title>
+    </head>
+<body>
+    <input type="button" id="btn1" value="clear all" />
+    <div id="cont"></div>
+    <script type="text/javascript">
+     
+            document.getElementById("btn1").onclick = function () {
+                // удаление всех записей в хранилище
+               localStorage.clear();
+                showStorageContent();
+            }
+            localStorage.setItem("key1", "test1");
+            localStorage.setItem("key2", "test2");
+            localStorage.setItem("key3", "test3");
+            localStorage.setItem("key4", "test4");
+            localStorage.setItem("key5", "test5");
+
+            showStorageContent();
+
+            // удаление элемента по ключу
+            //window.localStorage.removeItem("key1");
+            //showStorageContent();
+            function showStorageContent() {
+              document.getElementById("cont").innerHTML=("Количество пар ключ-значение " +localStorage.length + "<br />");
+              document.getElementById("cont").innerHTML+="Все ключи в localStorage:<br />"
+                for (var i = 0; i < localStorage.length; i++) {
+                    // key - получение элемента по индексу
+                    document.getElementById("cont").innerHTML+=localStorage[localStorage.key(i)] + "<br />";
+                }
+              
+            }
+
+    </script>
+</body>
+</html>

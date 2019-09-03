@@ -49,7 +49,7 @@
             //   timeout: 2000, - данные должны быть получены в течении 2 секунд.
             //   maximumAge: 30000 - если данные были получены в течении последних 30 секунд их можно не запрашивать заново.
             // }
-            navigator.geolocation.getCurrentPosition(updateLocation, handleError, { enableHighAccuracy: true, timeout: 2000, maximumAge: 30000 });
+            navigator.geolocation.getCurrentPosition(updateLocation, handleError, { enableHighAccuracy: true, timeout: 2000, maximumAge: 3000 });
 
             function updateLocation(position) {
                 var $ = function (selector) {

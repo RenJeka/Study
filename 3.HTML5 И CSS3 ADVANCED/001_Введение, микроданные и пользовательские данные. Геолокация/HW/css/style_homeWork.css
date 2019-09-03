@@ -11,6 +11,10 @@ header{
     /* background-color: lightgreen; */
 }
 
+iframe{
+    display: none;
+}
+
 .header-logo{
     float: left;
     width: 11.7vw;

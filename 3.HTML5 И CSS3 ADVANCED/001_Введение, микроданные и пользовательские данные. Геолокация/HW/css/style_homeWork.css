@@ -36,6 +36,8 @@ iframe{
     background:url("../img/header.jpg") no-repeat;
     background-size: 100%;
     background-position: center;
+    position: relative;
+
   
    
     float: left;
@@ -60,6 +62,7 @@ article{
     /* width: 85%; */
     padding: 15px;
     margin-bottom: 5px;
+    border-radius: 5px;
 }
 article h3{
     font-size: 1.7rem;

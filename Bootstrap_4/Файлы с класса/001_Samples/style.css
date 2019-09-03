@@ -1,0 +1,23 @@
+
+.myborder{
+    background: #ddd;
+}
+
+/* .row > div:nth-child(odd){
+    background: green;
+}
+
+.row > div:nth-child(even){
+    background: gold;
+} */
+
+img{
+    width: 100%;
+    height: 300px;
+}
+
+.block{
+    width: 100%;
+    height: 300px;
+    background: green;
+}

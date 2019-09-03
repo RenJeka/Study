@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Самостоятельная работа</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Дополнительное задание Задание 1 -- Создать форму, группу кнопок, навигацию.  -->
+
+    <!-- Самостоятельная деятельность Задание 1 -- Создать каждый компонент используя все классы и атрибуты.  -->
+
+    <!-- 
+        • .alert         --уведомления
+        • .badge         --бейджт
+        • .btn           --кнопки
+        • .card          --карточки
+        • .dropdown      --выпадающее меню
+        • .progress-bar  -- прогрес-бары
+        • .nav           --навбары
+        • data-toggle="popover"  -- всплывающяя подсказка
+        • .navbar .navbar-scroll -- навигация со скроллингом
+     -->
+</head>
+
+
+<body>
+    
+    <div class="container container-style bg-dark">
+
+        <div class="row row-style bg-light">
+
+            <div class="col col-style bg-secondary">
+
+                <div class="alert alert-dark "> 
+                    <h3 class="alert-heading">Это большоооое уведомление! Будьте внимательны!</h3>
+                    Привет всем! Это Уведомление!!! <a class="alert-link" href="http://gismeteo.ua">Посмотреть погоду в Киеве</a>
+                    <hr> 
+                    <p>Тут тоже может быть какой-то текст</p> 
+                </div> <!-- .alert -->
+
+                <p class="h3">Here some text with <span class=" badge-pill badge-info ">badge</span></p>
+
+
+                <div class="btn-group">
+                    <button class="btn btn-primary">Some button</button>
+                    <button class="btn btn-primary">2 button</button>
+                    <button class="btn btn-primary">3 button</button>
+                    <button class="btn btn-primary">4 button</button>
+                </div>
+                <hr>
+                <button class="btn btn-primary btn-block">Some button</button>
+                <hr>
+                <div class=" btn-group btn-group-toggle" data-toggle="buttons">
+                    <label for="btn_1" class="btn btn-primary active">
+                        <input type="radio" name="group1" id="btn_1" autocomplete="off">Button-1
+
+                    </label>
+
+                    <label for="btn_2" class="btn btn-primary">
+                        <input type="radio" name="group1" id="btn_2" autocomplete="off">Button-2
+                        
+                    </label>
+
+                    <label for="btn_3" class="btn btn-primary">
+                        <input type="radio" name="group1" id="btn_3" autocomplete="off" >Button-3
+                        
+                    </label>
+                </div>
+                <hr>
+                <div class="col-12 col-lg-3">
+                    <div class="card">
+                        <img src="https://images.sftcdn.net/images/t_app-cover-l,f_auto/p/befbcde0-9b36-11e6-95b9-00163ed833e7/260663710/the-test-fun-for-friends-screenshot.jpg" alt="" class="card-img-top">
+                        <div class="card-header text-center"><h5>Title</h5></div>
+                        <div class="card-body">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iure veritatis repellat dolor neque harum alias ad reprehenderit voluptas aperiam, minus quos consequuntur accusamus nobis architecto obcaecati. Ducimus reiciendis odit fuga.</div>      
+                    </div>
+                    
+                </div><!-- .col-3 -->
+                  <hr>
+                  <div class="dropdown">
+                      <button class="btn btn-primary dropdown-toggle" type="button" id="btn-drp" data-toggle="dropdown">Some dropdown-button</button>
+                      <div class="dropdown-menu" aria-labelledby="btn-drp">
+                          <div class="dropdown-header font-weight-bold">Some header</div>
+                          <div class="dropdown-divider"></div>
+                          <div class="dropdown-item">item-1</div>
+                          <div class="dropdown-item">item-2</div>
+                          <div class="dropdown-item">item-3</div>
+                      </div>
+                  </div><!-- .dropdown -->
+                  
+                  <hr>
+                  <h3>Here is some progress bar</h3>
+                  <div class="progress">
+                      <div class="progress-bar bg-dark progress-bar-style progress-bar-striped progress-bar-animated"></div>
+                  </div>
+                  <hr>
+                  <h3>Here is breadcrumb</h3>
+                  <ul class="breadcrumb">
+                      <li class="breadcrumb-item"> <a href="#">Path start</a></li>
+                      <li class="breadcrumb-item"> <a href="#">path</a></li>
+                      <li class="breadcrumb-item"> <a href="#">path</a></li>
+                      <li class="breadcrumb-item"> <a href="#">path</a></li>
+                      <li class="breadcrumb-item active">path finish</li>
+                  </ul>
+                  <hr>
+                  <p class="display-4 text-center"> Заполните форму!</p>
+                  <form >
+                      <div class="form-row">
+
+                          <div class="col-md-6 ">
+                                <input type="text" class="form-control" aria-describedby="input_1" placeholder="Введите свой логин">
+                                <span id="input_1">Тут какае-то подпись</span>
+                          </div>
+                          <div class="col-md-6">
+                                <input type="password" class="form-control" aria-describedby="input_2" placeholder="Введите свой пароль">
+                                <span id="input_2">Нужно ввести пароль. Никому его не давайте!!!</span>
+                          </div>
+                          <div class="col-12">
+                                <input type="email" class="form-control" aria-describedby="input_3" placeholder="Введите свой e-mail">
+                                <span id="input_3">Нужно ввести пароль. мы никогда не спрашиваем ваши личные данные</span>
+                          </div>
+
+                        </div>
+
+                          <div class="form-check-inline">
+                              <input type="checkbox" class="form-check-input" id="inp_1">
+                              <label for="inp_1" class="form-check-label"> Лейблочка</label>
+                              <input type="checkbox" class="form-check-input" id="inp_2">
+                              <label for="inp_2" class="form-check-label"> Лейблочка</label>
+                              <input type="checkbox" class="form-check-input" id="inp_3">
+                              <label for="inp_3" class="form-check-label"> Лейблочка</label>
+                          </div>
+                      
+                      <div class="form-row">
+                          <h3>Пробуем инпут-группу</h3>
+                          <br>
+                          <div class="input-group">
+                            
+                            <input type="text" class="form-control" aria-describedby="inp_add_1" placeholder="введите любой текст">
+                            <div class="input-group-append">
+                                    <span class="input-group-text" id="inp_add_1">TEXT</span>
+                                </div>
+
+                          </div>
+                      </div>
+                      <br>
+                      <button class="btn btn-light" type="reset">Reset</button>
+                      <hr>
+                      <button class="btn btn-light mb-2" type="submit">Submit</button>
+                     
+                  </form>
+                </div>
+                  <hr>
+                </div>
+        <div class="row bg-light">
+                <div class="col-3 text-center">
+                        <h3 >Тестировка Навбаров</h3>
+                        <ul class="nav flex-column nav-pills">
+                            <li class="nav-item ">
+                                <a href="#" class="nav-link active dropdown-toggle" data-toggle="dropdown">111</a>
+                                <div class="dropdown-menu">
+                                    <div class="dropdown-item">О компании</div>
+                                    <div class="dropdown-item">Портфолио</div>
+                                    <div class="dropdown-item">Галлерея</div>
+                                    <div class="dropdown-item">Наши достижения</div>
+                                    <div class="dropdown-item">Контакты</div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">222</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">333</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">444</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">555</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col offset-2">
+                        <button class="btn btn-primary mt-3" data-toggle="popover" data-content="This is some popover text" >Some button</button>
+                    </div>
+
+                    <hr>
+                    <span data-toggle="popover" data-content="lorhgkjhekrgkegk" data-placement="top">
+                        <button type="button" class="btn btn-primary mt-3">Other popover</button>
+                    </span>
+        </div> <!-- .row -->
+        <hr>
+        <div class="row">
+            <div class="col-12">
+                <h3 class="text-center text-white">Пробуем навбар ! &#9971</h3>
+                <nav id="myNavbar" class="navbar navbar-light bg-light navbar-style">
+                    <a href="#" class="navbar-brand">PUT the BRAND here</a>
+                    <ul class="nav nav-pills">
+                        <li class="nav-item">
+                            <a href="#aaa" class="nav-link">111</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#bbb" class="nav-link">222</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#ccc" class="nav-link">333</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div data-spy="scroll" data-target="#myNavbar" data-offset="0" class="navbar-scroll-style">
+
+                    <h3 id="aaa">Hello</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero amet similique mollitia eum reiciendis animi sapiente id in quaerat tenetur maxime distinctio quam, quos fugit tempore ducimus. Temporibus ratione explicabo inventore sit libero, quam doloremque laborum numquam quia enim quo pariatur? Vel dolor debitis, provident similique minima nam vitae rem repudiandae explicabo earum, laboriosam numquam commodi architecto incidunt quisquam suscipit nulla odit! Autem quam modi voluptatibus reiciendis doloribus, consequatur sit quia labore non porro ad soluta fuga atque, optio nostrum sunt iusto odit maxime? Eveniet nesciunt eum repudiandae nam id dolorem asperiores. Ipsum voluptate nulla facilis aut repudiandae amet perspiciatis sit maxime voluptates aspernatur architecto reiciendis natus, obcaecati debitis vitae deleniti nisi tempora! Animi illo, laboriosam ducimus ipsa quia perspiciatis maxime nam perferendis deleniti accusamus ratione ex iusto sit consequuntur accusantium, autem eum unde, quibusdam impedit itaque? Sapiente aspernatur quibusdam nisi perspiciatis iure, et optio porro nam, rerum tempore suscipit consequatur. Delectus at corrupti mollitia rem saepe iure molestiae ducimus vitae eius quo aperiam hic voluptatum, sint asperiores est nesciunt obcaecati nulla dignissimos esse amet enim nam numquam id? Perferendis consequuntur, ut, aut corrupti iure dignissimos quod odio, atque doloremque velit voluptatibus? Maxime ea alias non maiores dicta officia tempore ratione corporis odit recusandae amet sequi ipsa, voluptatum ad architecto facere quaerat pariatur ipsam natus iusto deleniti exercitationem perferendis et nesciunt? Deserunt consequatur suscipit temporibus quo adipisci consequuntur velit quae asperiores dolorem, accusantium quos vero architecto, nisi culpa. Officia minus non deserunt aut provident repellendus veritatis ad laudantium maxime eos modi nisi alias officiis iure sequi at voluptatem, facere error excepturi. Harum, nemo iusto cumque mollitia cupiditate amet necessitatibus dignissimos dicta porro? Quis, ex dicta dolores dolorum eum omnis commodi doloribus iure? Quam explicabo illum ratione optio autem asperiores, sit nihil eum voluptatum earum saepe labore ut aperiam consectetur aspernatur nobis ea, eaque vitae veniam fuga beatae quae repellendus qui! Ipsam aliquam ex reiciendis pariatur corporis veritatis iste, error similique consectetur commodi doloribus eum temporibus itaque quos ipsum esse earum ad quis. Esse aperiam illum necessitatibus earum mollitia sunt expedita delectus tempora temporibus voluptatum explicabo deleniti tempore inventore eaque doloribus unde saepe possimus, sapiente amet harum, voluptas corrupti? Nesciunt minus magnam repellendus cumque ea, provident ullam aspernatur magni id voluptas et iure deleniti mollitia sunt sint consequatur ab. Possimus libero doloremque provident, voluptate deserunt, aliquid iste reiciendis perferendis corrupti quisquam accusamus nam pariatur vitae? Dolore minus optio deleniti doloribus est tenetur aliquam assumenda, atque ipsa quos suscipit corporis distinctio. Delectus modi optio ut et repellat tempore in temporibus. Cum pariatur enim rerum odio ipsam dolorum, dolores aliquid fuga quis est quisquam, quia suscipit voluptate numquam mollitia veniam quidem incidunt consequuntur cupiditate! Voluptatum modi, commodi earum est totam quas voluptatibus architecto necessitatibus aut debitis ullam quo veritatis inventore cumque laudantium voluptas minus hic tenetur et maxime. Quasi provident doloremque dolorem aut cum. Ad in reiciendis iste pariatur modi veritatis? Nulla quisquam voluptate velit praesentium sit laborum quam quod sint quibusdam nemo? Perferendis architecto nam qui nostrum. Maiores, ullam nihil! Magni, nesciunt. Sed tempore ratione fugit reiciendis pariatur eius aliquid aperiam quo maiores, facilis nesciunt dolor debitis sint quibusdam, porro ullam esse quam optio culpa inventore totam modi quas, molestias obcaecati. Eius labore quibusdam, architecto suscipit reiciendis saepe nemo voluptas possimus. Natus velit inventore, ex dolor, accusantium minus tempore suscipit obcaecati asperiores cupiditate veniam quo numquam sit amet culpa quos officiis earum, deserunt ab fuga! Quas doloremque atque, aspernatur tenetur laborum labore minima autem voluptate doloribus quia, mollitia explicabo cupiditate rem cum ipsa recusandae nam saepe architecto provident at voluptates sunt ab! Consequatur dignissimos consectetur assumenda et maiores velit voluptatem dolores iste, repellat doloremque optio facere eos similique quae rem vero deserunt ipsam illo iusto minima illum. Ullam similique fugiat eos mollitia doloremque eaque eligendi neque reprehenderit vitae iste blanditiis dolorem expedita quisquam incidunt ab in, nulla suscipit ducimus. Tenetur consectetur dolore beatae, quis amet voluptas ab sit iusto. Doloribus magnam mollitia dolore reiciendis ipsum explicabo reprehenderit velit numquam dolor minima fuga obcaecati totam officiis, error tenetur culpa saepe optio perferendis? Ea in repellendus architecto officiis voluptatibus! In, sequi molestiae tempora natus vero aspernatur commodi corrupti! Sint dolores, cumque aliquid aut reiciendis ipsam adipisci maxime odit laborum quisquam voluptatum. Eos eius vitae amet nesciunt. Fugiat ad obcaecati quos praesentium aperiam, unde omnis vero voluptatum asperiores id error nesciunt ratione hic porro officia recusandae assumenda non, fugit nam! Rerum, a animi! Enim possimus, voluptate tempore illum molestiae voluptatem vitae autem reiciendis officia animi error praesentium ratione at! Soluta facere vitae cum perspiciatis voluptatibus cumque rem ea blanditiis, veritatis consequatur ipsum id odio. Minima omnis vero earum, molestiae rem amet sapiente temporibus beatae in harum vel cumque error optio eius nemo ipsa exercitationem iusto maiores, ullam fuga, illo velit? A, sint reprehenderit, excepturi iure distinctio saepe labore, quia neque laudantium nemo ipsum mollitia corrupti alias maxime est quos tempora vero aliquid quasi dolore quo culpa! Iste voluptatibus consequatur quasi quos excepturi mollitia facere blanditiis natus rem enim nemo magni explicabo aperiam deserunt eveniet eius autem possimus amet voluptas assumenda, tempora recusandae. Doloremque temporibus ipsam pariatur incidunt accusantium recusandae asperiores corrupti animi reprehenderit exercitationem enim esse, rem possimus quia architecto, nam commodi. Numquam, laboriosam sit quae provident vitae asperiores architecto neque amet, voluptates dolorem at maiores nihil quasi, similique mollitia maxime odit odio impedit nulla distinctio nesciunt sequi aspernatur. Sunt atque quis distinctio illo voluptatem mollitia sit suscipit facere at maiores quas explicabo qui dicta nemo vel, incidunt natus architecto quaerat deserunt non ratione animi officia eum. Commodi vel asperiores quaerat. Eaque amet voluptate ab, quam sapiente voluptates obcaecati assumenda odio nihil dolorem, eum reprehenderit autem eos delectus. Fuga ipsa, rem ex tempora excepturi, repellat quod inventore laboriosam vero fugiat repudiandae ab harum? Fugit possimus aut veritatis. Veritatis accusantium natus architecto perferendis, quo tempora sunt, odit excepturi earum omnis quaerat hic aperiam! Suscipit sit fuga tempora voluptas animi, atque exercitationem eveniet sed aperiam expedita minus aliquam ea quo, beatae modi quibusdam! Ullam sapiente cum est accusantium at molestias aspernatur, temporibus dolor distinctio sunt eaque sequi!</p>
+                    <h3 id="bbb">This is some text</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo cumque animi dolore quam. Dolor iste eos at, eius minus vitae facere blanditiis perferendis explicabo quae ab optio repudiandae facilis veniam illo inventore ratione fuga sint nisi repellat dolore! Temporibus recusandae harum voluptatibus et officiis dolores ut incidunt corporis ad hic, quam expedita fugiat dolorem quidem adipisci? Sed ab officiis soluta, molestias unde autem? Alias reprehenderit eligendi expedita natus quo, velit nesciunt pariatur, error soluta rem assumenda maxime! Cupiditate porro quam soluta nesciunt voluptas sunt dolorum expedita totam iusto, deserunt odit eum? Illo praesentium quos est ad quaerat voluptates sequi dolorum?</p>
+                    <h3 id="ccc"> More text</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid nam quas vel veritatis at excepturi assumenda quam consequatur rem tempora, fugit officia error quibusdam tempore nesciunt quia mollitia aliquam nihil modi pariatur, ipsum fuga beatae! Labore ad minus voluptatibus facere similique dolorem quas, aspernatur nisi est natus quasi nostrum cumque fugiat et molestias eos commodi nulla esse. At odio eos incidunt voluptatum reiciendis aperiam recusandae rerum necessitatibus, dolores dolore. Ex magni facilis, voluptatibus ea molestias officiis mollitia numquam suscipit at!</p>
+
+                </div>
+            </div>
+        </div>
+                  
+            
+        
+    </div>
+
+    
+    
+
+
+
+
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script src="js/main.js"></script>        
+</body>
+</html>

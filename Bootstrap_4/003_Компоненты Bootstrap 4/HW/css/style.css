@@ -1,0 +1,31 @@
+/* .container-style{
+    min-height: 500px;
+}
+
+.row-style{
+    
+    min-height: 300px;
+}
+
+.col-style{
+    
+    height: 100px;
+} */
+
+.progress-bar-style{
+    width: 25%;
+}
+
+.navbar-style{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.navbar-scroll-style{
+    position: relative;
+    height: 300px;
+    overflow: auto;
+    background-color: #fff;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+
+}

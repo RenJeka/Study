@@ -1,0 +1,15 @@
+.my-container {
+    background-color: lightcoral;
+    height: 350px;
+}
+.my-row {
+    background-color: lightgreen;
+    height: 100px;
+}
+.my-col{
+    background-color: lightseagreen;
+    height: 50px;
+}
+/* .row div{
+    background-color: lightcoral;
+} */

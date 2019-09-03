@@ -1,0 +1,19 @@
+.container-style{
+    height: 500px;
+}
+
+.row-style{
+    
+    height: 300px;
+    position: relative;
+    
+
+}
+.col-style{
+    height: 75px;
+    border: 1px solid white;
+    color: beige;
+    text-align: center;
+    line-height: 75px;
+}
+

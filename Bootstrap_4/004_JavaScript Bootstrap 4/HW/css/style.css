@@ -1,0 +1,52 @@
+.myStyle{
+    /* width: 500px; */
+    text-align: center;
+    /* background: #ccc; */
+    margin: 0 auto;
+    height: 500px;
+}
+
+
+.accordion-style{
+    height: 300px;
+}
+
+.collapse-style{
+    height: 300px;
+    
+}
+
+.myClassInvalid:invalid ~ .myFeedback{
+    /* background-color: lightcoral; */
+    color: crimson;
+    border-radius: 10px;
+    margin-left: 10px;
+    font-size: 1em;
+}
+
+.myClassInvalid:invalid {
+    background-color: lightcoral;
+    color: brown;
+    border-radius: 10px;
+}
+
+/* .carousel-height{
+    height: 600px;
+} */
+.carousel-height  img{
+    height: 100%;
+}
+
+
+
+
+.mycolClass:nth-child(odd){
+    height: 300px;
+    background-color: lightblue;
+    /* border: 1px solid red */
+}
+
+.mycolClass:nth-child(even){
+    height: 300px;
+    background-color: lightgreen;
+}

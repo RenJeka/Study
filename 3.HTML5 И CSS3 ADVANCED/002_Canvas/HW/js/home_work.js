@@ -13,10 +13,10 @@ window.addEventListener("load", function () {
     myGradient.addColorStop(0.75, "white");
     myGradient.addColorStop(0.75, "red");
     ctx.fillStyle = myGradient;
-    ctx.shadowColor = "black";
-    ctx.shadowOffsetX = 5;
-    ctx.shadowOffsetY = 5;
-    ctx.shadowBlur = 3;
+    // ctx.shadowColor = "black";
+    // ctx.shadowOffsetX = 5;
+    // ctx.shadowOffsetY = 5;
+    // ctx.shadowBlur = 3;
     ctx.lineWidth = 0.01;
 
     ctx.beginPath();
@@ -39,15 +39,31 @@ window.addEventListener("load", function () {
 
     }
 
-    var shift1X = 120;
-    var shift1Y = 75;
+    var shift1X = 130;
+    var shift1Y = 90;
     var ctx2 = myCanvas.getContext("2d");
     // ctx2.moveTo(startX +shift1X,startY+shift1Y);
 
     currentX =startX +shift1X;
     currentY = startY+shift1Y;
     ctx2.moveTo(currentX,currentY);
-    shiftLine(50,50);
+    shiftLine(30,0);
+    shiftLine(-3,-10);
+    shiftLine(15,-20);
+    shiftLine(-5,-3);
+    shiftLine(5,-15);
+    shiftLine(-15,2);
+    shiftLine(-2,-7);
+    shiftLine(-15,20);
+    shiftLine(7,-35);
+    shiftLine(-8,4);
+    shiftLine(-10,-20);
+    shiftLine(0,120);
+    shiftLine(4,0);
+    // shiftLine(0,-35);
+    ctx2.closePath();
+    // ctx2.fillStyle="red"
+    ctx2.fill();
 
 
     ctx2.lineWidth = 3;

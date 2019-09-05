@@ -13,6 +13,9 @@ window.addEventListener("load", function () {
     myGradient.addColorStop(0.75, "white");
     myGradient.addColorStop(0.75, "red");
     ctx.fillStyle = myGradient;
+
+    // SHADOW
+
     // ctx.shadowColor = "black";
     // ctx.shadowOffsetX = 5;
     // ctx.shadowOffsetY = 5;
@@ -43,9 +46,10 @@ window.addEventListener("load", function () {
     var shift1Y = 90;
     var ctx2 = myCanvas.getContext("2d");
     // ctx2.moveTo(startX +shift1X,startY+shift1Y);
-
+    ctx2.save();
     currentX =startX +shift1X;
     currentY = startY+shift1Y;
+    ctx2.beginPath();
     ctx2.moveTo(currentX,currentY);
     shiftLine(30,0);
     shiftLine(-3,-10);
@@ -62,11 +66,17 @@ window.addEventListener("load", function () {
     shiftLine(4,0);
     // shiftLine(0,-35);
     ctx2.closePath();
-    // ctx2.fillStyle="red"
+    
+    ctx2.fillStyle="red"
     ctx2.fill();
-
-
-    ctx2.lineWidth = 3;
+    
+    // TRANSFORMATION
+    // ctx2.transform(1,33,33,1,0,0)
+    // ctx2.rotate(90*3.14/180);
+    // ctx2.scale(50,50);
+    // ctx2.translate(100, 100);
+    
+    // ctx2.lineWidth = 0.5;
     console.dir(ctx2);
     ctx2.stroke();
 

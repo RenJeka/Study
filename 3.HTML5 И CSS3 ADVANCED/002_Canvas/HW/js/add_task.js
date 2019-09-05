@@ -7,22 +7,39 @@ window.addEventListener("load", function () {
     myContext.save();
     myContext.translate(200, 200);
 
+    // for (let i = 0; i < 10; i++) {
+    //     var  shiftX = i * 10 + 10;
+    //     myContext.moveTo(shiftX,0);
+    //     myContext.lineTo(shiftX, 110);
+    //     myContext.stroke();
+        
+    // }
+    // for (let i = 0; i < 10; i++) {
+    //     var  shiftY = i * 10 + 10;
+    //     myContext.moveTo(0,shiftY);
+    //     myContext.lineTo(110, shiftY);
+    //     myContext.stroke();
+
+    // }
+
     for (let i = 0; i < 10; i++) {
         var  shiftX = i * 10 + 10;
+        var  shiftY = i * 10 + 10;
+        // myContext.beginPath();
         myContext.moveTo(shiftX,0);
         myContext.lineTo(shiftX, 110);
+        // myContext.closePath();
         myContext.stroke();
-        
-    }
-    for (let i = 0; i < 10; i++) {
-        var  shiftY = i * 10 + 10;
+
+        // myContext.beginPath();
         myContext.moveTo(0,shiftY);
         myContext.lineTo(110, shiftY);
+        // myContext.closePath();
         myContext.stroke();
 
     }
 
-    
+
     myContext.restore();
 
 

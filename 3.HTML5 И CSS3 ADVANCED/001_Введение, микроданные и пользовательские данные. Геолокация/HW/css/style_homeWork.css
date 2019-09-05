@@ -96,7 +96,8 @@ nav{
     float: left;
     width: 15%;
     margin: 15px;
-    position: relative;
+    position: sticky;
+    top: 10px;
     border-radius: 10px;
 }
 

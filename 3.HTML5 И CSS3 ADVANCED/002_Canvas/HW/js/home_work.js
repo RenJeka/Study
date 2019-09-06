@@ -57,11 +57,14 @@ window.addEventListener("load", function () {
         ctx2.lineTo(currentX, currentY);
 
     }
+
+    var ctx2 = myCanvas.getContext("2d");
+    // ctx2.rotate(.2);
+    ctx2.scale(1, 1);
     // ctx.translate(100, 100);
     // ctx.rotate(.3);
     var shift1X = 130;
     var shift1Y = 90;
-    var ctx2 = myCanvas.getContext("2d");
     // ctx2.moveTo(startX +shift1X,startY+shift1Y);
     ctx2.save();
     currentX =startX +shift1X;

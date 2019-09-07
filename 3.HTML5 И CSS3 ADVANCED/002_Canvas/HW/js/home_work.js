@@ -11,7 +11,6 @@ window.addEventListener("load", function () {
 
     var myGradient = ctx.createLinearGradient(startX,startY,startX + 250,startY);
 
-
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
 
@@ -60,15 +59,16 @@ window.addEventListener("load", function () {
 
     var ctx2 = myCanvas.getContext("2d");
     // ctx2.rotate(.2);
-    ctx2.scale(1, 1);
-    // ctx.translate(100, 100);
-    // ctx.rotate(.3);
+    // ctx2.scale(1, 1);
+    // ctx2.translate(100, 100);
     var shift1X = 130;
     var shift1Y = 90;
     // ctx2.moveTo(startX +shift1X,startY+shift1Y);
     ctx2.save();
     currentX =startX +shift1X;
     currentY = startY+shift1Y;
+
+
     ctx2.beginPath();
     ctx2.moveTo(currentX,currentY);
     shiftLine(30,0);
@@ -86,6 +86,9 @@ window.addEventListener("load", function () {
     shiftLine(4,0);
     // shiftLine(0,-35);
     ctx2.closePath();
+
+
+
     
     ctx2.fillStyle="red";
     ctx2.fill();

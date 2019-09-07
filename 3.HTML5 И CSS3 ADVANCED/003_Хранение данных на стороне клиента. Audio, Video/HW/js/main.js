@@ -4,14 +4,19 @@ window.addEventListener("load", function () {
     }
 
     var 
-        inp1    = $("number_1"),
-        inp2    = $("number_2"),
+        // inp1    = $("number_1"),
+        // inp2    = $("number_2"),
         btn1    = $("count_1"),
         btn2    = $("count_2"),
         btn3    = $("count_3"),
         btn4    = $("count_4"),
         output  = $("output");
 
+        // TODO . Исправить ошибку.
+        //  При попытке создать новый воркер через конструктор — выдает ошибку:
+        // ----------------ОШИБКА-----------------------
+        // Failed to construct 'Worker': Script at 'file:....HW/worker1.js' cannot be accessed from origin 'null'.
+        // ---------------------------------------------
         var worker1 = new Worker("worker1.js");
         var worker2 = new Worker ("worker2.js");
         var worker3 = new Worker ("worker3.js");
@@ -20,8 +25,8 @@ window.addEventListener("load", function () {
         btn1.addEventListener("click", function () {
             worker1.addEventListener("message", function (e) {
                 output.innerHTML += e.data + "</br>";
-                console.log(111)
-            })
+                console.log(111);
+            });
             worker1.postMessage("some data");
         });
 

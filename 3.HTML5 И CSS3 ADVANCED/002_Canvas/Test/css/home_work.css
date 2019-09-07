@@ -6,4 +6,5 @@ body{
 canvas{
     background-color: lightgray;
     display: block;
+    /* margin: 50px; */
 }

@@ -59,7 +59,7 @@ window.addEventListener("load", function () {
 
     var ctx2 = myCanvas.getContext("2d");
     // ctx2.rotate(.2);
-    // ctx2.scale(1, 1);
+    // ctx2.scale(-1, 1);
     // ctx2.translate(100, 100);
     var shift1X = 130;
     var shift1Y = 90;
@@ -68,6 +68,7 @@ window.addEventListener("load", function () {
     currentX =startX +shift1X;
     currentY = startY+shift1Y;
 
+    // ctx2.transform(0.1,0,0,1,0,0);
 
     ctx2.beginPath();
     ctx2.moveTo(currentX,currentY);

@@ -1,7 +1,7 @@
 window.addEventListener("load", function () {
     var myCanvas = this.document.querySelector("canvas"),
         ctx2 = myCanvas.getContext("2d");
-        
+
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
 
@@ -12,19 +12,21 @@ window.addEventListener("load", function () {
         currentY ,
         skewY = 0,
         skewX = 0,
-        scaleX,
+        scaleX = 0,
         //scaleY;
-        stepSkewing = 0.01,
-
-    // Флаг для переворачивания (масштабирования)
-        scaleFlag = true,
-    // Флаг для трансформации
-        transformFlag = false;
-
+        stepSkewing = 0.01;
+        stepScaling = 0.02;
     // При запуске Трансформации №1 — лучше выставить границы 0.2 и -0.2 
     // При запуске Трансформации №1 — лучше выставить границы 1 и -1 (Так красивее =) )
-    var topLimit = 0.2;
-    var bottomLimit = -0.2;
+    var skewTopLimit     =  0.2,
+        skewBottomLimit  = -0.2,
+        scaleTopLimit    =  1.3,
+        scaleBottomLimit = -1.3;
+
+    // Флаг для переворачивания (масштабирования)
+    var scaleFlag = false,
+    // Флаг для трансформации
+        transformFlag = false;
 
     // Функция для облегчения рисования. Задаем в параметрах сдвиг и ф-я сама рисует линию.
     function shiftLine(shiftX, shiftY) {
@@ -40,19 +42,19 @@ window.addEventListener("load", function () {
         currentX = 0;
         currentY = 0;
         skewY += 0;
-        scaleFlag = !scaleFlag;
+        // scaleFlag = !scaleFlag;
         // skewX += 0.01;
         
         // ---------ПРОВЕРКА ДЛЯ ТРАНСФОРМАЦИИ-------------
         // Проверка для того, чтобы остановить трансформацию на определенной границе и запустить её в обратном порядке.
         // Тут идет привязка к флагу — если трансформация дошла до границы — поменять флаг на противоположный.
-        if (skewX >= topLimit) {
+        if (skewX >= skewTopLimit) {
             transformFlag = true;
-        }else if (skewX < bottomLimit) {
+        }else if (skewX < skewBottomLimit) {
             transformFlag = false;
         }
 
-        // Увеличиваем 
+        // Увеличиваем или уменьшаем искажение на заданный шаг (в зависимости от флага)
         if (transformFlag == false) {
             skewX += stepSkewing;
         }else if(transformFlag == true){
@@ -60,24 +62,39 @@ window.addEventListener("load", function () {
         }
 
         // ---------ПРОВЕРКА ДЛЯ МАСШТАБИРОВАНИЯ---------
-        if (scaleFlag == true) {
-            scaleX = 1;
-        }else{
-            scaleX = -1;
+        // if (scaleFlag == true) {
+        //     scaleX = 1;
+        // }else{
+        //     scaleX = -1;
+        // }
+
+        // Такая-же проверка как и для трансформации. Также используем флаг
+        if (scaleX >= scaleTopLimit) {
+            scaleFlag = true;
+        }else if (scaleX < scaleBottomLimit) {
+            scaleFlag = false;
         }
+
+        if (scaleFlag == false) {
+            scaleX +=stepScaling;
+        }else if (scaleFlag == true) {
+            scaleX -=stepScaling;
+        }
+
+
 
         // console.log(skewY);
         console.log(skewX);
 
         // Трансформация №1
-        ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
+        // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
         console.log("scaleX = " + scaleX);
         
         ctx2.save();
         ctx2.translate(500,200);
 
         // Поворот изображения (отражение) путем масштабирования
-        // ctx2.scale(scaleX,1);
+        ctx2.scale(scaleX,1);
 
         // Трансформация №2
         // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );

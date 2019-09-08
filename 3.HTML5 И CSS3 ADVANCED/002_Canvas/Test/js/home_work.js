@@ -1,10 +1,10 @@
 window.addEventListener("load", function () {
     var myCanvas        = document.querySelector("canvas"),
         ctx2            = myCanvas.getContext("2d"),
-        btnScale       = document.getElementById("btnScale"),
+        btnScale        = document.getElementById("btnScale"),
         btnTransform1   = document.getElementById("btnTransform1"),
         btnTransform2   = document.getElementById("btnTransform2"),
-        btnPause         = document.getElementById("btnPause"),
+        btnPause        = document.getElementById("btnPause"),
         btnReset        = document.getElementById("btnReset"),
         intervalHandlerScale, intervalHandlerTrf1, intervalHandlerTrf2;
 
@@ -36,11 +36,10 @@ window.addEventListener("load", function () {
     // Флаг для трансформации
         transformFlag = false,
         btnPauseFlag = false,
+        btnResetFlag = false,
         btnScaleFlag = false,
         btnTransform1Flag = false,
         btnTransform2Flag = false;
-
-
 
     // Функция для облегчения рисования. Задаем в параметрах сдвиг и ф-я сама рисует линию.
     function shiftLine(shiftX, shiftY) {
@@ -68,7 +67,7 @@ window.addEventListener("load", function () {
     }
 
     function scaleImage() {
-                // ---------ПРОВЕРКА ДЛЯ МАСШТАБИРОВАНИЯ---------
+        // ---------ПРОВЕРКА ДЛЯ МАСШТАБИРОВАНИЯ---------
         // if (scaleFlag == true) {
         //     scaleX = 1;
         // }else{
@@ -89,9 +88,11 @@ window.addEventListener("load", function () {
         }
     }
 
+    
+    // Функкция по отрисовке самого изображения
     function drawImage() {
-        // -------------ОТРИСОВКА-----------------
-        // Отрисовка самого изображения
+        
+        ctx2.translate(0,0);
         ctx2.save();
         ctx2.translate(500,200);
 
@@ -121,7 +122,7 @@ window.addEventListener("load", function () {
         shiftLine(0,120);
         shiftLine(4,0);
         ctx2.closePath();
-        ctx2.fillStyle="red";
+        ctx2.fillStyle = "red";
         ctx2.fill();
 
         ctx2.stroke();
@@ -134,7 +135,7 @@ window.addEventListener("load", function () {
         ctx2.clearRect(0,0,ctx2.canvas.width, ctx2.canvas.height);
         currentX = 0;
         currentY = 0;
-        skewY += stepSkewingY;
+        // skewY += stepSkewingY;
         
         transformImage();
         scaleImage();
@@ -142,22 +143,28 @@ window.addEventListener("load", function () {
         //------------ЗАПУСК АНИМАЦИЙ--------------------
         // console.log(skewY);
         console.log("%c skewX = " + skewX , "color: red;");
+        // console.log("%c skewY = " + skewY , "color: brown;");
 
+
+        // TODO Не понимаю, почему не ресетиться Трансформация №1 (Нужно, чтобы при нажатии кноки "Reset"—анимация становилась в изначальное положение, обнулялась)
         // Трансформация №1
-        if (btnTransform1Flag == true) {
+        if (btnTransform1Flag == true && btnResetFlag == false ) {
             ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
         }
         
-        console.log("%c scaleX = " + scaleX , "color: green;");
+        // console.log("%c scaleX = " + scaleX , "color: green;");
         
         drawImage();
     }
 
     function reset() {
-        clearInterval(intervalHandler);
-        skewY = 0;
-        skewX = 0;
+        clearInterval(intervalHandlerScale);
+        clearInterval(intervalHandlerTrf1);
+        clearInterval(intervalHandlerTrf2);
+        // skewY = 0;
+        // skewX = 0;
         scaleX = 0;
+        // stepSkewingX = 0.01;
         btnPauseFlag      = false;
         btnScaleFlag      = false;
         btnTransform1Flag = false;
@@ -171,7 +178,8 @@ window.addEventListener("load", function () {
 // ----------------КНОПКИ УПРАВЛЕНИЯ-------------------------
     btnScale.addEventListener("click", function () {
         if (btnScaleFlag == false) {
-            intervalHandler =  setInterval(main, stepInterval);
+            reset();
+            intervalHandlerScale =  setInterval(main, stepInterval);
             btnScaleFlag = true;
             
         }else{
@@ -184,9 +192,10 @@ window.addEventListener("load", function () {
     });
 
     btnTransform1.addEventListener("click", function () {
-        if (btnTransform2Flag == false) {
-            intervalHandler =  setInterval(main, stepInterval);
-            btnTransform2Flag = true;
+        if (btnTransform1Flag == false) {
+            reset();
+            intervalHandlerTrf1 =  setInterval(main, stepInterval);
+            btnTransform1Flag = true;
             
         }else{
             reset();
@@ -194,9 +203,10 @@ window.addEventListener("load", function () {
     });
 
     btnTransform2.addEventListener("click", function () {
-        if (btnTransform1Flag == false) {
-            intervalHandler =  setInterval(main, stepInterval);
-            btnTransform1Flag = true;
+        if (btnTransform2Flag == false) {
+            reset();
+            intervalHandlerTrf2 =  setInterval(main, stepInterval);
+            btnTransform2Flag = true;
             
         }else{
             reset();
@@ -207,19 +217,31 @@ window.addEventListener("load", function () {
     btnPause.addEventListener("click", function () {
         
         if (btnPauseFlag == false) {
-            clearInterval(intervalHandler);
+            clearInterval(intervalHandlerScale);
+            clearInterval(intervalHandlerTrf1);
+            clearInterval(intervalHandlerTrf2);
             btnPauseFlag = true;
+            console.dir(stepInterval);
 
         }else if (btnPauseFlag == true) {
-            intervalHandler =  setInterval(main, stepInterval);
+            intervalHandlerScale =  setInterval(main, stepInterval);
+            intervalHandlerTrf1  =  setInterval(main, stepInterval);
+            intervalHandlerTrf2  =  setInterval(main, stepInterval);
             btnPauseFlag = false;
+            console.dir(stepInterval);
         }
-        
+        console.log(btnPauseFlag);
     });
 
-    btnReset.addEventListener("click", reset );
-
-
+    btnReset.addEventListener("click", function () {
+        
+        if (btnResetFlag == false) {
+            btnResetFlag = true;
+            reset();
+            btnResetFlag = false;
+        }
+        
+    } );
 
 });
     

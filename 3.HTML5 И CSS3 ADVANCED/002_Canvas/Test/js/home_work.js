@@ -1,6 +1,12 @@
 window.addEventListener("load", function () {
-    var myCanvas = this.document.querySelector("canvas"),
-        ctx2 = myCanvas.getContext("2d");
+    var myCanvas        = document.querySelector("canvas"),
+        ctx2            = myCanvas.getContext("2d"),
+        btnRotate       = document.getElementById("btnRotate"),
+        btnTransform1   = document.getElementById("btnTransform1"),
+        btnTransform2   = document.getElementById("btnTransform2"),
+        btnStop         = document.getElementById("btnStop"),
+        btnReset        = document.getElementById("btnReset"),
+        intervalHandler;
 
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
@@ -14,10 +20,11 @@ window.addEventListener("load", function () {
         skewX = 0,
         scaleX = 0,
         //scaleY;
-        stepSkewing = 0.01;
+        stepSkewingX = 0.01;
+        stepSkewingY = 0.01;
         stepScaling = 0.02;
-    // При запуске Трансформации №1 — лучше выставить границы 0.2 и -0.2 
-    // При запуске Трансформации №1 — лучше выставить границы 1 и -1 (Так красивее =) )
+    // При запуске Трансформации №1 — лучше выставить границы "skewTop(Bottom)Limit" 0.2 и -0.2 
+    // При запуске Трансформации №1 — лучше выставить границы "skewTop(Bottom)Limit" 1 и -1 (Так красивее =) )
     var skewTopLimit     =  0.2,
         skewBottomLimit  = -0.2,
         scaleTopLimit    =  1.3,
@@ -26,7 +33,9 @@ window.addEventListener("load", function () {
     // Флаг для переворачивания (масштабирования)
     var scaleFlag = false,
     // Флаг для трансформации
-        transformFlag = false;
+        transformFlag = false,
+        pauseFlag = false;
+
 
     // Функция для облегчения рисования. Задаем в параметрах сдвиг и ф-я сама рисует линию.
     function shiftLine(shiftX, shiftY) {
@@ -35,16 +44,7 @@ window.addEventListener("load", function () {
         ctx2.lineTo(currentX, currentY);
     }
 
-    // Основная (интервальная)  функция для анимации
-    setInterval(function () {
-
-        ctx2.clearRect(0,0,ctx2.canvas.width, ctx2.canvas.height);
-        currentX = 0;
-        currentY = 0;
-        skewY += 0;
-        // scaleFlag = !scaleFlag;
-        // skewX += 0.01;
-        
+    function transformImage() {
         // ---------ПРОВЕРКА ДЛЯ ТРАНСФОРМАЦИИ-------------
         // Проверка для того, чтобы остановить трансформацию на определенной границе и запустить её в обратном порядке.
         // Тут идет привязка к флагу — если трансформация дошла до границы — поменять флаг на противоположный.
@@ -56,12 +56,14 @@ window.addEventListener("load", function () {
 
         // Увеличиваем или уменьшаем искажение на заданный шаг (в зависимости от флага)
         if (transformFlag == false) {
-            skewX += stepSkewing;
+            skewX += stepSkewingX;
         }else if(transformFlag == true){
-            skewX -= stepSkewing;
+            skewX -= stepSkewingX;
         }
+    }
 
-        // ---------ПРОВЕРКА ДЛЯ МАСШТАБИРОВАНИЯ---------
+    function scaleImage() {
+                // ---------ПРОВЕРКА ДЛЯ МАСШТАБИРОВАНИЯ---------
         // if (scaleFlag == true) {
         //     scaleX = 1;
         // }else{
@@ -80,16 +82,11 @@ window.addEventListener("load", function () {
         }else if (scaleFlag == true) {
             scaleX -=stepScaling;
         }
+    }
 
-
-
-        // console.log(skewY);
-        console.log(skewX);
-
-        // Трансформация №1
-        // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
-        console.log("scaleX = " + scaleX);
-        
+    function drawImage() {
+        // -------------ОТРИСОВКА-----------------
+        // Отрисовка самого изображения
         ctx2.save();
         ctx2.translate(500,200);
 
@@ -99,8 +96,6 @@ window.addEventListener("load", function () {
         // Трансформация №2
         // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
 
-        // -------------ОТРИСОВКА-----------------
-        // Отрисовка самого изображения
         ctx2.beginPath();
         ctx2.moveTo(currentX,currentY);
         shiftLine(30,0);
@@ -122,7 +117,55 @@ window.addEventListener("load", function () {
 
         ctx2.stroke();
         ctx2.restore();
-    }, 50);
+    }
+
+    // Основная (интервальная)  функция для анимации
+    function main() {
+
+        ctx2.clearRect(0,0,ctx2.canvas.width, ctx2.canvas.height);
+        currentX = 0;
+        currentY = 0;
+        skewY += stepSkewingY;
+        
+        transformImage();
+        scaleImage();
+
+        //------------ЗАПУСК АНИМАЦИЙ--------------------
+        // console.log(skewY);
+        console.log("%c skewX = " + skewX , "color: red;");
+
+        // Трансформация №1
+        // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
+        console.log("%c scaleX = " + scaleX , "color: green;");
+        
+        drawImage();
+    }
+
+//=================ЗАПУСК ПРОГРАММЫ=======================================
+    intervalHandler =  setInterval(main, 50);
+
+
+    btnStop.addEventListener("click", function () {
+        
+        if (pauseFlag == false) {
+            clearInterval(intervalHandler);
+            pauseFlag = true;
+
+        }else if (pauseFlag == true) {
+            intervalHandler =  setInterval(main, 50);
+            pauseFlag = false;
+        }
+        
+    });
+
+    btnReset.addEventListener("click", function () {
+        clearInterval(intervalHandler);
+        intervalHandler =  setInterval(main, 50);
+        skewY = 0;
+        skewX = 0;
+        scaleX = 0;
+        pauseFlag = false;
+    });
 
 });
     

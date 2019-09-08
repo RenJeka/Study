@@ -1,12 +1,12 @@
 window.addEventListener("load", function () {
     var myCanvas        = document.querySelector("canvas"),
         ctx2            = myCanvas.getContext("2d"),
-        btnRotate       = document.getElementById("btnRotate"),
+        btnScale       = document.getElementById("btnScale"),
         btnTransform1   = document.getElementById("btnTransform1"),
         btnTransform2   = document.getElementById("btnTransform2"),
-        btnStop         = document.getElementById("btnStop"),
+        btnPause         = document.getElementById("btnPause"),
         btnReset        = document.getElementById("btnReset"),
-        intervalHandler;
+        intervalHandlerScale, intervalHandlerTrf1, intervalHandlerTrf2;
 
     myCanvas.width = window.innerWidth;
     myCanvas.height = window.innerHeight;
@@ -21,8 +21,9 @@ window.addEventListener("load", function () {
         scaleX = 0,
         //scaleY;
         stepSkewingX = 0.01;
-        stepSkewingY = 0.01;
-        stepScaling = 0.02;
+        stepSkewingY = 0;
+        stepScaling  = 0.02;
+        stepInterval = 50;
     // При запуске Трансформации №1 — лучше выставить границы "skewTop(Bottom)Limit" 0.2 и -0.2 
     // При запуске Трансформации №1 — лучше выставить границы "skewTop(Bottom)Limit" 1 и -1 (Так красивее =) )
     var skewTopLimit     =  0.2,
@@ -34,7 +35,11 @@ window.addEventListener("load", function () {
     var scaleFlag = false,
     // Флаг для трансформации
         transformFlag = false,
-        pauseFlag = false;
+        btnPauseFlag = false,
+        btnScaleFlag = false,
+        btnTransform1Flag = false,
+        btnTransform2Flag = false;
+
 
 
     // Функция для облегчения рисования. Задаем в параметрах сдвиг и ф-я сама рисует линию.
@@ -91,10 +96,14 @@ window.addEventListener("load", function () {
         ctx2.translate(500,200);
 
         // Поворот изображения (отражение) путем масштабирования
-        ctx2.scale(scaleX,1);
-
+        if (btnScaleFlag == true) {
+            ctx2.scale(scaleX,1);
+        }
+        
         // Трансформация №2
-        // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
+        if (btnTransform2Flag == true) {
+            ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
+        }
 
         ctx2.beginPath();
         ctx2.moveTo(currentX,currentY);
@@ -135,37 +144,82 @@ window.addEventListener("load", function () {
         console.log("%c skewX = " + skewX , "color: red;");
 
         // Трансформация №1
-        // ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
+        if (btnTransform1Flag == true) {
+            ctx2.transform( 1 , skewY , skewX , 1 , 0 , 0 );
+        }
+        
         console.log("%c scaleX = " + scaleX , "color: green;");
         
         drawImage();
     }
 
-//=================ЗАПУСК ПРОГРАММЫ=======================================
-    intervalHandler =  setInterval(main, 50);
+    function reset() {
+        clearInterval(intervalHandler);
+        skewY = 0;
+        skewX = 0;
+        scaleX = 0;
+        btnPauseFlag      = false;
+        btnScaleFlag      = false;
+        btnTransform1Flag = false;
+        btnTransform2Flag = false;
+
+        main();
+
+    }
 
 
-    btnStop.addEventListener("click", function () {
+// ----------------КНОПКИ УПРАВЛЕНИЯ-------------------------
+    btnScale.addEventListener("click", function () {
+        if (btnScaleFlag == false) {
+            intervalHandler =  setInterval(main, stepInterval);
+            btnScaleFlag = true;
+            
+        }else{
+            reset();
+            // btnScaleFlag = false;
+        }
+
+
+
+    });
+
+    btnTransform1.addEventListener("click", function () {
+        if (btnTransform2Flag == false) {
+            intervalHandler =  setInterval(main, stepInterval);
+            btnTransform2Flag = true;
+            
+        }else{
+            reset();
+        }
+    });
+
+    btnTransform2.addEventListener("click", function () {
+        if (btnTransform1Flag == false) {
+            intervalHandler =  setInterval(main, stepInterval);
+            btnTransform1Flag = true;
+            
+        }else{
+            reset();
+        }
+    });
+
+
+    btnPause.addEventListener("click", function () {
         
-        if (pauseFlag == false) {
+        if (btnPauseFlag == false) {
             clearInterval(intervalHandler);
-            pauseFlag = true;
+            btnPauseFlag = true;
 
-        }else if (pauseFlag == true) {
-            intervalHandler =  setInterval(main, 50);
-            pauseFlag = false;
+        }else if (btnPauseFlag == true) {
+            intervalHandler =  setInterval(main, stepInterval);
+            btnPauseFlag = false;
         }
         
     });
 
-    btnReset.addEventListener("click", function () {
-        clearInterval(intervalHandler);
-        intervalHandler =  setInterval(main, 50);
-        skewY = 0;
-        skewX = 0;
-        scaleX = 0;
-        pauseFlag = false;
-    });
+    btnReset.addEventListener("click", reset );
+
+
 
 });
     

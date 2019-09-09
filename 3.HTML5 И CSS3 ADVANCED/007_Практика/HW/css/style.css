@@ -1,0 +1,129 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: arial,  sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 300px;
+  height: 60px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border: none;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(46, 106, 184, 0.5))), url("../img/bg.png");
+  background-image: linear-gradient(rgba(46, 106, 184, 0.5) rgba(0, 0, 0, 0.5)), url("../img/bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 700px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  padding-top: 20px;
+  text-transform: uppercase;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.main-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 150px;
+}
+
+.main-top h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 24px;
+  letter-spacing: 5px;
+  line-height: 2;
+}
+
+.main-top h1 span {
+  display: block;
+  font-size: 30px;
+}
+
+.main-top button.btn-top {
+  background-color: #fff;
+}
+
+.main-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step {
+  width: 250px;
+}
+
+.step_img {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.btn-bottom {
+  background-color: #2d20e4;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  margin-top: 10px;
+  background-color: #2d20e4;
+  padding: 85px 0;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

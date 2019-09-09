@@ -45,13 +45,14 @@ html, body{
 }
 
 .nav-item-block{
-	width: 50px;
+
+	width: 40%;
 	height: 100px;
 	background-color: lightsalmon;
 	margin: 10px;
+	/* box-sizing:initial; */
 }
 
-.align-bottom{s
-	align-self: ;
+.align-bottom{
 	width: 70px;
 }

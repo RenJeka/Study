@@ -1,0 +1,39 @@
+.container{
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.f-item{
+	width: 200px;
+	height: 100px;
+	margin: 5px;
+	text-align: center;
+	color: white;
+}
+
+.color1{
+	background-color: green;
+
+}
+.color2{
+	background-color: blue;
+
+}
+.color3{
+	background-color: aqua;
+
+}
+.color4{
+	background-color: brown;
+
+}
+.color5{
+	background-color: black;
+
+}
+.color6{
+	background-color: violet;
+
+}

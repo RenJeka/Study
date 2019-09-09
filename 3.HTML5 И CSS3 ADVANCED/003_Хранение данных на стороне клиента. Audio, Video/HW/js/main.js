@@ -17,10 +17,10 @@ window.addEventListener("load", function () {
         // ----------------ОШИБКА-----------------------
         // Failed to construct 'Worker': Script at 'file:....HW/worker1.js' cannot be accessed from origin 'null'.
         // ---------------------------------------------
-        var worker1 = new Worker("worker1.js");
-        var worker2 = new Worker ("worker2.js");
-        var worker3 = new Worker ("worker3.js");
-        var worker4 = new Worker ("worker4.js");
+        var worker1 = new Worker("js/worker1.js");
+        var worker2 = new Worker ("js/worker2.js");
+        var worker3 = new Worker ("js/worker3.js");
+        var worker4 = new Worker ("js/worker4.js");
 
         btn1.addEventListener("click", function () {
             worker1.addEventListener("message", function (e) {

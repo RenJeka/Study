@@ -1,0 +1,101 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body{
+    font-family: Arial, sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.btn{
+    width: 300px;
+    height: 60px;
+    cursor: pointer;
+    border: none;
+    text-transform: uppercase;
+    font-size: 20px;
+    margin-top: 25px;
+}
+
+header{
+    background-image: linear-gradient(rgba(58, 113, 175, 0.5), rgba(58, 113, 175, 0.5)), url('img/bg.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 700px;
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+    color: #fff;
+    text-transform: uppercase;
+    img{
+        margin-right: 10px;
+    }
+}
+
+
+.main-top{
+    display: flex;
+    justify-content: center;
+    // align-items: center;
+    flex-direction: column;
+    padding-top: 150px;
+    h1{
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        font-size: 24px;
+        line-height: 2;
+        letter-spacing: 5px;
+        span{
+            display: block;
+            font-size: 30px;
+        }
+    }
+    //.main-top h1 end
+    button.btn-top{
+        background-color: #fff;
+        align-self: center;
+    }
+}
+
+// ------ HEADER END
+
+.main-steps{
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+.step{
+    width: 250px;
+    &_img{
+        height: 100px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+    }
+}
+
+.btn_bottom{
+    background: rgb(76, 58, 236);
+    color: #fff;
+    display: block;
+    margin: 0 auto;
+}
+
+footer{
+    background: rgb(76, 58, 236);
+    padding: 85px 0;
+    text-align: center;
+}

@@ -1,0 +1,31 @@
+@charset "UTF-8";
+div {
+  width: 200px;
+  height: 130px;
+  border: 3.33333px solid black;
+  float: left;
+  margin-left: 20px;
+  margin-top: 25px;
+}
+
+/*Для прохождения по списку значений, а не просто чисел, можно использовать директиву @each*/
+.car-ferrary {
+  background-image: url("../010_SCSS_each/img/ferrary.jpg");
+  background-size: 100% 100%;
+}
+
+.car-bugatti {
+  background-image: url("../010_SCSS_each/img/bugatti.jpg");
+  background-size: 100% 100%;
+}
+
+.car-lamborghini {
+  background-image: url("../010_SCSS_each/img/lamborghini.jpg");
+  background-size: 100% 100%;
+}
+
+.car-maserati {
+  background-image: url("../010_SCSS_each/img/maserati.jpg");
+  background-size: 100% 100%;
+}
+/*# sourceMappingURL=main.css.map */

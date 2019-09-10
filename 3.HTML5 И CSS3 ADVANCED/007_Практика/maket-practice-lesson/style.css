@@ -1,0 +1,129 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.btn {
+  width: 300px;
+  height: 60px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(58, 113, 175, 0.5)), to(rgba(58, 113, 175, 0.5))), url("img/bg.png");
+  background-image: linear-gradient(rgba(58, 113, 175, 0.5), rgba(58, 113, 175, 0.5)), url("img/bg.png");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 700px;
+}
+
+.logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 20px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.logo img {
+  margin-right: 10px;
+}
+
+.main-top {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 150px;
+}
+
+.main-top h1 {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 2;
+  letter-spacing: 5px;
+}
+
+.main-top h1 span {
+  display: block;
+  font-size: 30px;
+}
+
+.main-top button.btn-top {
+  background-color: #fff;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.main-steps {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.step {
+  width: 250px;
+}
+
+.step_img {
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.btn_bottom {
+  background: #4c3aec;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+}
+
+footer {
+  background: #4c3aec;
+  padding: 85px 0;
+  text-align: center;
+}
+/*# sourceMappingURL=style.css.map */

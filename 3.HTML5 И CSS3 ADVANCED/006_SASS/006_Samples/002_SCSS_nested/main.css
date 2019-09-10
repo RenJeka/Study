@@ -1,0 +1,48 @@
+.item {
+  width: 600px;
+  height: 500px;
+  background-color: lightblue;
+  margin: 50px auto;
+  border: 2px solid green;
+}
+
+.item h2 {
+  text-align: right;
+  color: greenyellow;
+}
+
+.item .container {
+  width: 400px;
+  height: 300px;
+  border-top: 13px solid red;
+  border-bottom: 23px dashed blue;
+  border-left: 15px double orange;
+  border-right: 3px dotted green;
+  margin: 20px auto;
+}
+
+.item .container h1 {
+  text-align: center;
+  color: rgba(230, 50, 50, 0.86);
+}
+
+.item .container .lead {
+  font-size: 10px;
+  text-align: center;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.item .container a {
+  text-decoration: none;
+  color: tomato;
+  border-radius: 30%;
+  border: 2px solid blue;
+}
+
+.item .container a:hover {
+  border: none;
+  color: #ff0000;
+  padding-left: 30px;
+  font-size: 2rem;
+}
+/*# sourceMappingURL=main.css.map */

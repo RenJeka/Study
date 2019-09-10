@@ -1,0 +1,32 @@
+@charset "UTF-8";
+div {
+  width: 75px;
+  height: 50px;
+  border: 1.66667px solid black;
+  float: left;
+  margin-left: 10px;
+  margin-top: 12.5px;
+}
+
+/*Директива @while принимает выражение SassScript и циклично выводит вложенные в неё стили, пока выражение вычисляется как true.*/
+/*Пока переменная i -меньше 6, добавляем класс со свойствами стилей, после чего увеличиваем значение на 1*/
+.item1 {
+  width: 50px;
+}
+
+.item2 {
+  width: 100px;
+}
+
+.item3 {
+  width: 150px;
+}
+
+.item4 {
+  width: 200px;
+}
+
+.item5 {
+  width: 250px;
+}
+/*# sourceMappingURL=main.css.map */

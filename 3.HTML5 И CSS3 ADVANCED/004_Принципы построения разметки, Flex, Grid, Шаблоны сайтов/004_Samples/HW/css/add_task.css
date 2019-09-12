@@ -1,3 +1,7 @@
+*{
+	font-family: Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
+}
+
 html, body{
 	padding: 0;
 	margin: 0;
@@ -19,8 +23,13 @@ html, body{
 
 .header{
 	width: 100%;
-	height: 100px;
+	/* min-height: 200px; */
+	
 	background-color: lightgray;
+	background-image: url("../img/header-2.jpg");
+	background-position: center;
+	background-repeat: no-repeat;	
+	background-size:  cover;
 }
 
 
@@ -29,7 +38,7 @@ html, body{
 	min-height: 300px;
 }
 .section{
-	min-width: 65%;
+	width: 65%;
 	background-color: lightblue;
 }
 
@@ -60,7 +69,7 @@ html, body{
 
 .article{
 	display: flex;
-	flex-flow: column wrap-reverse;
+	flex-flow: column wrap;
 	justify-content: flex-start;
 	background-color: violet;
 	min-height: 150px;
@@ -88,17 +97,46 @@ html, body{
 	justify-content: flex-start;
 }
 
-.article-body img{
-	width: 300px;
-	margin-left: 30px;
+.thumbnail{
+	width: 30%;
+	min-height: 150px;	
+	display: flex;
+	align-items: flex-start;
+	padding: 0 10px;
+	box-sizing: border-box;
+}
+
+.thumbnail img{
+	width: 100%;
 }
 
 .article-text{
+
 	background-color: cyan;
-	height: 100px;
-	min-width: 30%;
+	min-height: 200px;
+	width: 70%;
+	box-sizing: border-box;
+	padding: 10px;
+	/* flex-grow: 0; */
+	
 }
 
-.article-footer{
+.status-bar{
+	width: 95%;
+	min-height: 10px;
+	background-color: brown;
+	align-self: flex-start;
+	padding: 5px;
+	font-size: 0.75rem;
+}
 
+.status-bar a{
+	color:  #fff;
+	margin-left: 10px;
+	font-weight: bold;
+	text-decoration: none;
+}
+.status-bar span{
+	color:  #fff;
+	margin-left: 10px;
 }

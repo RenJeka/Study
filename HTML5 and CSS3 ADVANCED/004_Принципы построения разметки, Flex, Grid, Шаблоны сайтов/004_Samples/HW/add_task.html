@@ -13,69 +13,92 @@
 <body>
 	<div class="container">
 		<div class="header">
+
 			<div class="main-news">
-				<div>
-					<span>Lorem ipsum dolor sit amet.</span>-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, assumenda. Natus repudiandae deserunt minima. Ut quibusdam dolores est, sunt distinctio reiciendis rerum corrupti minus, esse, expedita illo asperiores quasi fugit!	
-				</div>
-				<button > Read more</button>
+
+				<p><span>Lorem ipsum dolor sit amet.</span>-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum, assumenda. Natus repudiandae deserunt minima. Ut quibusdam dolores est, sunt distinctio reiciendis rerum corrupti minus, esse, expedita illo asperiores quasi fugit!</p>	
+
+				<button class="btn"> Read more</button>
 			</div>
-		</div>
+
+		</div><!-- header -->
+		
 
 
+		<div class="body">
 
-		<div class="section">
-			<div class="article">
+		
+			<div class="section">
+				<div class="article">
 
-				<div class="article-name">
-					<h4>
-						Some title about this article
-					</h4>
-					<p>some add information</p>
-				</div>
-
-
-				<div class="article-body">
-					<div class="thumbnail">
-						<img src="img/car1.jpg" alt="car" >
+					<div class="article-name">
+						<h4>
+							Some title about this article
+						</h4>
+						<p>some add information</p>
 					</div>
-					<div class="article-text" >
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis qui sapiente nisi ratione! Odit, harum! Nesciunt qui consequuntur sapiente! Non distinctio quod odio dolores architecto possimus facere repellat incidunt quaerat?</p>
+
+
+					<div class="article-body">
+						<div class="thumbnail">
+							<img src="img/car1.jpg" alt="car" >
+						</div>
+						<div class="article-text" >
+							<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis qui sapiente nisi ratione! Odit, harum! Nesciunt qui consequuntur sapiente! Non distinctio quod odio dolores architecto possimus facere repellat incidunt quaerat?</p>
+						</div>
+						
 					</div>
-					
+
+
+					<div class="status-bar">
+						<a href="#">Read more </a>
+						<a href="#">2 Comments</a>
+						<a href="#">Log in</a> <span>or</span> <a href="#">register</a> <span>to post comments</span>
+					</div>
+
+
 				</div>
 
 
-				<div class="status-bar">
-					<a href="#">Read more </a>
-					<a href="#">2 Comments</a>
-					<a href="#">Log in</a> <span>or</span> <a href="#">register</a> <span>to post comments</span>
+			</div> <!-- section -->
+
+			<div class="nav ">
+
+				<div class="nav-item-block ">
+
+					<h4>User Login</h4>
+
+					<label for="login">Username <span>*</span></label>
+					<input type="text" id="login">
+
+					<label for="pass">Passvord <span>*</span></label>
+					<input type="text" id="pass">
+
 				</div>
 
 
-			</div>
+				<div class="nav-item-block login-item">
+					<a href="#">Create new account</a>
+					<a href="#">Request new password</a>
+					<button class="btn btn-login">Log in</button>
+				</div>
+
+				<br>
+				<div class="nav-item-block navigation">
+					<h4>Navigation</h4>
+					<details>
+						<summary><span>Forums</span></summary>
+						<ul>
+							<li><span>Resent content</span></li>
+						</ul>
+					</details>	
+				</div>
 
 
-		</div>
-
-		<div class="nav nav-flex-container">
-
-			<div class="nav-item-block ">
-				User Login
-			</div>
-
-
-			<div class="nav-item-block ">
-				Create new account
-			</div>
-
-			<br>
-			<div class="nav-item-block align-bottom">
-				Navigation
-			</div>
-
-
-		</div>
-
+			</div> <!-- nav -->
+		
+		</div><!-- body -->
+		
 	</div> 
 	
 	<script src="js/add_task.js"></script>

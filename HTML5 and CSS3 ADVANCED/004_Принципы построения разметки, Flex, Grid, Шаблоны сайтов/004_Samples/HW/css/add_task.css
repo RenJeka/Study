@@ -7,12 +7,15 @@ html, body{
 	margin: 0;
 }
 
-.container, .article{
+.container, .article, .body{
 	display: flex;
 	width: 100%;
 	flex-flow: row wrap;
 	justify-content: center;
 }
+
+
+/* ==============HEADER================= */
 
 .header{
 	width: 100%;
@@ -30,16 +33,39 @@ html, body{
 .header .main-news{
 	width: 100%;
 	height: 25%;
-	background-color: #fff;
-	opacity: .6;
+	background-color: rgba(255, 255, 255, .7);
+	
 	display: flex;
 	flex-flow: row 	;
-}
-	/* Застилизовать кнопкуб спан и создать формочки */
-.main-news button{
-	/* width: 100px; */
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 10px ;
+	box-sizing: border-box;
 }
 
+.main-news p{
+	width: 70%;
+	font-size: 0.9rem;
+}
+
+.main-news p span{
+	color: red;
+	font-weight: bold;
+}
+	/* Застилизовать кнопкуб спан и создать формочки */
+.btn{
+	width: 150px;
+	height: 50%;
+	background-color: brown;
+	margin-right: 15px;
+	border: 1px solid rgb(145, 36, 36);
+}
+/* ==============BODY================= */
+
+
+.body{
+	/* flex-wrap: nowrap; */
+}
 .section, .nav{
 
 	min-height: 300px;
@@ -50,28 +76,79 @@ html, body{
 }
 
 .nav{
-	min-width: 35%;
-	background-color: lightgreen;
-}
-
-.nav-flex-container{
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: left;
 	align-content: flex-start;
+	width: 35%;
+	background-color: lightgreen;
 }
+
 
 .nav-item-block{
 
-	width: 40%;
-	height: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	min-width: 20%;
+	min-height: 100px;
 	background-color: lightsalmon;
 	margin: 10px;
+	
 	/* box-sizing:initial; */
 }
+.login-item{
+	justify-content: flex-end;
+	height: 175px;
+	
+}
+.nav-item-block h4{
+	color: brown;
+	font-weight: bold;
+	margin: 10px 0;
+	font-size: 18px;
+}
+.nav-item-block label{
+	font-weight: bold;
+	margin-top: 10px;
+}
+.nav-item-block label span{
+	font-weight: bold;
+	color: brown;
+}
+.nav-item-block input{
+	width: 140px;
+	height: 25px;
+}
+.nav-item-block a{
+	font-size: 16px;
+	font-weight: bold;
+	color: brown;
+	text-decoration: none;
+	margin-top: 10px;
+}
 
-.align-bottom{
-	width: 70px;
+
+
+.btn-login{
+	width: 90px;
+	height: 40px;
+	margin-top: 20px;
+}
+
+.navigation{
+	width: 100%;
+}
+.navigation details{
+	color: black;
+}
+
+.navigation span{
+	color: brown;
+}
+
+.navigation ul{
+	padding-left: 20px;
 }
 
 .article{

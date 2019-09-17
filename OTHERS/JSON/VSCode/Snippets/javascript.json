@@ -1,0 +1,73 @@
+	// Place your snippets for javascript here. Each snippet is defined under a snippet name and has a prefix, body and 
+	// description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+	// $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+	// same ids are connected.
+	// Example:
+	// "Print to console": {
+	// 	"prefix": "log",
+	// 	"body": [
+	// 		"console.log('$1');",
+	// 		"$2"
+	// 	],
+	// 	"description": "Log output to console"
+	// }
+
+	{
+		"Console Log": {
+			"prefix": "cl",
+			"body": [
+			  "console.log($1);$2",
+			],
+			"description": "Console Log"
+		  },
+		  "Console Dir": {
+			"prefix": "cd",
+			"body": [
+			  "console.dir($1);$2",
+			],
+			"description": "Console Log"
+		  },
+	
+		  "Document.Write": {
+			"prefix": "dw",
+			"body": [
+			  "document.write($1);$2",
+			],
+			"description": "Document.Write"
+		  },
+	
+		  "Prompt Function plus": {
+			"prefix": "pp",
+			"body": [
+			  "${1:a} = +prompt(\"${2:Введите какое либо значение}\");$3",
+			],
+			"description": "Prompt Function"
+		  },
+	
+		  "Prompt Function": {
+			"prefix": "p",
+			"body": [
+			  "prompt(\"${1:Введите какое либо значение}\");$2",
+			],
+			"description": "Prompt Function"
+		  },
+		  "For Cycle": {
+			"prefix": "fc",
+			"body": [
+			  "for (${1:index} = 0; ${1:index}< ; ${1:index}++) {",
+			  "    $2",
+			  "}"
+			],
+			"description": "For Cycle"
+		  },
+		  "comment1": {
+			"prefix": "/1",
+			"body": [
+			  "//=============================================",
+			  "//     $1",
+			  "//============================================="
+			],
+			"description": "comment1"
+		  },
+	}
+	

@@ -1,6 +1,8 @@
+
 *{
 	font-family: Verdana, 'Segoe UI', Tahoma, Geneva, sans-serif;
 }
+
 
 html, body{
 	padding: 0;
@@ -75,6 +77,20 @@ html, body{
 	background-color: lightblue;
 }
 
+@media screen and (max-width:800px){
+
+	.body{
+		flex-direction: column;
+	}
+	.section{
+		width: 100%;
+		background-color: red;
+	}
+	.nav{
+		width: 10%;
+	}
+}
+
 .nav{
 	display: flex;
 	flex-flow: row wrap;
@@ -127,7 +143,6 @@ html, body{
 	text-decoration: none;
 	margin-top: 10px;
 }
-
 
 
 .btn-login{
@@ -224,3 +239,4 @@ html, body{
 	color:  #fff;
 	margin-left: 10px;
 }
+

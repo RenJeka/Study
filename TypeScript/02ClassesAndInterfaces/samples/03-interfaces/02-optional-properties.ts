@@ -30,4 +30,4 @@ let rectangle3 = {
 
 drawRectangle(rectangle1);
 drawRectangle(rectangle2);
-//drawRectangle(rectangle3); // у аргумента нет обязательного свойства height
+// drawRectangle(rectangle3); // у аргумента нет обязательного свойства height

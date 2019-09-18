@@ -2,12 +2,12 @@
 function printValue1(obj: { name: string }) {
     console.log(obj.name);
 }
-
+// 
 let myObj1 = { value: 10, name: "Hello" };
 printValue1(myObj1); // myObj1 имеет свойство name
 
 let myObj2 = { data: 10, param: "Hello" };
-//printValue1(myObj2); // myObj2 не может использоваться в качестве параметра, так как не имеет свойства name
+// printValue1(myObj2); // myObj2 не может использоваться в качестве параметра, так как не имеет свойства name
 
 // определяем интерфейс NamedValue
 // Данный интерфейс можно рассматривать как требования к объектам иметь свойство с именем name типа string

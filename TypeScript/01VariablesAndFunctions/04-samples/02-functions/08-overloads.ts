@@ -20,4 +20,4 @@ function showMessage(message: any) { // непосредственно реал�
 
 showMessage(1);
 showMessage("test");
-// showMessage(true); // compile error
+showMessage(true); // compile error

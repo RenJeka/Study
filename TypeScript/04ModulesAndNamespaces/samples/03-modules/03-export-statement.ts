@@ -4,5 +4,6 @@ class EmailValidator {
     }
 }
 
+
 export { EmailValidator };
 export { EmailValidator as MyEmailValidator}; // экспорт с указанием другого имени 

@@ -12,7 +12,7 @@ function printValue2(obj) {
     console.log(obj.name);
 }
 let myObj3 = { value: 10, name: "World" };
-printValue1(myObj3); // myObj1 имеет свойство name
+printValue2(myObj3); // myObj1 имеет свойство name
 let myObj4 = { data: 10, param: "Hello" };
-//printValue1(myObj4); // myObj2 не может использоваться в качестве параметра, так как не имеет свойства name
+//printValue2(myObj4); // myObj2 не может использоваться в качестве параметра, так как не имеет свойства name
 //# sourceMappingURL=01-simple-interface.js.map

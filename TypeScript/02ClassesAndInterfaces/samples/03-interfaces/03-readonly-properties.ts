@@ -4,4 +4,4 @@ interface PointInterface {
 }
 
 let point: PointInterface = {x: 10, y: 20};
-//point.x = 100; // ошибка
+// point.x = 100; // ошибка

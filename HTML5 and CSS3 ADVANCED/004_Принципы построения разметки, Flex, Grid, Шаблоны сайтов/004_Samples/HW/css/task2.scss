@@ -40,7 +40,6 @@ body, html{
 	// padding: 0;
 	align-items: flex-start;
 	// grid-auto-flow: column;
-	align-items: flex-start;
 	justify-content: end;
 	grid-template-columns: repeat(auto-fit,minmax(75px, 130px));
 	// grid-template-columns: repeat(auto-fill,min-nax(5px, 50px));
@@ -95,7 +94,7 @@ body, html{
 .main-news-text{
 	grid-area: mt;
 	// overflow: scroll;
-	padding: 10px 20px;
+	padding: 0 20px;
 	h2{
 		
 		font-size: 2em;
@@ -155,4 +154,48 @@ body, html{
 			background-color: #ccc;
 		}
 	}
+}
+
+@media(max-width:800px){
+
+	.grid{
+		grid-template-rows: 1.5fr 100px 5fr 4fr;
+		grid-template-columns: repeat(2, 1fr);
+		grid-template-areas: 	"hl hl"
+								"nav nav"
+								"mi mi"
+								"mt mt"
+								"hn hn";
+								
+	}
+	.main-news-image{
+		background-position: top center;
+	}
+
+	.nav{
+		justify-content: center;
+	}
+
+}
+
+@media(max-width:440px){
+
+	.grid{
+		grid-template-rows: 1.5fr 100px 5fr 4fr;
+		grid-template-columns: 1fr;
+		grid-template-areas: 	"hl "
+								"nav"
+								"mi"
+								"mt"
+								"hn";
+								
+	}
+	.main-news-image{
+		background-position: top center;
+	}
+
+	.nav{
+		justify-content: center;
+	}
+
 }

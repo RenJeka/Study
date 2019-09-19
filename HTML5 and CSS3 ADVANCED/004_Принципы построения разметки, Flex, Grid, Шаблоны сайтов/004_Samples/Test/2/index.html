@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test template</title>
+
+    <style>
+        .grid{
+            display: grid;
+            grid-template:  "header header header"
+                            "article nav ads"
+                            "footer footer footer";
+            grid-template-rows: 100px 1fr 50px; 
+            grid-template-columns: 1fr 15%  20%;
+            grid-gap: 10px;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .grid > div {
+            background-color: gold;
+            padding: 10px;
+            font-size: 1.5em;
+
+        }
+
+        .header{
+            grid-area: header;
+        }
+
+        .nav{
+            grid-area: nav;
+        }
+
+        .article{
+            grid-area: article;
+        }
+
+        .ads{
+            grid-area: ads;
+        }
+
+        .footer{
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class="header">Header</div>
+        <div class="nav">Nav</div>
+        <div class="article">Article</div>
+        <div class="ads">Ads</div>
+        <div class="footer">Footer</div>
+    </div>
+</body>
+</html>

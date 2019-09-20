@@ -7,8 +7,8 @@ body, html {
   margin: 0 auto;
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: .75fr 300px .5fr 4fr;
-      grid-template-rows: .75fr 300px .5fr 4fr;
+  -ms-grid-rows: .75fr 300px .2fr 4fr;
+      grid-template-rows: .75fr 300px .2fr 4fr;
   -ms-grid-columns: (1fr)[4];
       grid-template-columns: repeat(4, 1fr);
   grid-gap: 25px 10px;
@@ -48,6 +48,7 @@ body, html {
 
 .nav div {
   margin-right: 1px;
+  margin-bottom: 1px;
   font-size: 16px;
   text-align: center;
 }
@@ -107,12 +108,17 @@ body, html {
   -ms-grid-column-span: 4;
   grid-area: hn;
   font-size: 2em;
-  padding: 10px 20px;
+  padding: 0 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 .news-item {
   display: -ms-grid;
   display: grid;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .news-item h4, .news-item p, .news-item span, .news-item a {
@@ -155,8 +161,8 @@ body, html {
 
 @media (max-width: 800px) {
   .grid {
-    -ms-grid-rows: 1.5fr 100px 5fr 4fr;
-        grid-template-rows: 1.5fr 100px 5fr 4fr;
+    -ms-grid-rows: 1fr .5fr 3fr 2fr;
+        grid-template-rows: 1fr .5fr 3fr 2fr;
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "hl hl" "nav nav" "mi mi" "mt mt" "hn hn";
@@ -171,10 +177,10 @@ body, html {
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 410px) {
   .grid {
-    -ms-grid-rows: 1.5fr 100px 5fr 4fr;
-        grid-template-rows: 1.5fr 100px 5fr 4fr;
+    -ms-grid-rows: .5fr 1fr 1fr 1.25fr .3fr;
+        grid-template-rows: .5fr 1fr 1fr 1.25fr .3fr;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
         grid-template-areas: "hl " "nav" "mi" "mt" "hn";

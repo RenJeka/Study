@@ -3,6 +3,8 @@ body, html {
 }
 
 .grid {
+  max-width: 1600px;
+  margin: 0 auto;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: .75fr 300px .5fr 4fr;

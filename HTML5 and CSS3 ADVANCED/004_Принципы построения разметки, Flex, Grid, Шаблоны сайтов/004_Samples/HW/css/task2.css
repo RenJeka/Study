@@ -207,5 +207,11 @@ body, html {
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .news-item p, .news-item time, .news-item h4 {
+    display: none;
+  }
+  .news-item a {
+    margin-top: 10px;
+  }
 }
 /*# sourceMappingURL=task2.css.map */

@@ -219,4 +219,14 @@ body, html{
 		justify-content: center;
 	}
 
+	.news-item{
+		p,time,h4{
+			display: none;
+		}
+		a{
+			margin-top: 10px;
+		}
+
+	}
+
 }

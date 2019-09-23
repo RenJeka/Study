@@ -1,3 +1,4 @@
+
 let myObject = {
 	a:"hello",
 	b: 380995552266,
@@ -5,10 +6,10 @@ let myObject = {
 		console.log("Hello there!");
 	}
 
-}
+};
 
 console.log("%O", myObject);
 
-let myFunk (a= "lll", b = "sjkdn") => a+b;
+// let myFunk (a= "lll", b = "sjkdn") => a+b;
 
 console.log(myFunk());

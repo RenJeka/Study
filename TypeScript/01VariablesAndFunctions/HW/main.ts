@@ -8,7 +8,8 @@ window.addEventListener("load", () => {
 		fillingsLimit:number = 15,
 		marshmallow: number = 0,
 		costFillings:number = 0,
-		moreFilling = true,
+		moreFilling:boolean = true,
+		totalFillings:number = 0,
 		inCorrectFilling:boolean;
 
 	// Функция, которая запрашивает все данные у пользователя
@@ -45,7 +46,7 @@ window.addEventListener("load", () => {
 					} while (inCorrectFilling);
 					
 				}
-				 
+				
 				if (confirm("Ягоды?")) {
 					do {
 						berriesFilling = prompt("Сколько наяинки с ягодами?","0");
@@ -78,20 +79,31 @@ window.addEventListener("load", () => {
 				inCorrectFilling = false;
 				filling = 0;
 				return filling;
+
 			}else{
+
 				filling = parseInt(filling) ;
+
 				if (isNaN(filling)) {
 					alert("Введите число!");
 					inCorrectFilling = true;
 					filling = 0;
 					return filling;
+
 				}else{
-					if (filling > fillingsLimit) {
+
+					totalFillings += filling;
+					
+					console.log(totalFillings);
+					if (totalFillings > fillingsLimit) {
 						inCorrectFilling = true;
 						alert("Слишком много начинки! Вы что!?");
+						totalFillings -= filling;
 						filling = 0;
 						return filling;
+
 					}else{
+						
 						inCorrectFilling = false;
 						return filling;
 					}

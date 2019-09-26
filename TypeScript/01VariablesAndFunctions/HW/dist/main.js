@@ -1,5 +1,5 @@
 window.addEventListener("load", function () {
-    var costSize = 0, chocoFilling = 0, caramelFilling = 0, berriesFilling = 0, fillingsLimit = 15, marshmallow = 0, costFillings = 0, moreFilling = true, inCorrectFilling;
+    var costSize = 0, chocoFilling = 0, caramelFilling = 0, berriesFilling = 0, fillingsLimit = 15, marshmallow = 0, costFillings = 0, moreFilling = true, totalFillings = 0, inCorrectFilling;
     var mainFunc = function () {
         alert("Добрый день! Эта программа позволит Вам расчитать стоимость мороженного");
         var whatSize = prompt("Выберите размер мороженного: 'Маленькое' или '1', 'Большое' или '2'");
@@ -56,9 +56,12 @@ window.addEventListener("load", function () {
                 return filling;
             }
             else {
-                if (filling > fillingsLimit) {
+                totalFillings += filling;
+                console.log(totalFillings);
+                if (totalFillings > fillingsLimit) {
                     inCorrectFilling = true;
                     alert("Слишком много начинки! Вы что!?");
+                    totalFillings -= filling;
                     filling = 0;
                     return filling;
                 }

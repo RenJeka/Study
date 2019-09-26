@@ -2,11 +2,14 @@ window.addEventListener("load", () => {
 
 
 	let costSize = 0,
-		chocoFilling: number = 0,
-		caramelFilling: number = 0,
-		berriesFilling: number = 0,
-		marshmellow: number = 0,
-		flag = true;
+		chocoFilling: any = 0,
+		caramelFilling: any = 0,
+		berriesFilling: any = 0,
+		fillingsLimit:number = 15,
+		marshmallow: number = 0,
+		costFillings:number = 0,
+		moreFilling = true,
+		inCorrectFilling:boolean;
 
 	// Функция, которая запрашивает все данные у пользователя
 	let mainFunc = () => {
@@ -19,25 +22,44 @@ window.addEventListener("load", () => {
 		if (whatSize == "большое" || whatSize == "2") {
 
 			costSize = 25;
+			
+			alert("Большое мороженное обязательно дополняется начинкой от 1 до " +fillingsLimit + ", какую Вам добавить?");
 
-			while (flag) {
+			while (moreFilling) {
 
-				alert("Большое мороженное обязательно дополняется начинкой, какую Вам добавить?");
 				if (confirm("Шоколадную?")) {
-					chocoFilling += parseInt(prompt("Сколько?") as string);
+
+					do {
+						chocoFilling = prompt("Сколько шоколадной начинки?", "0");
+						
+						costFillings += fillingFix(chocoFilling) * 5 ;
+					} while (inCorrectFilling);
 
 				}
-
+				
 				if (confirm("Карамель?")) {
-					caramelFilling += parseInt(prompt("Сколько?") as string);
-
+					do {
+						caramelFilling = prompt("Сколько карамельной начинки?","0");
+						
+						costFillings += fillingFix(caramelFilling) * 6 ;
+					} while (inCorrectFilling);
+					
 				}
-
+				 
 				if (confirm("Ягоды?")) {
-					berriesFilling += parseInt(prompt("Сколько?") as string);
+					do {
+						berriesFilling = prompt("Сколько наяинки с ягодами?","0");
+						
+						costFillings += fillingFix(berriesFilling) * 10 ;
+					} while (inCorrectFilling);
 
+				} 
+				if (costFillings == 0) {
+					alert("Вы должны выбрать минимум 1 начинку. Давайте попробуем еще раз");
+					moreFilling = true;
+					continue;
 				}
-				flag = confirm("Еще добавить начинки?");
+				moreFilling = confirm("Еще добавить начинки?");
 			}
 
 		} else if (whatSize == "маленькое" || whatSize == "1") {
@@ -45,22 +67,53 @@ window.addEventListener("load", () => {
 		}
 
 		if (confirm("Добавить маршмеллоу?")) {
-			marshmellow = 5;
+			marshmallow = 5;
 		}
 	}
 	
+		// Функция, которая делает проверку на правильноссть введенного значения, когда пользователь вводит начинку. Если пользователь нажал "Отена" или не ввел ничего — считается что начинки нет (0), если ввел не число — выводится сообщение.
+		function fillingFix (filling:any){
+		
+			if (filling === null || filling == "") {
+				inCorrectFilling = false;
+				filling = 0;
+				return filling;
+			}else{
+				filling = parseInt(filling) ;
+				if (isNaN(filling)) {
+					alert("Введите число!");
+					inCorrectFilling = true;
+					filling = 0;
+					return filling;
+				}else{
+					if (filling > fillingsLimit) {
+						inCorrectFilling = true;
+						alert("Слишком много начинки! Вы что!?");
+						filling = 0;
+						return filling;
+					}else{
+						inCorrectFilling = false;
+						return filling;
+					}
+					
+				}
+
+			}
+
+		}
+
 	// Функция, которая считает всю сумму мороженного
-	let calculateIceCream = (size: number, chocoFilling: number, caramelFilling: number, berriesFilling: number, marshmellow:number) => {
+	let calculateIceCream = (size: number, chocoFilling: number, caramelFilling: number, berriesFilling: number, marshmallow:number) => {
 		let sum = 0;
 
-		sum = size + chocoFilling * 3 + caramelFilling * 6 + berriesFilling * 10 + marshmellow;
+		sum = size + costFillings +  marshmallow;
 		return sum;
 	}
 
 	// Начало работы программы---------------------------------------------
 	mainFunc();
 
-	alert(`Сумма к оплате = ${calculateIceCream(costSize, chocoFilling, caramelFilling, berriesFilling, marshmellow)}`);
+	alert(`Сумма к оплате = ${calculateIceCream(costSize, chocoFilling, caramelFilling, berriesFilling, marshmallow)} грн`);
 
 });
 

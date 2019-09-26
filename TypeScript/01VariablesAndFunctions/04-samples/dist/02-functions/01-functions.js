@@ -9,8 +9,8 @@ function add2(x, y) {
     return x + y;
 }
 let result2 = add2(10, 20);
-//let result2: number = add2(10); // ожидается два параметра
-//let result2: number = add2(10, "text"); // второй аргумент должен быть числовым
-//let result2: string = add2(10, 20); // результат работы функции не может быть присвоен строковой переменной
+// let result2: number = add2(10); // ожидается два параметра
+// let result2: number = add2(10, "text"); // второй аргумент должен быть числовым
+// let result2: string = add2(10, 20); // результат работы функции не может быть присвоен строковой переменной
 console.log(result2);
 //# sourceMappingURL=01-functions.js.map

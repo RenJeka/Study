@@ -4,14 +4,14 @@ function let1() {
     for (let i = 0; i < 10; i++) {
         let test = i;
     }
-    //console.log(i); // [ts] cannot find name i
-    //console.log(test); // [ts] cannot find name test
+    // console.log(i); // [ts] cannot find name i
+    // console.log(test); // [ts] cannot find name test
 }
 let1();
 // Повторное определение переменной не приводит к ошибке.
 function let2() {
     let a = 10;
-    //var a = 20; // [ts] cannot redeclare block-scoped variable a
+    // var a = 20; // [ts] cannot redeclare block-scoped variable a
     console.log(a); // 10
 }
 let2();

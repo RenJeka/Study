@@ -19,5 +19,5 @@ function showMessage(message) {
 }
 showMessage(1);
 showMessage("test");
-// showMessage(true); // compile error
+showMessage(true); // compile error
 //# sourceMappingURL=08-overloads.js.map

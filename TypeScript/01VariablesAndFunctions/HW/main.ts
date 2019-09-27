@@ -1,6 +1,5 @@
 window.addEventListener("load", () => {
 
-
 	let costSize = 0,
 		chocoFilling: any = 0,
 		caramelFilling: any = 0,
@@ -128,6 +127,3 @@ window.addEventListener("load", () => {
 	alert(`Сумма к оплате = ${calculateIceCream(costSize, chocoFilling, caramelFilling, berriesFilling, marshmallow)} грн`);
 
 });
-
-
-

@@ -11,21 +11,23 @@
 <div [ngClass]="settings">Hello world #1</div>
 
 <hr />
-
+<!-- ================================================================== -->
 <!-- Использование class binding -->
 <div 
-    [class.accent]="settings.accent"
-    [class.error]="settings.error"
-    [class.highlighted]="settings.highlighted">
-    Hello world #2
+[class.accent]="settings.accent"
+[class.error]="settings.error"
+[class.highlighted]="settings.highlighted">
+Hello world #2
 </div>
 
 <hr />
+<!-- ================================================================== -->
 
 <!-- Использование массива вместо объекта -->
 <div [ngClass]="['accent', 'error']">Hello world #3</div>
 
 <hr />
+<!-- ================================================================== -->
 
 <!-- Использование строкового значения -->
 <div [ngClass]="'accent error'">Hello world #3</div>

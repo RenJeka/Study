@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("./index");
-var DataListComponent = (function () {
+var DataListComponent = /** @class */ (function () {
     // private dataService: DataService внедрение зависимости через конструктор
     function DataListComponent(dataService) {
         this.dataService = dataService;
@@ -23,8 +24,8 @@ var DataListComponent = (function () {
             moduleId: module.id,
             selector: "data-list",
             templateUrl: "data-list.component.html"
-        }), 
-        __metadata('design:paramtypes', [index_1.DataService])
+        }),
+        __metadata("design:paramtypes", [index_1.DataService])
     ], DataListComponent);
     return DataListComponent;
 }());

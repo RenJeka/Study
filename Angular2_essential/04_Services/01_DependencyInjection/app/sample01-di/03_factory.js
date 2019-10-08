@@ -1,5 +1,6 @@
 "use strict";
-var Car = (function () {
+Object.defineProperty(exports, "__esModule", { value: true });
+var Car = /** @class */ (function () {
     function Car(engine, tires) {
         this.engine = engine;
         this.tires = tires;
@@ -10,17 +11,17 @@ var Car = (function () {
     return Car;
 }());
 exports.Car = Car;
-var Engine = (function () {
+var Engine = /** @class */ (function () {
     function Engine() {
     }
     return Engine;
 }());
-var Engine2 = (function () {
+var Engine2 = /** @class */ (function () {
     function Engine2() {
     }
     return Engine2;
 }());
-var Tires = (function () {
+var Tires = /** @class */ (function () {
     function Tires() {
     }
     return Tires;
@@ -30,7 +31,7 @@ var Tires = (function () {
 //////////////////////////////////////////
 // Сопровождение такого класса будет усложнятся по мере роста приложения
 // Для решения подобных проблем используется Dependency Injection Framework
-var CarFactory = (function () {
+var CarFactory = /** @class */ (function () {
     function CarFactory() {
     }
     CarFactory.prototype.createCar = function () {

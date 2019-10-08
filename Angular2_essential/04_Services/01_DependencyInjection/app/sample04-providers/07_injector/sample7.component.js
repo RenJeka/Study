@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
-var Sample7Component = (function () {
+var Sample7Component = /** @class */ (function () {
     function Sample7Component(injector) {
         this.injector = injector;
         this.logger = this.injector.get(index_1.Logger);
@@ -24,8 +25,8 @@ var Sample7Component = (function () {
             selector: "my-sample7",
             templateUrl: "sample7.component.html",
             providers: [index_1.Logger]
-        }), 
-        __metadata('design:paramtypes', [core_1.Injector])
+        }),
+        __metadata("design:paramtypes", [core_1.Injector])
     ], Sample7Component);
     return Sample7Component;
 }());

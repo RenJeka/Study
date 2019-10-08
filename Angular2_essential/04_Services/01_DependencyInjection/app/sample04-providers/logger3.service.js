@@ -8,8 +8,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var Logger3 = (function () {
+var Logger3 = /** @class */ (function () {
     function Logger3(prefix) {
         this.prefix = prefix;
     }
@@ -17,8 +18,8 @@ var Logger3 = (function () {
         console.log(this.prefix + "_" + message);
     };
     Logger3 = __decorate([
-        core_1.Injectable(), 
-        __metadata('design:paramtypes', [String])
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [String])
     ], Logger3);
     return Logger3;
 }());

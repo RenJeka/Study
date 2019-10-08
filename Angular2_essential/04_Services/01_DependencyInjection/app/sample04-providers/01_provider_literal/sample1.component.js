@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
-var Sample1Component = (function () {
+var Sample1Component = /** @class */ (function () {
     function Sample1Component(logger) {
         this.logger = logger;
     }
@@ -23,8 +24,14 @@ var Sample1Component = (function () {
             selector: "my-sample1",
             templateUrl: "sample1.component.html",
             providers: [{ provide: index_1.Logger, useClass: index_1.Logger }] // поставить комментарий
-        }), 
-        __metadata('design:paramtypes', [index_1.Logger])
+            // [Logger] - это сокращенная нотация регистрации провайдера
+            // [{ provide: Logger, useClass: Logger }] - регистрация провайдера с использованием Provider Object Literal
+            // первый параметр - token
+            // второй параметр - provider definition object
+            // альтернативный класс провайдера
+            //providers: [{ provide: Logger, useClass: Logger2 }] // убрать комментарий
+        }),
+        __metadata("design:paramtypes", [index_1.Logger])
     ], Sample1Component);
     return Sample1Component;
 }());

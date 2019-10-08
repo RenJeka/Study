@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
 var simpleLogger = {
@@ -15,7 +16,7 @@ var simpleLogger = {
         console.log("simple logger - " + m);
     }
 };
-var Sample3Component = (function () {
+var Sample3Component = /** @class */ (function () {
     function Sample3Component(logger) {
         this.logger = logger;
     }
@@ -28,8 +29,8 @@ var Sample3Component = (function () {
             selector: "my-sample3",
             templateUrl: "sample3.component.html",
             providers: [{ provide: index_1.Logger, useValue: simpleLogger }]
-        }), 
-        __metadata('design:paramtypes', [index_1.Logger])
+        }),
+        __metadata("design:paramtypes", [index_1.Logger])
     ], Sample3Component);
     return Sample3Component;
 }());

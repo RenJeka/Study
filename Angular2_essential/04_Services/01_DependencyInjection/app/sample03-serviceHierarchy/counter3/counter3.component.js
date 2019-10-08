@@ -8,10 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
 // Данный компонент использует экземпляр сервсиа CounterService, который создан для текущего модуля.
-var Counter3Component = (function () {
+var Counter3Component = /** @class */ (function () {
     function Counter3Component(counterService) {
         this.counterService = counterService;
         this.counter = 0;
@@ -29,8 +30,8 @@ var Counter3Component = (function () {
             moduleId: module.id,
             selector: "counter-3",
             templateUrl: "counter3.component.html",
-        }), 
-        __metadata('design:paramtypes', [index_1.CounterService])
+        }),
+        __metadata("design:paramtypes", [index_1.CounterService])
     ], Counter3Component);
     return Counter3Component;
 }());

@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
-var Sample2Component = (function () {
+var Sample2Component = /** @class */ (function () {
     function Sample2Component(logger) {
         this.logger = logger;
     }
@@ -24,8 +25,9 @@ var Sample2Component = (function () {
             templateUrl: "sample2.component.html",
             providers: [index_1.Logger2,
                 { provide: index_1.Logger, useExisting: index_1.Logger2 }] // для токена Logger использовать существующий экземпляр Logger2, а не создавать новый.
-        }), 
-        __metadata('design:paramtypes', [index_1.Logger])
+            // Теперь компоненты будут использовать один объект, хотя при внедрении зависимости будут использоваться два разных токена Logger и Logger2 
+        }),
+        __metadata("design:paramtypes", [index_1.Logger])
     ], Sample2Component);
     return Sample2Component;
 }());

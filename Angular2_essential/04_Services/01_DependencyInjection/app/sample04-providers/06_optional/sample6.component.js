@@ -11,9 +11,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
-var Sample6Component = (function () {
+var Sample6Component = /** @class */ (function () {
     // @Optional() - зависимость является не обязательной. Если инжектор не сможет ее создать, поле logger будет null
     function Sample6Component(logger) {
         this.logger = logger;
@@ -33,8 +34,8 @@ var Sample6Component = (function () {
             templateUrl: "sample6.component.html",
             providers: [index_1.Logger]
         }),
-        __param(0, core_1.Optional()), 
-        __metadata('design:paramtypes', [index_1.Logger])
+        __param(0, core_1.Optional()),
+        __metadata("design:paramtypes", [index_1.Logger])
     ], Sample6Component);
     return Sample6Component;
 }());

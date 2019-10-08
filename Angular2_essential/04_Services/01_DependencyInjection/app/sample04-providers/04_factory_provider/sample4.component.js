@@ -8,9 +8,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var index_1 = require("../index");
-var Sample4Component = (function () {
+var Sample4Component = /** @class */ (function () {
     function Sample4Component(logger) {
         this.logger = logger;
     }
@@ -28,8 +29,8 @@ var Sample4Component = (function () {
                         return new index_1.Logger3("test");
                     }
                 }]
-        }), 
-        __metadata('design:paramtypes', [index_1.Logger])
+        }),
+        __metadata("design:paramtypes", [index_1.Logger])
     ], Sample4Component);
     return Sample4Component;
 }());

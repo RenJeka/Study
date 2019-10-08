@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var __param = (this && this.__param) || function (paramIndex, decorator) {
     return function (target, key) { decorator(target, key, paramIndex); }
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 // OpaqueToken может использоваться, когда создаваемая зависимость не является классом.
 // При создании OpaqueToken в конструкторе в качестве параметра указывается строковое описание токена.
@@ -20,7 +21,7 @@ var config = {
     prop1: "value 1",
     prop2: "value 2"
 };
-var Sample5Component = (function () {
+var Sample5Component = /** @class */ (function () {
     // При создании Sample5Component инжектор внедрит значение объекта config в аргумент конструктора с именем config
     function Sample5Component(config) {
         this.config = config;
@@ -39,8 +40,8 @@ var Sample5Component = (function () {
                     useValue: config
                 }]
         }),
-        __param(0, core_1.Inject(APP_CONFIG)), 
-        __metadata('design:paramtypes', [Object])
+        __param(0, core_1.Inject(APP_CONFIG)),
+        __metadata("design:paramtypes", [Object])
     ], Sample5Component);
     return Sample5Component;
 }());

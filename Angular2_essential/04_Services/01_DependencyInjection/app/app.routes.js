@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var index_1 = require("./sample02-simpleService/index");
 var index_2 = require("./sample03-serviceHierarchy/index");
 var index_3 = require("./sample04-providers/index");

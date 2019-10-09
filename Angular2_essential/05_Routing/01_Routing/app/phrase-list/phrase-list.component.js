@@ -8,10 +8,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var phrase_service_1 = require("../shared/phrase.service");
-var PhraseListComponent = (function () {
+var PhraseListComponent = /** @class */ (function () {
     function PhraseListComponent(router, phraseService) {
         this.router = router;
         this.phraseService = phraseService;
@@ -27,14 +28,15 @@ var PhraseListComponent = (function () {
         // адрес с обязательным параметром указан в настройках маршрутизации в файле app.routes.ts 
         this.router.navigate(["phrase", selected.id]);
     };
+    var _a;
     PhraseListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: "phrase-list",
             templateUrl: "phrase-list.component.html",
             styleUrls: ["phrase-list.component.css"]
-        }), 
-        __metadata('design:paramtypes', [router_1.Router, phrase_service_1.PhraseService])
+        }),
+        __metadata("design:paramtypes", [typeof (_a = typeof router_1.Router !== "undefined" && router_1.Router) === "function" ? _a : Object, phrase_service_1.PhraseService])
     ], PhraseListComponent);
     return PhraseListComponent;
 }());

@@ -32,10 +32,10 @@ export class PhraseDetailsComponent implements OnInit {
 
         // SNAPSHOT
         // получение начального значения параметра id 
-        /*let id = +this.activatedRoute.snapshot.params["id"];
-        this.service
-            .getPhrase(id)  
-            .then(result => this.phrase = result); */ 
+        // let id = +this.activatedRoute.snapshot.params["id"];
+        // this.service
+        //     .getPhrase(id)  
+        //     .then(result => this.phrase = result); 
     }
 
     goToPhrasesList() {

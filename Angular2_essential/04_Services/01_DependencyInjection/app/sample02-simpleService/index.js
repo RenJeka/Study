@@ -4,5 +4,6 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(require("./data.service")); // Сервисы должен экспортироваться до того, как будут экспортироваться компоненты, которые его используют
+__export(require("./data-2.service"));
 __export(require("./data-list.component"));
 //# sourceMappingURL=index.js.map

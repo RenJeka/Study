@@ -19,7 +19,7 @@ var SimpleServiceModule = /** @class */ (function () {
         core_1.NgModule({
             imports: [common_1.CommonModule],
             declarations: [index_1.DataListComponent],
-            providers: [index_1.DataService]
+            providers: [index_1.DataService, index_1.Service2]
         })
     ], SimpleServiceModule);
     return SimpleServiceModule;

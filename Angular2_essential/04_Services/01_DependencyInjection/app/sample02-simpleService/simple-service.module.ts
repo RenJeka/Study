@@ -1,6 +1,6 @@
 import { NgModule } from "@angular/core";
 import { CommonModule } from "@angular/common";
-import { DataListComponent, DataService } from "./index";
+import { DataListComponent, DataService,Service2 } from "./index";
 
 // Инжектор создается при запуске приложения.
 // Для корректной работы инжектор нужно сконфигурировать, зарегистрировав провайдеров, которые создают сервисы необходимые приложению.
@@ -8,7 +8,7 @@ import { DataListComponent, DataService } from "./index";
 @NgModule({
     imports: [CommonModule],
     declarations: [DataListComponent],
-    providers: [DataService] 
+    providers: [DataService, Service2] 
 })
 export class SimpleServiceModule {
 }

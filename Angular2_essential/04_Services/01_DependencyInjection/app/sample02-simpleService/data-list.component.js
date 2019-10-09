@@ -13,11 +13,13 @@ var core_1 = require("@angular/core");
 var index_1 = require("./index");
 var DataListComponent = /** @class */ (function () {
     // private dataService: DataService внедрение зависимости через конструктор
-    function DataListComponent(dataService) {
+    function DataListComponent(dataService, service2) {
         this.dataService = dataService;
+        this.service2 = service2;
     }
     DataListComponent.prototype.ngOnInit = function () {
         this.itemsSource = this.dataService.getData();
+        this.myVariable = this.service2.someMethod();
     };
     DataListComponent = __decorate([
         core_1.Component({
@@ -25,7 +27,7 @@ var DataListComponent = /** @class */ (function () {
             selector: "data-list",
             templateUrl: "data-list.component.html"
         }),
-        __metadata("design:paramtypes", [index_1.DataService])
+        __metadata("design:paramtypes", [index_1.DataService, index_1.Service2])
     ], DataListComponent);
     return DataListComponent;
 }());

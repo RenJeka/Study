@@ -1,3 +1,10 @@
+<div class="filter">
+	<input type="text" (input)="filterGalleryMethod()" [(ngModel)] = "search">
+	<button>Filter</button>
+	<br>
+	<h3>{{ search }}</h3>
+</div>
+
 <div *ngFor = "let item of gallery1" class="card">
 	<img src="{{item.url}}" alt="">
 	<h3>{{item.title}}</h3>

@@ -1,5 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { GetGalleryService } from './get-gallery.service';
+import { FilterServiceService } from './filter-service.service';
+
+export interface interfaceGallery{
+  title:string;
+  url: string;
+}
 
 @Component({
   selector: 'app-gallery-page',
@@ -8,7 +14,9 @@ import { HttpClient } from '@angular/common/http';
 })
 export class GalleryPageComponent implements OnInit {
 
-  gallery1
+  gallery1:interfaceGallery[];
+  search:string;
+  allGallery:interfaceGallery[];
   
   // = [
   //   {
@@ -26,16 +34,34 @@ export class GalleryPageComponent implements OnInit {
    
   // ];
 
-  constructor(private http:HttpClient) { }
+  constructor(
+
+    private getService: GetGalleryService,
+    private filterGalleryService: FilterServiceService
+    ) { }
 
   ngOnInit() {
-    this.http.get('https://jsonplaceholder.typicode.com/photos?_limit=10').subscribe(
+
+    this.getService.getAllImages().subscribe(
+      (res:interfaceGallery[]) => {
+        this.allGallery = res;
+        this.gallery1 = res;
+        console.log(res);
+      }
+    )
+
+    /* this.http.get('https://jsonplaceholder.typicode.com/photos?_limit=10').subscribe(
       (res) => {
 
           this.gallery1 = res;
           console.log(res);
         }
-    );
+    );*/
+  }
+
+  filterGalleryMethod(){
+    this.gallery1 = this.filterGalleryService.returnFilterResult(this.search, this.allGallery)
+    console.log(this.search);
   }
 
 }

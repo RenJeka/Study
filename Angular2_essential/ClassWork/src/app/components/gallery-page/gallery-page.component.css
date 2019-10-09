@@ -6,3 +6,17 @@
 .card{
 	width: 50%;
 }
+
+.filter{
+	width: 100%;
+	padding: 15px;
+	text-align: center;
+}
+.filter button{
+	margin-left: 10px;
+}
+
+.filter input{
+	border-radius: 5px;
+	
+}

@@ -1,0 +1,13 @@
+<header>
+  <div class="container">
+    <nav>
+      <a routerLink ="/" routerLinkActive ="active" [routerLinkActiveOptions] = "{exact: true}">Home</a>
+      <a routerLink ="/gallery" routerLinkActive ="active">Gallery</a>
+      <a routerLink ="contacts" routerLinkActive ="active">Contacts</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

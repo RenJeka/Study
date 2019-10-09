@@ -1,0 +1,17 @@
+nav{
+	text-align: center;
+}
+
+nav a{
+	display: inline-block;
+	text-decoration: none;
+	padding: 15px;
+}
+
+a:hover{
+	background: #ddd;
+}
+
+.active{
+	background: #ccc;
+}

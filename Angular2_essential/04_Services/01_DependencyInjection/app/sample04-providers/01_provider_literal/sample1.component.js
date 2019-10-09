@@ -25,11 +25,11 @@ var Sample1Component = /** @class */ (function () {
             templateUrl: "sample1.component.html",
             providers: [{ provide: index_1.Logger, useClass: index_1.Logger }] // поставить комментарий
             // [Logger] - это сокращенная нотация регистрации провайдера
-            // [{ provide: Logger, useClass: Logger }] - регистрация провайдера с использованием Provider Object Literal
+            // [{ provide: Logger, useClass: Logger }] //- регистрация провайдера с использованием Provider Object Literal
             // первый параметр - token
             // второй параметр - provider definition object
             // альтернативный класс провайдера
-            //providers: [{ provide: Logger, useClass: Logger2 }] // убрать комментарий
+            // providers: [{ provide: Logger, useClass: Logger2 }] // убрать комментарий
         }),
         __metadata("design:paramtypes", [index_1.Logger])
     ], Sample1Component);

@@ -10,6 +10,7 @@ import { CounterService } from "../index";
 })
 export class Counter1Component {
     private counter: number = 0;
+    
     constructor(private counterService: CounterService) { }
 
     plusOne() {

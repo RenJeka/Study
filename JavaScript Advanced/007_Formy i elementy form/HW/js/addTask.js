@@ -4,6 +4,7 @@ window.addEventListener("load", function () {
     var arrayOfRadio = [];
     
 
+    // Ставим на событие "onchange" обработчик события на каждый элемент формы.
     this.document.form1.fName.onchange = function () {
         validate(this, /[a-zA-Zа-яА-Я-]/);
     }
@@ -24,10 +25,18 @@ window.addEventListener("load", function () {
     }
 
     this.document.form1.submit.onclick = function () {
+
+
         var flag = true;
+
+        // Перебираем все элементы формы
         for (let k = 0; k < document.form1.elements.length; k++) {
             var e = document.form1.elements[k];
+
+            // Если элелмент имеет обработчик на событие "onchange"
             if (e.onchange) {
+
+                // Запускаем принудительно событие "onchange"
                 e.onchange();
                 if (e.className == "invalidInput") {
                     flag =  false;
@@ -38,6 +47,12 @@ window.addEventListener("load", function () {
         return flag && isChecked("radio_1");
     }
 
+    /**
+     * Функция, которая валидирует <element> на соответствие паттерну <pattern>
+     * @param {object} element 
+     * @param {string} pattern 
+     * @returns {boolean} true, если элемент прошел валидацию,  false -- если не прошел валидацию
+     */
     function validate(element, pattern) {
         if (element.value.search(pattern) == -1) {
             // Как можно достучаться к лейблу ?
@@ -53,6 +68,12 @@ window.addEventListener("load", function () {
         }
     }
 
+    /**
+     * Функция проверяет на равенство значений 2 элементов <element1> и  <element2>
+     * @param {boolean} flag  Является ли элементы изначально валидными (есть ли смысл их проверять на равенство)
+     * @param {object} element1 DOM-элемент 1 (input-1)
+     * @param {object} element2 DOM-элемент 2 (input-2)
+     */
     function confirm(flag,element1,element2) {
         if (flag) {
             if (element1.value != element2.value) {
@@ -73,11 +94,18 @@ window.addEventListener("load", function () {
 
     }
 
+    /**
+     * Функция проверяет все радиокнопки определенной группы на наличие отмеченной радиокнопки
+     * @param {object} group Группа радиокнопок для проверки
+     * @returns {boolean} true, если выбранная радиокнопка , false если ни одна радиокнопка не выбрана.
+     */
     function isChecked(group) {
 
+        // Перебор всех радиокнопок
         for (let i = 0; i < document.form1.elements.length; i++) {
             if (document.form1.elements[i].name == group && document.form1.elements[i].type == "radio") {
                 
+                // Проверка, если есть значение checked == true у данной радиокнопки
                 if (document.form1.elements[i].checked) {
                     return  true;
                 }
@@ -85,6 +113,5 @@ window.addEventListener("load", function () {
         }
         pMessage.innerHTML = "Вы не выбрали \"Пол\"";
         return false;
-
     }
 });

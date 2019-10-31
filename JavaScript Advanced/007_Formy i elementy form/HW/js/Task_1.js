@@ -1,13 +1,19 @@
 window.addEventListener("load", function () {
+
+	// Вспомогательная функция доллара (как в jQuery)
 	var $ = function (id) {
 		return document.getElementById(id);
 	}
-	var sum = 0;
-	var pizzaSize = this.document.form1.pizzaSize;
-	var addIngredient = this.document.form1.addIngredient;
+	var sum = 0; // Общая сумма заказа
+	var pizzaSize = this.document.form1.pizzaSize; // Массив радиокнопок с размером пиццы
+	var addIngredient = this.document.form1.addIngredient; // Массив чекбоксов с выбором доп. ингредиента
 	var formFields = document.form1.elements;
 	var pizzaSizeCost = 0;
 	var addIngredientCost = 0;
+
+	console.log(`pizzaSize = ` , pizzaSize);
+	console.log(`addIngredient = ` ,addIngredient);
+
 
 	for (let j = 0; j< pizzaSize.length; j++) {
 		pizzaSize[j].addEventListener("click",function () {

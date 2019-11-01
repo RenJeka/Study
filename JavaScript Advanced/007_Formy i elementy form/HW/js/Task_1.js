@@ -1,23 +1,27 @@
+
+// ПОДСКАЗКА: Сумма пиццы просчитывается суммой 2-х переменных (pizzaSizeCost + addIngredientCost). Сумма далжна быть постоянно актуальной. При каждом изменении одной переменной сумма пересчитывается и выводится пользователю.
+
 window.addEventListener("load", function () {
 
 	// Вспомогательная функция доллара (как в jQuery)
 	var $ = function (id) {
 		return document.getElementById(id);
 	}
-	var sum = 0; // Общая сумма заказа
-	var pizzaSize = this.document.form1.pizzaSize; // Массив радиокнопок с размером пиццы
-	var addIngredient = this.document.form1.addIngredient; // Массив чекбоксов с выбором доп. ингредиента
-	var formFields = document.form1.elements;
-	var pizzaSizeCost = 0;
-	var addIngredientCost = 0;
 
-	console.log(`pizzaSize = ` , pizzaSize);
-	console.log(`addIngredient = ` ,addIngredient);
+	var sum = 0, // Общая сумма заказа
+		rbtArrayPizzaSize = this.document.form1.pizzaSize, // Массив радиокнопок с размером пиццы
+		addIngredient = this.document.form1.addIngredient, // Массив чекбоксов с выбором доп. ингредиента
+		formFields = document.form1.elements, // Массив элементов формы
+		pizzaSizeCost = 0, // Отдельная переменная для стоимости пиццы в зависимости от размера
+		addIngredientCost = 0; // Отдельная переменная для подсчета суммы всех добавочных ингредиентов
 
+	// Перебираем все radiobuttons и вешаем обработчик событий на них
+	for (let j = 0; j < rbtArrayPizzaSize.length; j++) {
 
-	for (let j = 0; j< pizzaSize.length; j++) {
-		pizzaSize[j].addEventListener("click",function () {
-			switch (pizzaSize[j].value) {
+		rbtArrayPizzaSize[j].addEventListener("click",function () {
+
+			// в зависимости от выбранной radio увеличиваем переменную "pizzaSizeCost" 
+			switch (rbtArrayPizzaSize[j].value) {
 				case "small":
 					pizzaSizeCost =5;
 					break;
@@ -31,19 +35,23 @@ window.addEventListener("load", function () {
 				default:
 					break;
 			}
+			
+			// Пересчитываем сумму и выводим пользователю
 			sum = pizzaSizeCost + addIngredientCost;
 			$("sum").innerHTML = "$" + sum;
-			console.log(pizzaSizeCost);
-			console.dir(addIngredient);
+
 		});
 	}
 //TODO Проверить (сделать проверку), как сделать так, чтобы при каждом нажатии добавлялась стоимость, а не перезаписывалась, но в то же время и не добавлялась больше 1 раза (поставить флаг или перебрать циклом все нечекнутые) 
-	for (let k = 0; k<addIngredient.length ; k++) {
+
+	// Перебираем все чекбоксы с дополнительными ингредиентами и вешаем обработчик событий на них.
+	for (let k = 0; k < addIngredient.length ; k++) {
+
 		addIngredient[k].addEventListener("click", function () {
 
 			// TODO Привязать флаг к этому "if" — если ингредиент отмечен— значит флаг подымаеться (можно и без переменной флага) — и цена "addIngredientCost" добавляеться, если он снят — addIngredientCost отнимаеться
 
-			
+			// В зависимости от выбранного ингредиента увеличиваем или уменьшаем переменную "addIngredientCost"
 			switch (addIngredient[k].value) {
 				case "mushroom":
 					if (addIngredient[k].checked == true) {
@@ -80,8 +88,9 @@ window.addEventListener("load", function () {
 						addIngredientCost -=5
 					}
 					break;
-			
 			}
+
+			// Пересчитываем сумму и выводим пользователю
 			sum = pizzaSizeCost + addIngredientCost;
 			$("sum").innerHTML = "$" + sum;
 			console.log(pizzaSizeCost);
@@ -89,67 +98,64 @@ window.addEventListener("load", function () {
 		});
 	}
 	
+// ====================ВАЛИДАЦИЯ ФОРМЫ ================================
 
-// TODO == Также необходимо валидация формы по паттерну
+	// Обработчик событий на клик по кнопек "Заказать"
 	$("submit_btn").addEventListener("click", function (e) {
-		var flag = true;
 
-		// Проверка на выбор размера пиццы (радиокнопки). Еслистоимость равна 0 — соответственно что пользователь не выбрал ни одну пиццу. 
+		var isValid = true; // Переменная, которая указывает -- прошла ли форма валидацию.
+		
+		// Проверка, если пицца не выбрана -- пишем сообщение и не отправляем форму. 
 		if (pizzaSizeCost == 0) {
-			flag = false;
+			isValid = false;
 			$("message").innerHTML = "Для начала выбирите пиццу!";
 			e.preventDefault();
-			return flag;
+			return isValid;
 		}
 
 		//Перебираем все элементы формы, чтобы найти незаполненные поля и вывести ошибку
-		for (let i = 0; i<formFields.length ; i++) {
+		for (let i = 0; i < formFields.length ; i++) {
+
+			let pattern = formFields[i].getAttribute("data-val"),
+
+				// элемент <span>, который связан с полем ввода, для вывода в него сообщения
+				boundMessageItem  = $(formFields[i].getAttribute("data-val-id")),
+				text_msg = formFields[i].getAttribute("data-val-msg"),
+				result = formFields[i].value.search(pattern);
+
+			console.dir(formFields[i]);
 
 			// Сначала ищем все текстовые поля(предпологаем, что ВСЕ текстовые поля должны быть заполненны) (В случае, если у нас были бы текстовые поля, которые не обязательно заполнять — мы бы вписали доп. условие, либо алгоритм поиска был бы другой)
-			if (formFields[i].getAttribute("data-val")) {
-				//formFields[i].type =="text"
+			if (pattern) {
+
 				// Если значениев поле — пустое, то меняем флаг и задаем стиль с красным полем
 				if (formFields[i].value == "") {
-					flag = false;
+					isValid = false;
 					$("message").innerHTML = "Нужно заполнить все поля !";
 					formFields[i].className = "invalid";
 					continue;
 				}
-				//Проверка на соответствие паттерну — если поле не  соответствует (возвращает "-1") — мы выводим подсказку, применяем красный стиль к полю и устанавливаем флаг в "false"
-				var pattern = formFields[i].getAttribute("data-val");
-				var messageElement = $(formFields[i].getAttribute("data-val-id"));
-				var text_msg = formFields[i].getAttribute("data-val-msg");
-				var result = formFields[i].value.search(pattern);
 				
+				// Если поле не соответствует паттерну --ставим соответствующий класс и выводим сообщение.
 				if (result == -1) {	
 					$("message").innerHTML = "Заполните поля правильно";
 					formFields[i].className = "invalid";
-					messageElement.innerHTML = text_msg;
-					flag = false;
+					boundMessageItem .innerHTML = text_msg;
+					isValid = false;
 					
+				// В противном случае -- поле прошло валидацию. Ставим соответствующий класс и Очищаем поле
 				}else{
 					formFields[i].className = "valid";
-					messageElement.innerHTML = "";
+					boundMessageItem .innerHTML = "";
 				}
 			}
 		}
 
 		//Главная проверка на флаг: если флаг — "false", тогда выводим сообщение о ошибке и запрещяем отправку формы.
-		if (flag == false) {
+		if (isValid == false) {
 			e.preventDefault();
-			return flag;
-		}
-		// В противном случае "if" не сработает и форма отправиться сама
-		
+			return isValid;
+		}	
 	});
-	// var pattern1 = formFields[8].getAttribute("data-val");
-	
-	// formFields[8].onchange = function(){
-	// 	var result1 = this.value.search(pattern1);
-	// 	console.log(this.value)
-	// 	console.log(result1)
-	// }
-	
-
 
 });

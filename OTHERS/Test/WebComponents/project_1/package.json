@@ -1,0 +1,34 @@
+{
+  "name": "web_components_1",
+  "version": "1.0.0",
+  "description": "here is would be testing of web components: I want create custom element with HTML-import",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack -p",
+    "build-dev": "webpack --mode development",
+    "dev": "webpack-dev-server --mode development --open"
+  },
+  "author": "RenJeka",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.2.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "file-loader": "^4.3.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "image-webpack-loader": "^6.0.0",
+    "node-sass": "^4.13.0",
+    "path": "^0.12.7",
+    "sass-loader": "^8.0.0",
+    "source-map-loader": "^0.2.4",
+    "style-loader": "^1.0.0",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-dev-server": "^3.9.0"
+  }
+}

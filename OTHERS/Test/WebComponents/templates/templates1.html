@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+	<template id="mytemp1">
+
+		<p>Hello there. Here is some code, that isn`t show on this page</p>
+	</template>
+	
+	
+
+	<script >
+		window.addEventListener("load", ()=>{
+			let myTemp1 = document.querySelector("#mytemp1");
+
+			temp1Clone1 = document.importNode(myTemp1.content, true);
+			console.dir(myTemp1.content);
+
+			document.body.appendChild(temp1Clone1);
+			
+		 
+		})
+		
+	</script>
+	
+</body>
+</html>

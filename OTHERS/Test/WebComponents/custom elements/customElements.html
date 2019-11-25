@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	
+	<my-component></my-component>
+
+	<script>
+		
+		let myElementProto = Object.create(HTMLElement.prototype), // Создание базового прототипа (чтобы в будущем на его основе сделать кастомный элемент)
+			myElement;
+
+
+		// Настройка колбек-функции при создании этого прототипа.
+		myElementProto.createdCallback = function () {
+			this.innerHTML = "<h2>Hello, Jeka. You Created Me!!!! Congratulations You!!!</h2>"
+		}
+
+		// Регистрируем элемент с созданным прототипом.
+		myElement = document.registerElement("my-component", {
+			prototype: myElementProto,
+		})
+		
+
+	</script>
+</body>
+</html>

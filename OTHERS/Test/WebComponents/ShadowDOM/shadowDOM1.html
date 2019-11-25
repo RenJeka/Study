@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+	 <div id="sHost">
+		 <p slot="ppp">Here is paragraph</p>
+	</div>  <!-- Создаем Shadow-host (оберточный элемент для теневого дерева)-->
+
+	<template id="templ1">
+
+		<h2>Hello! Here I am from shadow DOM =))  Go on the dark side! Here's cookies)))</h2>
+		<slot name="ppp"> </slot>
+	</template>
+
+
+	<script>
+
+		window.addEventListener("load", ()=>{
+			let templ1 		= document.querySelector("#templ1"),
+				cloneTempl1 = document.importNode(templ1.content, true),
+				sHost1 		= document.querySelector("#sHost"), // Получаем Shadow host элемент
+				sRoot		= sHost1.attachShadow({mode: "open"}); // Прикрепляем к Shadow host элементу теневое дерево Shadow root
+
+			sRoot.appendChild(cloneTempl1) // Добавляем любую HTML-разметку в теневое дерево Shadow root
+			
+		})
+		
+	</script>
+</body>
+</html>

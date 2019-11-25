@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+	<template id="templ1">
+		<style>
+			span {
+				display: block;
+				margin: 10px 0; 
+			}
+		</style>
+		<h1>Hello Jeka! I am life. You created me and defined in JS! I was added on your page! Yuuuuhhhuuuuu =)</h1> 
+		
+		<hr> 
+		
+		<p>Yes! Here is second paragraph!!!</p>
+
+		<span>Всё,  что угодно! </span>
+		<br>
+	</template>
+
+
+
+	<my-component></my-component>
+
+	<button id="myBtn1">Push here! </button>
+
+	<script>
+
+		window.addEventListener("load", ()=>{
+
+			let myBtn1 = document.querySelector("#myBtn1"),
+				template1 = document.importNode(document.querySelector("#templ1").content, true);
+
+
+			class MyComponent extends HTMLElement {
+
+				constructor() {
+					super();
+				};
+
+				connectedCallback(){
+					this.appendChild(template1);
+				}
+
+			}	
+
+			myBtn1.addEventListener("click", ()=>{
+			 
+				MyComponent.connectedCallback();
+			 
+			})
+
+
+			customElements.define('my-component', MyComponent);
+
+		})
+	
+	</script>
+</body>
+</html>

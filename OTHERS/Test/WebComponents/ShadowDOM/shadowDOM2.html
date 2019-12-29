@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+
+	<template id="template1">
+		<h1>
+			<slot name="slot1"> </slot>
+		</h1>
+	</template>
+
+	<my-element1>
+		<span slot="slot1">Содержимое "my-element"</span>
+	</my-element1>
+
+
+
+	<script>
+
+		class MyElement1 extends HTMLElement {
+		
+		  constructor() {
+			super();
+		  };
+		
+		  connectedCallback(){
+
+			let template1 = document.importNode(document.querySelector("#template1").content, true),
+				shadowHost = this.attachShadow({mode:"open"});
+
+			shadowHost.appendChild(template1); // what HTML content need to add in custom element
+
+		  }
+		
+		}
+		
+		// MyElement1.connectedCallback;
+		// console.dir(MyElement1);
+		
+		customElements.define('my-element1', MyElement1);		 		 
+
+	</script>
+	
+</body>
+</html>

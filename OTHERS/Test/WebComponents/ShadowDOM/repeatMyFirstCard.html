@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+	
+	<template id="temp1">
+
+		<style>
+
+			.template-background{
+				background-color: brown;
+				min-width: 500px;
+				min-height: 150px;
+				display: inline-block;
+			}
+
+		</style>
+
+		<div class="template-background">
+			<p>
+				<slot name="mySlot1"> </slot>
+			</p>
+		</div>
+
+	</template>
+
+
+	<jeka-element>
+		<p slot="mySlot1">Hello</p>
+	</jeka-element>
+	<jeka-element>
+		<p slot="mySlot1">Olla</p>
+	</jeka-element>
+	<jeka-element>
+		<p slot="mySlot1">Privet</p>
+	</jeka-element>
+
+	<jeka-element>
+		<a slot="mySlot1" href="https://www.youtube.com/watch?v=OVQCN_bUkZM&t=49s">Link</a>
+	</jeka-element>
+	
+	<script>
+
+		window.addEventListener("load", ()=>{
+		 
+			// let myTemplate 		= document.querySelector("#temp1"),
+			// 	cloneTemplate 	= document.importNode(myTemplate.content, true);
+		
+			// document.body.appendChild(cloneTemplate);
+
+			class jekaElement extends HTMLElement{
+
+				constructor (){
+					super();
+				}
+
+				connectedCallback(){
+					let myTemplate 		= document.querySelector("#temp1"),
+						cloneTemplate 	= document.importNode(myTemplate.content, true),
+						shadowHost		= this.attachShadow({mode:"open"});
+
+					shadowHost.appendChild(cloneTemplate);
+				}
+
+			}
+
+			customElements.define("jeka-element", jekaElement);
+			
+		})
+		
+	</script>
+
+
+
+</body>
+</html>

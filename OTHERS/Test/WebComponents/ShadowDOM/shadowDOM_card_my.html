@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+
+	<!-- =======================НАЧАЛО ШАБЛОНА============================ -->
+	<template id="temp1">
+
+		<style>
+
+			.background{
+				display: inline-block;
+				min-width: 10em;
+				min-height: 5em;
+				background-color: lightgreen;
+				border: 3px ridge gray; 
+			}
+
+			.top-title{
+				text-align: center;
+				margin: 0 auto;
+				font-size: 1em;
+			}
+
+			.name{
+				font-size: 2em;
+				display: block;
+				text-align: center;
+				background-color: #fff;
+			}
+
+		</style>
+
+
+		<div class="background">
+			<div class="top-title">
+				Меня зовут
+			</div>
+			<div class="name">
+				
+				<slot  name="slot1"></slot>
+				<slot name="slot2"></slot>
+			</div>
+
+		</div>
+	
+	</template>
+
+
+	<my-element1> 
+
+		<span slot="slot1">Jeka</span> 
+		<span slot="slot2">Ren</span>
+
+	</my-element1>
+	
+
+	<script>
+			
+		class MyElem1 extends HTMLElement{
+
+			constructor() {
+				super();
+			}
+
+			connectedCallback(){
+
+				let temp1 		= document.querySelector("#temp1"),
+					clone1		= document.importNode(temp1.content, true),
+					shadowHost1 = this.attachShadow({mode: "open"});
+
+				
+				shadowHost1.appendChild(clone1);
+			}
+
+		}
+
+		customElements.define("my-element1", MyElem1);
+
+	</script>
+
+
+</body>
+</html>

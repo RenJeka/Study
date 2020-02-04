@@ -1,0 +1,82 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Deferred After</title>
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <style>
+        div {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+
+        #player1 {
+            background-color: green;
+        }
+
+        #player2 {
+            background-color: red;
+            margin-left: 280px;
+        }
+
+        #ball {
+            background-color: yellow;
+            border: 1px solid black;
+            border-radius: 80px;
+            position: relative;
+        }
+    </style>
+
+    <script>
+
+        var ball = {
+
+            roll: function () {
+                this.deferred = $.Deferred();
+                $("#ball").animate({ "left": "280px" }, 2000, ball.endRoll);
+                return this.deferred;
+            },
+
+            endRoll: function () {
+                $("#ball").animate({ "left": "270px" }, 500);
+                ball.deferred.resolve();
+            }
+        }
+
+        var player1 = {
+            pass: function () {
+                return ball.roll();
+            }
+        }
+
+        var player2 = {
+            move: function () {
+                $("#player2").animate({ "margin-left": "290px" }, 300);
+            },
+
+            takePass: function (game) {
+                // так как объект player2 получает Deferred объект, он может самостоятельно решать в каком состоянии будет находиться этот объект не зависимо
+                // от результата асинхронной операции. Это является нарушением инкапсуляции так как player2 не может решать какой был результат асинхронной операции.
+                game.done(player2.move);
+                game.reject();
+            }
+        }
+
+        function startGame() {
+            var game = player1.pass();
+            player2.takePass(game);
+        }
+
+        $(function () {
+            $("#player1").click(startGame);
+        });
+    </script>
+
+</head>
+<body>
+    <div id="player1"></div>
+    <div id="ball"></div>
+    <div id="player2"></div>
+</body>
+</html>

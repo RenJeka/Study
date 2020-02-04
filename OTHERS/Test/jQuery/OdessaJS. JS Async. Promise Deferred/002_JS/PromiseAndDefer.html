@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Promise and Deferred</title>
+    <script src="PromiseAndDefer.js"></script>
+    <script src="Download.js"></script>
+</head>
+<body>
+
+    <button id="getData">Download</button>
+    <div id="output"></div>
+
+    <script>
+
+        document.getElementById("getData").addEventListener("click", function () {
+            // downloadData - возвращает promise, на котором вызывается функция then.
+            // В качестве параметров функция принимает две callback функции - действие при успешном завершении асинхронной операции и действие в случае ошибки.
+            // Для работы используется сценарий из файла PromiseAndDefer.js
+            downloadData().then(function (response) {
+                document.getElementById("output").innerHTML = response;
+            }, function (error) {
+                alert(error.message);
+            });
+        });
+
+    </script>
+
+</body>
+</html>

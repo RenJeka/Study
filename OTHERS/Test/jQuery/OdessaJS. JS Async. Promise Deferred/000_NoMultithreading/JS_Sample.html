@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Single Thread Sample</title>
+</head>
+<body>
+    <script>
+        for (var i = 0; i < 3; i++) {
+            setTimeout(function () { console.log(i) }, 0);
+            // Обработчики событий в JavaScript не запустятся пока поток не станет свободным
+        }
+        // output:
+        // 3
+        // 3
+        // 3
+
+        var start = new Date();
+        setTimeout(function () {
+            var end = new Date();
+            console.log('Time elapsed:', end - start, 'ms');
+        }, 500);
+
+        // Цикл блокирует поток на 1 секунду
+        while (new Date() - start < 1000) { };
+        // output:
+        // Time elapsed: 1022 ms
+    </script>
+</body>
+</html>

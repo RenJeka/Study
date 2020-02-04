@@ -1,0 +1,27 @@
+<tr class="courses-table__tr">
+  <td class="courses-table__td">
+    <div class="b-lazy courses-table__img" data-src="{{coverColorUrl}}">
+      <div class="b-lazy courses-table__icon" data-src="{{imageUrl}}"></div>
+    </div>
+  </td>
+
+  <td class="courses-table__title">
+    <a href="/ua/courses/{{slug}}" class="course-title-link" data-title="{{slug}}">{{title}}</a>
+  </td>
+  <td class="courses-table__date">
+    {{start}}
+  </td>
+  <td class="courses-table__duraction">
+    <div data-time="{{time}}">{{time}}</div>
+  </td>
+  <td class="courses-table__length">
+
+    <div data-month="{{monthNumber}}">{{duration}}</div>
+  </td>
+  <td class="courses-table__price">
+    <b>{{price}}</b> грн.
+  </td>
+  <td class="courses-table_btn">
+    <div class="course-btn">Записатися</div>
+  </td>
+</tr>

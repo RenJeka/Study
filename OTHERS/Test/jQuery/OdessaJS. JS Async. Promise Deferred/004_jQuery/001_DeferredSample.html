@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Deferred Sample</title>
+</head>
+<body>
+    <script src="jquery-2.1.1.min.js"></script>
+    <script>
+        
+        var deferred = $.Deferred();
+
+        deferred.done(function () { console.log("resloved") });
+        deferred.fail(function () { console.log("failed") });
+        deferred.always(function () { console.log("always") });
+
+        $(function () {
+            $("#btnResolve").click(function () { deferred.resolve(); });
+            $("#btnReject").click(function () { deferred.reject(); });
+        });
+
+    </script>
+
+    <input id="btnResolve" type="button" value="Resolve" />
+    <input id="btnReject" type="button" value="Reject" />
+</body>
+</html>

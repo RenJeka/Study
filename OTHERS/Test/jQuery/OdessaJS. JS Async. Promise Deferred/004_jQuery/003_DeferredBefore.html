@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Deferred Before</title>
+    <script src="jquery-2.1.1.min.js"></script>
+
+    <style>
+        div {
+            width: 80px;
+            height: 80px;
+            float: left;
+        }
+
+        #player1 {
+            background-color: green;
+        }
+
+        #player2 {
+            background-color: red;
+            margin-left: 280px;
+        }
+
+        #ball {
+            background-color: yellow;
+            border: 1px solid black;
+            border-radius: 80px;
+            position: relative;
+        }
+    </style>
+
+    <script>
+
+        var ball = {
+            roll: function () {
+                $("#ball").animate({ "left": "280px" }, 2000, ball.endRoll);
+            },
+
+            endRoll: function () {
+                // Нарушение принцыпов ООП. Объект ball не должен указывать что должен делать объект player1
+                // Также, могут возникнуть проблемы при необходимости добавить несколько действий по завершению асинхронной операции.
+                // Перечисленные проблемы можно решить с помощью deferred объектов
+                player2.move();
+                $("#ball").animate({ "left": "270px" }, 500);
+            }
+        }
+
+        var player1 = {
+            pass: function () {
+                ball.roll();
+            }
+        }
+
+        var player2 = {
+            move: function () {
+                var p = $("#player2");
+                p.animate({ "margin-left": "290px" }, 300);
+            }
+        }
+
+        $(function () {
+            $("#player1").click(player1.pass);
+        });
+    </script>
+
+</head>
+<body>
+    <div id="player1"></div>
+    <div id="ball"></div>
+    <div id="player2"></div>
+</body>
+</html>

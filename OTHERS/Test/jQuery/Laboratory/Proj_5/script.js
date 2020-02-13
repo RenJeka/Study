@@ -2,7 +2,7 @@ const url = 'https://www.cbr-xml-daily.ru/daily_json.js';
 const method = 'GET';
 const isAsync = false;
 
-main1();
+main5();
 
 function main1() {
 	$.get(url)
@@ -47,5 +47,8 @@ function main4() {
 		
 }
 
-
+function main5() {
+	console.log(fetch(url));
+	
+}
 

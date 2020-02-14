@@ -1,6 +1,9 @@
 .grid-host{
-
+	display: grid;
+	grid-gap: 10px;
+	height: 500px;
+	grid-template-columns: 100px 1fr 100px;
 }
 .grid-item{
-	
+	background-color: #96ceb4;
 }

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>рекурсивный вызов</title>
+</head>
+<body>
+	<script>
+		function fun1(param1) {
+			
+			let variable1 = "bbb";
+
+			let myObj = {
+				prop1: 111,
+				prop2: 222,
+				prop3: 333,
+				prop4: {
+					prop41:41414141,
+					prop42:42424242
+				}
+			}
+
+			function fun2(param2) {
+				console.log('param1 from function2 = ', param1);
+				console.log('variable1 from function2 = ', variable1);
+				
+			}
+
+			fun2(20);
+		}
+		
+		fun1(10);
+
+	</script>
+</body>
+</html>

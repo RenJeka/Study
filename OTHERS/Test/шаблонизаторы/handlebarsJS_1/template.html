@@ -1,0 +1,15 @@
+{{#each .}}
+
+<div>
+	<h5>Название курса — {{title}}</h5>	
+	<img src="{{imageUrl}}" alt="{{slug}}" width="100">
+	<pre>
+		Дата проведения — {{monthName}}.{{year}}год
+		Кол-во занятий — {{duration}}
+		Цена — {{price}}
+	</pre>
+
+
+</div>
+
+{{/each}}

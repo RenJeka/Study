@@ -1,0 +1,23 @@
+html,
+body{
+	margin: 0;
+	padding: 0;
+}
+
+.talking-area{
+	max-width: 1100px;
+	margin: 0 auto;
+	padding: 0 50px;
+	box-sizing: border-box;
+	overflow: hidden;
+	background-color: #eaeaea;
+	color: rgb(98, 129, 12);
+}
+
+.avatar{
+	max-width: 100px;
+}
+
+.house{
+	max-width: 700px;
+}

@@ -2,23 +2,12 @@
 require('whatwg-fetch');
 
 require("@babel/polyfill");
-
 $(document).ready(function () {
 
-    let language = "ru";
-    let getCoursePlansLink = `testUsers.json`;
-    let getTemplateTableRowLink = `template.html`;
+    let language = currentCulture.language;
+    let getCoursePlansLink = `/${language}/schedule/get-course-plans`;
+    let getTemplateTableRowLink = `/assets/js/templates/template-schedulte.${language}.html`;
 
-	// let aaa = fetch(getCoursePlansLink)
-	//           .then((responce) => {
-    //              return responce.json()
-	// 		  })
-	// 		  .then((responce2)=>{
-	// 			  console.log(responce2);
-	// 		  });
-	
-	// console.log();
-	
     /**
     * Функция, которая получает шаблон для обработки данных с сервера
     * @param {String} urlTemplate Строка URL для получения шаблона.
@@ -411,28 +400,28 @@ $(document).ready(function () {
         $(".schedule-s2__table-courses_course-title").on("change", (e) => {
             filterObject.slug = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            
+            bLazy.revalidate();
         });
 
         // Обработчик на фильтр "Время" 
         $(".schedule-s2__table-courses_time").on("change", (e) => {
             filterObject.time = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            
+            bLazy.revalidate();
         });
 
         // Обработчик на фильтр "Месяц" 
         $(".schedule-s2__table-courses_month").on("change", (e) => {
             filterObject.monthNumber = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            
+            bLazy.revalidate();
         });
 
         // Обработчик на фильтр "Локация" 
         $(".schedule-s2__table-courses_location").on("change", (e) => {
             filterObject.Office.ShortName = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            
+            bLazy.revalidate();
         });
 
         // Обработчик на кнопку "сбросить фильтры"
@@ -443,9 +432,9 @@ $(document).ready(function () {
             filterObject.Office.ShortName = "";
             $(".schedule_form")[0].reset();
             showResult(rawData, templateTableRow, filterObject);
-            
+            bLazy.revalidate();
         });
 
-        
+        bLazy.revalidate();
     })()
 })

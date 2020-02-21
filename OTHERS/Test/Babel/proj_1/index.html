@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="site.min.css">
+	<script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.3/handlebars.min.js"></script>
+	<script src="blazy.min.js"></script>
+	<script>
+			(function() {
+				// Initialize
+				var bLazy = new Blazy();
+			})();
+	</script>
+
+</head>
+<body>
+
+
+		<div class="schedule-s2__body">
+
+			
+					<div class="schedule-s2__body_text-block">
+						<h2 class="schedule-s2__body_text-block_title header-text">
+							@Index.Course
+						</h2>
+						<div class="schedule-s2__body_text-block_text">
+							@Index.AtThisSection <span onclick="$('.menu-btn').click()" style="color: #0094ff; cursor: pointer;">@Index.AtThisSection2</span> @Index.AtThisSection3
+						</div>
+					</div>
+			
+
+					<table class="courses-table front-for-js">
+							<tr class="courses-table__header">
+								<th class="courses-table__header-item">@Index.ProgrammingCourses</th>
+				
+								<th class="courses-table__header-item schedule-s2__table-header-date">@Index.DateToStart</th>
+								<th class="courses-table__header-item schedule-s2__table-header-time">@Index.Time</th>
+								<th class="courses-table__header-item schedule-s2__table-header-length">@Index.Duration</th>
+								<th class="courses-table__header-item">@Index.Location</th>
+								<th class="courses-table__header-item">@Index.Price</th>
+								<th class="courses-table__header-item schedule-s2__table-header-empty"></th>
+							</tr>
+				
+							@foreach (var monthGroup in Model.MonthScheduleItems)
+							{
+								foreach (var scheduleItem in monthGroup.courses)
+								{
+									<tr class="courses-table__tr">
+				
+										<td class="courses-table__td">
+											<div class="b-lazy courses-table__img" data-src="/assets/img/specialities/main-course-bg/LightBlue.jpg">
+												<div class="b-lazy courses-table__icon-spec" data-src="@string.Format("{0}{1}", baseIconUrl, scheduleItem.IconUrl)"></div>
+											</div>
+										</td>
+										<td class="courses-table__title">
+											<a href="/@ViewBag.Language/specialities/@scheduleItem.slug" class="course-title-link" data-title="Специальность @scheduleItem.title">
+												@scheduleItem.title
+											</a>
+										</td>
+										<td class="courses-table__date">
+											@scheduleItem.StartDateString
+										</td>
+										<td class="courses-table__duraction">
+											<div>@scheduleItem.time</div>
+										</td>
+										<td class="courses-table__length">
+											@scheduleItem.duration
+										</td>
+				
+										<td class="courses-table__location">
+											<div class="course-location course-location_table">
+												@Html.Raw(Html.GetOfficeLink(scheduleItem.Office))
+											</div>
+										</td>
+				
+										<td class="courses-table__price">
+											<b> @(string.Format("{0:### ###}", Convert.ToInt32(scheduleItem.price))) </b> грн.
+										</td>
+										<td class="courses-table_btn">
+											<div href="#" class="course-btn">@Index.SignOn</div>
+										</td>
+									</tr>
+								}
+							}
+						</table>
+
+
+					<div class="schedule-s2__body_select-block">
+
+			
+					<div class="schedule-s2__body_month-sort-courses">
+			
+						<template id="templateWrapper">
+							<div class="schedule-s2__body_month-block">
+								<div class="schedule-s2__body_month-block_title header-text">
+			
+								</div>
+			
+								<table id="courses-table" class="courses-table month1-for-js">
+									<tr class="courses-table__header">
+										<th class="courses-table__header-item">Курс программирования</th>
+										<th class="courses-table__header-item schedule-s2__table-header-date">Дата старта</th>
+										<th class="courses-table__header-item">Время</th>
+										<th class="courses-table__header-item schedule-s2__table-header-length">Продолжительность</th>
+										<th class="courses-table__header-item courses-table__header-item">Локация</th>
+										<th class="courses-table__header-item">Месяц</th>
+										<th class="courses-table__header-item"></th>
+									</tr>
+			
+								</table>
+							</div>
+						</template>
+			
+					</div>
+				</div>
+		</div>
+			
+
+
+
+
+
+	<!-- <script src="src/main.js"></script> -->
+	<script src="dist/bundle.js"></script>
+	
+</body>
+</html>

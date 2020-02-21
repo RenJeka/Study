@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -d dist"
+    "babel": "babel src -d temp",
+    "go": "browserify ./temp/main.js -o ./dist/bundle.js",
+    "minify": "minify ./dist/bundle.js",
+    "babelify": "browserify ./src/main.js -t babelify --outfile bundle.js"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +16,14 @@
     "@babel/cli": "^7.8.4",
     "@babel/core": "^7.8.4",
     "@babel/plugin-transform-arrow-functions": "^7.8.3",
-    "@babel/preset-env": "^7.8.4"
+    "@babel/plugin-transform-regenerator": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "browserify": "^16.5.0"
   },
   "dependencies": {
-    "@babel/polyfill": "^7.8.3"
+    "@babel/polyfill": "^7.8.3",
+    "core-js": "^3.6.4",
+    "minify": "^5.1.0",
+    "whatwg-fetch": "^3.0.0"
   }
 }

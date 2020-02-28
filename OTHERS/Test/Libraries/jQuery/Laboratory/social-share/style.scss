@@ -1,0 +1,57 @@
+@import 'fonts/fonts.scss';
+
+
+.share-social-networks{
+    display: flex;
+    padding-top: 35px;
+
+}
+
+.share-social-networks__title {
+    text-transform: uppercase;
+    color: rgba(0, 158, 223, 0.8);
+}
+	
+.share-social-networks__icons{
+
+}
+
+
+.share-social-networks__icons-list {
+
+    margin: 0;
+    padding: 0;
+
+    li {
+        list-style-image: none !important;
+        display: inline-block;
+    }
+}
+
+.share-social-networks__icon {
+    padding-left: 20px;
+    font-family: "edufont";
+	color: rgba(0, 158, 223, 0.8);
+	text-decoration: none;
+
+
+    &_twitter:before {
+        content: "\e918";
+    }
+
+    &_facebook:before {
+        content: "\e90a";
+    }
+
+    &_vkontakte:before {
+        content: "\e91a";
+    }
+
+    &_instagram:before {
+        content: "\e91c";
+    }
+
+    &_linkedin:before {
+        content: "\e90e";
+    }
+}

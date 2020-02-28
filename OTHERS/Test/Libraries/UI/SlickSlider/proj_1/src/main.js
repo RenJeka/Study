@@ -1,5 +1,6 @@
 var $ = require("jquery");
+require("slick-carousel");
 
 $(document).ready(function () {
-	$("div").css({"background-color:"})
+	$(".aaa").slick();
 });

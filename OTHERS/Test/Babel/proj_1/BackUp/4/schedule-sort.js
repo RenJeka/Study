@@ -1,10 +1,4 @@
 // Скрипт получает данные с сервера,  сортирует их  и выводит на страницу в виде таблицы с заголовками месяцев.
-require('whatwg-fetch');
-
-require("@babel/polyfill");
-
-//require("@webcomponents/webcomponentsjs");
-// require("../pollyfill/template");
 
 $(document).ready(function () {
 
@@ -18,7 +12,7 @@ $(document).ready(function () {
     * @returns {Promise} Возвращает Promise с шаблоном.
     */
     async function getTemplate(urlTemplate) {
-        let returnTemplate = await window.fetch(urlTemplate)
+        let returnTemplate = await fetch(urlTemplate)
             .then(response => response.text());
 
         return returnTemplate;
@@ -30,7 +24,7 @@ $(document).ready(function () {
     * @returns {Promise} Возвращает Promise с данными расписания курсов.
     */
     async function getData(urlData) {
-        let returnData = await window.fetch(urlData)
+        let returnData = await fetch(urlData)
             .then(response => response.json());
 
         return returnData;
@@ -53,15 +47,15 @@ $(document).ready(function () {
         let arrUniqueValues = []; // Массив уникальных значений, который будет возвращатся функцией
 
         // Перебираем массив "arrAllDataToFind", чтобы найти уникальные значения.
-
-        for (let i = 0; i < dataArray.length; i++) {
-            let curr = dataArray[i];
+        for (let elem of dataArray) {
+            // Для доступа к вложенным свойствам реализуем доступ с точечной нотацией.
+            let curr = elem;
             let props = propToFind.split('.');
 
             // цыкл для того, чтобы дотянуться к вложенному значению
-            for (let j = 0; j < props.length; j++) {
+            for (var i = 0; i < props.length; i++) {
                 if (!curr) break;
-                curr = curr[props[j]];
+                curr = curr[props[i]];
             }
 
             // проверка на уникальность, если значение не уникально — не добавляем его в массив уникальн. значений и ищем другое.
@@ -69,7 +63,6 @@ $(document).ready(function () {
                 arrUniqueValues.push(curr);
             }
         }
-
 
         if (needSort) {
             // Сортируем по возрастанию
@@ -325,13 +318,12 @@ $(document).ready(function () {
      */
     function showResult(fRawData, fTemplateTableRow, fFilterObject) {
         let arrDataPerMonth = [],   // Массив с расписаниями курсов отдельно для каждого месяца.
-            $outerContainer = $('.schedule-s2__body_month-sort-courses'), // Внешний контейнер для расписания.
-            $templateWrapper = $(document.querySelector("#templateWrapper").innerHTML), //Оберточный шаблон для каждого месяца
+            outerContainer = $('.schedule-s2__body_month-sort-courses'), // Внешний контейнер для расписания.
+            templateWrapper = document.querySelector("#templateWrapper"), //Оберточный шаблон для каждого месяца
             templateWrapperContent, // Внутреняя разметка элемента <template>
-            $templateWrapperClone,   // Клон Элемента templateWrapper, который будет настраиваться и вставлятся в разметку.
-            $templateWrapperTitle,   // Заголовок, который вставляется в шаблон для каждого месяца
+            templateWrapperTitle,   // Заголовок, который вставляется в шаблон для каждого месяца
             table,                  // Таблица (в шаблоне "templateWrapper"), куда будут рендерится строки
-            $currentTable,           // Объект jQuery таблицы "table"
+            currentTable,           // Объект jQuery таблицы "table"
             readyToRenderData,      // Готовые данные для рендеринга в таблицу "table"
             months, // Массив месяцев, которые нужно заполнить в html - разметке
             filtredData = [];       // Отфильтрированные данные
@@ -360,7 +352,7 @@ $(document).ready(function () {
         filtredData = filterFunc(fRawData, fFilterObject);
 
         // Проверяем на наличие курсов и показываем пустое сообщение
-        checkEmptyMsg(filtredData, $outerContainer.get(0));
+        checkEmptyMsg(filtredData, outerContainer.get(0));
 
         // Находим уникальные месяца в отфильтрованном массиве
         months = getUniqueData(filtredData, "monthNumber");
@@ -368,16 +360,16 @@ $(document).ready(function () {
         // Перебор массива месяцев, чтобы создать блок месяца с расписанием курсов.
         months.forEach(currentMonth => {
 
-            // Клонируем шаблон из тега <script> 
-            $templateWrapperClone = $templateWrapper.clone(true);
+            // Получаем содержимое от "templateWrapper" (задействована технология Web Components — templates)
+            templateWrapperContent = document.importNode(templateWrapper.content, true);
 
-            // ищем элемент заголовка в контексте текущего клона шаблона
-            $templateWrapperTitle = $(".schedule-s2__body_month-block_title", $templateWrapperClone);
+            // ищем элемент заголовка во фрагменте  <template>
+            templateWrapperTitle = templateWrapperContent.querySelector(".schedule-s2__body_month-block_title");
+            table = templateWrapperContent.querySelector("#courses-table");
+            currentTable = $(table); // Превращаем в объект jQuery, так как сразу не получается получить объект "table" в контексте "templateWrapperContent"
 
-            // также находим табюлицу
-            $currentTable = $("#courses-table", $templateWrapperClone);
+            // Достаем из данных только те, которые относятся к месяцу "currentMonth"
 
-            // Достаем данных только тех курсов, которые относятся к месяцу "currentMonth"
             if (!filtredData) {
                 arrDataPerMonth = fRawData.filter(course => currentMonth == course.monthNumber);
             } else {
@@ -385,15 +377,13 @@ $(document).ready(function () {
             }
 
             // Добавляем название месяца в заголовок оберточного шаблона (блока с расписанием на месяц)
-            $templateWrapperTitle.text(arrDataPerMonth[0].monthName);
-
-            // Добавляем клон шаблона во внешний контейнер
-            $outerContainer.append($templateWrapperClone);
+            templateWrapperTitle.innerHTML = arrDataPerMonth[0].monthName;
+            outerContainer.append(templateWrapperContent);
 
             // Рендерим таблицу для текущего месяца (currentMonth) при помощи библиотеки Handlebars
             arrDataPerMonth.forEach(elem => {
                 readyToRenderData = Handlebars.compile(fTemplateTableRow);
-                $currentTable.append(readyToRenderData(elem));
+                currentTable.append(readyToRenderData(elem));
             });
         });
     }

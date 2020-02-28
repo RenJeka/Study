@@ -10338,9 +10338,9 @@ return jQuery;
 }));
 
 },{}],2:[function(require,module,exports){
-require("jQuery");
+var $ = require("jquery");
 
 $(document).ready(function () {
-	$("div").style.backGroundColor("red");
+	$("div").style.backgroundColor = "red";
 });
-},{"jQuery":1}]},{},[2]);
+},{"jquery":1}]},{},[2]);

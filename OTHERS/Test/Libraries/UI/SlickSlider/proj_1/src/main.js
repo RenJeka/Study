@@ -1,5 +1,5 @@
-require("jquery");
+var $ = require("jquery");
 
 $(document).ready(function () {
-	$("div").style.backGroundColor("red");
+	$("div").css({"background-color:"})
 });

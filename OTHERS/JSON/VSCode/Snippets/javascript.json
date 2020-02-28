@@ -42,7 +42,7 @@
 			  "${1:a} = +prompt(\"${2:Введите какое либо значение}\");$3",
 			],
 			"description": "Prompt Function"
-		  },
+			},
 	
 		  "Prompt Function": {
 			"prefix": "p",
@@ -69,5 +69,79 @@
 			],
 			"description": "comment1"
 		  },
+		  "create Class": {
+			"prefix": "class",
+			"body": [
+			  "class ${1:ClassName} {",
+			  "	constructor(${2:params}) {",
+			  "		",
+			  "	}",
+			  "}"
+			],
+			"description": "create Class"
+		  },
+		  "addEventListener_snippet": {
+			"prefix": ".add",
+			"body": [
+			  ".addEventListener(\"${1:click}\", ()=>{",
+				" "
+			  "	${2}",
+				" "
+			  "})"
+			],
+			"description": "addEventListener_snippet"
+		  },
+		  "Class Custom Element (WebComponents)": {
+			"prefix": "classCE(WC)",
+			"body": [
+			  "class ${1:MyComponent} extends HTMLElement {",
+			  "",
+			  "  constructor() {",
+			  "    super();",
+			  "  };",
+			  "",
+			  "  connectedCallback(){",
+			  "    this.appendChild(${2:template}); // what HTML content need to add in custom element",
+			  "  }",
+			  "",
+			  "}",
+			  "",
+			  "${1:MyComponent}.connectedCallback();",
+			  "",
+			  "customElements.define('${3:my-element}', ${1:ClassName});		 "
+			],
+			"description": "Class Custom Element (WebComponents)"
+		  },
+		  "template variable": {
+			"prefix": "template var",
+			"body": [
+			  "let template1 = document.importNode(document.querySelector(${1:template}).content, true)		 "
+			],
+			"description": "template variable"
+		  },
+		  "QuerySelector #": {
+			"prefix": "qs",
+			"body": [
+			  "document.querySelector(\"#${1}\")"
+			],
+			"description": "querySelector_snippet"
+		  },
+		  "QuerySelector All": {
+			"prefix": "qsa",
+			"body": [
+			  "document.querySelectorAll(\".${1}\")"
+			],
+			"description": "querySelectorAll_snippet"
+		  },
+		  "build arrow function": {
+			"prefix": "afun",
+			"body": [
+			  "(${1:response}) => {",
+			  "  ${2}",
+			  "}"
+			],
+			"description": "build arrow function"
+		  },
+	
 	}
 	

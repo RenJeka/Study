@@ -1,0 +1,22 @@
+{
+  "name": "proj_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass ./styles/style.scss ./styles/style.css --watch",
+    "go": "watchify ./src/main.js -o ./dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browserify": "^16.5.0",
+    "sass": "^1.26.1",
+    "watchify": "^3.11.1"
+  },
+  "dependencies": {
+    "jquery": "^1.11.0",
+    "slick-carousel": "^1.8.1"
+  }
+}

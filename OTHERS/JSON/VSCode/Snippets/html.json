@@ -55,4 +55,20 @@
 		],
 		"description": "add css styly with <link>"
 	  },
+	  "template tag": {
+		"prefix": "temp",
+		"body": [
+		  "<template>",
+		  "	$1",
+		  "</template>"
+		],
+		"description": "template"
+	  },
+	  "slot tag": {
+		"prefix": "slot",
+		"body": [
+		  "<slot name=\"${1:slot1}\">$2</slot>"
+		],
+		"description": "slot tag"
+	  }
 }

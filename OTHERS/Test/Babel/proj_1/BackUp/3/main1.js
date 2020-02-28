@@ -3,15 +3,24 @@ require('whatwg-fetch');
 
 require("@babel/polyfill");
 
-//require("@webcomponents/webcomponentsjs");
-// require("../pollyfill/template");
+require("../pollyfill/template")
 
 $(document).ready(function () {
 
-    let language = currentCulture.language;
-    let getCoursePlansLink = `/${language}/schedule/get-course-plans`;
-    let getTemplateTableRowLink = `/assets/js/templates/template-schedulte.${language}.html`;
+    let language = "ru";
+    let getCoursePlansLink = `testUsers.json`;
+    let getTemplateTableRowLink = `template.html`;
 
+	// let aaa = fetch(getCoursePlansLink)
+	//           .then((responce) => {
+    //              return responce.json()
+	// 		  })
+	// 		  .then((responce2)=>{
+	// 			  console.log(responce2);
+	// 		  });
+	
+	// console.log();
+	
     /**
     * Функция, которая получает шаблон для обработки данных с сервера
     * @param {String} urlTemplate Строка URL для получения шаблона.
@@ -19,7 +28,7 @@ $(document).ready(function () {
     */
     async function getTemplate(urlTemplate) {
         let returnTemplate = await window.fetch(urlTemplate)
-            .then(response => response.text());
+            .then(response => response.text())
 
         return returnTemplate;
     }
@@ -31,7 +40,7 @@ $(document).ready(function () {
     */
     async function getData(urlData) {
         let returnData = await window.fetch(urlData)
-            .then(response => response.json());
+            .then(response => response.json())
 
         return returnData;
     }
@@ -46,22 +55,22 @@ $(document).ready(function () {
     function getUniqueData(dataArray, propToFind, needSort) {
 
         if (!dataArray || !propToFind) {
-            throw "ArgumentNullException: dataArray или propToFind == underfined. Проверьте входные значения";
+            throw "ArgumentNullException: dataArray или propToFind == underfined. Проверьте входные значения"
         }
-        needSort = needSort !== undefined ? needSort : true;
+        needSort = (needSort !== undefined) ? needSort : true;
 
         let arrUniqueValues = []; // Массив уникальных значений, который будет возвращатся функцией
 
         // Перебираем массив "arrAllDataToFind", чтобы найти уникальные значения.
-
-        for (let i = 0; i < dataArray.length; i++) {
-            let curr = dataArray[i];
+        for (let elem of dataArray) {
+            // Для доступа к вложенным свойствам реализуем доступ с точечной нотацией.
+            let curr = elem;
             let props = propToFind.split('.');
 
             // цыкл для того, чтобы дотянуться к вложенному значению
-            for (let j = 0; j < props.length; j++) {
+            for (var i = 0; i < props.length; i++) {
                 if (!curr) break;
-                curr = curr[props[j]];
+                curr = curr[props[i]];
             }
 
             // проверка на уникальность, если значение не уникально — не добавляем его в массив уникальн. значений и ищем другое.
@@ -70,12 +79,11 @@ $(document).ready(function () {
             }
         }
 
-
         if (needSort) {
             // Сортируем по возрастанию
-            arrUniqueValues.sort(function (a, b) { return a - b; });
+            arrUniqueValues.sort(function (a, b) { return a - b })
         }
-
+        
         return arrUniqueValues;
     }
 
@@ -96,7 +104,7 @@ $(document).ready(function () {
                 if (arrSchedule[j].Office.ShortName === arrUniqueStreets[i]) {
                     metroStation = arrSchedule[j].Office.SubwayStationName;
                     break;
-                }
+                } 
             }
             arrMetroStations.push(metroStation);
         }
@@ -114,7 +122,7 @@ $(document).ready(function () {
 
         let EmptyMsg = document.createElement('div');
         EmptyMsg.classList.add("schedule-s2__no-courses-msg");
-        EmptyMsg.innerHTML = "Нет запланированных курсов";
+        EmptyMsg.innerHTML = "Нет запланированных курсов"
         if (arrayOfCurrentMonth.length == 0) {
             elementToRender.appendChild(EmptyMsg);
         }
@@ -128,7 +136,7 @@ $(document).ready(function () {
     function setCourseColor(collectionCourses) {
         collectionCourses.forEach(course => {
             course.coverColorUrl = getCoverUrl(course.coverColor);
-        });
+        })
     }
 
     /**
@@ -160,7 +168,6 @@ $(document).ready(function () {
         return "";
     }
 
-    // ------------ Дубликат функций start --------------
     /**
      * Функция заполняет теги <option> для фильтра "Локация"
      * @param {Array} arrStreetLocation Массив с улицами, который будет заполнятся в "selectList"
@@ -170,7 +177,7 @@ $(document).ready(function () {
 
         let selectList = document.querySelector(".schedule-s2__table-courses_location");
         let tempOption; // Временный <option>, который будет добавлятся в "selectList"
-        let tempValue; // Значение innerHTML
+        let tempValue; // Значение, которое будет записываться в "tempOption"
 
         arrStreetLocation.forEach((elem, index) => {
 
@@ -179,35 +186,16 @@ $(document).ready(function () {
             } else {
                 tempValue = elem;
             }
-            // Настраиваем элемент <option>, который будет добавлятся в "selectList"
+            
             tempOption = document.createElement("option");
             tempOption.value = elem;
             tempOption.innerHTML = tempValue;
-            // Добавляем <option>
+
             selectList.add(tempOption);
-        });
+        })
+
+        
     }
-
-    /**
-     * Функция заполняет теги <option> для фильтра "Месяц"
-     * @param {Array} arrMounthsNames Массив с улицами, который будет заполнятся в "selectList"
-     * */
-    function setMounthSelectList(arrMounthsNumbers) {
-
-        let selectList = document.querySelector(".schedule-s2__table-courses_month");
-        let tempOption; // Временный <option>, который будет добавлятся в "selectList"
-
-        arrMounthsNumbers.forEach((elem) => {
-            // Настраиваем элемент <option>, который будет добавлятся в "selectList"
-            tempOption = document.createElement("option");
-            tempOption.value = elem;
-            tempOption.innerHTML = currentCulture.mounthNames[elem - 1];
-            // Добавляем <option>
-            selectList.add(tempOption);
-        });
-    }
-    // ------------ Дубликат функций end --------------
-
 
     // ================  ФИЛЬТРАЦИЯ start ======================
     /* Чтобы добавить очередной фильтр нужно:
@@ -245,7 +233,7 @@ $(document).ready(function () {
              * @param {Object} object Объект с данными, про свойствам которого будет 
              * @returns {boolean} Возвращает true, если свойсво и значение совпадает со свойством и значением объекта фильтрации и false - если не совпадает.
              * */
-            function bypassOriginalObject(object) {
+            function bypassOriginalObject(object){
                 for (var prop in object) {
 
                     if (object.hasOwnProperty(prop)) {
@@ -265,14 +253,14 @@ $(document).ready(function () {
 
                     }
                 }
-                return false;
+                return false
             }
 
             // Если значение фильтрующего объекта - пустая строка, значит нужно выбрать все элементы
             if (filterValue == "" || filterValue == -1) {
                 arrFiltredData = arrData.filter(elem => true);
             } else {
-                arrFiltredData = arrData.filter((elem) => { return bypassOriginalObject(elem); });
+                arrFiltredData = arrData.filter((elem) => { return bypassOriginalObject(elem) });
             }
             return arrFiltredData;
         }
@@ -306,9 +294,9 @@ $(document).ready(function () {
         }
 
         if (!unfilteredData) {
-            throw "ArgumentNullException: Не передан 'unfilteredData', проверьте входные данные! ";
-        } else if (!filterObj || filterObj.length == 0) {
-            throw "ArgumentNullException: Не передан 'filterObj', проверьте входные данные! ";
+            throw "ArgumentNullException: Не передан 'unfilteredData', проверьте входные данные! "
+        } else if (!filterObj || filterObj.length == 0 ) {
+            throw "ArgumentNullException: Не передан 'filterObj', проверьте входные данные! "
         }
 
         bypassFilterObject(filterObj);
@@ -325,13 +313,12 @@ $(document).ready(function () {
      */
     function showResult(fRawData, fTemplateTableRow, fFilterObject) {
         let arrDataPerMonth = [],   // Массив с расписаниями курсов отдельно для каждого месяца.
-            $outerContainer = $('.schedule-s2__body_month-sort-courses'), // Внешний контейнер для расписания.
-            $templateWrapper = $(document.querySelector("#templateWrapper").innerHTML), //Оберточный шаблон для каждого месяца
+            outerContainer = $('.schedule-s2__body_month-sort-courses'), // Внешний контейнер для расписания.
+            templateWrapper = document.querySelector("#templateWrapper"), //Оберточный шаблон для каждого месяца
             templateWrapperContent, // Внутреняя разметка элемента <template>
-            $templateWrapperClone,   // Клон Элемента templateWrapper, который будет настраиваться и вставлятся в разметку.
-            $templateWrapperTitle,   // Заголовок, который вставляется в шаблон для каждого месяца
+            templateWrapperTitle,   // Заголовок, который вставляется в шаблон для каждого месяца
             table,                  // Таблица (в шаблоне "templateWrapper"), куда будут рендерится строки
-            $currentTable,           // Объект jQuery таблицы "table"
+            currentTable,           // Объект jQuery таблицы "table"
             readyToRenderData,      // Готовые данные для рендеринга в таблицу "table"
             months, // Массив месяцев, которые нужно заполнить в html - разметке
             filtredData = [];       // Отфильтрированные данные
@@ -360,43 +347,57 @@ $(document).ready(function () {
         filtredData = filterFunc(fRawData, fFilterObject);
 
         // Проверяем на наличие курсов и показываем пустое сообщение
-        checkEmptyMsg(filtredData, $outerContainer.get(0));
+        checkEmptyMsg(filtredData, outerContainer.get(0))
 
         // Находим уникальные месяца в отфильтрованном массиве
         months = getUniqueData(filtredData, "monthNumber");
 
+        // =============================================
+        filtredData = fRawData;
+        months = [2, 3, 4, 5]
+        console.log("filtredData = ", filtredData);
+        console.log("months = ", months);
         // Перебор массива месяцев, чтобы создать блок месяца с расписанием курсов.
         months.forEach(currentMonth => {
 
-            // Клонируем шаблон из тега <script> 
-            $templateWrapperClone = $templateWrapper.clone(true);
+            // Получаем содержимое от "templateWrapper" (задействована технология Web Components — templates)
+            templateWrapperContent = document.importNode(templateWrapper.content, true);
 
-            // ищем элемент заголовка в контексте текущего клона шаблона
-            $templateWrapperTitle = $(".schedule-s2__body_month-block_title", $templateWrapperClone);
+            // ищем элемент заголовка во фрагменте  <template>
+            templateWrapperTitle = templateWrapperContent.querySelector(".schedule-s2__body_month-block_title");
+            table = templateWrapperContent.querySelector("#courses-table");
+            currentTable = $(table); // Превращаем в объект jQuery, так как сразу не получается получить объект "table" в контексте "templateWrapperContent"
 
-            // также находим табюлицу
-            $currentTable = $("#courses-table", $templateWrapperClone);
+            // Достаем из данных только те, которые относятся к месяцу "currentMonth"
 
-            // Достаем данных только тех курсов, которые относятся к месяцу "currentMonth"
             if (!filtredData) {
-                arrDataPerMonth = fRawData.filter(course => currentMonth == course.monthNumber);
+                arrDataPerMonth = fRawData.filter(course => currentMonth == course.monthNumber)
             } else {
-                arrDataPerMonth = filtredData.filter(course => currentMonth == course.monthNumber);
+                arrDataPerMonth = filtredData.filter(course => currentMonth == course.monthNumber)
             }
 
             // Добавляем название месяца в заголовок оберточного шаблона (блока с расписанием на месяц)
-            $templateWrapperTitle.text(arrDataPerMonth[0].monthName);
-
-            // Добавляем клон шаблона во внешний контейнер
-            $outerContainer.append($templateWrapperClone);
+            templateWrapperTitle.innerHTML = arrDataPerMonth[0].monthName;
+            outerContainer.append(templateWrapperContent);
 
             // Рендерим таблицу для текущего месяца (currentMonth) при помощи библиотеки Handlebars
             arrDataPerMonth.forEach(elem => {
                 readyToRenderData = Handlebars.compile(fTemplateTableRow);
-                $currentTable.append(readyToRenderData(elem));
-            });
-        });
+                currentTable.append(readyToRenderData(elem));
+            })
+        })
     }
+
+
+
+
+
+
+
+
+
+
+//-------------------------------------------------------------------------------------------
 
     // Главная асинхронная функция
     (async function () {
@@ -404,57 +405,61 @@ $(document).ready(function () {
         let templateTableRow = await getTemplate(getTemplateTableRowLink);
         let rawData = await getData(getCoursePlansLink); // JSON- данные с расписанием курсов
 
+
+        console.log(templateTableRow);
+        console.log(rawData);
         // Инициализация фильтрирующего объекта, по свойствам которого будет проходить фильтрация
         let filterObject = {
             slug: "",
             time: "",
             monthNumber: -1,
-            Office: { ShortName: "" }
-        };
+            Office: {ShortName: ""}
+        }
+           
+        console.log(filterObject);
 
-        // Чтобы заполнить раскрывающий список для фильтра "Локация", нужно 2 массива название улицы и связанное с ней метро.
 
-        let arrUniqueOffices = getUniqueData(rawData, 'Office.ShortName', false);// Уникальные улицы
+        // Чтобы заполнить раскрывающий список для фильтра "Локация", нужно 2 массива — название улицы и связанное с ней метро.
+        // Получаем уникальные улицы
+        let arrUniqueOffices = getUniqueData(rawData, 'Office.ShortName', false);
+        // Получаем связанное метро к каждой улице
+        let arrRelatedMetroToOffices = getMetroStations(rawData, arrUniqueOffices)
 
-        let arrRelatedMetroToOffices = getMetroStations(rawData, arrUniqueOffices);// Связанное метро к каждой улице
-
-        let arrUniqueMounth = getUniqueData(rawData, 'monthNumber');// Уникальные месяцы 
-
-        // Заполняем раскрывающийся список "Локация"
+        // Заполняем раскрывающийся список 
         setLocationSelectList(arrUniqueOffices, arrRelatedMetroToOffices);
-
-        // Заполняем раскрывающийся список "Месяц"
-        setMounthSelectList(arrUniqueMounth);
 
         // Первый показ данных с расписанием
         showResult(rawData, templateTableRow, filterObject);
+
+
+
 
         // Обработчик на фильтр "название курса" (Курсы)
         $(".schedule-s2__table-courses_course-title").on("change", (e) => {
             filterObject.slug = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            bLazy.revalidate();
+            
         });
 
         // Обработчик на фильтр "Время" 
         $(".schedule-s2__table-courses_time").on("change", (e) => {
             filterObject.time = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            bLazy.revalidate();
+            
         });
 
         // Обработчик на фильтр "Месяц" 
         $(".schedule-s2__table-courses_month").on("change", (e) => {
             filterObject.monthNumber = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            bLazy.revalidate();
+            
         });
 
         // Обработчик на фильтр "Локация" 
         $(".schedule-s2__table-courses_location").on("change", (e) => {
             filterObject.Office.ShortName = event.currentTarget.value.trim();
             showResult(rawData, templateTableRow, filterObject);
-            bLazy.revalidate();
+            
         });
 
         // Обработчик на кнопку "сбросить фильтры"
@@ -465,9 +470,9 @@ $(document).ready(function () {
             filterObject.Office.ShortName = "";
             $(".schedule_form")[0].reset();
             showResult(rawData, templateTableRow, filterObject);
-            bLazy.revalidate();
+            
         });
 
-        bLazy.revalidate();
-    })();
-});
+        
+    })()
+})

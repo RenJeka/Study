@@ -1,17 +1,43 @@
-// .slider{
-// 	img{
-// 		width: 500px;
 
-// 	}
-// }
+.slick-track{
+	display: flex;
+}
+
+.slick-list{
+	overflow: hidden;
+}
 
 .my-slide{
-	width: 300px;
+	height: 200px;
 }
 
-.aaa{
-	width: 500px;
-}
-.bbb{
+.slides{
+	padding: 0 50px;
+	position: relative;
+	.slick-arrow{
+		position: absolute;
+		top: 50%;
+		width: 30px;
+		height: 50px;
+		margin: -50px 0 0 0 ;
+		z-index: 10;
+		font-size: 0;
+		border: none;
+		
+		&:focus{
+			border: none;
+		}
 
+		
+	}
+	.slick-prev{
+		left: 0;
+		background: url("../img/arrows/left.svg") 0 0 / 100% no-repeat;
+		
+	}
+
+	.slick-next{
+		right: 0;
+		background: url("../img/arrows/right.svg") 0 0 / 100% no-repeat;
+	}
 }

@@ -2,5 +2,8 @@ var $ = require("jquery");
 require("slick-carousel");
 
 $(document).ready(function () {
-	$(".aaa").slick();
+	$(".slides").slick({
+		arrows: true,
+		dots: true,
+	});
 });

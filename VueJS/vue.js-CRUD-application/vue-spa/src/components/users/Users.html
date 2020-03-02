@@ -1,0 +1,27 @@
+<div id="app">
+    <router-link to="/users/edit" class="btn btn-primary mt-3 ml-2">Add user</router-link>
+
+    <table class="table mt-3 text-dark">
+        <thead>
+          <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Surname</th>
+            <th scope="col">Phone</th>
+            <th scope="col">Email</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(user, n) in users">
+            <th>{{user.name}}</th>
+            <td>{{user.surname}}</td>
+            <td>{{user.phone}}</td>
+            <td>{{user.email}}</td>
+            <td> 
+                <router-link to="/users/edit" class="btn btn-warning">edit</router-link>
+                <button class="btn btn-danger" @click="removeUser(n)">delete</button> 
+            </td>
+          </tr>
+        </tbody>
+      </table>
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Document</title>
+	<style type="text/css">
+		code{
+			font-weight: bold;
+			background-color: #eee;
+			border-radius: 3px;
+			padding: 1px;
+		}
+	</style>
+</head>
+<body>
+	<h3> Меняется цвет текста ниже в зависимости от размера окна</h3>
+	<h4>Медиазапрос без медиазапроса (скриптом)</h4>
+	<p class="test">Lorem ipsum dolor sit amet.</p>
+	<p class="test">Lorem ipsum dolor sit amet.</p>
+	<p class="test">Lorem ipsum dolor sit amet.</p>
+	<a href="https://developer.mozilla.org/ru/docs/Web/CSS/Media_Queries/%D0%A2%D0%B5%D1%81%D1%82%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5_%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0_%D0%B7%D0%B0%D0%BF%D1%80%D0%BE%D1%81%D1%8B"> Ссылка на статью MDN</a>
+	<br>
+	<p>
+		<code>Window.matchMedia()</code><span> —  метод глобального объекта window, который позволяет обрабатывать медиазапросы через скрипт. Возвращает объект, в котором 3 (три) свойства. Объект называется <code>mediaQueryList</code> (выведен в  консоль)</span>
+	</p>
+	<p>Главное свойство — <code>mediaQueryList.matches</code>, к которому можно привязаться</p>
+	<p>
+		У этого объекта (<code>mediaQueryList</code>) есть метод <code>mediaQueryList.addListener</code>, который вешает событие на изменение того, что указано в медиазапросе (размера окна).
+		В это событие автоматически передается сам объект (<code>mediaQueryList</code>)
+	</p>
+
+	<!-- Скриптом будем менять цвет текста в зависимости от размера окна -->
+	<script type="text/javascript">
+		window.addEventListener("load", ()=>{
+
+			// Передаем этот объект в переменную
+			let matchMediaObject = window.matchMedia("(max-width: 700px)");
+			console.dir(matchMediaObject);
+
+			// Обработчик события (при изменении )
+			function matchMediaHandler(matchMediaObject){
+
+				// Тут уже то, что мы напишем (Берем все параграфы и меняем им цвет)
+				let paragraphs = document.querySelectorAll(".test");
+
+				// Если медиазапрос правдивый
+				if (matchMediaObject.matches) {
+					for (const element of paragraphs){
+						element.style.color = "orange"
+					}
+				} else {// Если медиазапрос неправдивый
+					for (const element of paragraphs){
+						element.style.color = "lightgreen"
+					}
+				}
+			}
+
+			// Вешаем обработчик события для объекта "mediaQueryList". у нас — "matchMediaObject"
+			matchMediaObject.addListener(matchMediaHandler);
+
+			// !!! Важный момент — запускаем обработчик события принудительно. Иначе первый раз медиазапрос не сработает.
+			matchMediaHandler(matchMediaObject);
+
+		});
+
+	</script>
+</body>
+</html>

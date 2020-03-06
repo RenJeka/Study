@@ -18,5 +18,4 @@ $(document).ready(function () {
 	$dots.eq(2).text("Dot net");
 
 
-	
 });

@@ -13371,6 +13371,5 @@ $(document).ready(function () {
 	$dots.eq(2).text("Dot net");
 
 
-	
 });
 },{"jquery":1,"slick-carousel":2}]},{},[3]);

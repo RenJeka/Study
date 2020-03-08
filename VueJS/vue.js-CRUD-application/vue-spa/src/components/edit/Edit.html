@@ -1,0 +1,51 @@
+<div id="app" style="padding-left: 9.5%;">
+    
+    <form class="mt-4">
+
+        <div class="row col-11">
+            <input class="form-control" placeholder="Import JSON" @blur="saveJSON($event.target.value, $event.target)"> 
+            <i class="text-muted">Пример для этого поля: {"name":"Alex", "surname":"Alexeev", "phone":"0999999999", "email":"alex9@mail.com"}</i>
+        </div>
+
+        <div class="form-row mt-4">
+          <div class="col-2">
+            <input class="form-control" placeholder="name" v-model="name">
+          </div>
+          <div class="col-2">
+            <input class="form-control" placeholder="surname" v-model="surname">
+          </div>
+          <div class="col-2">
+            <input class="form-control" placeholder="phone" v-model="phone">
+          </div>
+          <div class="col-2">
+            <input class="form-control" placeholder="email" v-model="email">
+          </div>
+          <div class="col-3">
+            <button @click="addUser" class="btn btn-primary">Add user</button>
+          </div>
+        </div>
+      </form>
+
+    <table class="mt-5 text-muted">
+        <thead>
+            <th>NAME</th>
+            <th>SURNAME</th>
+            <th>PHONE</th>
+            <th>EMAIL</th>
+        </thead>
+        <tbody>
+            <tr v-for="(user, n) in users">
+                <td> <input class="form-control mt-2" v-model="user.name" name="name" v-bind:id='n' @blur='changeName(n, $event.target.value, $event.target.name)'> </td>
+                <td> <input class="form-control mt-2" v-model="user.surname" name="surname" v-bind:id='n' @blur='changeName(n, $event.target.value, $event.target.name)'> </td>
+                <td> <input class="form-control mt-2" v-model="user.phone" name="phone" v-bind:id='n' @blur='changeName(n, $event.target.value, $event.target.name)'> </td>
+                <td> <input class="form-control mt-2" v-model="user.email" name="email" v-bind:id='n' @blur='changeName(n, $event.target.value, $event.target.name)'> </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class=" text-muted">
+        <i>Чтобы сохранить введенное значение, кликните за пределами поля ввода</i>
+    </div>
+</div>
+
+  

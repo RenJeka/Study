@@ -7,13 +7,20 @@
 	overflow: hidden;
 }
 
-.my-slide{
-	height: 200px;
-}
+
 
 .slides{
 	padding: 0 50px;
 	position: relative;
+
+	.slider-item{
+		text-align: center;
+
+		.my-slide{
+			height: 1171px;
+			width: 825px;
+		}
+	}
 	.slick-arrow{
 		position: absolute;
 		top: 50%;
@@ -40,4 +47,34 @@
 		right: 0;
 		background: url("../img/arrows/right.svg") 0 0 / 100% no-repeat;
 	}
+	
+}
+
+.slick-dots{
+	display: flex;
+	justify-content: center;
+	
+	li{
+		list-style: none;
+		button{
+			width: 100px;
+			height: 50px;
+			margin: 0 30px;
+			background-color: lightblue;
+			border: 0;
+			
+			&:focus{
+				outline: 0;
+			}
+
+		}
+	}
+	.slick-active{
+
+		button{
+
+			background-color: green;
+		}
+	}
+
 }

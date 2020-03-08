@@ -14,7 +14,6 @@
   padding: 0 50px;
   position: relative;
 }
-
 .slides .slick-arrow {
   position: absolute;
   top: 50%;
@@ -25,17 +24,16 @@
   font-size: 0;
   border: none;
 }
-
 .slides .slick-arrow:focus {
   border: none;
 }
-
 .slides .slick-prev {
   left: 0;
   background: url("../img/arrows/left.svg") 0 0/100% no-repeat;
 }
-
 .slides .slick-next {
   right: 0;
   background: url("../img/arrows/right.svg") 0 0/100% no-repeat;
 }
+
+/*# sourceMappingURL=style.css.map */

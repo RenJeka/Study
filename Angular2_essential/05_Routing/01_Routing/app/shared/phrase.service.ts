@@ -32,7 +32,7 @@ export class PhraseService {
     // Метод для получения фразы по id. Возвращает Promise c экземпляром Phrase
     getPhrase(id: number): Promise<Phrase> {
         return phrasesPromise
-            .then(phrases => phrases.find(x => x.id == id));
+                .then(phrases => phrases.find(x => x.id == id));
     }
 }
 

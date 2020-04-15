@@ -1,0 +1,8 @@
+<div *ngIf="product">
+    <h2>Selected Product</h2>
+    Id: {{product.id}} <br />
+    Name: {{product.name}} <br />
+    Price: {{product.price}} <br />
+
+    <button (click)="goToProductList()">Go Back</button>
+</div>

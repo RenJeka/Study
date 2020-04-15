@@ -28,7 +28,6 @@ var PhraseListComponent = /** @class */ (function () {
         // адрес с обязательным параметром указан в настройках маршрутизации в файле app.routes.ts 
         this.router.navigate(["phrase", selected.id]);
     };
-    var _a;
     PhraseListComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
@@ -36,7 +35,8 @@ var PhraseListComponent = /** @class */ (function () {
             templateUrl: "phrase-list.component.html",
             styleUrls: ["phrase-list.component.css"]
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof router_1.Router !== "undefined" && router_1.Router) === "function" ? _a : Object, phrase_service_1.PhraseService])
+        __metadata("design:paramtypes", [router_1.Router,
+            phrase_service_1.PhraseService])
     ], PhraseListComponent);
     return PhraseListComponent;
 }());

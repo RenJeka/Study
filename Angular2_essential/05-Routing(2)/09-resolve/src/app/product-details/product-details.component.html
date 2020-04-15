@@ -1,0 +1,10 @@
+<div *ngIf="product">
+    <h2>Selected Product</h2>
+    Id: {{id}} <br />
+    Name: <input type="text" [(ngModel)]="product.name" (change)="changed()" /><br />
+    Price: <input type="text" [(ngModel)]="product.price" (change)="changed()" /> <br />
+
+    <button (click)="save()">Save</button>
+
+    <button (click)="goToProductList()">Go Back</button>
+</div>

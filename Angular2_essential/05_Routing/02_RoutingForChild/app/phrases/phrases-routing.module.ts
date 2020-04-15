@@ -13,8 +13,6 @@ import { PhraseDetailsComponent } from "./phrase-details/phrase-details.componen
             { path: "phrase/:id", component: PhraseDetailsComponent }
         ])
     ],
-    exports: [
-        RouterModule
-    ]
+    exports: [RouterModule]
 })
 export class PhrasesRoutingModule { }

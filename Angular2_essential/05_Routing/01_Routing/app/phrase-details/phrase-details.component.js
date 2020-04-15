@@ -25,30 +25,31 @@ var PhraseDetailsComponent = /** @class */ (function () {
         var _this = this;
         // OBSERVABLE PARAMS
         // forEach - устанавливаем обработчик на каждое изменение params
-        this.activatedRoute.params.forEach(function (params) {
-            var id = +params["id"]; // конвертируем значение параметра id в тип number
-            _this.service
-                .getPhrase(id) // обращаемся к сервису и запрашиваем фразу по id. Получаем Promise
-                .then(function (result) { return _this.phrase = result; }); // как только Promise перейдет в состояние resolved присваиваем его значение свойству phrase
-        });
+        // this.activatedRoute.params.forEach((params: Params) => {
+        //     let id = +params["id"]; // конвертируем значение параметра id в тип number
+        //     this.service
+        //         .getPhrase(id)  // обращаемся к сервису и запрашиваем фразу по id. Получаем Promise
+        //         .then(result => this.phrase = result);  // как только Promise перейдет в состояние resolved присваиваем его значение свойству phrase
+        // });
         // SNAPSHOT
         // получение начального значения параметра id 
-        /*let id = +this.activatedRoute.snapshot.params["id"];
+        var id = +this.activatedRoute.snapshot.params["id"];
         this.service
             .getPhrase(id)
-            .then(result => this.phrase = result); */
+            .then(function (result) { return _this.phrase = result; });
     };
     PhraseDetailsComponent.prototype.goToPhrasesList = function () {
         this.router.navigate(["phrases"]); // перенаправляем пользователя на PhraseListComponent
     };
-    var _a, _b;
     PhraseDetailsComponent = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: "phrase-details",
             templateUrl: "phrase-details.component.html"
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof router_1.Router !== "undefined" && router_1.Router) === "function" ? _a : Object, typeof (_b = typeof router_1.ActivatedRoute !== "undefined" && router_1.ActivatedRoute) === "function" ? _b : Object, phrase_service_1.PhraseService])
+        __metadata("design:paramtypes", [router_1.Router,
+            router_1.ActivatedRoute,
+            phrase_service_1.PhraseService])
     ], PhraseDetailsComponent);
     return PhraseDetailsComponent;
 }());

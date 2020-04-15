@@ -14,18 +14,25 @@ export function emailValidator(control: AbstractControl): { [key: string]: any }
     }
 }
 
+/**
+ *  Функция для кастомной валидации с минимальным и максимальным значением!
+ * @param minValue Минимальное значение
+ * @param maxValue Максимальное значение
+ */
 export function rangeValidator(minValue: number, maxValue: number): ValidatorFn {
     return (control: AbstractControl): { [key: string]: any } => {
         let value = control.value;
         let numValue: number = +value;
 
         if (isNaN(numValue)) {
+
             return { "rangeValidator": { value } };
-        }
-        else if (numValue < minValue || numValue > maxValue) {
+
+        } else if (numValue < minValue || numValue > maxValue) {
+
             return { "rangeValidator": { value } };
-        }
-        else {
+
+        } else {
             return null;
         }
     }

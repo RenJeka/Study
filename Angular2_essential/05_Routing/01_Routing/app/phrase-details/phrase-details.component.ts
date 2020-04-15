@@ -23,20 +23,20 @@ export class PhraseDetailsComponent implements OnInit {
 
         // OBSERVABLE PARAMS
         // forEach - устанавливаем обработчик на каждое изменение params
-        this.activatedRoute.params.forEach((params: Params) => {
-            let id = +params["id"]; // конвертируем значение параметра id в тип number
-            this.service
-                .getPhrase(id)  // обращаемся к сервису и запрашиваем фразу по id. Получаем Promise
-                .then(result => this.phrase = result);  // как только Promise перейдет в состояние resolved присваиваем его значение свойству phrase
-        });
+        // this.activatedRoute.params.forEach((params: Params) => {
+        //     let id = +params["id"]; // конвертируем значение параметра id в тип number
+        //     this.service
+        //         .getPhrase(id)  // обращаемся к сервису и запрашиваем фразу по id. Получаем Promise
+        //         .then(result => this.phrase = result);  // как только Promise перейдет в состояние resolved присваиваем его значение свойству phrase
+        // });
 
         // SNAPSHOT
-        // получение начального значения параметра id 
-        // let id = +this.activatedRoute.snapshot.params["id"];
-        // this.service
-        //     .getPhrase(id)  
-        //     .then(result => this.phrase = result); 
-    }
+            // получение начального значения параметра id 
+            let id = +this.activatedRoute.snapshot.params["id"];
+            this.service
+                .getPhrase(id)  
+                    .then(result => this.phrase = result); 
+        }
 
     goToPhrasesList() {
         this.router.navigate(["phrases"]); // перенаправляем пользователя на PhraseListComponent

@@ -1,0 +1,17 @@
+.block1{
+	position: relative;
+	top: 200px;
+	left: 200px;
+	width: 100px;
+	height: 100px;
+	border: 2px solid #aaa;
+}
+
+.green{
+	background-color: aquamarine;
+}
+
+.cmxform{
+	max-width: 1000px;
+	margin: 0 auto;
+}

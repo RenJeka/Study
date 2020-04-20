@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>jQuery Validation. Proj_1</title>
+	
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+	<form class="cmxform" id="commentForm" method="GET" action="">
+
+		  <p>
+			<label for="cname">Имя:</label>
+			<input id="cname" name="name" type="text" >
+		  </p>
+
+
+		  <p>
+			  <label for="pass1">Пароль:</label>
+			  <input type="password" name="pass1" id="pass1">
+		  </p>
+
+		  <p>
+			<label for="pass2">Подтвердите пароль:</label>
+			<input type="password" name="pass2" id="pass2">
+		  </p>
+
+		  <p>
+			<label for="custom1">Кастомизированныая валидация:</label>
+			<input type="text" name="custom1" id="custom1" data-msg="Сообщение в HTML теге">
+		  </p>
+		  <!-- <p>
+			<label for="cemail">E-Mail (required)</label>
+			<input id="cemail" type="email" name="email" >
+		  </p>
+
+		  <p>
+			<label for="curl">URL (optional)</label>
+			<input id="curl" type="url" name="url">
+		  </p>
+
+		  <p>
+			<label for="ccomment">Your comment (required)</label>
+			<textarea id="ccomment" name="comment" ></textarea>
+		  </p> -->
+
+		  <p>
+			<input type="submit" value="Submit">
+		  </p>
+
+	  </form>
+
+
+	<!-- <div class="block1"></div>
+
+	<input type="button" id="btn1" value="change color"> -->
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.min.js"></script>
+	<script src="main.js"></script>
+	
+</body>
+</html>

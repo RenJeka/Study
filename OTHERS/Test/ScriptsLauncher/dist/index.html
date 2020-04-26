@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<title>Example</title>
+</head>
+<body>
+	<h1>Программа для запуска консольных скриптов</h1>
+	<h3>Поместите файл скрипта в папку с данной программой и укажите в поле ввода её путь, относительно корневой папки</h3>
+	<br>
+	<p id="userInterface">
+			<label for="inputPath">Введите путь к файлу</label>
+			<input type="text" id="inputPath" placeholder="folder1/file.js">
+			<button id="addFileBtn"> Добавить файл </button>
+			<button id="clearAll">Удалить все скрипты</button>
+	</p>
+	<br>	
+	<div id="scriptContainer">
+
+	</div>
+
+	
+	<script id="mainScript" src="main.js"></script>
+</body>
+</html>

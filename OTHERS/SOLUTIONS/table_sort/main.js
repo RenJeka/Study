@@ -1,38 +1,57 @@
 window.addEventListener("load", () => {
 
 	let arrImg = document.querySelectorAll("table img");
-	let modalBg = document.querySelector("#modalBg");
+	let overlay = document.querySelector("#modalBg");
 	let modalBody = document.querySelector("#modal-body");
 	let bigImg = document.querySelector("#big-img");
 
-	modalBg.addEventListener("click", func2)
+	overlay.addEventListener("click", overlayHandler)
 
-	function func1() {
+	/**
+	 * Функция задает правильные размеры картинке и ограничиваемому блоку и размещает картинку
+	 */
+	function smallImageHandler() {
 		let coefficientWidth = +((((window.innerWidth / this.naturalWidth)) + 1) / 2).toFixed(2);
 		let coefficientHeight = +((((window.innerHeight / this.naturalHeight)) + 1) / 2).toFixed(2);
+		let modalWidth;
+		let modalHeight;
 
-
-		modalBody.style.width = this.naturalWidth * coefficientWidth + "px";
-		modalBody.style.height = this.naturalHeight * coefficientHeight + "px";
-		console.log(modalBody.style.width);
-		console.log(modalBody.style.height);
 		bigImg.src = this.src;
+
+		// Задаем правильные размеры картинке и ограничивающему блоку
+		modalWidth = this.naturalWidth * coefficientWidth;
+		modalHeight = this.naturalHeight * coefficientHeight;
+		modalBody.style.width = modalWidth + "px";
+		modalBody.style.height = modalHeight + "px";
+		
+		// Для того, чтобы работала адаптвность (свойсвто object-fit — задаем разные размеры картинке
+		if (modalWidth >= this.naturalWidth) {
+			bigImg.style.height = "100%";
+			bigImg.style.width = "auto";
+
+		} else if (modalHeight >= this.naturalHeight) {
+			bigImg.style.height = "auto";
+			bigImg.style.width = "100%";
+		}
+
+		// Показываем оверлей, ограничивающий блок и размещаем там картинку 
 		modalBody.classList.toggle("modal-body_visible");
 		modalBody.appendChild(bigImg);
-		modalBg.style.display = "block";
+		overlay.style.display = "block";
 
 	}
 
-	function func2(e) {
+	function overlayHandler(e) {
 		if (e.target !== bigImg) {
-			modalBg.style.display = "none"
+			overlay.style.display = "none"
 			modalBody.classList.remove("modal-body_visible");
 		}
 		
 	}
 
+	// Цикл пробегается по массиву картинок и ставит обработчики событий
 	arrImg.forEach((image) => {
-		image.addEventListener("click", func1)
+		image.addEventListener("click", smallImageHandler)
 	})
 
 

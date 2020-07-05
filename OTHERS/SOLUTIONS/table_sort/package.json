@@ -1,0 +1,22 @@
+{
+  "name": "table_sort",
+  "version": "1.0.0",
+  "description": "test app to output data into table",
+  "main": "main.js",
+  "scripts": {
+    "start": "tsc  && sass style.scss style.css ",
+    "t": "tsc --watch" ,
+    "s": "sass style.scss style.css --watch"
+  },
+  "keywords": [
+    "table",
+    "app",
+    "simple"
+  ],
+  "author": "renjeka",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.26.9",
+    "scss": "^0.2.4"
+  }
+}

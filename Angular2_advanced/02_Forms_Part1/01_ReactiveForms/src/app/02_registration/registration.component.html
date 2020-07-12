@@ -1,0 +1,44 @@
+<div>
+  В данном примере добавленна проверка введенных данных.
+</div>
+<form novalidate [formGroup]="registrationForm">
+  <fieldset formGroupName="name">
+    
+    <div class="form-group" [ngClass]="{
+      'has-error': registrationForm.controls.name.controls.firstName.invalid 
+                  && registrationForm.controls.name.controls.firstName.dirty,
+      'has-success': registrationForm.controls.name.controls.firstName.valid 
+                  && registrationForm.controls.name.controls.firstName.dirty }">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="firstName">
+    </div>
+
+    <div class="form-group"[ngClass]="{
+      'has-error': registrationForm.controls.name.controls.lastName.invalid 
+                  && registrationForm.controls.name.controls.lastName.dirty,
+      'has-success': registrationForm.controls.name.controls.lastName.valid 
+                  && registrationForm.controls.name.controls.lastName.dirty }">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+    </div>
+  </fieldset>
+
+  <div class="form-group" [ngClass]="{
+      'has-error': registrationForm.controls.email.invalid && registrationForm.controls.email.dirty,
+      'has-success': registrationForm.controls.email.valid && registrationForm.controls.email.dirty }">
+    <label>Email</label>
+    <input type="email" class="form-control" formControlName="email">
+  </div>
+
+  <div class="form-group" [ngClass]="{
+      'has-error': registrationForm.controls.password.invalid && registrationForm.controls.password.dirty,
+      'has-success': registrationForm.controls.password.valid && registrationForm.controls.password.dirty }">
+    <label for="">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+  </div>
+  <input type="submit" class="btn btn-default">
+</form>
+
+<br>
+
+<pre>{{registrationForm.value |json}}</pre>

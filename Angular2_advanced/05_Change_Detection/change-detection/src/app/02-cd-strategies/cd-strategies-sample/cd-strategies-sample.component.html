@@ -1,0 +1,8 @@
+<div *ngFor="let user of users">
+  <user-card [currentUser]="user"></user-card>
+</div>
+
+<button (click)="test()">Test</button>
+<button (click)="chnageAllValues()">Chnage all values</button>
+<button (click)="chnageFirstValue()">Chngge first value</button>
+<button (click)="chnageFirstReference()">Chngge first reference</button>

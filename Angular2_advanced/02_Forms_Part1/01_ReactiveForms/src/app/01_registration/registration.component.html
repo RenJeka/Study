@@ -1,0 +1,28 @@
+<div>
+  В данном примере реализована форма через Model Driven подход.
+</div>
+<form novalidate [formGroup]="registrationForm">
+  <fieldset formGroupName="name">
+    <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="firstName">
+    </div>
+    <div class="form-group">
+      <label>Last Name</label>
+      <input type="text" class="form-control" formControlName="lastName">
+    </div>
+  </fieldset>
+  <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" formControlName="email">
+  </div>
+  <div class="form-group">
+    <label for="">Password</label>
+    <input type="password" class="form-control" formControlName="password">
+  </div>
+  <input type="submit" class="btn btn-default">
+</form>
+
+<br>
+
+<pre>{{registrationForm.value | json}}</pre>

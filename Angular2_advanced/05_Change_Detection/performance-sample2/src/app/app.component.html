@@ -1,0 +1,6 @@
+<div (mousemove)="onMouseMove($event)" 
+(mouseup)="onMouseUp($event)" 
+(mousedown)="onMouseDown($event)">
+  <app-box *ngFor="let box of boxes;" 
+  [box]="box"  [selected]="box.num == currentId"></app-box>
+</div>

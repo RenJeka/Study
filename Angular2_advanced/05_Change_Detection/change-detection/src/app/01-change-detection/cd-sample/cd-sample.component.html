@@ -1,0 +1,19 @@
+<test-card name="root">
+  <test-card name="branch1">
+    <test-card name="branch1-1"></test-card>
+    <test-card name="branch1-2">
+      <test-card name="branch1-2-1"></test-card>
+    </test-card>
+  </test-card>
+  <test-card name="branch2"></test-card>
+  <test-card name="branch3">
+    <test-card name="branch3-1"></test-card>
+    <test-card name="branch3-2"></test-card>
+  </test-card>
+</test-card>
+
+<div>
+  <button (click)="testClick()">Click</button>
+  <button (click)="timerClick()">Timer</button>
+  <button (click)="ajaxClick()">XHR</button>
+</div>

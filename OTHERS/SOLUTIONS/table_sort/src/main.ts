@@ -1,3 +1,6 @@
+import * as tablesort from  "tablesort";
+// declare tablesort:tablesort
+// var tablesort = require('tablesort');
 window.addEventListener("load", () => {
 
 	
@@ -182,6 +185,8 @@ window.addEventListener("load", () => {
 			console.log("Данные:", data);
 			fillTable(TABLE_ID, data);
 			setTableImageClickHandler();
+			// new Tablesort(document.querySelector('#tableSort'));
+			// sort.refresh();
 		})
 	})()
 

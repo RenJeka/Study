@@ -189,10 +189,15 @@
 		<thead class="thead-light"></thead>
 		<tbody></tbody>
 	</table>
-	<script src="main.js"></script>
-	<script>
-		new Tablesort(document.querySelector('#tableSort'));
+	<script src="main.js" ></script>
+
+	<script >
+		var sort = new Tablesort(document.querySelector('#tableSort'));
+
+		// Make some Ajax request to fetch new data and on success:
+		sort.refresh();
 	</script>
+	
 </body>
 
 </html>

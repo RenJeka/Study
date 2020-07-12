@@ -1,4 +1,5 @@
-"use strict";
+// declare tablesort:tablesort
+// var tablesort = require('tablesort');
 window.addEventListener("load", () => {
     let overlay = document.querySelector("#modalBg");
     let modalBody = document.querySelector("#modal-body");
@@ -157,6 +158,8 @@ window.addEventListener("load", () => {
             console.log("Данные:", data);
             fillTable(TABLE_ID, data);
             setTableImageClickHandler();
+            // new Tablesort(document.querySelector('#tableSort'));
+            // sort.refresh();
         });
     })();
 });

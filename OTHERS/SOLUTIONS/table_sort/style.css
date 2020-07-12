@@ -132,6 +132,10 @@ thead th {
   text-align: start;
 }
 
+thead th::after {
+  content: " ⯆";
+}
+
 table tr td {
   height: 100px;
 }
@@ -150,6 +154,12 @@ tbody {
 .table-fixed tbody {
   overflow-y: auto;
   width: 100%;
+}
+
+td:nth-child(3)::after,
+td:nth-child(4)::after,
+td:nth-child(5)::after {
+  content: " см";
 }
 
 td img {

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>testSizeSendBeacon</title>
+</head>
+	<h2>test Size SendBeacon</h2>
+<body>
+
+	<script>
+		var url = 'https://jsonplaceholder.typicode.com/posts';
+		// var n = 65537; // sendBeacon limit for Chrome v40 on Windows (2^16)
+
+		// // this method courtesy of http://stackoverflow.com/questions/14343844/create-a-string-of-variable-length-filled-with-a-repeated-character
+		// var data = new Array(n + 1).join('X'); // generate string of length n
+
+
+		data = {"UserId":"f8c34083-389b-4ab0-970b-cd0d9bf0d41c","UserExamId":"6b12ff4c-67e1-4f32-9bdb-1694964ab09d","UserAnswers":[{"TestId":"f123ea20-8859-4823-9cfa-f76a3d68575f","SelectedAnswers":["370d3a91-a126-446f-90d6-47d5bcb66c38"],"OpenAnswerText":""},{"TestId":"c5a6e2c9-66a2-4a00-be78-cec7914dc5f5","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"c8b2ac6d-c134-47c2-b51d-035324a5271e","SelectedAnswers":["49ca6108-c148-4a1d-956a-3ffd5a32ece8"],"OpenAnswerText":""},{"TestId":"5a1bf995-ea7f-4f87-a3cd-67ec5c9c8bb5","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"3d1306ea-d12a-4d23-8021-ef0c6140e57f","SelectedAnswers":["c131ad2e-2020-4874-b024-d10703bc0dbf"],"OpenAnswerText":""},{"TestId":"e320a72e-24b5-471d-8cd4-d8f8df362072","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"cf494e42-c2ed-4f7d-b450-e6de81656a2f","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"6340009a-b0dc-4337-bd4d-d39223a97c2d","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"61060532-6c81-463b-8a17-86060c988240","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"513c7d4b-9b0c-427b-bdf4-fd4b9ae34d2c","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"0ec0bde1-d890-4679-ab01-08a7aa2a9953","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"0ce11a35-2826-4c59-955c-78e03735d80c","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"aa2e4a1d-cdbd-49cb-a41f-16957f3b24fe","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"e6eafc7d-9670-466e-8f2a-26eb8a774253","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"35d15cf8-9c37-45a9-9981-747b9092073c","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"0b65b3a0-76ac-4981-8ac1-55704da9deba","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"e680575b-920c-46f0-ac52-1563827cc0e7","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"5d39feb9-f656-4717-ab62-8eccfbf50b7e","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"212fd04e-1a7e-4733-8bbd-a7bb3e7c7a2b","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"98416b25-b816-4769-84b1-359f4fddc06c","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"6d48ee3a-e699-430d-9f0c-14b7380320b4","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"5d510b2c-d142-4864-b874-ed5d37051166","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"f2c85fb8-7d8c-4238-946c-b1d852a0574a","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"f1891533-2956-49f0-a4b8-962a6cc6a7ca","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"17a8fb8f-1086-4254-bc68-d265e18c8ea5","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"9f7dce16-780c-4c98-a518-bfc0bfa6766a","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"e3bdfa58-6841-4e85-aded-b2c24ddd4640","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"f8965b36-2d45-498e-9ae3-af91e894a67d","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"45f5d607-c87d-424b-8053-4c9942967e09","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"67e37ae3-8227-4ad7-9031-79941d604f2c","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"5dace6d8-fa62-47fe-b62c-1688fee32bf0","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"f4e84a58-1640-4744-8802-e17d8166a05b","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"8fedf636-bd1c-4321-80f5-e600226f2064","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"eece7171-a876-431f-a2da-a977eafed09e","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"0917591e-0e0b-4508-8b2d-69335a19866b","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"6481ca93-7ca6-4b30-a78d-8cea1f83ca2d","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"7cd9bb5e-8a94-4bab-b11b-4beeb81b9e53","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"bceea289-2d91-4e8f-9d50-fa1ba8c4b0a7","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"48d43179-76fa-4c92-b7f4-9c7f1b84b160","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"ef6deca6-a158-4bd4-8daf-ab2d2b7745bf","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"265cea1b-2305-4731-911e-57a0a978fafa","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"fb5d68a8-868a-4b8d-8fb4-1ad9075783d2","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"5cc724aa-486a-402b-b868-96ae35cd48c6","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"0fc898d4-4ef3-46b9-b098-b82e760cc4e7","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"8716c3db-00f2-44f8-a195-167de6e2d000","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"3e6d4199-307f-4a77-8bcf-ca88e535400f","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"848e2242-b865-4d61-b8e1-34241bc78d90","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"083777a3-82dd-4e02-85b9-3d34c418c319","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"737c48bb-d7f8-4040-8439-930c123bc532","SelectedAnswers":[],"OpenAnswerText":""},{"TestId":"e029590e-986a-484d-8faf-5023d8ad1fd5","SelectedAnswers":[],"OpenAnswerText":""}]}
+
+		window.onunload = function() {
+			if (navigator.sendBeacon(url, JSON.stringify(data))) {
+				console.log(11111111);
+				console.log(222222222);
+			}
+		}
+		// if (!navigator.sendBeacon(url, data)) {
+		// 	alert('data limit reached');
+		// } 
+	</script>
+</body>
+
+</html>
+

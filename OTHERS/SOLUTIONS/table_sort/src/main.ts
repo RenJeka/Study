@@ -1,5 +1,5 @@
-import * as tablesort from  "tablesort";
-// declare tablesort:tablesort
+// import * as tablesort from  "lib/tablesort.min.js";
+declare let Tablesort:any;
 // var tablesort = require('tablesort');
 window.addEventListener("load", () => {
 
@@ -11,7 +11,7 @@ window.addEventListener("load", () => {
 	const AVOID_PROPERTY_NAME = "other"; // Свойство в данных, которое не нужно выводить в таблицу
 	const FETCH_URL = "data_2.json";
 	const LINK_NAME = "Ссылка";
-	type imageOrLink = "image" | "link" | "text"
+	type imageOrLink = "image" | "link" | "text" | "number"
 	overlay.addEventListener("click", closeModal)
 
 	/**
@@ -87,20 +87,23 @@ window.addEventListener("load", () => {
 		const TBODY:HTMLTableSectionElement = TABLE.querySelector("tbody") as HTMLTableSectionElement;
 
 		/**
+		 * Заполняет <THEAD> таблицы переданными значениями
 		 * @param objectKeys объект, по ключам которого создадутся названия колонок таблицы (<th>)
 		 */
 		function fillTableHeader(objectKeys: string[]): HTMLTableSectionElement {
-
+			const TR: HTMLTableRowElement = document.createElement("tr");
 			// Пробегаемся по ключам и создаем <th>, и заполняем его (названием ключа объекта)
 			objectKeys.forEach((thName: string) => {
 				if (thName === AVOID_PROPERTY_NAME) {
 					return
 				}
 				const TH: HTMLTableHeaderCellElement = document.createElement("th");
+				
 				TH.innerHTML = thName;
-				THEAD.appendChild(TH);
+				TR.appendChild(TH)
 			});
 			
+			THEAD.appendChild(TR);
 			return THEAD;
 		}
 
@@ -110,7 +113,7 @@ window.addEventListener("load", () => {
 		 */
 		function fillTableBody(arrObjects: object[]): HTMLTableSectionElement {
 			
-			function isImageORLink(property:string): imageOrLink {
+			function checkFormat(property:string): imageOrLink {
 				const TEST_STRING_FOR_HTTP:string = property.slice(0, 8) // Берем последние 4 символа строки, чтобы узнать расширение
 				const TEST_STRING_FOR_IMG:string = property.slice(-5) // Берем последние 4 символа строки, чтобы узнать расширение
 				const REGEXP_HTTP = /(https\:\/\/)|(http\:\/\/) /
@@ -123,9 +126,29 @@ window.addEventListener("load", () => {
 				} else if (REGEXP_HTTP.test(TEST_STRING_FOR_HTTP)) {
 					console.log("Совпадение. Ссылка", property);
 					return "link"
+				
+				} else if (checkIsNumber(property)) {
+					return "number"
 				} else {
 					return "text"
 				}
+			}
+
+			/**
+			 * Функция проверяет, является ли переданное значение числом.
+			 * @param value Значение, которое будет проверятся на число
+			 */
+			function checkIsNumber(value: string): boolean {
+				return !Number.isNaN(Number.parseFloat(value))
+			}
+
+			/**
+			 * Функция обрабатывает разные типы запятых
+			 * @param value число в строковом формате, которое впоследствии будет сконвертировано в правильный формат
+			 */
+			function convertCommaFormat(stringifiedNumber: string): number {
+
+				return 0
 			}
 
 			arrObjects.forEach((obj: object) => {
@@ -143,7 +166,7 @@ window.addEventListener("load", () => {
 						tdContent = "Unvalid Data"
 					}
 					// isPropertyImageOrLink = isImageORLink(tdContent);
-					switch (isImageORLink(`${tdContent}`)) {
+					switch (checkFormat(`${tdContent}`)) {
 						case "image":
 							const IMG: HTMLImageElement = document.createElement("img");
 							IMG.src = tdContent;
@@ -155,6 +178,10 @@ window.addEventListener("load", () => {
 							LINK.href = tdContent;
 							LINK.innerHTML = LINK_NAME;
 							TD.appendChild(LINK);
+							break;
+						
+						case "number":
+							TD.innerHTML = tdContent.toString().replace(',', '.');
 							break;
 
 						case "text":
@@ -185,7 +212,9 @@ window.addEventListener("load", () => {
 			console.log("Данные:", data);
 			fillTable(TABLE_ID, data);
 			setTableImageClickHandler();
-			// new Tablesort(document.querySelector('#tableSort'));
+			console.log(11111111111111111);
+			// let sort = new Tablesort(document.querySelector('#tableSort'));
+			return new Tablesort(document.querySelector('#tableSort'));
 			// sort.refresh();
 		})
 	})()

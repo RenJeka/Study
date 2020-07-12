@@ -208,6 +208,11 @@ window.addEventListener("load", () => {
 			
 			return TBODY;
 		}
+
+		if (!Array.isArray(dataArray)) {
+			dataArray = new Array(dataArray)
+		}
+		console.log(Object.keys(dataArray[0]));
 		fillTableHeader(Object.keys(dataArray[0]));
 		fillTableBody(dataArray);
 	}
@@ -241,7 +246,7 @@ window.addEventListener("load", () => {
 	
 
 	// Забираем данные и отрисовываем таблицу с этими данными
-	(async () => {
+	( () => {
 		submitBtn.addEventListener("click", () => {
 			if (validateInput()) {
 				API_URL = apiInput.value;
@@ -259,7 +264,7 @@ window.addEventListener("load", () => {
 				})
 			}
 		})
-		return await getData (FETCH_URL).then((response) => {
+		return getData (FETCH_URL).then((response) => {
 			return response.json()
 		}).then((data) => {
 			console.log("Данные:", data);

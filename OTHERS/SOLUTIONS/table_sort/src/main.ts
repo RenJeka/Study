@@ -140,7 +140,7 @@ window.addEventListener("load", () => {
 			 * @param value Значение, которое будет проверятся на число
 			 */
 			function checkIsNumber(value: string): boolean {
-				return !Number.isNaN(Number.parseFloat(value))
+				return !isNaN(parseFloat(value))
 			}
 
 			/**
@@ -152,9 +152,16 @@ window.addEventListener("load", () => {
 				return 0
 			}
 
-			arrObjects.forEach((obj: object) => {
+			arrObjects.forEach((obj: {[key:string] : any }) => {
 				const TR:HTMLTableRowElement = document.createElement("tr");
-				let arrTableDataCellNames: string[] = Object.values(obj);
+				let arrTableDataCellNames: string[] = [];
+
+				for (let prop in obj) {
+					if (obj.hasOwnProperty(prop)) {
+						arrTableDataCellNames.push(obj[prop] as string);
+					}
+					
+				}
 				// let isPropertyImageOrLink: imageOrLink;
 				// Создание и заполнение ячейки TD
 				arrTableDataCellNames.forEach((tdContent: string) => {

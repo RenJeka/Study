@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* ============= IMPORTS ===============  */
 /* Normilise */
 * {
   padding: 0;
@@ -14,14 +15,37 @@
   box-sizing: border-box;
 }
 
+* {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.25rem;
+}
+
 :focus,
 :active {
   outline: none;
 }
 
+a,
+a:focus,
+a:active,
+a:link,
+a:visited {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #4bb5ee;
+}
+
 a:focus,
 a:active {
   outline: none;
+}
+
+a:hover {
+  color: #9dddff;
+}
+
+a:active {
+  color: #27aef6;
 }
 
 nav,
@@ -90,22 +114,6 @@ h6 {
   font-weight: 400;
 }
 
-/* ====================================  */
-* {
-  font-family: "Roboto", sans-serif;
-  font-size: 1.25rem;
-}
-
-a,
-a:focus,
-a:active,
-a:link,
-a:visited {
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #4bb5ee;
-}
-
 .table {
   width: 100%;
   max-width: 1000px;
@@ -167,6 +175,15 @@ td img {
   transition: 1s;
 }
 
+thead.thead-light th:hover {
+  background-color: #d1d2d3;
+  cursor: pointer;
+}
+
+td img:hover {
+  cursor: pointer;
+}
+
 /* ================== MODAL ======================  */
 .modal-bg {
   display: none;
@@ -194,19 +211,19 @@ td img {
 
 .modal-img {
   /* height: 100%;
-  width: 100%; */
+  	width: 100%; */
   object-fit: contain;
 }
 
 /* .modal-img_height{
-	height: 100%;
-	width: auto;
-}
+		height: 100%;
+		width: auto;
+	}
 
-.modal-img_width{
-	height: auto;
-	width: 100%;
-} */
+	.modal-img_width{
+		height: auto;
+		width: 100%;
+	} */
 .close-btn {
   z-index: 300;
   position: fixed;
@@ -227,24 +244,6 @@ td img {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-/* =========== HOVERS ================ */
-a:hover {
-  color: #9dddff;
-}
-
-a:active {
-  color: #27aef6;
-}
-
-thead.thead-light th:hover {
-  background-color: #d1d2d3;
-  cursor: pointer;
-}
-
-td img:hover {
-  cursor: pointer;
 }
 
 .close-btn:hover {

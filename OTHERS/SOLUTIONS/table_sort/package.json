@@ -4,9 +4,9 @@
   "description": "test app to output data into table",
   "main": "main.js",
   "scripts": {
-    "start": "tsc  && sass style.scss style.css ",
+    "start": "tsc  && sass ./src/styles/style.scss ./newstyle/style.css ",
     "t": "tsc --watch",
-    "s": "sass style.scss style.css --watch"
+    "s": "sass ./src/styles/style.scss style.css --watch"
   },
   "keywords": [
     "table",
@@ -16,8 +16,7 @@
   "author": "renjeka",
   "license": "ISC",
   "devDependencies": {
-    "sass": "^1.26.9",
-    "scss": "^0.2.4"
+    "sass": "^1.26.9"
   },
   "dependencies": {
     "tablesort": "^5.2.1"

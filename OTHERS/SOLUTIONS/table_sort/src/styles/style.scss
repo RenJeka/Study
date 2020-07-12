@@ -1,0 +1,84 @@
+/* ============= IMPORTS ===============  */
+@import "./normalise.scss";
+@import "./table.scss";
+
+/* ================== MODAL ======================  */
+.modal-bg {
+	display: none;
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+	padding: 20px;
+	background-color: rgba(128, 128, 128, 0.808);
+}
+
+.modal-body {
+	z-index: 200;
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	max-height: 100%;
+	max-width: 100%;
+	transition: 2s;
+	object-fit: cover;
+	/* background-color: rgba(190, 25, 25, 0.705); */
+}
+
+.modal-img {
+	/* height: 100%;
+		width: 100%; */
+	object-fit: contain;
+}
+
+/* .modal-img_height{
+		height: 100%;
+		width: auto;
+	}
+
+	.modal-img_width{
+		height: auto;
+		width: 100%;
+	} */
+
+.close-btn {
+	z-index: 300;
+	position: fixed;
+	top: 10px;
+	right: 10px;
+	height: 60px;
+	width: 60px;
+	font-size: 4rem;
+	text-align: center;
+}
+
+.close-btn svg {
+	height: 100%;
+	width: 100%;
+}
+
+.modal-body_visible {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.close-btn:hover {
+	cursor: pointer;
+}
+
+/* ------------------ OTHERS ---------- */
+// th:nth-child(6),
+// td:nth-child(6){
+// 	display: none;
+// }
+
+/* =========== MEDIA ============= */
+@media screen and (max-width: 700px) {
+	.modal-body {
+		min-width: 90%;
+		min-height: 90%;
+	}
+}

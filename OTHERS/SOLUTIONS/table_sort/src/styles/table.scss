@@ -68,3 +68,14 @@ thead.thead-light th:hover {
 td img:hover {
 	cursor: pointer;
 }
+
+@media screen and (max-width: 700px) {
+	.table,
+	.table * {
+		font-size: 0.95em !important;
+	}
+
+	.table .thead-light th {
+		padding: 10px 2px;
+	}
+}

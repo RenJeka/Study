@@ -210,11 +210,13 @@ window.addEventListener("load", () => {
 		if (apiInput.value.trim().length === 0) {
 			apiInput.classList.add("input-block__input_error");
 			document.querySelector("#error-msg")?.classList.add("input-block__error_active");
+			document.querySelector("#input-wrapper")?.classList.add("input-block__input-wrapper_error");
 			apiInput.focus();
 
 			setTimeout(() => {
 				apiInput.classList.remove("input-block__input_error");
 				document.querySelector("#error-msg")?.classList.remove("input-block__error_active");
+				document.querySelector("#input-wrapper")?.classList.remove("input-block__input-wrapper_error");
 			}, 3000)
 
 			return false

@@ -27,9 +27,14 @@
 	</div>
 
 	<div class="container">
-		<div class="api-reference">
-			<label for="api-input">Введите API - ссылку</label>
-			<input type="text" id="api-input">
+		<div class="input-block">
+			<label class="input-block__label" for="api-input">Введите API - ссылку: </label>
+			<div class="input-block__input-wrapper" id="input-wrapper">
+				<input class="input-block__input" type="text" id="api-input" placeholder="https://jsonplaceholder.typicode.com/todos">
+				<div class="input-block__error" id="error-msg">Введите URL адрес API</div>
+			</div>
+			
+			<input class="input-block__submit" type="submit" id="api-submit" value="Go">
 		</div>
 	
 		<table id="tableSort" class="table table-hover table-fixed">

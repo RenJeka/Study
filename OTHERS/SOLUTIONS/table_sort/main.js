@@ -1,13 +1,16 @@
 "use strict";
-// var tablesort = require('tablesort');
 window.addEventListener("load", () => {
     let overlay = document.querySelector("#modalBg");
     let modalBody = document.querySelector("#modal-body");
     let bigImg = document.querySelector("#big-img");
+    let API_URL;
+    let sort; // Объект "Tablesort"
     const TABLE_ID = "tableSort";
     const AVOID_PROPERTY_NAME = "other"; // Свойство в данных, которое не нужно выводить в таблицу
     const FETCH_URL = "data_2.json";
     const LINK_NAME = "Ссылка";
+    const submitBtn = document.querySelector("#api-submit");
+    const apiInput = document.querySelector("#api-input");
     overlay.addEventListener("click", closeModal);
     /**
      * Функция задает правильные размеры картинке и ограничиваемому блоку и размещает картинку
@@ -99,11 +102,9 @@ window.addEventListener("load", () => {
                 const REGEXP_IMAGES = /(\.jpeg)|(\.jpg)|(\.png)|(\.gif)|(\.svg) /;
                 // Проверяем, это ссылка, картинка или просто текст
                 if (REGEXP_HTTP.test(TEST_STRING_FOR_HTTP) && REGEXP_IMAGES.test(TEST_STRING_FOR_IMG)) {
-                    console.log("Совпадение. Картинка", property);
                     return "image";
                 }
                 else if (REGEXP_HTTP.test(TEST_STRING_FOR_HTTP)) {
-                    console.log("Совпадение. Ссылка", property);
                     return "link";
                 }
                 else if (checkIsNumber(property)) {
@@ -173,17 +174,53 @@ window.addEventListener("load", () => {
         fillTableHeader(Object.keys(dataArray[0]));
         fillTableBody(dataArray);
     }
+    function validateInput() {
+        if (apiInput.value.trim().length === 0) {
+            apiInput.classList.add("input-block__input_error");
+            document.querySelector("#error-msg")?.classList.add("input-block__error_active");
+            apiInput.focus();
+            setTimeout(() => {
+                apiInput.classList.remove("input-block__input_error");
+                document.querySelector("#error-msg")?.classList.remove("input-block__error_active");
+            }, 3000);
+            return false;
+        }
+        else {
+            return true;
+        }
+    }
+    function clearTable(formID) {
+        const table = document.querySelector(`#${formID}`);
+        for (let i = table.rows.length - 1; i < table.rows.length && i >= 0; i--) {
+            table.deleteRow(i);
+        }
+    }
     // Забираем данные и отрисовываем таблицу с этими данными
     (async () => {
+        submitBtn.addEventListener("click", () => {
+            if (validateInput()) {
+                API_URL = apiInput.value;
+                clearTable("tableSort");
+                apiInput.value = "";
+                getData(API_URL).then((response) => {
+                    return response.json();
+                }).then((data) => {
+                    console.clear();
+                    console.log("Данные:", data);
+                    fillTable(TABLE_ID, data);
+                    setTableImageClickHandler();
+                    sort = new Tablesort(document.querySelector('#tableSort'));
+                    sort.refresh();
+                });
+            }
+        });
         return await getData(FETCH_URL).then((response) => {
             return response.json();
         }).then((data) => {
             console.log("Данные:", data);
             fillTable(TABLE_ID, data);
             setTableImageClickHandler();
-            console.log(11111111111111111);
-            // let sort = new Tablesort(document.querySelector('#tableSort'));
-            return new Tablesort(document.querySelector('#tableSort'));
+            sort = new Tablesort(document.querySelector('#tableSort'));
             // sort.refresh();
         });
     })();

@@ -1,6 +1,5 @@
 .table {
 	width: 100%;
-	max-width: 1000px;
 	margin: 0 auto;
 	margin-bottom: 1rem;
 	background-color: transparent;
@@ -48,11 +47,13 @@ tbody {
 	width: 100%;
 }
 
-td:nth-child(3)::after,
-td:nth-child(4)::after,
-td:nth-child(5)::after {
-	content: " см";
-}
+//  ПОСТФИКСЫ для размеров (см)
+
+// td:nth-child(3)::after,
+// td:nth-child(4)::after,
+// td:nth-child(5)::after {
+// 	content: " см";
+// }
 
 td img {
 	max-width: 100px;

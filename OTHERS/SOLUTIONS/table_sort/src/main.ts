@@ -88,7 +88,7 @@ window.addEventListener("load", () => {
 		const TABLE:HTMLTableElement = document.querySelector(`#${tableID}`) as HTMLTableElement;
 		const THEAD:HTMLTableSectionElement = TABLE.querySelector("thead") as HTMLTableSectionElement;
 		const TBODY:HTMLTableSectionElement = TABLE.querySelector("tbody") as HTMLTableSectionElement;
-
+		let dataArrayNew: object[] = [];
 		/**
 		 * Заполняет <THEAD> таблицы переданными значениями
 		 * @param objectKeys объект, по ключам которого создадутся названия колонок таблицы (<th>)
@@ -209,12 +209,13 @@ window.addEventListener("load", () => {
 			return TBODY;
 		}
 
-		if (!Array.isArray(dataArray)) {
-			dataArray = new Array(dataArray)
+		if (!dataArray.length) {
+			dataArrayNew.push(dataArray);
+		} else {
+			dataArrayNew = dataArray;
 		}
-		console.log(Object.keys(dataArray[0]));
-		fillTableHeader(Object.keys(dataArray[0]));
-		fillTableBody(dataArray);
+		fillTableHeader(Object.keys(dataArrayNew[0]));
+		fillTableBody(dataArrayNew);
 	}
 
 	

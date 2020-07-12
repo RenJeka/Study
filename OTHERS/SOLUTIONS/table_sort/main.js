@@ -72,6 +72,7 @@ window.addEventListener("load", function () {
         var TABLE = document.querySelector("#" + tableID);
         var THEAD = TABLE.querySelector("thead");
         var TBODY = TABLE.querySelector("tbody");
+        var dataArrayNew = [];
         /**
          * Заполняет <THEAD> таблицы переданными значениями
          * @param objectKeys объект, по ключам которого создадутся названия колонок таблицы (<th>)
@@ -176,12 +177,14 @@ window.addEventListener("load", function () {
             });
             return TBODY;
         }
-        if (!Array.isArray(dataArray)) {
-            dataArray = new Array(dataArray);
+        if (!dataArray.length) {
+            dataArrayNew.push(dataArray);
         }
-        console.log(Object.keys(dataArray[0]));
-        fillTableHeader(Object.keys(dataArray[0]));
-        fillTableBody(dataArray);
+        else {
+            dataArrayNew = dataArray;
+        }
+        fillTableHeader(Object.keys(dataArrayNew[0]));
+        fillTableBody(dataArrayNew);
     }
     function validateInput() {
         var _a, _b;

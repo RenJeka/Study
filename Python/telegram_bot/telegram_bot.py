@@ -17,13 +17,16 @@ def send_echo(message):
 	temp = w.temperature('celsius')["temp"]
 
 	answer = "В городе "+ message.text +" сейчас " + w.detailed_status + "\n"
-	answer += "Температура сейчас: " + str(temp) + "℃" +"\n\n"
+	answer += "Температура сейчас: " + str(temp) + "℃" +"\n"
+	answer += "Скорость вертра: " + str(w.wind()['speed']) + " метров за секунду" +"\n"
+	answer += "Влажность: " + str(w.humidity) + " %" +"\n\n"
 	if temp < 10:
 		answer += "Сейчас слишком холодно — одевайся очень тепло!"
 	elif temp < 20:
 		answer += "Сейчас прохладно — надень что-нибудь теплое."
 	else:
 		answer += "Температура комфортная. Можешь одевать что-угодно."
+	
 	bot.send_message(message.chat.id, answer)
 
 bot.polling( none_stop = True )

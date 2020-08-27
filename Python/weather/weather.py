@@ -9,7 +9,7 @@ place = input("Your country: ")
 
 # Search for current weather in London (Great Britain)
 mgr = owm.weather_manager()
-observation = mgr.weather_at_place('London,GB')
+observation = mgr.weather_at_place(place)
 w = observation.weather
 temp = w.temperature('celsius')["temp"]
 print("In city "+ place +" rigth now is " + w.detailed_status)

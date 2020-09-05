@@ -1,11 +1,13 @@
 <?php
 
-include_once 'functions.php';
+include_once('model/apps.php');
 $articles = getArticles();
 
 $id = (int) ($_GET['id'] ?? '');
 $post = $articles[$id] ?? null;
 $hasPost = ($post !== null);
+
+logRequest();
 
 ?>
 

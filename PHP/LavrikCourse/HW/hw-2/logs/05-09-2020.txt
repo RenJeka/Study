@@ -1,0 +1,13 @@
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;direct link
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;direct link
+05-Sep-2020;::1;/hw/hw-2/article.php?id=4;http://localhost/hw/hw-2/index.php
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;http://localhost/hw/hw-2/index.php
+05-Sep-2020;::1;/hw/hw-2/article.php?id=3;http://localhost/hw/hw-2/index.php
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;http://localhost/hw/hw-2/
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;http://localhost/hw/hw-2/; warning!
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;direct link; warning!
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;direct link; warning!
+05-Sep-2020;::1;/hw/hw-2/article.php?id=3;http://localhost/hw/hw-2/; !warning!
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;http://localhost/hw/hw-2/;!warning!
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;http://localhost/hw/hw-2/;!warning!
+05-Sep-2020;::1;/hw/hw-2/article.php?id=2;http://localhost/hw/hw-2/index.php;!warning!

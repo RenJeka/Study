@@ -1,9 +1,9 @@
-# �������� ���� ��� �������������
+# folders
 /git_learn/folder for ignore
 
 node_modules
 
-# ����� ������ ������
+# files
 
 *.pdf
 #  *.jpg
@@ -11,7 +11,10 @@ node_modules
 #  *.png
 #  *.gif
 *.rar
+!OTHERS/SETTINGS/**
 *.zip
+!OTHERS/SETTINGS/**
+
 *.exe
 
 

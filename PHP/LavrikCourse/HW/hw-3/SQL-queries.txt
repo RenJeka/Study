@@ -1,0 +1,52 @@
+
+3.1.1
+select articleTitle,content, publishdate, ismoderated,  username, usersurname, email, address from articles
+    JOIN users using(id_user) ORDER BY publishDate desc LIMIT 20
+
+3.1.2
+select categoryName from categories
+
+3.2.1
+select articleTitle, content, publishDate, isModerated, userName, userSurname, email, address from articles
+    inner join users using (id_user)
+where id_article=2
+
+3.2.2
+select categoryName from articles
+    join categories c on articles.id_category = c.id_category
+where id_article=2
+
+3.2.3
+select tagName from `articles-tags`
+    join tags using(id_tag)
+where id_article=2
+
+3.3.1
+select * from categories
+    where categoryUrl= 'http://cars.ua'
+
+3.3.2
+select articleTitle, content, publishDate, isModerated from articles
+    join categories using (id_category)
+    where categoryUrl= 'http://cars.ua'
+	
+3.4.1
+select * from tags
+     where tagURL= 'kievsport.ua'
+	 
+3.4.2
+select articleTitle, content, publishDate, isModerated
+       from articles
+    join `articles-tags` using (id_article)
+    join tags using (id_tag)
+where tagURL = 'kievsport.ua'
+
+
+3.5.1
+select * from users
+where userName='Kolya'
+
+3.5.2
+select articleTitle, content, publishDate, isModerated from articles
+    join users using (id_user)
+where userName='Kolya'

@@ -1,0 +1,87 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>The HTML5 Herald</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+	<style>
+		h1{
+			font-size: 36px;
+			color: brown;
+		}
+
+		.my-table{
+			min-width: 600px;
+			min-height: 300px;
+			border: 1px solid #ddd;
+		}
+
+		.my-row{
+			width: 200px;
+			height: 10px;
+
+			position: relative;
+			top: 50px;
+			
+			margin-bottom: 10px;
+
+			background-color: coral;
+		}
+
+		.my-td{
+			background-color: LightGreen;
+		}
+	</style>
+</head>
+
+<body>
+  
+  	<!-- ОПИСАНИЕ -->
+	<h1>Некоторые стили не влияют на элементы таблицы</h1>	
+
+	<h3>1. Попробуйте изменить элементу <kbd>&lt;tr&gt;</kbd> такие стили в таблице, как:</h3>	
+
+	<ul>
+		<li>width:</li>
+		<li>height:</li>
+		<li>top:</li>
+		<li>margin:</li>
+	</ul>
+	<h3>2. Попробуйте спозиционировать ячейку таблицы <kbd>&lt;td&gt;</kbd> относительно строки</h3>
+	<h3>3. Попробуйте сдвинуть строку таблицы, используя <kbd>position: relative</kbd></h3>
+
+	<!-- ТАБЛИЦА -->
+	<table class="my-table" cellspacing="0">
+		<tr class="my-row">
+			<td>Hello!</td>
+			<td>Hello!</td>
+			<td>Hello!</td>
+		</tr>
+		<tr class="my-row">
+			<td>Hello!</td>
+			<td>Hello!</td>
+			<td>Hello!</td>
+		</tr>
+		<tr class="my-row">
+			<td>Hello!</td>
+			<td class="my-td">Спозиционируй меня</td>
+			<td>Hello!</td>
+		</tr>
+		<tr class="my-row">
+			<td>Hello!</td>
+			<td>Hello!</td>
+			<td>Hello!</td>
+		</tr>
+		<tr class="my-row">
+			<td>Hello!</td>
+			<td>Hello!</td>
+			<td>Hello!</td>
+		</tr>			
+	</table>
+  
+</body>
+</html>

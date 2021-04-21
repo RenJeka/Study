@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C01_Arrays.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C02_ArraysFill.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C03_ArraysFill.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C04_ArraysNull.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C05_TwoDimentionalArray.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C06_TwoDimentionalArrayFill.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C07_TwoDimentionalArrayFill.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C08_TwoDimentionalArray.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C09_ThreeDimentionalArray.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C10_ThreeDimensionalArrayFill.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C11_JaggedArray.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C12_JaggedArray.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C13_MethodWithArray.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

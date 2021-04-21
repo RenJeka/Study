@@ -6,6 +6,7 @@ node_modules
 # files
 
 *.pdf
+*.xps
 #  *.jpg
 #  *.jpeg
 #  *.png

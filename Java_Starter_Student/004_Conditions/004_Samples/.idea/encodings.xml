@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C01_If.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C02_IfElse.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C03_IfElseShort.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C04_Authentification.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C05_Ternary.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C06_Ternary.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C07_Ternary.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C08_Ternary.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C09_Ternary.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C10_Ternary.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C11_Switch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C12_Switch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C13_Switch.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaStarter/C14_CoffeeMachine.java" charset="UTF-8" />
+  </component>
+</project>

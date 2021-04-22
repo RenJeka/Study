@@ -1,4 +1,4 @@
-package com.company.hw7;
+package src.com.company.hw8;
 
 import java.util.Scanner;
 

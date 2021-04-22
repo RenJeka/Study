@@ -19,8 +19,12 @@ public class C02_ArraysFill {
         // Специальная запись цикла for для прохождения элементов массива (Java 8)
         // Аналогична конструкции foreach, используемой в других языках программирования (например C#, PHP)
         // for (int ключ, массив)
-        for (int anArray : array) {
-            System.out.print(anArray + " ");
+//        for (int anArray : array) {
+//            System.out.print(anArray + " ");
+//        }
+
+        for (int element : array) {
+            System.out.print(element + " ");
         }
     }
 }

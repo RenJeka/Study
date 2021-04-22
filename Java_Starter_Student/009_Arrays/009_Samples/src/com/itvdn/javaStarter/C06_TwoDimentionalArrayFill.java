@@ -4,8 +4,8 @@ public class C06_TwoDimentionalArrayFill {
     // Массивы (двумерный массив).
 
     public static void main(String[] args) {
-        int sizeI = 3;
-        int sizeJ = 3;
+        int sizeI = 5;
+        int sizeJ = 25;
         int[][] array = new int[sizeI][sizeJ];
 
         // Заполнение массива

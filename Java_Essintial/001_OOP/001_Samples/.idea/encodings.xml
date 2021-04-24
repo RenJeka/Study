@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_001_class_declaration/Car.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_002_access_modifiers/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_006_packages01/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_006_packages01/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_007_packages02_import/Main.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_008_packages03_lang/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_009_packages04_without_import/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_010_packages05/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_011_packages06_import_static/Main.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

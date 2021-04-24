@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_001_constructors/declaration/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_002_constructors/kw_this/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_003_constructors/default_constructor/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_003_constructors/default_constructor/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_004_constructors/defaul_not_created/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_004_constructors/defaul_not_created/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_005_constructors/private_constructor/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_005_constructors/private_constructor/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_006_constructors/overload/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_006_constructors/overload/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_007_constructors/from_constructors/Animal.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_007_constructors/from_constructors/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_008_static/constant/MyCalc.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/ex_008_static/methods/Main.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex001_nestedclasses/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex001_nestedclasses/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex002_nestedclasses/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex002_nestedclasses/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex003_nestedclasses/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex003_nestedclasses/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex004_nestedclasses/BaseClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex004_nestedclasses/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex004_nestedclasses/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex005_nestedclasses/BaseClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex005_nestedclasses/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex005_nestedclasses/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex006_nestedclasses/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/nested_classes/ex006_nestedclasses/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex001_static/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex001_static/NotStaticClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex001_static/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex001_static/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex002_static/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex002_static/NotStaticClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex002_static/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex002_static/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex003_static_blocks/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex003_static_blocks/NotStaticClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex003_static_blocks/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex003_static_blocks/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex004_static_blocks/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex004_static_blocks/NotStaticClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex004_static_blocks/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex004_static_blocks/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex005_constructors/Main.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex005_constructors/NotStaticClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex005_constructors/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex005_constructors/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex006_abstract_class/AbstractClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex006_abstract_class/ConcreteClass.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex006_abstract_class/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex006_abstract_class/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex007_static/Main.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex007_static/Main.java" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex007_static/desktop.ini" charset="windows-1251" />
+    <file url="file://$PROJECT_DIR$/src/com/itvdn/javaEssential/static_members/ex007_static/desktop.ini" charset="windows-1251" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

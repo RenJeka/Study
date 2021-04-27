@@ -9,6 +9,7 @@ public class Main {
         instance.method();
         System.out.println(instance.publicField);
 
+
         // UpCast
         SomeInterface instanceUp = instance;
         instanceUp.method();

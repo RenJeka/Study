@@ -6,5 +6,6 @@ public class Main {
 
         // при создании объекта без параметов - компилятор будет ругаться
          Animal animal = new Animal();
+         animal.getThis();
     }
 }

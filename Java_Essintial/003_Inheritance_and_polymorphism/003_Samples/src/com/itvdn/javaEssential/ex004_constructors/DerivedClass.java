@@ -14,7 +14,8 @@ public class DerivedClass extends BaseClass {
     // вызывается пользовательский конструктор базового класса, при этом не нужно,
     // присваивать значения, унаследованным членам в конструкторе производного класса.
     public DerivedClass(int number1, int number2) {
-        super(number1);
+        super();
+//        super(number1);
         derivedField = number2;
     }
 }

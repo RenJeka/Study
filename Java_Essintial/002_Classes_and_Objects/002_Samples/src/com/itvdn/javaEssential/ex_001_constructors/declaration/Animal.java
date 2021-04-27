@@ -1,6 +1,6 @@
 package com.itvdn.javaEssential.ex_001_constructors.declaration;
 
-public class Animal {
+public class  Animal {
     private int age;
 
     // объявление конструктора

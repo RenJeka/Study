@@ -36,10 +36,11 @@ class ConcreteClass extends AbstractClassB {
 
 public class Main {
     public static void main(String[] args) {
-        AbstractClassA instance = new ConcreteClass();
+        AbstractClassB instance = new ConcreteClass();
 
         instance.operationA();
-
-        //instance.operationB();  // ¬опрос: почему недоступен данный метод?
+        AbstractClassB instanceB = instance;
+//        instance.operationB();  // ¬опрос: почему недоступен данный метод?
+        instanceB.operationB();
     }
 }

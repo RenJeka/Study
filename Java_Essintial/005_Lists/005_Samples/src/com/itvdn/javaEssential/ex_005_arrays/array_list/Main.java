@@ -16,13 +16,14 @@ public class Main {
 
         // добавление по индексу
         arrayList.add(0, "teacher");
+        System.out.println(arrayList);
 
         // удаление элементов по индексу
         arrayList.remove(1);
+        System.out.println(arrayList);
 
         // удаление элементов по значению
         arrayList.remove("would you?");
-
         System.out.println(arrayList);
     }
 }

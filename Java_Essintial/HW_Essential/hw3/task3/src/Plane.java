@@ -1,3 +1,5 @@
+package HW_Essential.hw3.task3.src;
+
 public class Plane extends Vehicle{
     int maxLiftingHeight;
     int numberOfPassengers;

@@ -24,6 +24,7 @@
       <module fileurl="file://$PROJECT_DIR$/HomeWorkAnswers/Lesson_003/Additional task/Additional task9.iml" filepath="$PROJECT_DIR$/HomeWorkAnswers/Lesson_003/Additional task/Additional task9.iml" />
       <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw1/AdditionalTask/AdditionalTask_hw1.iml" filepath="$PROJECT_DIR$/HW_Essential/hw1/AdditionalTask/AdditionalTask_hw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw2/AdditionalTask/AdditionalTask_hw2.iml" filepath="$PROJECT_DIR$/HW_Essential/hw2/AdditionalTask/AdditionalTask_hw2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw3/adittionalTask/AdittionalTask_hw3.iml" filepath="$PROJECT_DIR$/HW_Essential/hw3/adittionalTask/AdittionalTask_hw3.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/Java_Essintial.iml" filepath="$PROJECT_DIR$/.idea/Java_Essintial.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorkAnswers/Lesson_009/Task 2/Task 2.iml" filepath="$PROJECT_DIR$/HomeWorkAnswers/Lesson_009/Task 2/Task 2.iml" />
       <module fileurl="file://$PROJECT_DIR$/HomeWorkAnswers/Lesson_010/Task 2/Task 21.iml" filepath="$PROJECT_DIR$/HomeWorkAnswers/Lesson_010/Task 2/Task 21.iml" />
@@ -55,6 +56,15 @@
       <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw2/Task3/Task3_hw2.iml" filepath="$PROJECT_DIR$/HW_Essential/hw2/Task3/Task3_hw2.iml" />
       <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw1/Task4/Task4_hw1.iml" filepath="$PROJECT_DIR$/HW_Essential/hw1/Task4/Task4_hw1.iml" />
       <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw2/Task4/Task4_hw2.iml" filepath="$PROJECT_DIR$/HW_Essential/hw2/Task4/Task4_hw2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw4/additionalTask/additionalTask_hw3.iml" filepath="$PROJECT_DIR$/HW_Essential/hw4/additionalTask/additionalTask_hw3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw5/additionalTask/additionalTask_hw5.iml" filepath="$PROJECT_DIR$/HW_Essential/hw5/additionalTask/additionalTask_hw5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw4/task2/task2_hw3.iml" filepath="$PROJECT_DIR$/HW_Essential/hw4/task2/task2_hw3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw5/task2/task2_hw5.iml" filepath="$PROJECT_DIR$/HW_Essential/hw5/task2/task2_hw5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw4/task3/task3_hw3.iml" filepath="$PROJECT_DIR$/HW_Essential/hw4/task3/task3_hw3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw5/task3/task3_hw5.iml" filepath="$PROJECT_DIR$/HW_Essential/hw5/task3/task3_hw5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw3/task4/task4_hw3.iml" filepath="$PROJECT_DIR$/HW_Essential/hw3/task4/task4_hw3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw5/task4/task4_hw5.iml" filepath="$PROJECT_DIR$/HW_Essential/hw5/task4/task4_hw5.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HW_Essential/hw6/test/test_hw5.iml" filepath="$PROJECT_DIR$/HW_Essential/hw6/test/test_hw5.iml" />
     </modules>
   </component>
 </project>

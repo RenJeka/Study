@@ -1,3 +1,5 @@
+package HW_Essential.hw3.task3.src;
+
 public class Main {
     public static void main(String[] args) {
         Vehicle vehicles[] = {

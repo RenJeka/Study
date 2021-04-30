@@ -1,3 +1,5 @@
+package HW_Essential.hw3.task3.src;
+
 public class Vehicle {
     int yearOfIssue;
     int price;

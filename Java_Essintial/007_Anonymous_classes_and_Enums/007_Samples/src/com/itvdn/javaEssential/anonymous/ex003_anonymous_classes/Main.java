@@ -27,6 +27,7 @@ public class Main {
         instance.method();
 
         // Метод не доступен
-        // System.out.println(instance.getPublicField());
+//        System.out.println(instance.publicField);
+//        System.out.println(instance.getPublicField());
     }
 }

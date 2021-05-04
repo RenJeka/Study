@@ -6,7 +6,7 @@ package com.itvdn.javaEssential.nested_classes.ex001_nestedclasses;
 class MyClass {
     public class Nested {
         public void method() {
-            System.out.println("Метод из Nested класса");
+            System.out.println("Method from Nested class");
         }
     }
 }

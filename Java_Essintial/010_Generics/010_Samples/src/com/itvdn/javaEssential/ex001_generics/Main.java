@@ -19,9 +19,13 @@ public class Main {
         instance1.field = "ABC";
         instance1.method();
 
+        MyClass<Object> instance5 = new MyClass<>();
+        instance5.field = "lxksndvgklsnvgj";
+        instance5.method();
+
         // В качестве параметра типа передавать примитивные типы (int, long, float, double, и так далее) нельзя.
-        //MyClass<int> instance2 = new MyClass<int>();
-        //instance2.method();
+//        MyClass<int> instance4 = new MyClass<int>();
+//        instance4.method();
 
         // Создаем экземпляр класса MyClass и в качестве параметра типа (тип MyClass) передаем тип Integer.
         MyClass<Integer> instance2 = new MyClass<Integer>();

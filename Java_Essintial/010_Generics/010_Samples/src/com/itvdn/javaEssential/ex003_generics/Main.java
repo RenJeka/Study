@@ -6,8 +6,8 @@ package com.itvdn.javaEssential.ex003_generics;
 class MyClass {
     public <T> void method(T argument) {
         T variable = argument;
-
         System.out.println(variable);
+
     }
 }
 

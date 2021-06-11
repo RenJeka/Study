@@ -21,6 +21,6 @@ public class Main {
 
         MyClass<Derived> mc2 = new MyClass<>();
 
-        //MyClass<String> mc3 = new MyClass<>(); // Ошибка.
+//        MyClass<String> mc3 = new MyClass<>(); // Ошибка.
     }
 }

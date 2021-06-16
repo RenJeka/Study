@@ -9,8 +9,8 @@ public class Main {
         Animal[] c = {cat, dog, bird};
 
         for (Animal tmp : c) {
-            tmp.price = tmp.price + 1000;    // Возможно изменение полей объекта
-//            tmp = new Animal("Lion", 200000);     // Нельзя поменять объекты в массиве
+//            tmp.price = tmp.price + 1000;    // Возможно изменение полей объекта
+            tmp = new Animal("Lion", 200000);     // Нельзя поменять объекты в массиве
         }
 
         for (Animal tmp : c) {

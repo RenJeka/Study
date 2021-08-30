@@ -8,14 +8,20 @@ public class Main {
     public static void main(String[] args){
         // Создаем коллекцию хэш-сет
         Set<String> set = new HashSet<>();
-        set.add("арбуз");
-        set.add("банан");
-        set.add("дыня");
-        set.add("земляника");
-        set.add("ирис");
-        set.add("картофель");
+//        set.add(null);
+        set.add("text");
+        set.add("text");
+        //-------------
+//        set.add("арбуз");
+//        set.add("банан");
+//        set.add("дыня");
+//        set.add("земляника");
+//        set.add("ирис");
+//        set.add("картофель");
         for (String text : set) {
-            System.out.println(text + " " + text.hashCode());
+//            System.out.println(text + " " + text.hashCode());
+            System.out.println(text);
+//            System.out.println(text.length());
         }
     }
 }

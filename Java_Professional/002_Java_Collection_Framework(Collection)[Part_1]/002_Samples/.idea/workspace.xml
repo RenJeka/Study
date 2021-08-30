@@ -1,17 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_Introduction" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_Introduction" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_HelloWorldApp" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:03_Directives" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:03_Directives" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_BindingSample" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ClassWork" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="5a5248e1-04d8-4ee7-af6e-6a78b930d3f2" name="Default" comment="" />
-    <ignored path="$PROJECT_DIR$/out/" />
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
-    <option name="TRACKING_ENABLED" value="true" />
+    <list default="true" id="5a5248e1-04d8-4ee7-af6e-6a78b930d3f2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/.idea/Java_Professional.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/001_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/002_Java_Collection_Framework(Collection)[Part_1]/002_Samples/002_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/003_Java_Collection_Framework(Map)[Part_2]/003_Samples/003_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/004_Basic_IO_NIO/004_Samples/004_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/005_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/006_Regular_expressions_and_Date_API/006_Samples/006_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/007_Reflection_and_ClassLoader/007_Samples/007_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClassWork/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_001_foreach/foreach/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_001_foreach/foreach/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_001_foreach/foreachWithPrimitives/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_002_iterator/iterator/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_002_iterator/iteratorWithObjects/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_002_iterator/iteratorWithObjects/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_003_sorting/sorting_arrays/SortingStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_003_sorting/sorting_objects/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_003_sorting/sorting_objects/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/ComparatorByBreed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/ComparatorByPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/ComparatorBySpeed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/QueueMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/QueueMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/SimpleArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/SimpleArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/SimpleQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/SimpleQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/SimpleStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/SimpleStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/StackMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/StackMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_002_linkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_002_linkedList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/hashSet/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/hashSet/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet_primitives/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet_primitives/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="FileEditorManager">
-    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -20,81 +153,31 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>*</find>
-      <find>oldCapa</find>
-    </findStrings>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
-  <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
-      <list>
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/linkedList_time/linkedListTime/Main.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/linkedListTime/Main.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/linkedList_time/Main.java" />
-        <option value="$PROJECT_DIR$/src/isEmpty.java" />
-        <option value="$PROJECT_DIR$/src/A.java" />
-        <option value="$PROJECT_DIR$/src/SimpleLinkedList.java" />
-        <option value="$PROJECT_DIR$/src/MethodsOfArrayList.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/A.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_001_arrayList/arrayList/Main.java" />
-        <option value="$PROJECT_DIR$/src/SimpleArray.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java" />
-        <option value="$PROJECT_DIR$/src/SimpleQueue.java" />
-        <option value="$PROJECT_DIR$/src/SimpleStack.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_004_set/treeSet/Main.java" />
-        <option value="$PROJECT_DIR$/src/javaProfessional/ex_004_set/treeSet_primitives/Main.java" />
-      </list>
-    </option>
+  <component name="ProjectId" id="1u1bpgNYcXJLzYutaCjRIL1AFur" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1358" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1096" />
-  </component>
-  <component name="ProjectView">
-    <navigator proportions="" version="1">
-      <foldersAlwaysOnTop value="true" />
-    </navigator>
-    <panes>
-      <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="002_Samples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="002_Samples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="002_Samples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="002_Samples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="002_Samples" type="b2602c69:ProjectViewProjectNode" />
-              <item name="002_Samples" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="javaProfessional" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
-      <pane id="PackagesPane" />
-    </panes>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
   </component>
   <component name="RecentsManager">
     <key name="MoveMembersDialog.RECENTS_KEY">
@@ -104,151 +187,7 @@
       <recent name="D:\Java Professional Course_video\002_Java_Collection_Framework[Part_1]\002_Samples\src" />
     </key>
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
-  <component name="RunManager" selected="Application.Main (2)">
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-    </configuration>
-    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.hashSet.Main" />
-      <module name="002_Samples" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaProfessional.ex_004_set.hashSet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.treeSet_primitives.Main" />
-      <module name="002_Samples" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaProfessional.ex_004_set.treeSet_primitives.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.treeSet.Main" />
-      <module name="002_Samples" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaProfessional.ex_004_set.treeSet.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-    </configuration>
-    <configuration name="QueueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="QueueMain" />
-      <module name="002_Samples" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration name="StackMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="StackMain" />
-      <module name="002_Samples" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration default="true" type="Application" factoryName="Application">
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-    </configuration>
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="" />
-      <setting name="debug" value="false" />
-    </configuration>
-    <configuration default="true" type="JUnit" factoryName="JUnit">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <patterns />
-    </configuration>
-    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="WORKING_DIRECTORY" />
-      <module name="" />
-    </configuration>
-    <configuration default="true" type="TestNG" factoryName="TestNG">
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="SUITE_NAME" />
-      <option name="PACKAGE_NAME" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="METHOD_NAME" />
-      <option name="GROUP_NAME" />
-      <option name="TEST_OBJECT" value="CLASS" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="OUTPUT_DIRECTORY" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <option name="USE_DEFAULT_REPORTERS" value="false" />
-      <option name="PROPERTIES_FILE" />
-      <properties />
-      <listeners />
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <module name="" />
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <Java />
-      <Profilers>
-        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
-        <option name="GAPID_ENABLED" value="false" />
-        <option name="GAPID_DISABLE_PCS" value="false" />
-        <option name="SUPPORT_LIB_ENABLED" value="true" />
-        <option name="INSTRUMENTATION_ENABLED" value="true" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.CWQueueMain">
     <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
       <option name="TESTING_TYPE" value="0" />
@@ -276,11 +215,8 @@
       </Profilers>
       <method />
     </configuration>
-    <configuration default="true" type="AntRunConfiguration" factoryName="Ant Target">
-      <method />
-    </configuration>
-    <configuration default="true" type="CompoundRunConfigurationType" factoryName="Compound Run Configuration">
-      <method />
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
     </configuration>
     <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
       <module name="" />
@@ -291,29 +227,113 @@
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <method />
     </configuration>
-    <configuration default="true" type="JarApplication" factoryName="JAR Application">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <envs />
-      <method />
+    <configuration name="CWQueueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClassWork.CWQueueMain" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassWork.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Java Scratch" factoryName="Java Scratch">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SCRATCH_FILE_ID" value="0" />
-      <option name="MAIN_CLASS_NAME" />
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.treeSet.Main" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaProfessional.ex_004_set.treeSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_003_queque.arrayDeque.Main" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaProfessional.ex_003_queque.arrayDeque.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.hashSet.Main" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaProfessional.ex_004_set.hashSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClassWork.StackMain" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassWork.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
       <module name="" />
-      <envs />
-      <method />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
       <option name="filePath" />
       <option name="vmParameters" />
       <option name="alternativeJrePath" />
@@ -321,38 +341,64 @@
       <option name="passParentEnvs" value="true" />
       <option name="workingDirectory" />
       <option name="isAlternativeJrePathEnabled" value="false" />
-      <envs />
-      <method />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="Remote" factoryName="Remote">
-      <option name="USE_SOCKET_TRANSPORT" value="true" />
-      <option name="SERVER_MODE" value="false" />
-      <option name="SHMEM_ADDRESS" value="javadebug" />
-      <option name="HOST" value="localhost" />
-      <option name="PORT" value="5005" />
-      <method />
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
       <module name="" />
       <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
-      <predefined_log_file id="idea.log" enabled="true" />
-      <method />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
     </configuration>
     <list>
-      <item itemvalue="Application.QueueMain" />
-      <item itemvalue="Application.StackMain" />
-      <item itemvalue="Application.Main (1)" />
       <item itemvalue="Application.Main (2)" />
-      <item itemvalue="Application.Main (3)" />
+      <item itemvalue="Application.CWQueueMain" />
+      <item itemvalue="Application.StackMain" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main (2)" />
-        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.CWQueueMain" />
         <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
         <item itemvalue="Application.StackMain" />
-        <item itemvalue="Application.QueueMain" />
+        <item itemvalue="Application.Main (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -366,273 +412,113 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523470974650</updated>
+      <workItem from="1623836228387" duration="17217000" />
     </task>
     <servers />
   </component>
-  <component name="ToolWindowManager">
-    <frame x="1358" y="-8" width="1936" height="1096" extended-state="6" />
-    <layout>
-      <window_info anchor="right" id="Palette" order="3" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Palette&#9;" order="3" />
-      <window_info id="Image Layers" order="2" />
-      <window_info anchor="right" id="Capture Analysis" order="3" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.32987553" />
-      <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2852697" />
-      <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.32987553" />
-      <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.4460581" visible="true" weight="0.20095949" />
-      <window_info id="Structure" order="1" sideWeight="0.5539419" side_tool="true" weight="0.1401919" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="2" />
-      <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32572615" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" order="0" weight="0.4" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32987553" />
-    </layout>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
   </component>
-  <component name="VcsContentAnnotationSettings">
-    <option name="myLimit" value="2678400000" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1920" y="0" key="#Project_Structure" timestamp="1623836278830">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1920" y="0" key="#Project_Structure/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623836278830" />
+    <state x="-1525" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1623852241464">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1525" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623852241464" />
+    <state x="-1408" y="35" width="737" height="610" key="#xdebugger.XInspectDialog" timestamp="1623845408083">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1408" y="35" width="737" height="610" key="#xdebugger.XInspectDialog/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623845408083" />
+    <state x="-1682" y="13" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623840671939">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1682" y="13" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623840671939" />
+    <state width="572" height="381" key="DebuggerActiveHint" timestamp="1623851813141">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state width="572" height="381" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623851813141" />
+    <state width="579" height="582" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623850741649" />
+    <state width="1869" height="398" key="GridCell.Tab.0.bottom" timestamp="1623857881696">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881696" />
+    <state width="1869" height="398" key="GridCell.Tab.0.center" timestamp="1623857881695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881695" />
+    <state width="1869" height="398" key="GridCell.Tab.0.left" timestamp="1623857881694">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881694" />
+    <state width="1869" height="398" key="GridCell.Tab.0.right" timestamp="1623857881695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881695" />
+    <state width="1869" height="398" key="GridCell.Tab.1.bottom" timestamp="1623857881710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700280" />
+    <state width="1869" height="398" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881710" />
+    <state width="1869" height="398" key="GridCell.Tab.1.center" timestamp="1623857881697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700280" />
+    <state width="1869" height="398" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881697" />
+    <state width="1869" height="398" key="GridCell.Tab.1.left" timestamp="1623857881696">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700279" />
+    <state width="1869" height="398" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881696" />
+    <state width="1869" height="398" key="GridCell.Tab.1.right" timestamp="1623857881697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700280" />
+    <state width="1869" height="398" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881697" />
+    <state x="-1865" y="0" key="SettingsEditor" timestamp="1623840936437">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1865" y="0" key="SettingsEditor/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623840936437" />
+    <state width="1278" height="678" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1623840741414">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state width="1278" height="678" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623840741414" />
+    <state x="3" y="52" key="new project wizard" timestamp="1623852891549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3" y="52" key="new project wizard/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623852891549" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="14" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ClassWork/CWSimpleQueue.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
     </breakpoint-manager>
   </component>
-  <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="9" column="9" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="490">
-          <caret line="17" column="32" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleStack.java" />
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_003_queque/arrayDeque/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleQueue.java" />
-    <entry file="file://$PROJECT_DIR$/src/SimpleLinkedList.java" />
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_004_set/treeSet/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="6" column="17" lean-forward="true" selection-start-line="6" selection-start-column="17" selection-end-line="6" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_004_set/treeSet_primitives/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="5" column="19" lean-forward="true" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/a.java" />
-    <entry file="file://$PROJECT_DIR$/src/A.java" />
-    <entry file="file://$PROJECT_DIR$/src/SimpleLinkedList.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/Arrays.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1579">
-          <caret line="3179" column="26" selection-start-line="3179" selection-start-column="26" selection-end-line="3179" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MethodsOfArrayList.java" />
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/A.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/LinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="189" column="14" selection-start-line="189" selection-start-column="14" selection-end-line="189" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/ArrayList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="199">
-          <caret line="490" column="13" selection-start-line="490" selection-start-column="13" selection-end-line="490" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/PriorityQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="732">
-          <caret line="81" column="13" selection-start-line="81" selection-start-column="13" selection-end-line="81" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="1464" column="15" selection-start-line="1464" selection-start-column="15" selection-end-line="1464" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_131/src.zip!/java/util/NavigableSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="126" column="6" selection-start-line="126" selection-start-column="6" selection-end-line="126" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_001_arrayList/arrayList/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="6" column="6" lean-forward="true" selection-start-line="6" selection-start-column="6" selection-end-line="6" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_003_queque/arrayDeque/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1190">
-          <caret line="34" column="6" selection-start-line="34" selection-start-column="6" selection-end-line="34" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_004_set/treeSet_primitives/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="8" column="18" lean-forward="true" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="9" column="7" selection-start-line="9" selection-start-column="7" selection-end-line="9" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_004_set/treeSet/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1505">
-          <caret line="43" column="6" selection-start-line="43" selection-start-column="6" selection-end-line="43" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="8" column="36" lean-forward="true" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleArray.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="4" column="3" lean-forward="true" selection-start-line="4" selection-start-column="3" selection-end-line="4" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleStack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SimpleQueue.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="70">
-          <caret line="2" column="3" lean-forward="true" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>1.8</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ScopeChooserConfigurable.UI">
-        <settings>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/002_Samples$CWQueueMain.ic" NAME="CWQueueMain Coverage Results" MODIFIED="1623850026752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ClassWork.*</FILTER>
+    </SUITE>
   </component>
 </project>

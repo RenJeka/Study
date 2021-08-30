@@ -1,3 +1,4 @@
+package javaProfessional.ex_004_comparable.interface_comparable;
 
 import java.util.Arrays;
 

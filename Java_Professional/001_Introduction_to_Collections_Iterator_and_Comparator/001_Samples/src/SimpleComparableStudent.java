@@ -4,7 +4,7 @@ import java.util.Comparator;
 /**
  * Created by Yevhenii Tykhonov.
  */
-public class SimpleComparableStudent implements Comparable {
+public class SimpleComparableStudent implements Comparable<SimpleComparableStudent> {
     private String firstName;
     private int group;
 
@@ -23,10 +23,10 @@ public class SimpleComparableStudent implements Comparable {
     }
 
     @Override
-    public int compareTo(Object o) {
-        if (this.group > ((SimpleComparableStudent)o).group) {
+    public int compareTo(SimpleComparableStudent o) {
+        if (this.group > o.group) {
             return 1;
-        } else if (this.group < ((SimpleComparableStudent)o).group) {
+        } else if (this.group < o.group) {
             return -1;
         } else {
             return 0;

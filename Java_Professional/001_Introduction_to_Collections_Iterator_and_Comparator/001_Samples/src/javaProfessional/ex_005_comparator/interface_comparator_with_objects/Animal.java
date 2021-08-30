@@ -21,19 +21,19 @@ public class Animal {
     }
 }
 
-class ComparatorByPrice implements Comparator {
+class CompByPrice implements Comparator {
     public int compare(Object o1, Object o2) {
         return ((Animal) o1).price - ((Animal) o2).price;
     }
 }
 
-class ComparatorBySpeed implements Comparator {
+class CompBySpeed implements Comparator {
     public int compare(Object o1, Object o2) {
         return ((Animal) o1).speed - ((Animal) o2).speed;
     }
 }
 
-class ComparatorByBreed implements Comparator {
+class CompByBreed implements Comparator {
     public int compare(Object o1, Object o2) {
         return ((Animal) o1).breed.compareTo(((Animal) o2).breed);
     }

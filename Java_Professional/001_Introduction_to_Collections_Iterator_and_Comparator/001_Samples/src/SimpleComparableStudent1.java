@@ -1,7 +1,7 @@
 import java.util.Arrays;
 import java.util.Comparator;
 
-public class SimpleComparableStudent1  implements Comparable<SimpleComparableStudent1> {
+class SimpleComparableStudent1  implements Comparable<SimpleComparableStudent1> {
 
     private String firstName;
     private int group;

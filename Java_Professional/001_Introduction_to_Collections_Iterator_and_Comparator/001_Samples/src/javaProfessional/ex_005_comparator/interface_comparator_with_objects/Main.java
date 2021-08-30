@@ -10,20 +10,20 @@ public class Main {
 
         Animal[] c = {cat, dog, bird};
 
-        Arrays.sort(c, new ComparatorByPrice());
+        Arrays.sort(c, new CompByPrice());
 
         for (Animal tmp : c) {
             System.out.println(tmp);
         }
         System.out.println();
 
-        Arrays.sort(c, new ComparatorBySpeed());
+        Arrays.sort(c, new CompBySpeed());
         for (Animal tmp : c) {
             System.out.println(tmp);
         }
         System.out.println();
 
-        Arrays.sort(c, new ComparatorByBreed());
+        Arrays.sort(c, new CompByBreed());
 
         for (Animal tmp : c) {
             System.out.println(tmp);

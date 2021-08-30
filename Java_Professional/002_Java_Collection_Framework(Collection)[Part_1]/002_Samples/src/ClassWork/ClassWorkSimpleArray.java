@@ -1,0 +1,6 @@
+package ClassWork;
+
+class ClassWorkSimpleArray {
+
+}
+

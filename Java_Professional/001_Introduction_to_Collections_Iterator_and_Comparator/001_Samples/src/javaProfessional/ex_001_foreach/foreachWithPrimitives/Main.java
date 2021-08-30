@@ -17,15 +17,15 @@ public class Main {
 //        System.out.println();
 
         // Изменения значения поля класса
-//        for (int tmp : x) {
-//            ++tmp;
-//            System.out.print(tmp + " ");
-//        }
-//        System.out.println();
+        for (int tmp : x) {
+            ++tmp;
+            System.out.print(tmp + " ");
+        }
+        System.out.println();
 //
 //        // Вывод на экран элементов массива x при помощи цикла foreach
-//        for (int tmp : x) {
-//            System.out.print(tmp + " ");
-//        }
+        for (int tmp : x) {
+            System.out.print(tmp + " ");
+        }
     }
 }

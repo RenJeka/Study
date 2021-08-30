@@ -1,3 +1,5 @@
+package javaProfessional.ex_004_comparable.interface_comparable;
+
 public class Animal implements Comparable { // <Animal>{
     String breed;
     int weight;

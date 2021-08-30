@@ -10,6 +10,9 @@ public class SimpleMap {
         map.put(null, 100);
 //        System.out.println(map.size());
 //        map.put("World", 150);
+//        System.out.println(map.size());
+//        map.put("World", 150);
+//        System.out.println(map.size());
 //        map.put("World1", 150);
 //        map.put("World2", 250);
 //        System.out.println(map.size());

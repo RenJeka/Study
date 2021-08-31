@@ -10,7 +10,7 @@ public class SimpleArray {
 //        al.add(20);
 //        al.add(0, 30);
 //        al.add(40);
-
+//
 //        for (Integer integer : al) {
 //            System.out.println(integer);
 //        }

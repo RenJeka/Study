@@ -1,10 +1,11 @@
 # folders
 /git_learn/folder for ignore
-
-node_modules
-
+/git_learn/folder for ignore
+Java_Professional/**/out/
 # files
 
+*.idea
+*.iml
 *.pdf
 *.xps
 #  *.jpg

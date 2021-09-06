@@ -5,7 +5,7 @@ import java.io.*;
 public class Main {
     public static void main(String[] args) throws Exception {
         // Создали объект файла по ссылке
-        File f1 = new File("D:\\Java Professional Course_video\\004_Basic_IO_NIO\\004_Samples\\src\\com\\itvdn\\javaProfessional\\ex_004_readingFile\\readingFile\\example.txt");
+        File f1 = new File("D:\\Yevhenii\\STUDY\\Study\\Java_Professional\\004_Basic_IO_NIO\\004_Samples\\src\\com\\itvdn\\javaProfessional\\ex_004_readingFile\\readingFile\\example.txt");
 
         // Считываем текстовый файл в пакете
         BufferedReader br = new BufferedReader(new FileReader(f1));

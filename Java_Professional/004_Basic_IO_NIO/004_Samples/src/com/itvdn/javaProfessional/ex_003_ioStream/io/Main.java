@@ -12,12 +12,12 @@ public class Main {
                 os.write(bWrite[x]); // writes the bytes
             }
             os.flush();
-
+//            os.close();
             is = new FileInputStream("test.txt");
             int size = is.available();
 
             for (int i = 0; i < size; i++) {
-                System.out.print((char) is.read() + "  ");
+                System.out.print(is.read() + "  ");
             }
         } catch (IOException e) {
             System.out.print("Exception");

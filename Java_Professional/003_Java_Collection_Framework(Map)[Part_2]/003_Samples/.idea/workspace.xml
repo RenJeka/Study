@@ -1,19 +1,93 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_Introduction" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_Introduction" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_HelloWorldApp" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:03_Directives" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:03_Directives" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_BindingSample" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ClassWork" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="e43d7ccc-d390-4433-80a9-370e27dc65ab" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../../Java_Essintial/001_OOP/001_Samples/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java_Essintial/001_OOP/001_Samples/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../Java_Essintial/001_OOP/001_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../Java_Essintial/001_OOP/001_Samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/003_Samples/SimpleEnumMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/003_Samples/SimpleEnumMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/003_Samples/SimpleHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/003_Samples/SimpleHashMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/003_Samples/SimpleIdentityHashMap.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/003_Samples/SimpleIdentityHashMap.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/003_Samples/com/itvdn/javaProfessional/ex_005_map/hashMap/Main$Human.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/003_Samples/com/itvdn/javaProfessional/ex_005_map/hashMap/Main$Human.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/003_Samples/com/itvdn/javaProfessional/ex_005_map/hashMap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/003_Samples/com/itvdn/javaProfessional/ex_005_map/hashMap/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/003_Samples/com/itvdn/javaProfessional/ex_005_map/treeMap/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/003_Samples/com/itvdn/javaProfessional/ex_005_map/treeMap/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HW_Professional/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw2/Task3/Task3.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw2/Task3/Task3.iml" afterDir="false" />
-    </list>
+    <list default="true" id="e43d7ccc-d390-4433-80a9-370e27dc65ab" name="Default" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -57,7 +131,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../HW_Professional/hw3" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../004_Basic_IO_NIO/004_Samples" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.0" />
@@ -312,7 +386,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523622815039</updated>
-      <workItem from="1630420911992" duration="9631000" />
+      <workItem from="1630420911992" duration="10877000" />
     </task>
     <servers />
   </component>
@@ -344,42 +418,42 @@
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1202" y="167" width="484" height="834" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630482946873" />
-    <state x="-1242" y="216" key="FileChooserDialogImpl" timestamp="1630490857446">
+    <state x="-1242" y="216" key="FileChooserDialogImpl" timestamp="1630507091900">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1242" y="216" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630490857446" />
-    <state width="1869" height="185" key="GridCell.Tab.0.bottom" timestamp="1630484260317">
+    <state x="-1242" y="216" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507091900" />
+    <state width="1869" height="181" key="GridCell.Tab.0.bottom" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="185" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630484260317" />
-    <state width="1869" height="185" key="GridCell.Tab.0.center" timestamp="1630484260317">
+    <state width="1869" height="181" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.0.center" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="185" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630484260317" />
-    <state width="1869" height="185" key="GridCell.Tab.0.left" timestamp="1630484260317">
+    <state width="1869" height="181" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.0.left" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="185" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630484260317" />
-    <state width="1869" height="185" key="GridCell.Tab.0.right" timestamp="1630484260317">
+    <state width="1869" height="181" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.0.right" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="185" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630484260317" />
-    <state width="1869" height="181" key="GridCell.Tab.1.bottom" timestamp="1630482542197">
+    <state width="1869" height="181" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.1.bottom" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630482542197" />
-    <state width="1869" height="181" key="GridCell.Tab.1.center" timestamp="1630482542197">
+    <state width="1869" height="181" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.1.center" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630482542197" />
-    <state width="1869" height="181" key="GridCell.Tab.1.left" timestamp="1630482542197">
+    <state width="1869" height="181" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.1.left" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630482542197" />
-    <state width="1869" height="181" key="GridCell.Tab.1.right" timestamp="1630482542197">
+    <state width="1869" height="181" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
+    <state width="1869" height="181" key="GridCell.Tab.1.right" timestamp="1630507097678">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630482542197" />
+    <state width="1869" height="181" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630507097678" />
   </component>
   <component name="masterDetails">
     <states>

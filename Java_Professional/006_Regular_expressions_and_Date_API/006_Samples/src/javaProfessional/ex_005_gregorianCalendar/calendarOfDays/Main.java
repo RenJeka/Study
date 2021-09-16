@@ -12,6 +12,7 @@ public class Main {
         d.set(Calendar.DAY_OF_MONTH, 1);
 
         int weekday = d.get(Calendar.DAY_OF_WEEK);
+        System.out.println( "today month is: " + ( d.get(Calendar.MONTH) + 1));
         System.out.println(" Sun   Mon   Tue   Wed   Thu   Fri   Sat");
 
         for (int i = Calendar.SUNDAY; i < weekday; i++) {

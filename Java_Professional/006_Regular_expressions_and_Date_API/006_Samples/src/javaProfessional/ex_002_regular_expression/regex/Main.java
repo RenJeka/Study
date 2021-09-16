@@ -15,7 +15,7 @@ public class Main {
 
         // Поиск и выбор подстроки, заданной шаблоном
         String regex = "(\\w+)@(\\w+\\.)(\\w+)(\\.\\w+)?";
-        String s = "адреса эл.почты:firstmail@mail.ru иsecondmail@gmail.com";
+        String s = "адреса эл.почты:firstmail@mail.ru.main иsecondmail@gmail.com";
 
         Pattern p2 = Pattern.compile(regex);
         Matcher m2 = p2.matcher(s);

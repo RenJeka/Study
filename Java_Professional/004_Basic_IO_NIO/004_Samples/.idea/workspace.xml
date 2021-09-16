@@ -91,27 +91,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eaa13604-0057-453f-94ee-e70471925846" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/../../003_Java_Collection_Framework(Map)[Part_2]/003_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../003_Java_Collection_Framework(Map)[Part_2]/003_Samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/SimpleByteArrayInputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/SimpleByteArrayInputStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/SimpleCopyFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/SimpleCopyFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/SimpleDataInputStream.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/SimpleDataInputStream.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/SimpleMoveFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/SimpleMoveFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/SimpleRandomAccessFile.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/SimpleRandomAccessFile.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/SimpleURL.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/SimpleURL.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_001_FileInputStream/fileInfo/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_001_FileInputStream/fileInfo/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_002_io_buffered/buffered/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_002_io_buffered/buffered/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_003_ioStream/io/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_003_ioStream/io/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_003_ioStream/io_stream/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_003_ioStream/io_stream/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/004_Samples/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_001_FileInputStream/fileInfo/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_001_FileInputStream/fileInfo/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_002_io_buffered/buffered/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_002_io_buffered/buffered/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_003_ioStream/io/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_003_ioStream/io/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/example.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/com/itvdn/javaProfessional/ex_004_readingFile/readingFile/example.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw4/myTestFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw4/myTestFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw4/task3/src/WriteNumbersToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw4/task3/src/WriteNumbersToFile.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -396,7 +377,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1523812094942</updated>
-      <workItem from="1630507095083" duration="17803000" />
+      <workItem from="1630507095083" duration="23439000" />
     </task>
     <servers />
   </component>
@@ -427,41 +408,45 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="451" y="248" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630586455524" />
-    <state width="1869" height="244" key="GridCell.Tab.0.bottom" timestamp="1630585762833">
+    <state width="1869" height="320" key="GridCell.Tab.0.bottom" timestamp="1630921321295">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="244" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630585762833" />
+    <state width="1869" height="320" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="120" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574728719" />
-    <state width="1869" height="244" key="GridCell.Tab.0.center" timestamp="1630585762832">
+    <state width="1869" height="320" key="GridCell.Tab.0.center" timestamp="1630921321295">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="244" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630585762832" />
+    <state width="1869" height="320" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="120" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574728719" />
-    <state width="1869" height="244" key="GridCell.Tab.0.left" timestamp="1630585762832">
+    <state width="1869" height="320" key="GridCell.Tab.0.left" timestamp="1630921321294">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="244" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630585762832" />
+    <state width="1869" height="320" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321294" />
     <state width="1869" height="120" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574728719" />
-    <state width="1869" height="244" key="GridCell.Tab.0.right" timestamp="1630585762833">
+    <state width="1869" height="320" key="GridCell.Tab.0.right" timestamp="1630921321295">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state width="1869" height="244" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630585762833" />
+    <state width="1869" height="320" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="120" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574728719" />
-    <state width="1869" height="320" key="GridCell.Tab.1.bottom" timestamp="1630574492025">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1869" height="320" key="GridCell.Tab.1.bottom" timestamp="1630921321295">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1869" height="320" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="320" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574492025" />
-    <state width="1869" height="320" key="GridCell.Tab.1.center" timestamp="1630574492025">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1869" height="320" key="GridCell.Tab.1.center" timestamp="1630921321295">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1869" height="320" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="320" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574492025" />
-    <state width="1869" height="320" key="GridCell.Tab.1.left" timestamp="1630574492025">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1869" height="320" key="GridCell.Tab.1.left" timestamp="1630921321295">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1869" height="320" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="320" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574492025" />
-    <state width="1869" height="320" key="GridCell.Tab.1.right" timestamp="1630574492025">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state width="1869" height="320" key="GridCell.Tab.1.right" timestamp="1630921321295">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
+    <state width="1869" height="320" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1630921321295" />
     <state width="1869" height="320" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1630574492025" />
     <state x="-1296" y="218" key="extract.method.dialog" timestamp="1630570027791">
       <screen x="-1920" y="0" width="1920" height="1040" />

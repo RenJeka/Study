@@ -37,8 +37,8 @@ public class WriteNumbersToFile {
 //            }
 
             // Считываем файл и переводим в строку текста (через считывание всех байтов)
-            byte[] bytes = fis.readAllBytes();
-            for (byte currentByte :bytes){
+//            byte[] bytes = fis.readAllBytes();
+            for (byte currentByte :fis.readAllBytes()){
                 sb.append((char) currentByte);
 
             }

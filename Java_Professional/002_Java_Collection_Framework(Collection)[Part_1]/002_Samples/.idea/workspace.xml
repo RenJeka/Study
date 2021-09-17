@@ -1,0 +1,524 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_Introduction" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_Introduction" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_HelloWorldApp" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:03_Directives" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:03_Directives" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:01_BindingSample" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:dependabot" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:npm_and_yarn" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:Angular2_essential" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:ClassWork" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5a5248e1-04d8-4ee7-af6e-6a78b930d3f2" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/.idea/Java_Professional.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/001_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/002_Java_Collection_Framework(Collection)[Part_1]/002_Samples/002_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/003_Java_Collection_Framework(Map)[Part_2]/003_Samples/003_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/004_Basic_IO_NIO/004_Samples/004_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/005_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/006_Regular_expressions_and_Date_API/006_Samples/006_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/007_Reflection_and_ClassLoader/007_Samples/007_Samples.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/ClassWork/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_001_foreach/foreach/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_001_foreach/foreach/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_001_foreach/foreachWithPrimitives/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_002_iterator/iterator/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_002_iterator/iteratorWithObjects/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_002_iterator/iteratorWithObjects/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_003_sorting/sorting_arrays/SortingStudents.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_003_sorting/sorting_objects/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_003_sorting/sorting_objects/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main$2.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main$3.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_anonymous/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/Animal.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/ComparatorByBreed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/ComparatorByPrice.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/ComparatorBySpeed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../001_Introduction_to_Collections_Iterator_and_Comparator/001_Samples/src/production/Java_Professional/javaProfessional/ex_005_comparator/interface_comparator_with_objects/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/QueueMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/QueueMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/SimpleArray.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/SimpleArray.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/SimpleQueue.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/SimpleQueue.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/SimpleStack.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/SimpleStack.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/StackMain.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/StackMain.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_001_arrayList/arrayList_reverse/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_002_linkedList/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_002_linkedList/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/arrayDeque/Person.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_003_queque/priorityQueue/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/hashSet/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/hashSet/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Car.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Car.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet_primitives/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/002_Samples/javaProfessional/ex_004_set/treeSet_primitives/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_002_linkedList/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_003_queque/priorityQueue/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_004_set/hashSet/Main.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1u1bpgNYcXJLzYutaCjRIL1AFur" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="extract.method.default.visibility" value="private" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveMembersDialog.RECENTS_KEY">
+      <recent name="isEmpty" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Java Professional Course_video\002_Java_Collection_Framework[Part_1]\002_Samples\src" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.CWQueueMain">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration name="CWQueueMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClassWork.CWQueueMain" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassWork.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.treeSet.Main" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaProfessional.ex_004_set.treeSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_003_queque.arrayDeque.Main" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaProfessional.ex_003_queque.arrayDeque.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_set.hashSet.Main" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="javaProfessional.ex_004_set.hashSet.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StackMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="ClassWork.StackMain" />
+      <module name="002_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ClassWork.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="" />
+      <setting name="debug" value="false" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="TEST_OBJECT" value="class" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="TestNG">
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.CWQueueMain" />
+      <item itemvalue="Application.StackMain" />
+      <item itemvalue="Application.Main" />
+      <item itemvalue="Application.Main (1)" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.CWQueueMain" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.StackMain" />
+        <item itemvalue="Application.Main (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5a5248e1-04d8-4ee7-af6e-6a78b930d3f2" name="Default" comment="" />
+      <created>1523470974650</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1523470974650</updated>
+      <workItem from="1623836228387" duration="17217000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1920" y="0" key="#Project_Structure" timestamp="1623836278830">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1920" y="0" key="#Project_Structure/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623836278830" />
+    <state x="-1525" y="0" key="#com.intellij.ide.util.MemberChooser" timestamp="1623852241464">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1525" y="0" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623852241464" />
+    <state x="-1408" y="35" width="737" height="610" key="#xdebugger.XInspectDialog" timestamp="1623845408083">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1408" y="35" width="737" height="610" key="#xdebugger.XInspectDialog/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623845408083" />
+    <state x="-1682" y="13" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1623840671939">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1682" y="13" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623840671939" />
+    <state width="572" height="381" key="DebuggerActiveHint" timestamp="1623851813141">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state width="572" height="381" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623851813141" />
+    <state width="579" height="582" key="DebuggerActiveHint/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623850741649" />
+    <state width="1869" height="398" key="GridCell.Tab.0.bottom" timestamp="1623857881696">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881696" />
+    <state width="1869" height="398" key="GridCell.Tab.0.center" timestamp="1623857881695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881695" />
+    <state width="1869" height="398" key="GridCell.Tab.0.left" timestamp="1623857881694">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881694" />
+    <state width="1869" height="398" key="GridCell.Tab.0.right" timestamp="1623857881695">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857698798" />
+    <state width="1869" height="398" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881695" />
+    <state width="1869" height="398" key="GridCell.Tab.1.bottom" timestamp="1623857881710">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700280" />
+    <state width="1869" height="398" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881710" />
+    <state width="1869" height="398" key="GridCell.Tab.1.center" timestamp="1623857881697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700280" />
+    <state width="1869" height="398" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881697" />
+    <state width="1869" height="398" key="GridCell.Tab.1.left" timestamp="1623857881696">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700279" />
+    <state width="1869" height="398" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881696" />
+    <state width="1869" height="398" key="GridCell.Tab.1.right" timestamp="1623857881697">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1229" height="229" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623857700280" />
+    <state width="1869" height="398" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623857881697" />
+    <state x="-1865" y="0" key="SettingsEditor" timestamp="1623840936437">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state x="-1865" y="0" key="SettingsEditor/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623840936437" />
+    <state width="1278" height="678" key="com.intellij.byteCodeViewer.ShowByteCodeAction" timestamp="1623840741414">
+      <screen x="-1920" y="0" width="1280" height="680" />
+    </state>
+    <state width="1278" height="678" key="com.intellij.byteCodeViewer.ShowByteCodeAction/0.0.1920.1040/-1920.0.1280.680@-1920.0.1280.680" timestamp="1623840741414" />
+    <state x="3" y="52" key="new project wizard" timestamp="1623852891549">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="3" y="52" key="new project wizard/0.0.1920.1040/-1920.0.1280.680@0.0.1920.1040" timestamp="1623852891549" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/ClassWork/CWSimpleQueue.java</url>
+          <line>58</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/002_Samples$CWQueueMain.ic" NAME="CWQueueMain Coverage Results" MODIFIED="1623850026752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ClassWork.*</FILTER>
+    </SUITE>
+  </component>
+</project>

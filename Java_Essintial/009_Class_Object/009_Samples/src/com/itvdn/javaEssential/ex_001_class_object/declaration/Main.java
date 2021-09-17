@@ -10,7 +10,14 @@ public class Main {
 //        main.
         // объект класса Car тоже имеет методы класса Object
         Car car = new Car();
+<<<<<<< HEAD
 //        car.
+=======
+
+        System.out.println("getClass : " + car.getClass());
+        System.out.println("car.hashCode()  : " + car.hashCode() );
+        System.out.println("car.toString(): " + car.toString());
+>>>>>>> 788700f74bc1ff53d6ff93a78221aa5d22fabbaa
     }
 }
 

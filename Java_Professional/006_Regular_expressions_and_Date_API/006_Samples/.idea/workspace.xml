@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="88270cb4-55b7-4e72-9160-f5ec0a1f8eb4" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/src/StringTestsMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../004_Basic_IO_NIO/004_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../004_Basic_IO_NIO/004_Samples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_add_in_pool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_add_in_pool/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_immutable/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_immutable/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_pool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_pool/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/SimpleGroupsRegExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/SimpleGroupsRegExp.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/SimpleScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/SimpleScanner.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_001_String/string_finder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_001_String/string_finder/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_001_String/string_while/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_001_String/string_while/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_002_regular_expression/regex/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_002_regular_expression/regex/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_003_groups_and_quantifers/quantifiers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_003_groups_and_quantifers/quantifiers/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_006_local_date_time/local_date/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/006_Samples/javaProfessional/ex_006_local_date_time/local_date/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_002_regular_expression/regex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_002_regular_expression/regex/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw4/myTestFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw4/myTestFile.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw4/task3/src/WriteNumbersToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw4/task3/src/WriteNumbersToFile.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1xtQbkW2lYtpmfAZ4QEYVlr1ooa" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last.edited.regexp" value="+380(67)22-33-444" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+  </component>
+  <component name="RunManager" selected="Application.TestNew">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
+      <module name="" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="PM_INSTALL_OPTIONS" value="" />
+      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <option name="DEEP_LINK" value="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="EXTRA_OPTIONS" value="" />
+      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
+      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
+      <option name="FORCE_STOP_RUNNING_APP" value="true" />
+      <option name="DEBUGGER_TYPE" value="Java" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <Java />
+      <Profilers>
+        <option name="ENABLE_ADVANCED_PROFILING" value="true" />
+        <option name="GAPID_ENABLED" value="false" />
+        <option name="GAPID_DISABLE_PCS" value="false" />
+        <option name="SUPPORT_LIB_ENABLED" value="true" />
+        <option name="INSTRUMENTATION_ENABLED" value="true" />
+      </Profilers>
+      <method />
+    </configuration>
+    <configuration default="true" type="AntRunConfiguration" factoryName="Ant Target">
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+    </configuration>
+    <configuration default="true" type="GriffonRunConfigurationType" factoryName="Griffon">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="true" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="" />
+      <setting name="debug" value="false" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType" factoryName="Kotlin">
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="WORKING_DIRECTORY" />
+      <module name="" />
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType" factoryName="Kotlin script">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="filePath" />
+      <option name="vmParameters" />
+      <option name="alternativeJrePath" />
+      <option name="programParameters" />
+      <option name="passParentEnvs" value="true" />
+      <option name="workingDirectory" />
+      <option name="isAlternativeJrePathEnabled" value="false" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="Main (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_005_gregorianCalendar.methods.Main" />
+      <module name="006_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_004_date.date.Main" />
+      <module name="006_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_005_gregorianCalendar.calendarOfDays.Main" />
+      <module name="006_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main (4)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_006_local_date_time.local_date.Main" />
+      <module name="006_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TestNew" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.TestNew" />
+      <module name="006_Samples" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JarApplication">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="Java Scratch">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file enabled="true" id="idea.log" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Main (2)" />
+      <item itemvalue="Application.Main (3)" />
+      <item itemvalue="Application.Main (1)" />
+      <item itemvalue="Application.Main (4)" />
+      <item itemvalue="Application.TestNew" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TestNew" />
+        <item itemvalue="Application.Main (4)" />
+        <item itemvalue="Application.Main (1)" />
+        <item itemvalue="Application.Main (3)" />
+        <item itemvalue="Application.Main (2)" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="88270cb4-55b7-4e72-9160-f5ec0a1f8eb4" name="Default" comment="" />
+      <created>1527494536716</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1527494536716</updated>
+      <workItem from="1631172013467" duration="2103000" />
+      <workItem from="1631177513010" duration="11665000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="-1288" y="128" key="#Auto_Import" timestamp="1631172392074">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1288" y="128" key="#Auto_Import/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631172392074" />
+    <state x="-1468" y="96" width="1016" height="905" key="#Intentions" timestamp="1631195956941">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1468" y="96" width="1016" height="905" key="#Intentions/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631195956941" />
+    <state width="1869" height="623" key="GridCell.Tab.0.bottom" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.0.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732673" />
+    <state width="1869" height="623" key="GridCell.Tab.0.center" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.0.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732673" />
+    <state width="1869" height="623" key="GridCell.Tab.0.left" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.0.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732673" />
+    <state width="1869" height="623" key="GridCell.Tab.0.right" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.0.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732673" />
+    <state width="1869" height="623" key="GridCell.Tab.1.bottom" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.1.bottom/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732674" />
+    <state width="1869" height="623" key="GridCell.Tab.1.center" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.1.center/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732674" />
+    <state width="1869" height="623" key="GridCell.Tab.1.left" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.1.left/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732674" />
+    <state width="1869" height="623" key="GridCell.Tab.1.right" timestamp="1631199447547">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1869" height="623" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631199447547" />
+    <state width="1869" height="730" key="GridCell.Tab.1.right/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1631186732674" />
+    <state width="623" height="498" key="SwitcherDM" timestamp="1631195887457">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="623" height="498" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631195887457" />
+    <state width="750" height="535" key="javadoc.popup" timestamp="1631198402420">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state width="750" height="535" key="javadoc.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631198402420" />
+    <state x="-1388" y="237" key="run.anything.popup" timestamp="1631172455016">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1388" y="237" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1631172455016" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.java</url>
+          <line>8</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="d" />
+        <watch expression="d" language="JAVA" />
+        <watch expression="Calendar.DAY_OF_MONTH" language="JAVA" />
+        <watch expression="Calendar.DAY_OF_MONTH" language="JAVA" />
+        <watch expression="new GregorianCalendar().get(5)" language="JAVA" />
+        <watch expression="new GregorianCalendar().get(2)" language="JAVA" />
+      </configuration>
+    </watches-manager>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Store} from "@ngrx/store";
+import {Observable} from "rxjs";
+import {ExampleSelectors} from "../store/example.selector";
 
 @Component({
   selector: 'app-component-two',
@@ -7,9 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ComponentTwoComponent implements OnInit {
 
-  constructor() { }
+  public count$: Observable<number>;
+  public message$: Observable<string>;
+  constructor(
+    private store$: Store,
+
+  ) {
+    this.count$ = this.store$.select(ExampleSelectors.count);
+    this.message$ = this.store$.select(ExampleSelectors.message);
+  }
 
   ngOnInit(): void {
+
   }
+
 
 }

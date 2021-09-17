@@ -8,8 +8,11 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
+import * as fromReducer from './store/example.reducer';
+import {FormsModule} from "@angular/forms";
+
 @NgModule({
-  declarations: [
+  "declarations": [
     AppComponent,
     ComponentOneComponent,
     ComponentTwoComponent
@@ -17,8 +20,9 @@ import { EffectsModule } from '@ngrx/effects';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    StoreModule.forRoot({example: fromReducer.reducer}),
+    EffectsModule.forRoot([]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -9,7 +9,9 @@ import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
 import * as fromReducer from './store/example.reducer';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
+import { ExampleEffects } from "./store/example.effects";
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   "declarations": [
@@ -18,10 +20,11 @@ import {FormsModule} from "@angular/forms";
     ComponentTwoComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
     StoreModule.forRoot({example: fromReducer.reducer}),
-    EffectsModule.forRoot([]),
+    EffectsModule.forRoot([ExampleEffects]),
     FormsModule
   ],
   providers: [],

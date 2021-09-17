@@ -6,5 +6,6 @@
   <div class="counter">{{count$ | async}}</div>
   <h3>Message: </h3>
 
-  <textarea class="message" name="" id="" cols="30" rows="10">{{message$ | async}}</textarea>
+  <textarea class="message" cols="30" rows="10">{{message$ | async}}</textarea>
+  <textarea class="message data" cols="30" rows="10">{{data$ | async | json}}</textarea>
 </div>

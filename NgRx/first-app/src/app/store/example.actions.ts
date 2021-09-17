@@ -8,4 +8,7 @@ export namespace ExampleActions {
     'SEND_MESSAGE',
     props<{message? : string}>()
   );
+
+  export const getData = createAction('GET_DATA');
+  export const getDataSuccess = createAction('GET_DATA_SUCCESS', props<{data: any}>());
 }

@@ -6,6 +6,7 @@ import { ExampleActions } from "./example.actions";
 export interface State {
   count: number;
   message?: string;
+  data?: any
 }
 
 const initialState: State = {
@@ -31,6 +32,10 @@ const exampleReducer = createReducer(
   on(ExampleActions.sendMassage, (state, {message}) => ({
     ...state,
     message: message
+  })),
+  on(ExampleActions.getDataSuccess, (state, {data}) => ({
+    ...state,
+    data: data
   }))
 );
 

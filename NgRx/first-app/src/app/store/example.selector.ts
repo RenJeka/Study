@@ -19,4 +19,6 @@ export namespace ExampleSelectors {
 
   export const messageAndCount = createSelector(state, state => (state.message || '') + state.count);
 
+  export const data = createSelector(state, state => state.data)
+
 }

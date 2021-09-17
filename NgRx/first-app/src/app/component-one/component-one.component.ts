@@ -28,4 +28,8 @@ export class ComponentOneComponent implements OnInit {
     this.store$.dispatch(ExampleActions.sendMassage({message: this.message}))
   }
 
+  getData(): void {
+    this.store$.dispatch(ExampleActions.getData())
+  }
+
 }

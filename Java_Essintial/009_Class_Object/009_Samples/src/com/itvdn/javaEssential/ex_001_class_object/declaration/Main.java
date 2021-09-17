@@ -7,8 +7,10 @@ public class Main {
         // Создали объект класса Car. У него уже есть методы класса Object.
         Main main = new Main();
 
+//        main.
         // объект класса Car тоже имеет методы класса Object
         Car car = new Car();
+//        car.
     }
 }
 

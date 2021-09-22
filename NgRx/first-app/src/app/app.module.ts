@@ -8,17 +8,24 @@ import { ComponentTwoComponent } from './component-two/component-two.component';
 import { StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 
+import * as fromReducer from './store/example.reducer';
+import { FormsModule } from "@angular/forms";
+import { ExampleEffects } from "./store/example.effects";
+import {HttpClientModule} from "@angular/common/http";
+
 @NgModule({
-  declarations: [
+  "declarations": [
     AppComponent,
     ComponentOneComponent,
     ComponentTwoComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     AppRoutingModule,
-    StoreModule.forRoot({}, {}),
-    EffectsModule.forRoot([])
+    StoreModule.forRoot({example: fromReducer.reducer}),
+    EffectsModule.forRoot([ExampleEffects]),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

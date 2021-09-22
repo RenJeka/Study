@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="pico.min.css">
+	<link rel="stylesheet" href="styles.css">
+	<title>Sample</title>
+</head>
+<body>
+	<div class="container">
+
+		<div class="container">
+			<h3 class="primary" style="text-align: center;">This application is to demonstrate how AWS technology works.</h3>
+			<p><u>Services that were used:</u> </p>
+			<ol>
+				<li>IAM for setting up Roles & policies</li>
+				<li>Lambda functions (NodeJS 12.. based)</li>
+				<li>DynamoDB DataBase</li>
+				<li>API Gateway for API</li>
+				<li>S3 Bucket</li>
+			</ol>
+		</div>
+
+		<label for="addTodo">
+			<input id="input" name="addTodo" type="text" placeholder="Add Todo: ">
+		</label>
+		<button id="button" type="button">Add</button>
+		<ul id="list">
+			<li>loading todos...</li>
+
+		</ul>
+	</div>
+
+	<script src="index.js"></script>
+</body>
+</html>

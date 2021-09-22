@@ -1,1 +1,17 @@
-<p>component-one works!</p>
+<div class="container">
+
+  <h1>Component-1</h1>
+  <i>Please click button to increase counter</i>
+  <button (click)="increaseCount()">Increase Counter</button>
+
+  <br>
+  <h6>Your message:</h6>
+  <input type="text" [(ngModel)]="message">
+
+  <h6>
+    Send Message
+  </h6>
+  <button (click)="sendMessage()">Send Message</button>
+
+  <button (click)="getData()">Get Data</button>
+</div>

@@ -1,1 +1,11 @@
-<p>component-two works!</p>
+<div class="container">
+
+  <h1>Container-2</h1>
+
+  <h3>Counter: </h3>
+  <div class="counter">{{count$ | async}}</div>
+  <h3>Message: </h3>
+
+  <textarea class="message" cols="30" rows="10">{{message$ | async}}</textarea>
+  <textarea class="message data" cols="30" rows="10">{{data$ | async | json}}</textarea>
+</div>

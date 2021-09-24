@@ -1,0 +1,139 @@
+[
+    {
+        "id": "id-1",
+        "name_uk": "Silpo_uk-1",
+        "name_ru": "Silpo_ru-1",
+        "name_en": "Silpo_en-1",
+        "logo": "https://picsum.photos/100/100"
+    },
+    {
+        "id": "id-2",
+        "name_uk": "Silpo_uk-2",
+        "name_ru": "Silpo_ru-2",
+        "name_en": "Silpo_en-2",
+        "logo": "https://picsum.photos/100/101"
+    },
+    {
+        "id": "id-3",
+        "name_uk": "Silpo_uk-3",
+        "name_ru": "Silpo_ru-3",
+        "name_en": "Silpo_en-3",
+        "logo": "https://picsum.photos/100/102"
+    },
+    {
+        "id": "id-4",
+        "name_ru": "Silpo_ru-4",
+        "name_en": "Silpo_en-4",
+        "logo": "https://picsum.photos/100/103"
+    },
+    {
+        "id": "id-5",
+        "name_uk": "Silpo_uk-5",
+        "name_ru": "Silpo_ru-5",
+        "name_en": "Silpo_en-5",
+        "logo": "https://picsum.photos/100/104"
+    },
+    {
+        "id": "id-6",
+        "name_uk": "Silpo_uk-6",
+        "name_ru": "Silpo_ru-6",
+        "logo": "https://picsum.photos/100/105"
+    },
+    {
+        "id": "id-7",
+        "name_uk": "Silpo_uk-7",
+        "name_ru": "Silpo_ru-7",
+        "name_en": "Silpo_en-7",
+        "logo": "https://picsum.photos/100/106"
+    },
+    {
+        "name_uk": "Silpo_uk-8",
+        "name_ru": "Silpo_ru-8",
+        "name_en": "Silpo_en-8",
+        "logo": "https://picsum.photos/100/107"
+    },
+    {
+        "id": "id-9",
+        "name_uk": "Silpo_uk-9",
+        "name_ru": "Silpo_ru-9",
+        "name_en": "Silpo_en-9",
+        "logo": "https://picsum.photos/100/108"
+    },
+    {
+        "id": "id-10",
+        "name_uk": "Silpo_uk-10",
+        "name_ru": "Silpo_ru-10",
+        "name_en": "Silpo_en-10",
+        "logo": "https://picsum.photos/100/109"
+    },
+    {
+        "id": "id-11",
+        "name_uk": "Silpo_uk-11",
+        "name_ru": "Silpo_ru-11",
+        "name_en": "Silpo_en-11",
+        "logo": "https://picsum.photos/100/110"
+    },
+    {
+        "id": "id-12",
+        "name_uk": "Silpo_uk-12",
+        "name_ru": "Silpo_ru-12",
+        "name_en": "Silpo_en-12",
+        "logo": "https://picsum.photos/100/111"
+    },
+    {
+        "id": "id-13",
+        "name_uk": "Silpo_uk-13",
+        "name_ru": "Silpo_ru-13",
+        "name_en": "Silpo_en-13",
+        "logo": "https://picsum.photos/100/112"
+    },
+    {
+        "id": "id-14",
+        "name_uk": "Silpo_uk-14",
+        "name_ru": "Silpo_ru-14",
+        "name_en": "Silpo_en-14",
+        "logo": "https://picsum.photos/100/113"
+    },
+    {
+        "id": "id-15",
+        "name_uk": "Silpo_uk-15",
+        "name_ru": "Silpo_ru-15",
+        "name_en": "Silpo_en-15",
+        "logo": "https://picsum.photos/100/114"
+    },
+    {
+        "id": "id-16",
+        "name_uk": "Silpo_uk-16",
+        "name_ru": "Silpo_ru-16",
+        "name_en": "Silpo_en-16",
+        "logo": "https://picsum.photos/100/115"
+    },
+    {
+        "id": "id-17",
+        "name_uk": "Silpo_uk-17",
+        "name_ru": "Silpo_ru-17",
+        "name_en": "Silpo_en-17",
+        "logo": "https://picsum.photos/100/116"
+    },
+    {
+        "id": "id-18",
+        "name_uk": "Silpo_uk-18",
+        "name_ru": "Silpo_ru-18",
+        "name_en": "Silpo_en-18",
+        "logo": "https://picsum.photos/100/117"
+    },
+    {
+        "id": "id-19",
+        "name_uk": "Silpo_uk-19",
+        "name_ru": "Silpo_ru-19",
+        "name_en": "Silpo_en-19",
+        "logo": "https://picsum.photos/100/118"
+    },
+    {
+        "id": "id-20",
+        "name_uk": "Silpo_uk-20",
+        "name_ru": "Silpo_ru-20",
+        "name_en": "Silpo_en-20",
+        "logo": "https://picsum.photos/100/119"
+    }
+]

@@ -1,0 +1,14 @@
+{
+  "name": "xlsx_to_json_converter",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "renjeka",
+  "license": "ISC",
+  "dependencies": {
+    "xlsx": "^0.17.2"
+  }
+}

@@ -2,25 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6049f0a3-58a1-40af-9cd3-ed8b9876321b" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/src/StringTestsMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../004_Basic_IO_NIO/004_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../004_Basic_IO_NIO/004_Samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_add_in_pool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_add_in_pool/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_immutable/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_immutable/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_pool/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../005_How_to_work_with_Strings[String,StringBuilder,StringBuffer]/005_Samples/out/production/005_Samples/com/itvdn/javaProfessional/ex_006_string/string_pool/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/SimpleGroupsRegExp.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/SimpleGroupsRegExp.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/SimpleScanner.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/SimpleScanner.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_001_String/string_finder/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_001_String/string_finder/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_001_String/string_while/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_001_String/string_while/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_002_regular_expression/regex/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_002_regular_expression/regex/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_003_groups_and_quantifers/quantifiers/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_003_groups_and_quantifers/quantifiers/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_006_local_date_time/local_date/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/out/production/006_Samples/javaProfessional/ex_006_local_date_time/local_date/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/src/javaProfessional/ex_002_regular_expression/regex/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/src/javaProfessional/ex_002_regular_expression/regex/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/src/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../006_Regular_expressions_and_Date_API/006_Samples/src/javaProfessional/ex_005_gregorianCalendar/calendarOfDays/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw4/myTestFile.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw4/myTestFile.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../HW_Professional/hw4/task3/src/WriteNumbersToFile.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../HW_Professional/hw4/task3/src/WriteNumbersToFile.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/javaProfessional/SimpleReflectionNew.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/javaProfessional/SimpleReflectionNew.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,7 +47,7 @@
       <recent name="D:\Java Professional Course_video\007_Reflection\007_Samples\src" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SimpleArrayListCapacity">
+  <component name="RunManager" selected="Application.SimpleReflectionNew">
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
       <module name="" />
       <option name="DEPLOY" value="true" />
@@ -217,20 +199,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_001_Reflection.reflectionModifier.Main" />
-      <module name="007_Samples" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaProfessional.ex_001_Reflection.reflectionModifier.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="javaProfessional.ex_002_ReflectionAccess.access.Main" />
       <module name="007_Samples" />
@@ -297,16 +265,10 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SimpleReflection" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="javaProfessional.SimpleReflection" />
+    <configuration name="SimpleReflectionNew" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="javaProfessional.SimpleReflectionNew" />
       <module name="007_Samples" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="javaProfessional.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -337,15 +299,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.Main (2)" />
       <item itemvalue="Application.Main" />
       <item itemvalue="Application.Main2" />
       <item itemvalue="Application.Main (1)" />
-      <item itemvalue="Application.SimpleReflection" />
       <item itemvalue="Application.SimpleArrayListCapacity" />
+      <item itemvalue="Application.SimpleReflectionNew" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SimpleReflectionNew" />
         <item itemvalue="Application.SimpleArrayListCapacity" />
         <item itemvalue="Application.Main2" />
         <item itemvalue="Application.Main" />
@@ -364,6 +326,7 @@
       <option name="presentableId" value="Default" />
       <updated>1529263125596</updated>
       <workItem from="1631280851861" duration="2450000" />
+      <workItem from="1633616370872" duration="772000" />
     </task>
     <servers />
   </component>

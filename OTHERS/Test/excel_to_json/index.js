@@ -11,18 +11,24 @@ sheet_name_list.forEach(function (y) {
 
     var headers = {};
     var data = [];
+	
+	// console.log(worksheet)
     for (z in worksheet) {
         if (z[0] === "!") continue;
         //parse out the column, row, and value
-        var col = z.substring(0, 1);
-        console.log(col);
+        //var col = z.substring(0, 1);
+		var col = z.match(/[A-Z]+/)[0] // letters, that means columns
+        //console.log(col);
 
-        var row = parseInt(z.substring(1));
-        // console.log(row);
+        //var row = parseInt(z.substring(1));
+		var row = z.match(/\d+/)[0] // digits (numbers), that means rows
+        //console.log(row);
 
-        var value = worksheet[z].v;
-        // console.log(value);
-
+        var value = null;
+		if((worksheet[z].v).toString().toLowerCase() !== "null") {
+			value = worksheet[z].v
+		}
+		
         //store header names
         if (row == 1) {
             headers[col] = value;

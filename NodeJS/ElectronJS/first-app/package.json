@@ -1,0 +1,47 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ./main.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "electron-builder"
+  },
+  "build": {
+    "appId": "electron-demo",
+    "mac": {
+      "category": "your.app.category.type"
+    },
+    "win": {
+      "target": "nsis"
+    },
+    "directories": {
+      "output": "release-installer",
+      "app": ""
+    },
+    "nsis": {
+      "allowElevation": true,
+      "createDesktopShortcut": false,
+      "createStartMenuShortcut": false,
+      "runAfterFinish": true,
+      "deleteAppDataOnUninstall": false,
+      "allowToChangeInstallationDirectory": true,
+      "oneClick": false,
+      "perMachine": true
+    },
+    "publish": [
+      {
+        "provider": "generic",
+        "url": ""
+      }
+    ]
+  },
+  "keywords": [],
+  "author": "Yevhenii Petrushenko<renjeka@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^15.3.1",
+    "electron-builder": "^22.13.1"
+  }
+}

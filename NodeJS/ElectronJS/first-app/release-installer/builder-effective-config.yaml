@@ -1,0 +1,23 @@
+directories:
+  output: release-installer
+  buildResources: build
+  app: ''
+appId: electron-demo
+mac:
+  category: your.app.category.type
+win:
+  target: nsis
+nsis:
+  allowElevation: true
+  createDesktopShortcut: false
+  createStartMenuShortcut: false
+  runAfterFinish: true
+  deleteAppDataOnUninstall: false
+  allowToChangeInstallationDirectory: true
+  oneClick: false
+  perMachine: true
+publish:
+  - provider: generic
+    url: ''
+files: []
+electronVersion: 15.3.1

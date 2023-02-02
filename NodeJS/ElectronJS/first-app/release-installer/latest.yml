@@ -1,0 +1,8 @@
+version: 1.0.0
+files:
+  - url: first-app Setup 1.0.0.exe
+    sha512: QTol3rXvxHPSu78WPdgAJpL/suBH64ENaUjoebe7Zewr5bICNyKRksz6yd5mY/tx5gfQgNYhgk68Wfg+UDNbtQ==
+    size: 61616454
+path: first-app Setup 1.0.0.exe
+sha512: QTol3rXvxHPSu78WPdgAJpL/suBH64ENaUjoebe7Zewr5bICNyKRksz6yd5mY/tx5gfQgNYhgk68Wfg+UDNbtQ==
+releaseDate: '2021-11-12T09:08:30.695Z'

@@ -15,7 +15,6 @@ export class ComponentTwoComponent implements OnInit {
   public data$: Observable<string>;
   constructor(
     private store$: Store,
-
   ) {
     this.count$ = this.store$.select(ExampleSelectors.count);
     this.message$ = this.store$.select(ExampleSelectors.message);

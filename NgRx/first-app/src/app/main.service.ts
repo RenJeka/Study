@@ -10,6 +10,6 @@ export class MainService {
   constructor(private http: HttpClient) { }
 
   getAllData(): Observable<any>{
-    return this.http.get('https://jsonplaceholder.typicode.com/todos/1')
+    return this.http.get('https://jsonplaceholder.typicode.com/posts/1')
   }
 }

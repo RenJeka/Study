@@ -1,8 +1,6 @@
 import {State} from "./example.reducer";
 import {createFeatureSelector, createSelector} from "@ngrx/store";
 
-
-
 /**
  * Generally State — it is very large object
  * to chose specific fields (properties) from State — use these selectors

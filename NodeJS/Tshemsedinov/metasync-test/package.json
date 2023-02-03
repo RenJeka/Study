@@ -1,0 +1,17 @@
+{
+  "name": "metasync-test",
+  "version": "1.0.0",
+  "description": "study with metasync",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "test"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "metasync": "^0.3.32"
+  }
+}

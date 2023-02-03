@@ -2,11 +2,9 @@
 /git_learn/folder for ignore
 /git_learn/folder for ignore
 Java_Professional/**/out/
-<<<<<<< HEAD
 
-**/node_modules
-=======
->>>>>>> 788700f74bc1ff53d6ff93a78221aa5d22fabbaa
+node_modules
+
 # files
 
 *.idea

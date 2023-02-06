@@ -3,25 +3,13 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="pico.min.css">
-	<link rel="stylesheet" href="styles.css">
+	<link rel="stylesheet" href="styles/pico.min.css">
+	<link rel="stylesheet" href="styles/styles.css">
 	<title>Sample</title>
 </head>
 <body>
+	<h1 style="text-align: center;">ToDo APP: </h1>
 	<div class="container">
-
-		<div class="container">
-			<h3 class="primary" style="text-align: center;">This application is to demonstrate how AWS technology works.</h3>
-			<p><u>Services that were used:</u> </p>
-			<ol>
-				<li>IAM for setting up Roles & policies</li>
-				<li>Lambda functions (NodeJS 12.. based)</li>
-				<li>DynamoDB DataBase</li>
-				<li>API Gateway for API</li>
-				<li>S3 Bucket</li>
-			</ol>
-		</div>
-
 		<label for="addTodo">
 			<input id="input" name="addTodo" type="text" placeholder="Add Todo: ">
 		</label>
@@ -32,6 +20,54 @@
 		</ul>
 	</div>
 
+	<img
+		class="info-icon"
+		id="btnModal"
+		src="img/info.svg"
+		alt="info"
+		onclick="toggleModal(event)"
+		data-target="modal"
+	>
+
+	<!-- Modal -->
+	<dialog id="modal">
+		<article>
+			<a href="#close"
+				aria-label="Close"
+				class="close"
+				data-target="modal"
+				onClick="toggleModal(event)">
+			</a>
+			<h3>Additional information</h3>
+			<p>
+				This project was created with AWS technologies 
+			</p>
+			<p>
+				<a href="https://github.com/RenJeka/Study/tree/master/AWS/todo_project">
+				see the code on GitHub
+				</a>
+			</p>
+			<p><u>Services that were used:</u> </p>
+			<ol>
+				<li>IAM for setting up Roles & policies</li>
+				<li>Lambda functions (NodeJS 12.. based)</li>
+				<li>DynamoDB DataBase</li>
+				<li>API Gateway for API</li>
+				<li>S3 Bucket</li>
+			</ol>
+			<footer>
+				<a 	href="#cancel"
+					role="button"
+					class="secondary"
+					data-target="modal"
+					onClick="toggleModal(event)">
+				Cancel
+				</a>
+			</footer>
+		</article>
+	</dialog>
+
 	<script src="index.js"></script>
+	<script src="modal.js"></script>
 </body>
-</html>
+</html>	

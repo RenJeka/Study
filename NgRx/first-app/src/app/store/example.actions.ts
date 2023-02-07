@@ -10,5 +10,6 @@ export namespace ExampleActions {
   );
 
   export const getData = createAction('GET_DATA');
+
   export const getDataSuccess = createAction('GET_DATA_SUCCESS', props<{data: any}>());
 }

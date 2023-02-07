@@ -29,7 +29,7 @@ export class ComponentOneComponent implements OnInit {
   }
 
   getData(): void {
-    this.store$.dispatch(ExampleActions.getData())
+    this.store$.dispatch(ExampleActions.getData());
   }
 
 }

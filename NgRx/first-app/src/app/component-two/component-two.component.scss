@@ -1,52 +1,58 @@
 
 :host {
   width: 300px;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   border: 2px solid #4e4e4e;
   border-radius: 5px;
 }
-
 .container {
   width: 100%;
-  min-height: 100%;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 10px;
+  font-size: 16px;
 
-  h1 {
+  h1,h2,h3,h4,h5,h6 {
+    margin-bottom: 0.5em;
+  }
+  h3 {
     flex-grow: 0.3;
     text-align: center;
   }
 
-  h3 {
-    margin: 0;
+  i{
+    text-align: center;
   }
 
   button {
-    width: 100px;
-    height: 35px;
-    border-radius: 10px;
+    width: 230px;
+    height: 50px;
+    padding: 0;
   }
 
   .counter {
-    font-size: 40px;
+    font-size: 32px;
     font-family: 'Arial Black', serif;
-    color: #00b0ff;
+    color: #1095c1;
   }
 
   .message {
     max-width: 295px;
-    font-size: 30px;
+    height: 185px;
+    font-size: 24px;
     resize: none;
     font-family: Arial, serif;
-    color: #1de9b6;
+    color: #1095c1;
   }
 
   .data{
     font-size: 14px;
-    color: #e9e584;
+    color: #1095c1;
   }
+
 }

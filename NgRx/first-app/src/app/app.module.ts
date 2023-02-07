@@ -12,12 +12,18 @@ import * as fromReducer from './store/example.reducer';
 import { FormsModule } from "@angular/forms";
 import { ExampleEffects } from "./store/example.effects";
 import {HttpClientModule} from "@angular/common/http";
+import { ModalComponent } from './modal/modal.component';
+import { StoreWindowComponent } from './store-window/store-window.component';
+
+import { OnlineStatusModule } from 'ngx-online-status';
 
 @NgModule({
   "declarations": [
     AppComponent,
     ComponentOneComponent,
-    ComponentTwoComponent
+    ComponentTwoComponent,
+    ModalComponent,
+    StoreWindowComponent
   ],
   imports: [
     HttpClientModule,
@@ -25,7 +31,8 @@ import {HttpClientModule} from "@angular/common/http";
     AppRoutingModule,
     StoreModule.forRoot({example: fromReducer.reducer}),
     EffectsModule.forRoot([ExampleEffects]),
-    FormsModule
+    FormsModule,
+    OnlineStatusModule
   ],
   providers: [],
   bootstrap: [AppComponent]

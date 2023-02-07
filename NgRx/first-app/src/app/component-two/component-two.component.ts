@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Store} from "@ngrx/store";
-import {Observable} from "rxjs";
-import {ExampleSelectors} from "../store/example.selector";
+import { Store } from "@ngrx/store";
+import { Observable } from "rxjs";
+import { ExampleSelectors } from "../store/example.selector";
 
 @Component({
   selector: 'app-component-two',

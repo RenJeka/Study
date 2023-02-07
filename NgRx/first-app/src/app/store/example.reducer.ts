@@ -6,11 +6,13 @@ import { ExampleActions } from "./example.actions";
 export interface State {
   count: number;
   message?: string;
-  data?: any
+  data?: any;
 }
 
 const initialState: State = {
   count: 0,
+  message: '',
+  data: undefined
 };
 
 // Store — it's only one source of truth. That changed on Actions and Always have actual Data!

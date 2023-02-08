@@ -1,27 +1,21 @@
 # FirstApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.6.
+This app shows how NgRx works with simple example:
 
-## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#####Have a look at the working application at  [this link](http://ngrxbucket.s3-website.us-east-2.amazonaws.com/).
 
-## Code scaffolding
+---
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### How the app works with NgRx:
+When you click on the _"Increace Counter"_ or _"Send Message"_ button in **Component-1** - Angular dispatches action
+, then reducer accepts and rewrites store to the entered value (increments the counter or writes the message you
+ entered). **Component-2** subscribes to the counter and message changes in the store using selectors, and redraws the counter and message values each time they are updated in the store.
+  
+With _"Get post data"_ the same thing happens, only when you click on the button _"Get post data"_ - **Component-1
+** sends action (GetData), where it is intercepted by effect. The effect takes data from the server and dispatch one
+ more  action (GetDataSuccess) which  intercepted by the reducer. Further algorithm exactly as in _"Send Message"_.
 
-## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+##### Simplified NgRx algorithm diagram:
+![Simplified NgRx algorithm diagram!](src/assets/ngrx_lifecycle.jpg "Simplified NgRx algorithm diagram")

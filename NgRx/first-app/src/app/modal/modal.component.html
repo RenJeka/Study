@@ -8,31 +8,44 @@
   [ngClass]="{
     'btn-info_dark': getPrefferedColorScheme() === 'dark',
     'btn-info_light': getPrefferedColorScheme() === 'light'
-  }"
-  >
+  }">
 
 <!-- info modal -->
 <dialog id="info-modal">
-<article>
-  <a href="#close"
-    aria-label="Close"
-    class="close"
-    data-target="info-modal"
-    (click)="toggleModal($event)">
-  </a>
-  <h3>NgRx application!</h3>
-  <p>
-    This app shows how NgRx works with simple example:
-  </p>
-  <p>See the full code <a href="https://github.com/RenJeka/Study/tree/master/NgRx/first-app">by this link to GitHub</a></p>
-  <footer>
-    <a href="#cancel"
-      role="button"
-      class="secondary"
+  <article>
+    <a href="#close"
+      aria-label="Close"
+      class="close"
       data-target="info-modal"
       (click)="toggleModal($event)">
-      Ok
     </a>
-  </footer>
-</article>
+    <h3>Additional info:</h3>
+    <p>
+      This app shows how NgRx works with simple example:
+    </p>
+    <p>See the full code <a href="https://github.com/RenJeka/Study/tree/master/NgRx/first-app">by this link to GitHub</a></p>
+
+    <hr>
+
+    <div>
+      <h4>How the app works with NgRx:</h4>
+      <p>When you click on the <i>"Increace Counter"</i> or <i>"Send Message"</i> button in <b>Component-1</b> - Angular dispatches action, then reducer accepts and rewrites store to the entered value (increments the counter or writes the message you entered). <b>Component-2</b> subscribes to the counter and message changes in the store using selectors, and redraws the counter and message values each time they are updated in the store.</p>
+
+      <p>With <i>"Get post data"</i> the same thing happens, only when you click on the button <i>"Get post data"</i> -
+        <b>Component-1</b> sends action <code>GetData</code>, where it is intercepted by effect. The effect takes data from the server and dispatch one more  action <code>GetDataSuccess</code> which  intercepted by the reducer. Further algorithm exactly as in <i>"Send Message"</i>.</p>
+
+
+      <h5>Simplified NgRx algorithm diagram:</h5>
+      <p class="image"><img src="assets/ngrx_lifecycle.jpg" alt="Simplified NgRx algorithm diagram"></p>
+    </div>
+    <footer>
+      <a href="#cancel"
+        role="button"
+        class="btn-confirm"
+        data-target="info-modal"
+        (click)="toggleModal($event)">
+        Ok
+      </a>
+    </footer>
+  </article>
 </dialog>

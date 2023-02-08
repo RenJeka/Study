@@ -2,8 +2,7 @@
   position: absolute;
 }
 
-
-h3 {
+h3, h4, h5 {
   text-align: center;
 }
 
@@ -35,3 +34,26 @@ h3 {
   }
 }
 
+.image {
+  text-align: center;
+}
+
+footer {
+  text-align: center;
+
+  .btn-confirm {
+    width: 10em;
+  }
+}
+
+@media (min-width: 768px) {
+  dialog article {
+    max-width: 700px;
+  }
+}
+
+@media (min-width: 1200px) {
+dialog article {
+    max-width: 1000px;
+  }
+}

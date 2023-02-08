@@ -1,8 +1,9 @@
 var fakeList = ['1', '2', '3'];
 
-var list = document.querySelector('#list');
-var button = document.querySelector('#button');
-var input = document.querySelector('#input');
+const taskContainer = document.querySelector('#taskContainer');
+const button = document.querySelector('#button');
+const input = document.querySelector('#input');
+const loadingInfo = document.querySelector('#loadingInfo');
 
 function request(url, method, body, callback) {
 
@@ -36,36 +37,35 @@ function inflateList(values) {
 		const nextIdIndex = next.id.indexOf('-') + 1;
 		const nextIdNumber = parseInt(next.id.slice(nextIdIndex));
 		return prevIdNumber - nextIdNumber;
-	})
+	});
 
-	list.innerHTML = '';
+	loadingInfo.classList.add('loading-hidden');
 	for (let i = 0; i < items.length; i++) {
-		list.appendChild(prepareListItem(values.body.Items[i]));
+		taskContainer.appendChild(prepareListItem(values.body.Items[i]));
 	}
 }
 
 function prepareListItem(itemModel) {
-	const li = document.createElement('li');
+	const tr = document.createElement('tr');
+	const tdTask = document.createElement('td');
+	const tdBtnRemove = document.createElement('td');
 	const span = document.createElement('span');
 	const button = document.createElement('button');
 
 	span.innerText = itemModel.name;
 	button.setAttribute("id", itemModel.id);
-	button.innerText = 'Delete Item';
-	button.style.borderRadius = '10px';
-	button.style.padding = '3px';
-	button.style.marginLeft = '20px';
-	button.style.width = '130px';
-	button.style.backgroundColor = '#d32f2f';
-	button.style.border = 'none';
-	button.style.display = 'inline-block';
-	li.style.height = '40px';
+	button.innerText = 'Delete';
+	button.classList.add('btn-remove');
+	tr.classList.add('task-item');
+	tdBtnRemove.classList.add('td-btn-remove');
 
 	button.addEventListener("click", btnDeleteItemClickHandler.bind(button))
 
-	li.append(span);
-	li.append(button);
-	return li;
+	tdTask.append(span);
+	tdBtnRemove.append(button);
+	tr.append(tdTask);
+	tr.append(tdBtnRemove);
+	return tr;
 
 }
 
@@ -75,7 +75,7 @@ function btnDeleteItemClickHandler() {
 
 	request(`https://q8w5itkcmh.execute-api.us-east-2.amazonaws.com/dev/todos?id=${deletedItem}`, 'DELETE', null , function(data) {
 		inflateList(JSON.parse(data));
-	})	
+	});
 }
 
 button.addEventListener('click', () => {
@@ -92,8 +92,8 @@ button.addEventListener('click', () => {
 		button.innerText = 'Add',
 		button.disabled = false;
 	});
-})
+});
 
 request('https://q8w5itkcmh.execute-api.us-east-2.amazonaws.com/dev/todos?id=111', 'GET',{} , function(data) {
 	inflateList(JSON.parse(data))
-})
+});

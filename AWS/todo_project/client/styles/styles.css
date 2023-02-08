@@ -14,3 +14,48 @@
 	filter: none;
 	cursor: pointer;
 }
+
+.task-item {
+    text-transform: capitalize;
+}
+.task-item::before {
+    content: '✓';
+    position: relative;
+    top: 10px;
+    display: flex;
+    vertical-align: middle;
+    height: auto;
+}
+
+.td-btn-remove {
+    text-align: center;
+}
+
+.btn-remove {
+    border-radius: 10px;
+    padding: 3px;
+    margin: 0;
+    width: 130px;
+    background-color: #d32f2f;
+    border: none;
+    display: inline-block;
+}
+
+.loading {
+    text-align: center;
+    color: var(--muted-color);
+    margin: 0;
+    height: 70px;
+}
+
+.loading-hidden {
+    height: 0;
+    overflow: hidden;
+    transition: height 1s ease-out;
+}
+
+@media screen and (max-width: 600px){
+    .btn-remove {
+        width: 60px;
+    }
+}

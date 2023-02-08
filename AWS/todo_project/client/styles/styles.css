@@ -54,6 +54,14 @@
     transition: height 1s ease-out;
 }
 
+.btn-confirm {
+    text-align: center;
+}
+
+.btn-confirm a {
+    width: 10em;
+}
+
 @media screen and (max-width: 600px){
     .btn-remove {
         width: 60px;

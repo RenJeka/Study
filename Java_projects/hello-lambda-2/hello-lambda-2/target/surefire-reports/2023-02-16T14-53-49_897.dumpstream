@@ -1,0 +1,5 @@
+# Created at 2023-02-16T14:53:52.023
+Boot Manifest-JAR contains absolute paths in classpath 'D:\GIT\My_Sites_Repository\Study\Java_projects\hello-lambda-2\hello-lambda-2\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

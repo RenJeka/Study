@@ -40,6 +40,7 @@ function inflateList(values) {
 	});
 
 	loadingInfo.classList.add('loading-hidden');
+	taskContainer.innerHTML = '';
 	for (let i = 0; i < items.length; i++) {
 		taskContainer.appendChild(prepareListItem(values.body.Items[i]));
 	}

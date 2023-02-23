@@ -1,0 +1,14 @@
+{
+  "firstName": "Yevhenii",
+  "lastName": "Petrushenko",
+  "course": {
+    "author": "Yevhenii Tykhonov",
+    "title": "Java Professional",
+    "description": "For everyone"
+  },
+  "personalContacts": [
+    "http://yevhenii.website",
+    "https://www.facebook.com/profile.php?id=100004312697047",
+    "https://www.linkedin.com/feed/"
+  ]
+}

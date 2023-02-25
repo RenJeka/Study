@@ -1,0 +1,12 @@
+{
+  "ok": true,
+  "result": {
+    "url": "https://b43ql3aerbzexql27d3koe3fuu0kzctp.lambda-url.us-east-1.on.aws/",
+    "has_custom_certificate": false,
+    "pending_update_count": 0,
+    "last_error_date": 1677092692,
+    "last_error_message": "Wrong response from the webhook: 502 Bad Gateway",
+    "max_connections": 40,
+    "ip_address": "44.208.122.155"
+  }
+}

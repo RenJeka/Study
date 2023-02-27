@@ -24,7 +24,6 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
         LambdaLogger logger = context.getLogger();
         try {
             TelegramBotsApi api = new TelegramBotsApi(DefaultBotSession.class);
-
             api.registerBot(myWebhookBot, setWebhook());
             Update update = objectMapper.readValue(inputMessage.getBody(), Update.class);
             myWebhookBot.onWebhookUpdateReceived(update, logger);

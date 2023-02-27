@@ -16,6 +16,8 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
     MyWebhookBot myWebhookBot = new MyWebhookBot();
 
 
+
+
     @Override
     public String handleRequest(APIGatewayV2HTTPEvent inputMessage, Context context)
     {
@@ -35,7 +37,7 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
 
     private SetWebhook setWebhook() {
         return SetWebhook.builder()
-                .url(System.getenv("uri"))
+                .url(SystemVariables.uri)
                 .build();
     }
 }

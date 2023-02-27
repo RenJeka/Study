@@ -21,7 +21,7 @@ public class MyWebhookBot extends TelegramWebhookBot {
     }
 
     public MyWebhookBot() {
-        super(System.getenv("botToken"));
+        super(SystemVariables.botToken);
     }
 
     @Override
@@ -31,7 +31,7 @@ public class MyWebhookBot extends TelegramWebhookBot {
 
     @Override
     public String getBotUsername() {
-        return System.getenv("botUsername");
+        return SystemVariables.botUsername;
     }
 
     public Long getChatId(Update update) {

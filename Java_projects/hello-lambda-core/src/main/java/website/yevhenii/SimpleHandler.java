@@ -6,41 +6,47 @@ import com.amazonaws.services.lambda.runtime.RequestHandler;
 import com.amazonaws.services.lambda.runtime.events.APIGatewayV2HTTPEvent;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
-import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
+import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
 import org.telegram.telegrambots.meta.api.objects.Update;
+import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
-public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, BotApiMethod<?>> {
+public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, String> {
 
     ObjectMapper objectMapper = new ObjectMapper();
-    MyBot myBot = new MyBot();
+    MyWebhookBot myWebhookBot = new MyWebhookBot();
 
 
     @Override
-    public BotApiMethod<?> handleRequest(APIGatewayV2HTTPEvent inputMessage, Context context)
+    public String handleRequest(APIGatewayV2HTTPEvent inputMessage, Context context)
     {
-//        Update update;
         LambdaLogger logger = context.getLogger();
         try {
             TelegramBotsApi api = new TelegramBotsApi(DefaultBotSession.class);
+            this.setWebhook(logger);
+
+
+
+
+            api.registerBot(myWebhookBot, new SetWebhook());
             Update update = objectMapper.readValue(inputMessage.getBody(), Update.class);
-            BotApiMethod<?> response = myBot.onWebhookUpdateReceived(update);
-            logger.log("---------- START -----------");
-
-            logger.log("---------- getUpdateId -----------");
-            logger.log(update.getUpdateId().toString());
-            logger.log("---------- USER -----------");
-            logger.log(update.getMessage().getFrom().getFirstName() +  " " + update.getMessage().getFrom().getLastName());
-            logger.log("---------- MESSAGE -----------");
-            logger.log(update.getMessage().getText());
-
-            logger.log("---------- BotApiMethod RESPONSE -----------");
-            logger.log(response.toString());
-            logger.log("---------- END -----------");
-            return response;
+            myWebhookBot.onWebhookUpdateReceived(update, logger);
+            return "OK";
         } catch (Exception e) {
             System.err.println("Failed to parse update: " + e);
             throw new RuntimeException("Failed to parse update!", e);
+        }
+    }
+
+    private void setWebhook(LambdaLogger logger) {
+        SetWebhook setWebhook = SetWebhook.builder()
+                .url(System.getenv("uri"))
+                .build();
+
+        try {
+            myWebhookBot.setWebhook(setWebhook);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while setWebhook: " + e.getStackTrace().toString());
         }
     }
 }

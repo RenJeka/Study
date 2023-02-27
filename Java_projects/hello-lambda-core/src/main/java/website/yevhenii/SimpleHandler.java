@@ -8,7 +8,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.telegram.telegrambots.meta.TelegramBotsApi;
 import org.telegram.telegrambots.meta.api.methods.updates.SetWebhook;
 import org.telegram.telegrambots.meta.api.objects.Update;
-import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, String> {
@@ -23,12 +22,8 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
         LambdaLogger logger = context.getLogger();
         try {
             TelegramBotsApi api = new TelegramBotsApi(DefaultBotSession.class);
-            this.setWebhook(logger);
 
-
-
-
-            api.registerBot(myWebhookBot, new SetWebhook());
+            api.registerBot(myWebhookBot, setWebhook());
             Update update = objectMapper.readValue(inputMessage.getBody(), Update.class);
             myWebhookBot.onWebhookUpdateReceived(update, logger);
             return "OK";
@@ -38,15 +33,9 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
         }
     }
 
-    private void setWebhook(LambdaLogger logger) {
-        SetWebhook setWebhook = SetWebhook.builder()
+    private SetWebhook setWebhook() {
+        return SetWebhook.builder()
                 .url(System.getenv("uri"))
                 .build();
-
-        try {
-            myWebhookBot.setWebhook(setWebhook);
-        } catch (TelegramApiException e) {
-            logger.log("Error, while setWebhook: " + e.getStackTrace().toString());
-        }
     }
 }

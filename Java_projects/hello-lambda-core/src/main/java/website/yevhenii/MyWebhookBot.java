@@ -18,7 +18,7 @@ import java.util.*;
 public class MyWebhookBot extends TelegramWebhookBot {
 
     private static final Map<String, String> keyboardButtons = Map.of(
-            "General Info about this", "general_info",
+            "General Info about this bot", "general_info",
             "Technology stack", "technology_stack",
             "My business card", "business_card"
     );
@@ -156,9 +156,9 @@ public class MyWebhookBot extends TelegramWebhookBot {
                         "\n" +
                         "The bot can output text, images and give information by pressing the buttons.\n" +
                         "\n" +
-                        "Think of it like a business card bot.",
-//                        "\n" +
-//                        "GitHub link: https://github.com/RenJeka/Study/tree/master/Java_projects/hello-lambda-core",
+                        "Think of it like a business card bot." +
+                        "\n" +
+                        "See the project via this [GitHub link](https://github.com/RenJeka/Study/tree/master/Java_projects/hello-lambda-core)",
                 getChatId(update));
 
         attachButtons(message);
@@ -203,7 +203,9 @@ public class MyWebhookBot extends TelegramWebhookBot {
                         "\n" +
                     "I am friendly, sociable, fond of sports, psychology, technology, business and much more \uD83D\uDE0A\n" +
                         "\n" +
-                    "You can visit my portfolio by link: http://yevhenii.website/",
+                    "You can visit my portfolio by clicking on [this portfolio link](http://yevhenii.website/)" +
+                        "\n" +
+                    "You can also visit my github by clicking on [this github link](https://github.com/RenJeka)",
                 getChatId(update));
 
         attachButtons(message);

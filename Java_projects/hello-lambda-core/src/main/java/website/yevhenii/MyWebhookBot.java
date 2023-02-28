@@ -4,59 +4,54 @@ import com.amazonaws.services.lambda.runtime.LambdaLogger;
 import org.telegram.telegrambots.bots.TelegramWebhookBot;
 import org.telegram.telegrambots.meta.api.methods.BotApiMethod;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
+import org.telegram.telegrambots.meta.api.methods.send.SendPhoto;
+import org.telegram.telegrambots.meta.api.objects.InputFile;
 import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
+import java.io.File;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class MyWebhookBot extends TelegramWebhookBot {
 
     private static final Map<String, String> keyboardButtons = Map.of(
             "General Info about this", "general_info",
-            "Technology stack", "technology_stack"
+            "Technology stack", "technology_stack",
+            "My business card", "business_card"
     );
+
+    public MyWebhookBot() {
+        super(SystemVariables.botToken);
+    }
 
     @Override
     public BotApiMethod<?> onWebhookUpdateReceived(Update update) {
         return null;
     }
     public BotApiMethod<?> onWebhookUpdateReceived(Update update, LambdaLogger logger) {
-        String updateMessage = update.getMessage().getText();
 
-        if (update.hasMessage() && updateMessage.equals("/start")) {
-            SendMessage message = createMessage(getGreetingMessage(update), getChatId(update));
-
-            attachButtons(message);
-            try {
-                execute(message);
-            } catch (TelegramApiException e) {
-                logger.log("Error, while sending message: " + e.getStackTrace().toString());
-                throw new RuntimeException(e);
+        if (update.hasMessage()) {
+            String updateMessage = update.getMessage().getText();
+            if (updateMessage.equals("/start")) {
+                greetingUser(update, logger);
+            } else {
+                giveCommonAnswer(update, logger);
             }
-        } else if (update.hasMessage()) {
-            String updateText = update.getMessage().getText();
-            SendMessage message = createMessage(
-                    "You said: '" + updateText + "', but this bot very simple and do only actions below",
-                    getChatId(update));
-            attachButtons(message);
-            try {
-                execute(message);
-            } catch (TelegramApiException e) {
-                logger.log("Error, while sending message: " + e.getStackTrace().toString());
-                throw new RuntimeException(e);
+        }
+
+        if (update.hasCallbackQuery()) {
+            if (update.getCallbackQuery().getData().equals("general_info")) {
+                giveGeneralInfo(update, logger);
+            } else if (update.getCallbackQuery().getData().equals("technology_stack")) {
+                giveTechnologyStack(update, logger);
+            } else if (update.getCallbackQuery().getData().equals("business_card")) {
+                giveBusinessCard(update, logger);
             }
         }
         return null;
-    }
-
-    public MyWebhookBot() {
-        super(SystemVariables.botToken);
     }
 
     @Override
@@ -90,11 +85,6 @@ public class MyWebhookBot extends TelegramWebhookBot {
         return sendMessage;
     }
 
-    private String getGreetingMessage(Update update) {
-        String userName = update.getMessage().getFrom().getFirstName() + " " + update.getMessage().getFrom().getLastName();
-        return String.format("Hello, %s! This is my simple Telegram bot on Java! Please, use menu below to know more about it. ", userName);
-    }
-
     private void attachButtons(SendMessage message) {
         InlineKeyboardMarkup markup = new InlineKeyboardMarkup();
 
@@ -122,6 +112,124 @@ public class MyWebhookBot extends TelegramWebhookBot {
      */
     private String getCorrectText(String text) {
         return new String(text.getBytes(), StandardCharsets.UTF_8);
+    }
+
+//    ANSWERS
+
+    private String getGreetingMessage(Update update) {
+        String firstName = !(update.getMessage().getFrom().getFirstName()).isEmpty() ? update.getMessage().getFrom().getFirstName() : "";;
+        String lastName = !(update.getMessage().getFrom().getLastName()).isEmpty() ? update.getMessage().getFrom().getLastName() : "";
+
+        String userName = firstName + " " + lastName;
+        return String.format("Hello, %s! This is my simple Telegram bot on Java! Please, use menu below to know more about it. ", userName);
+    }
+
+    private void greetingUser(Update update, LambdaLogger logger) {
+        SendMessage message = createMessage(getGreetingMessage(update), getChatId(update));
+
+        attachButtons(message);
+        try {
+            execute(message);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while sending message: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void giveCommonAnswer(Update update, LambdaLogger logger) {
+        String updateText = update.getMessage().getText();
+        SendMessage message = createMessage(
+                "You said: '" + updateText + "', but this bot very simple and do only actions below",
+                getChatId(update));
+        attachButtons(message);
+        try {
+            execute(message);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while sending message: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void giveGeneralInfo(Update update, LambdaLogger logger) {
+        SendMessage message = createMessage(
+                "This is simple project to show my experience in Java and related technologies (see \" *technology stack* ); \"\n" +
+                        "\n" +
+                        "The bot can output text, images and give information by pressing the buttons.\n" +
+                        "\n" +
+                        "Think of it like a business card bot.",
+//                        "\n" +
+//                        "GitHub link: https://github.com/RenJeka/Study/tree/master/Java_projects/hello-lambda-core",
+                getChatId(update));
+
+        attachButtons(message);
+        try {
+            execute(message);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while sending message: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void giveTechnologyStack(Update update, LambdaLogger logger) {
+        SendMessage message = createMessage(
+                "This project was built by using: \n" +
+                        " ✔️ Java POJO;\n" +
+                        " ✔️ Java Corretto 11 SDK;\n" +
+                        " ✔️ Software project management — 'Maven';\n" +
+                        " ✔️ 'telegrambots' Java library;\n" +
+                        " ✔️ Telegram webhooks (to get info prom telegram);\n" +
+                        " ✔️ AWS Lambda\n",
+                getChatId(update));
+
+        attachButtons(message);
+        try {
+            execute(message);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while sending message: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void giveBusinessCard(Update update, LambdaLogger logger) {
+        sendImage("photo", getChatId(update), logger);
+        SendMessage message = createMessage(
+                "     My name is Yevhenii Petrushenko.\n" +
+                        "\n" +
+                    "I am 29 y.o. Front-end developer who specializes in websites and single-page application (SPA) development.\n" +
+                        "\n" +
+                    "My expertise is Angular 2+, JavaScript, TypeScript, HTML / CSS (+ any preprocessors), RxJS, Unit and e2e Tests, GIT, Jira etc...\n" +
+                        "\n" +
+                    "I have 3+ years commercial experience and work with different technologies in different commands.\n" +
+                        "\n" +
+                    "I am friendly, sociable, fond of sports, psychology, technology, business and much more \uD83D\uDE0A\n" +
+                        "\n" +
+                    "You can visit my portfolio by link: http://yevhenii.website/",
+                getChatId(update));
+
+        attachButtons(message);
+        try {
+            execute(message);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while sending message: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+    }
+
+    public void sendImage(String name, Long chatId, LambdaLogger logger) {
+        SendPhoto photo = new SendPhoto();
+        InputFile inputFile = new InputFile();
+        inputFile.setMedia(new File("images/" + name + ".jpg"));
+
+        photo.setPhoto(inputFile);
+        photo.setChatId(chatId);
+
+        try {
+            execute(photo);
+        } catch (TelegramApiException e) {
+            logger.log("Error, while sending photo: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+
     }
 
 }

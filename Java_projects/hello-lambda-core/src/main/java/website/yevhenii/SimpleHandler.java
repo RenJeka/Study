@@ -29,8 +29,7 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
             myWebhookBot.onWebhookUpdateReceived(update, logger);
             return "OK";
         } catch (Exception e) {
-            System.err.println("Failed to parse update: " + e);
-            throw new RuntimeException("Failed to parse update!", e);
+            throw new RuntimeException("handle Request failed: ", e);
         }
     }
 

@@ -17,11 +17,17 @@ import java.util.*;
 
 public class MyWebhookBot extends TelegramWebhookBot {
 
-    private static final Map<String, String> keyboardButtons = Map.of(
-            "General Info about this bot", "general_info",
-            "Technology stack", "technology_stack",
-            "My business card", "business_card"
-    );
+
+    private final LinkedHashMap<String, String> keyboardButtons = getKeyboardButtons();
+
+    private LinkedHashMap<String, String> getKeyboardButtons() {
+        LinkedHashMap buttons = new LinkedHashMap<>();
+
+        buttons.put("General Info about this bot", "general_info");
+        buttons.put("Technology stack", "technology_stack");
+        buttons.put("My business card", "business_card");
+        return buttons;
+    }
 
     public MyWebhookBot() {
         super(SystemVariables.botToken);
@@ -193,7 +199,7 @@ public class MyWebhookBot extends TelegramWebhookBot {
     private void giveBusinessCard(Update update, LambdaLogger logger) {
         sendImage("photo", getChatId(update), logger);
         SendMessage message = createMessage(
-                "     My name is Yevhenii Petrushenko.\n" +
+                "# My name is Yevhenii Petrushenko.\n" +
                         "\n" +
                     "I am 29 y.o. Front-end developer who specializes in websites and single-page application (SPA) development.\n" +
                         "\n" +
@@ -203,9 +209,11 @@ public class MyWebhookBot extends TelegramWebhookBot {
                         "\n" +
                     "I am friendly, sociable, fond of sports, psychology, technology, business and much more \uD83D\uDE0A\n" +
                         "\n" +
-                    "You can visit my portfolio by clicking on [this portfolio link](http://yevhenii.website/)" +
+                    "You can visit my portfolio by clicking on [this portfolio link](http://yevhenii.website/).\n" +
                         "\n" +
-                    "You can also visit my github by clicking on [this github link](https://github.com/RenJeka)",
+                    "You can also visit my github by clicking on [this github link](https://github.com/RenJeka).\n" +
+                        "\n" +
+                    "Of course, you can contact me by clicking on [this telegram link](https://t.me/RenJeka).",
                 getChatId(update));
 
         attachButtons(message);

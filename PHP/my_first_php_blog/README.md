@@ -2,7 +2,7 @@
 
 #### This is my first php-blog, that is locating working on Beget hosting
 
-##### Thy it: http://i972057g.beget.tech/index.php  (work with VPN)
+##### Try it: https://yevhenii.website/php-blog/
 
 This is the simplest project with 1 DB couple models and some pages
 
@@ -10,5 +10,11 @@ This is the simplest project with 1 DB couple models and some pages
 * Host this project on your hosting
 * Create DataBase on your hosting
 * Write in `model/db.php` the correct settings to your database (in `getDBInstance()` method)
+```php
+$db = new PDO('mysql:host=localhost;dbname=<put here DB name>', '<put here your login to DB>', '<put here your password to DB>', [
+            PDO::ATTR_DEFAULT_FETCH_MODE => PDO::FETCH_ASSOC
+        ]);
+```
 * Start the project
 * If errors occur — correct them.
+

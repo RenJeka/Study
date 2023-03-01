@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     if ($inputParameters['title'] === '' || $inputParameters['text'] === '' || $inputParameters['id_category'] === '') {
-        $err = 'Заполните все поля!';
+        $err = 'Please fill in all fields!';
     } else {
         addNewArticle($inputParameters);
         $id = getLastInsertedID();
@@ -39,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Добавление статьи</title>
+	<title>Add an Article</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
 		integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
@@ -57,12 +57,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 			<div class="col">
 
 				<div class="display-6 text-center ">
-					Добавление статьи
+					Add an Article
 				</div>
 
 				<form method="post">
 					<div class="mb-3">
-						<label for="articleTitle" class="form-label">Заголовок статьи:</label>
+						<label for="articleTitle" class="form-label">Article title:</label>
                         <input 
                             type="text" 
                             name="title" 
@@ -70,16 +70,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             id="articleTitle" 
                             aria-describedby="articleTitleHelp"
                         >
-						<div id="articleTitleHelp" class="form-text">Введите сюда название своей статьи</div>
+						<div id="articleTitleHelp" class="form-text">Enter your article title here</div>
                     </div>
                     
                     <div class="mb-3">
                         <label 
                             for="articleCategory" 
                             class="form-label"
-                        >Выберите категорию статьи:</label>
+                        >Choose an article category:</label>
                         <select name="id_category" class="form-select">
-                            <option value="" hidden>Выберите значение:</option>
+                            <option value="" hidden>Select a category:</option>
 							<? foreach ($categories as $category): ?>
                             <option 
                                 value=<?= $category['id_category'] ?>
@@ -92,7 +92,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
                  
                     <div class="mb-3">
-                        <label for="articleText" class="form-label">Введите текст статьи: </label>
+                        <label for="articleText" class="form-label">Enter article text: </label>
                         <textarea 
                             name="text" 
                             class="form-control" 
@@ -102,7 +102,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </div>
 
                     <div class="mb-3">
-                        <label for="articleImageUrl" class="form-label">Ссылка на изображение</label>
+                        <label for="articleImageUrl" class="form-label">Image Link</label>
                         <input
                             type="text"
                             name="imageUrl"
@@ -110,17 +110,17 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             id="articleImageUrl"
                             aria-describedby="articleImgUrlHelp"
                         >
-                        <div id="articleImgUrlHelp" class="form-text">Просто правой кн. мыши на любой картинки в
-                            интернете → и "Копировать URL"</div>
+                        <div id="articleImgUrlHelp" class="form-text">Just right click on any picture in browser and
+                        choose "Copy image URL"</div>
                     </div>
 
 					<div class="mb-3">
-						<button type="submit" class="btn btn-success btn-lg btn-block">Добавить статью</button>
+						<button type="submit" class="btn btn-success btn-lg btn-block">Add an article</button>
 					</div>
 					<p><?= $err ?></p>
 				</form>
 
-				<a href="index.php" class="btn btn-primary btn-sm">На главную</a>
+				<a href="index.php" class="btn btn-primary btn-sm">Main page</a>
 
 			</div>
 		</div>

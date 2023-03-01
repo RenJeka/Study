@@ -16,7 +16,7 @@ if ($isArticleExist) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Статья — <?= $article['title'] ?> </title>
+    <title>Article — <?= $article['title'] ?> </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
     <style>
@@ -81,7 +81,7 @@ if ($isArticleExist) {
                           d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816L7.27 2.047z"></path>
                 </svg>
                 </span>
-            На главную</a>
+            Main page</a>
         </div>
         <? if ($isArticleExist): ?>
             <div class="article">
@@ -97,14 +97,14 @@ if ($isArticleExist) {
                 <? if ($article['imageUrl']): ?>
                     <img class="img-fluid my-3 mx-auto d-block" src="<?=$article['imageUrl']?>">
                 <? else: ?>
-                    <p class="text-muted  text-center font-weight-light">Добавьте  изображение для этой статьи</p>
+                    <p class="text-muted  text-center font-weight-light">Add an image for this article</p>
                 <?endif;?>
 
                 <div>
                     <pre class="p-2 border border-2 border-secondary rounded"><?= $article['text'] ?></pre>
                 </div>
 
-                <p class="edit-date"> Последнее изменение было <span
+                <p class="edit-date"> Last change was <span
                             class="edit-date"><?=$article['editDate']?></span></p>
                 <hr>
 
@@ -112,16 +112,16 @@ if ($isArticleExist) {
                     <a 
                         href="edit.php?id=<?= $article['id_article'] ?>" 
                         class="btn-edit btn btn-outline-secondary mr-4"
-                    >Редактировать статью</a>
+                    >Edit article</a>
                     <a 
                         href="delete.php?id=<?= $article['id_article'] ?>" 
                         class="btn btn-danger btn-sm"
-                    >Удалить статью</a>
+                    >Delete article</a>
                 </div>
             </div>
         <? else: ?>
             <div class="e404">
-                <h1>Страница не найдена!</h1>
+                <h1>Page not found!</h1>
             </div>
         <? endif; ?>
     

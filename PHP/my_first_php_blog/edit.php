@@ -33,7 +33,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
     }
 
     if ($inputParameters['title'] === '' || $inputParameters['text'] === '' || $inputParameters['id_category'] === '') {
-        $err = 'Заполните все поля!';
+        $err = 'Please fill in all fields!';
     } else {
         updateArticle($inputParameters);
         header("Location:article.php?id=".$inputParameters['id_article']);
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Редактирование статьи</title>
+    <title>Editing an article</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
     <style>
          * {
@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
 </head>
 <body>
 <? if (!$isArticleExist) : ?>
-    <div>Статья не найдена!</div>
+    <div>Article not found!</div>
 <? else: ?>
     <div class="container ">
 
@@ -86,14 +86,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
                           d="M7.27 2.047a1 1 0 0 1 1.46 0l6.345 6.77c.6.638.146 1.683-.73 1.683H11.5v3a1 1 0 0 1-1 1h-5a1 1 0 0 1-1-1v-3H1.654C.78 10.5.326 9.455.924 8.816L7.27 2.047z"></path>
                 </svg>
                 </span>
-                        На главную</a>
+                        Main page</a>
                 </div>
                 <div class="display-6 text-center">
-                    Редактирование статьи
+                    Editing an article
                 </div>
                 <form method="post">
                     <div class="mb-3">
-                        <label for="articleTitle" class="form-label">Заголовок статьи:</label>
+                        <label for="articleTitle" class="form-label">Article title:</label>
                             <input 
                                 type="text" 
                                 name="title"
@@ -102,11 +102,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
                                 id="articleTitle" 
                                 aria-describedby="articleTitleHelp"
                             >
-                        <div id="articleTitleHelp" class="form-text">Введите сюда название своей статьи</div>
+                        <div id="articleTitleHelp" class="form-text">Enter your article title here</div>
                     </div>
 
                     <div class="mb-3">
-                        <label for="articleCategory" class="form-label">Выберите категорию статьи:</label>
+                        <label for="articleCategory" class="form-label">Choose an article category:</label>
                         <select name="id_category" class="form-select">
                             <? foreach ($categories as $category): ?>
                             <option 
@@ -120,7 +120,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
                     </div>
             
                     <div class="mb-3">
-                        <label for="articleText" class="form-label">Введите текст статьи: </label>
+                        <label for="articleText" class="form-label">Enter article text: </label>
                         <textarea 
                             name="text" 
                             class="form-control" 
@@ -130,7 +130,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
                     </div>
 
                     <div class="mb-3">
-                        <label for="articleImageUrl" class="form-label">Ссылка на изображение</label>
+                        <label for="articleImageUrl" class="form-label">Image Link</label>
                         <input
                                 type="text"
                                 name="imageUrl"
@@ -139,15 +139,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $isArticleExist === true) {
                                 id="articleImageUrl"
                                 aria-describedby="articleImgUrlHelp"
                         >
-                        <div id="articleImgUrlHelp" class="form-text">Просто правой кн. мыши на любой картинки в
-                            интернете → и "Копировать URL"</div>
+                        <div id="articleImgUrlHelp" class="form-text">Just right click on any picture in browser and
+                        choose "Copy image URL"</div>
                     </div>
 
                     <div class="mb-3">
                         <button 
                             type="submit" 
                             class="btn btn-success btn-lg btn-block"
-                        >Изменить статью</button>
+                        >Edit article</button>
                     </div>
                     <p><?= $err ?></p>
                 </form>

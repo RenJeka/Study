@@ -10,7 +10,7 @@ $articles = getAllArticles();
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Мой блог</title>
+	<title>My blog</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css"
 		integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
 
@@ -48,9 +48,9 @@ $articles = getAllArticles();
 <body>
 	<div class="container">
 		<div class="row mx-3 ">
-            <h1 class="display-6 text-center">Это мой блог на PHP, с помощью базы данных </h1>
+            <h1 class="display-6 text-center">This is my blog in PHP using a database</h1>
             
-            <a href="add.php" class="btn btn-success btn-sm">Добавить статью</a>
+            <a href="add.php" class="btn btn-success btn-sm">Add an article</a>
             
 			<div class="my-4">
 				<? foreach ($articles as $article): ?>
@@ -74,7 +74,7 @@ $articles = getAllArticles();
 
                         <p><?= $article['text'] ?></p>
                         
-                        <a href="article.php?id=<?= $article['id_article'] ?>" class="stretched-link">Читать статью</a>
+                        <a href="article.php?id=<?= $article['id_article'] ?>" class="stretched-link">Read article</a>
                     </div>
 				</div>
 				<? endforeach; ?>

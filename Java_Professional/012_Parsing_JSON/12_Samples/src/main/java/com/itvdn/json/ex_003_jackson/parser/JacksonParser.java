@@ -19,13 +19,21 @@ public class JacksonParser {
         CurrencyRate[] currencyRates = objectMapper.readValue(new URL(url), CurrencyRate[].class);
 
         for (CurrencyRate currencyRate : currencyRates) {
-            System.out.println(currencyRate);
+            System.out.printf(
+                    "Currency change from %s to %s is %s (to buy) and %s (to sale ) \n",
+                    currencyRate.getFrom(),
+                    currencyRate.getTo(),
+                    currencyRate.getBuy(),
+                    currencyRate.getSale()
+                    );
         }
+        System.out.println(" ------------------------------------------------- ");
+        System.out.println(currencyRates.toString());
 
         String jsonString = objectMapper.writerWithDefaultPrettyPrinter()
                                         .writeValueAsString(currencyRates);
 
-        Files.write(Paths.get("D:\\Java Professional Course_video\\011_JSON\\011_Samples\\src\\main\\resources\\jacksonCurrency.json"),
+        Files.write(Paths.get("D:\\GIT\\My_Sites_Repository\\Study\\Java_Professional\\012_Parsing_JSON\\12_Samples\\src\\main\\resources\\jacksonCurrency.json"),
                 jsonString.getBytes(), StandardOpenOption.CREATE);
     }
 }

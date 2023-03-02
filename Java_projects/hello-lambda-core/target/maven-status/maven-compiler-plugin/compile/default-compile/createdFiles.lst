@@ -1,3 +1,5 @@
-website\yevhenii\SystemVariables.class
 website\yevhenii\SimpleHandler.class
 website\yevhenii\MyWebhookBot.class
+website\yevhenii\currency_parser\parser\Parser.class
+website\yevhenii\currency_parser\entity\CurrencyRate.class
+website\yevhenii\SystemVariables.class

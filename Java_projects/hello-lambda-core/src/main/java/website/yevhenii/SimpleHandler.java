@@ -16,8 +16,6 @@ public class SimpleHandler implements RequestHandler<APIGatewayV2HTTPEvent, Stri
     MyWebhookBot myWebhookBot = new MyWebhookBot();
 
 
-
-
     @Override
     public String handleRequest(APIGatewayV2HTTPEvent inputMessage, Context context)
     {

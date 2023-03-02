@@ -10,13 +10,14 @@ import org.telegram.telegrambots.meta.api.objects.Update;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
+import website.yevhenii.currency_parser.parser.Parser;
 
 import java.io.File;
+import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.*;
 
 public class MyWebhookBot extends TelegramWebhookBot {
-
 
     private final LinkedHashMap<String, String> keyboardButtons = getKeyboardButtons();
 
@@ -26,6 +27,7 @@ public class MyWebhookBot extends TelegramWebhookBot {
         buttons.put("General Info about this bot", "general_info");
         buttons.put("Technology stack", "technology_stack");
         buttons.put("My business card", "business_card");
+        buttons.put("Get NBU currency rates", "currency_rate");
         return buttons;
     }
 
@@ -55,6 +57,8 @@ public class MyWebhookBot extends TelegramWebhookBot {
                 giveTechnologyStack(update, logger);
             } else if (update.getCallbackQuery().getData().equals("business_card")) {
                 giveBusinessCard(update, logger);
+            } else if (update.getCallbackQuery().getData().equals("currency_rate")) {
+                giveCurrencyRates(update, logger);
             }
         }
         return null;
@@ -158,7 +162,7 @@ public class MyWebhookBot extends TelegramWebhookBot {
 
     private void giveGeneralInfo(Update update, LambdaLogger logger) {
         SendMessage message = createMessage(
-                "This is simple project to show my experience in Java and related technologies (see \" *technology stack* ); \"\n" +
+                "This is simple project to show my experience in Java and related technologies (see \"*technology stack*\"); \n" +
                         "\n" +
                         "The bot can output text, images and give information by pressing the buttons.\n" +
                         "\n" +
@@ -199,13 +203,13 @@ public class MyWebhookBot extends TelegramWebhookBot {
     private void giveBusinessCard(Update update, LambdaLogger logger) {
         sendImage("photo", getChatId(update), logger);
         SendMessage message = createMessage(
-                "# My name is Yevhenii Petrushenko.\n" +
+                "My name is Yevhenii Petrushenko.\n" +
                         "\n" +
                     "I am 29 y.o. Front-end developer who specializes in websites and single-page application (SPA) development.\n" +
                         "\n" +
                     "My expertise is Angular 2+, JavaScript, TypeScript, HTML / CSS (+ any preprocessors), RxJS, Unit and e2e Tests, GIT, Jira etc...\n" +
                         "\n" +
-                    "I have 3+ years commercial experience and work with different technologies in different commands.\n" +
+                    "I have 3+ years commercial experience and work with various technologies in different commands.\n" +
                         "\n" +
                     "I am friendly, sociable, fond of sports, psychology, technology, business and much more \uD83D\uDE0A\n" +
                         "\n" +
@@ -213,13 +217,28 @@ public class MyWebhookBot extends TelegramWebhookBot {
                         "\n" +
                     "You can also visit my github by clicking on [this github link](https://github.com/RenJeka).\n" +
                         "\n" +
-                    "Of course, you can contact me by clicking on [this telegram link](https://t.me/RenJeka).",
+                    "Of course, you can contact me by clicking on [this telegram link](https://t.me/RenJeka).\n",
                 getChatId(update));
 
         attachButtons(message);
         try {
             execute(message);
         } catch (TelegramApiException e) {
+            logger.log("Error, while sending message: " + e.getStackTrace().toString());
+            throw new RuntimeException(e);
+        }
+    }
+
+    private void giveCurrencyRates(Update update, LambdaLogger logger) {
+
+        sendImage("exchange_rate", getChatId(update), logger);
+
+        try {
+            String formattedCurrencyRates = Parser.getFormattedCurrencyRates();
+            SendMessage message = createMessage(formattedCurrencyRates, getChatId(update));
+            attachButtons(message);
+            execute(message);
+        } catch (TelegramApiException | IOException e) {
             logger.log("Error, while sending message: " + e.getStackTrace().toString());
             throw new RuntimeException(e);
         }

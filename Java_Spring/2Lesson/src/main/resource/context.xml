@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+<import resource="services.xml" />
+
+<context:annotation-config/>
+
+
+
+    <bean id="person1" class="com.itvdn.domain.implementation.Abonent"/>
+    <bean id="person2" class="com.itvdn.domain.implementation.Abonent"/>
+    <bean id="person3" class="com.itvdn.domain.implementation.Abonent"/>
+    <bean id="person4" class="com.itvdn.domain.implementation.Abonent" name="Peter"/>
+
+    <alias name="Peter" alias="Petro" />
+
+    <util:list id="subscriberList" scope="singleton" list-class="java.util.ArrayList">
+        <ref bean="person1"/>
+        <ref bean="person2"/>
+        <ref bean="person3"/>
+        <ref bean="person4"/>
+    </util:list>
+
+    <bean id="samsungPhone" class="com.itvdn.domain.implementation.SmartPhone">
+        <property name="brand" value="Samsung"/>
+        <property name="subscriberList" ref="subscriberList"/>
+        <property name="LOG" ref="myLogger" />
+    </bean>
+
+    <bean id="oldPhone" class="com.itvdn.domain.implementation.Calculate" lazy-init="true"/>
+</beans>

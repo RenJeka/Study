@@ -16,3 +16,10 @@ dispatcher.on('connect', (data) => {
 
 dispatcher.emit('error', new Error('something went wrong, Jeka!'));
 dispatcher.emit('connect', {myProp1: 'some long string'});
+
+
+// listeners
+console.log('listeners: ', dispatcher.listeners('connect'));
+
+// Count
+console.log('listenerCount: ', dispatcher.listenerCount('connect'));

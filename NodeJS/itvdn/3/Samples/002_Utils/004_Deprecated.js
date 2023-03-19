@@ -1,6 +1,6 @@
 var func = require('./example');
 
-// func.oF();
+func.oF();
 
-func.nF();
+// func.nF();
 

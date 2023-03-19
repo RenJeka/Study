@@ -1,0 +1,4 @@
+Hello dear friend!
+This is letter for you.
+I would like to show you, that 'fs' module can write file and read data from file.
+It can be implemented at low (by using buffer) or high level.  

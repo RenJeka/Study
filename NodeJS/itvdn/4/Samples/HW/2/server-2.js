@@ -1,7 +1,7 @@
 const http = require('http');
 const url = require('url');
 const fs = require('fs');
-const port = 8080;
+const port = process.env.PORT || 5000;
 
 const data = [
     {name: 'dog', age: 3},
@@ -20,7 +20,6 @@ http.createServer((req, res) => {
         }
 
         case 'POST': {
-            // TODO:  Synchronously!
             modifyData(req, res);
             break;
         }

@@ -1,14 +1,14 @@
 body {
     text-align: center;
-    background-color: rgba(137, 230, 146, 0.5);
+    background-color: rgba(218, 227, 95, 0.5);
 }
 
 h1 {
     font-size: 24px;
-    color: #7e40d6;
+    color: #4fa458;
 }
 
 a {
     font-size: 16px;
-    color: #4c81d7;
+    color: #006b80;
 }

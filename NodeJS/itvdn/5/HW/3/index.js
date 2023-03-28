@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const fs = require('fs');
 
 const app = express();
 const router = express.Router();
@@ -26,6 +27,8 @@ const pagesPaths = {
     adminPage: path.join(__dirname, '/cabinetPages/adminPage.html'),
     userPage: path.join(__dirname, '/cabinetPages/userPage.html')
 };
+
+const loggerPath = `logs/logs_${getCurrentDateString()}.txt`;
 
 router.route(['/', '/home', '/index.html'])
     .get((req, res) => {
@@ -66,7 +69,16 @@ app.use('/', express.static(path.join(__dirname, folderPaths.image)));
 app.use('/', express.static(path.join(__dirname, folderPaths.styles)));
 app.use('/', express.static(path.join(__dirname, folderPaths.js)));
 app.use(express.json());
+app.use('/login', (request, response, next) => {
+    logToFile(request, 'Login attempt');
+    next();
+});
+app.use('/registration', (request, response, next) => {
+    logToFile(request, 'Registration',  true)
+    next();
+});
 app.use('/', router);
+
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
@@ -91,4 +103,24 @@ function addUserCredentials(body) {
     console.log('userCred: ', body);
     
     userCredentials.push(body);
+}
+
+function getCurrentDateString() {
+    const today = new Date();
+    const day = today.getUTCDate();
+    const month = today.getUTCMonth() + 1;
+    const year = today.getUTCFullYear();
+    return `${day}_${month}_${year}`;
+}
+
+function logToFile(request, logHeader = 'Log', needBody = false) {
+    let data = `${logHeader} : ${request.ip}; Time: ${new Date().toLocaleString()}; URL : ${request.url}\n`;
+    if (needBody) {
+        data += `Data: ${ JSON.stringify(request.body)}\n`;
+    }
+    data += '---------------------------\n';
+
+    fs.appendFile(loggerPath, data, function(err){
+        console.log('registration data wrote');
+    });
 }

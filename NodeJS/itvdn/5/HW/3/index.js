@@ -22,28 +22,31 @@ const pagesPaths = {
     notFound: '/pages/404.html'
 };
 
+router.route(['/', '/home', '/index.html'])
+    .get((req, res) => {
+        homePageHandler(req, res)
+    })
+
+router.route(/\/\w*/)
+    .get((req, res) => {
+        notFoundPageHandler(req, res)
+    });
+
+router.route('/data')
+    .post((req, res) => {
+        res.append('Content-Type', 'text/plain');
+        if (checkAdminAuthorization(req.body)) {
+            res.status(200).send('Authorized successfully!')
+        } else {
+            res.status(401).send('Bad credentials!')
+        }
+    });
+
 app.use('/', express.static(path.join(__dirname, folderPaths.image)));
 app.use('/', express.static(path.join(__dirname, folderPaths.styles)));
 app.use('/', express.static(path.join(__dirname, folderPaths.js)));
 app.use(express.json());
-
-app.get(['/', '/home', '/index.html'], (req, res) => {
-    homePageHandler(req, res)
-});
-
-app.get(/\/\w*/, (req, res) => {
-    notFoundPageHandler(req, res)
-});
-
-app.post('/data', (req, res) => {
-    res.append('Content-Type', 'text/plain');
-
-    if (checkAdminAuthorization(req.body)) {
-        res.status(200).send('Authorized successfully!')
-    } else {
-        res.status(401).send('Bad credentials!')
-    }
-});
+app.use('/', router);
 
 app.listen(port, () => {
     console.log(`Server is running on port ${port}`);

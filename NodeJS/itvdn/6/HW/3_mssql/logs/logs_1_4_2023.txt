@@ -1,0 +1,36 @@
+Registration : ::1; Time: 01.04.2023, 15:25:00; URL : /
+Data: {"login":"login-1","pass":"123","repeat_pass":"123","email":"login-1@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:26:21; URL : /
+Data: {"login":"login-1","pass":"123","repeat_pass":"123","email":"login-1@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:42:04; URL : /
+Data: {"login":"login-2","pass":"234","repeat_pass":"234","email":"login-2@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:44:46; URL : /
+Data: {"login":"login-3","pass":"555","repeat_pass":"555","email":"login-3@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:46:15; URL : /
+Data: {"login":"login-4","pass":"456","repeat_pass":"456","email":"login-4@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:51:17; URL : /
+Data: {"login":"login-5","pass":"888","repeat_pass":"888","email":"login-5@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:55:07; URL : /
+Data: {"login":"login-6","pass":"123456","repeat_pass":"123456","email":"login-6@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 15:56:40; URL : /
+Data: {"login":"login-7","pass":"777","repeat_pass":"777","email":"login-7@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 16:01:16; URL : /
+Data: {"login":"login-8","pass":"888","repeat_pass":"888","email":"login-8@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 16:02:15; URL : /
+Data: {"login":"login-9","pass":"999","repeat_pass":"999","email":"login-9@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 16:04:50; URL : /
+Data: {"login":"login-10","pass":"101010","repeat_pass":"101010","email":"login-10@gmail.com"}
+---------------------------
+Registration : ::1; Time: 01.04.2023, 16:06:57; URL : /
+Data: {"login":"login-11","pass":"111111","repeat_pass":"111111","email":"login-11@gmail.com"}
+---------------------------

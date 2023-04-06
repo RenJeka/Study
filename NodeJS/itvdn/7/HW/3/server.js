@@ -1,6 +1,7 @@
 ﻿const express = require('express');
 const app = express();
 const path = require('path');
+const sessionConfig = require('./database/sessionConfig');
 
 const port = 8080;
 
@@ -19,6 +20,8 @@ app.use(express.static(path.join(__dirname, 'view')));
 // middleware для обработки данных в формате JSON 
 app.use(express.json());
 app.use(express.text());
+
+app.use(sessionConfig);
 
 // загрузить таблицу с элементами 
 app.get('/', displayHandler.displayItems);

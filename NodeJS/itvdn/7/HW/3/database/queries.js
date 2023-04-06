@@ -6,7 +6,7 @@ module.exports = {
 
 	tableRows: '',
 	// выбор всех элементов и отображение в виде таблицы
-	getAllItems: function (req, res) {
+	getAllItems: function (req, res, additionalInfo) {
 
 		const self = this;
 		self.tableRows = ``;
@@ -45,9 +45,9 @@ module.exports = {
 			}
 
 			if (req.url == '/') {
-				res.render('index', { data: self.tableRows, buttons: false });
+				res.render('index', { data: self.tableRows, buttons: false, additionalInfo });
 			} else {
-				res.render('index', { data: self.tableRows, buttons: true });
+				res.render('index', { data: self.tableRows, buttons: true, additionalInfo });
 			}
 		})
 

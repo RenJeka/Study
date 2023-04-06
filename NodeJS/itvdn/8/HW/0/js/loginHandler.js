@@ -29,7 +29,8 @@ window.addEventListener('load', () => {
 
     };
 
-    logoutBtn.addEventListener('click', async () => {
+    logoutBtn.addEventListener('click', async (event) => {
+        event.preventDefault();
         const response = await fetch('/logout');
         if (response.status === 200) {
             alert(await response.text());

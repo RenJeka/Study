@@ -1,0 +1,22 @@
+{
+  "name": "NodeJS Lesson#7 HW#3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [
+    "cookies",
+    "session",
+    "mssql",
+    "todo"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "3.1.9",
+    "express": "4.18.2",
+    "mssql": "9.1.1"
+  }
+}

@@ -35,3 +35,12 @@ header > nav {
     text-align: center;
     color: darkred
 }
+
+.pages {
+    display: flex;
+    justify-content: center;
+}
+
+.pages a{
+    margin: 15px;
+}

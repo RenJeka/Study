@@ -43,14 +43,45 @@ router.route(['/', '/home', '/index.html'])
 
 router.route('/login')
     .post((req, res) => {
-        adminAuthHandler(req, res);
-        userAuthHandler(req, res);
+        sessionHandler(req,res);
     })
+
+router.route('/logout')
+    .get((req, res) => {
+        req.session.currentUsername = '';
+        res.status(200).end('Logged out')
+    })
+
+router.route('/adminPage')
+    .get((req, res) => {
+        if (req.session.currentUsername) {
+            res.render('adminPage', {userName: currentUserName})
+        } else {
+            res.render('accessDenied');
+        }
+    })
+
+router.route('/userPage')
+    .get((req, res) => {
+        if (req.session.currentUsername) {
+            res.render('userPage', {userName: currentUserName})
+        } else {
+            res.render('accessDenied')
+        }
+    })
+
+
+router.route('/guestPage')
+    .get((req, res) => {
+        res.render('guestPage')
+    })
+
 
 router.route(/\/\w*/)
     .get((req, res) => {
         res.sendFile(pagesPaths.notFound);
     });
+
 
 
 // for template generator 'ejs'
@@ -78,27 +109,30 @@ app.listen(port, () => {
 })
 
 
-function adminAuthHandler(req, res) {
-    const currentAdmin = findCurrentAdmin(req.body);
-
-    if (currentAdmin) {
-        req.session.currentUsername = currentAdmin.login;
-        renderPageByUser(currentAdmin.login, res);
-    }
+function sessionHandler(req, res) {
+    const sessionData = getSessionData(req.body)
+    if (sessionData) {
+        req.session.currentUserName = sessionData;
+        res.status(200).end(`Successfully logged in with ${sessionData}`);
+    } else (
+        res.status(401).end(`Can\'t find user \'${req.body.login}\' with such password. Please try other!`)
+    )
 }
 
-function userAuthHandler(req, res) {
+function getSessionData(authData) {
 
-    const currentUser = findCurrentUser(req.body);
+    const adminData = findCurrentAdmin(authData)
+    const userData = findCurrentUser(authData)
 
-    if (currentUser) {
-        req.session.currentUsername = currentUser.login;
-        renderPageByUser(currentUser.login, res);
+    if (adminData) {
+        return  adminData.login;
+
+    } else if (userData) {
+        return userData.login;
+
     } else {
-        res.status(401);
-        res.end('No such user!')
+        return false;
     }
-
 }
 
 function findCurrentAdmin(currentUserData) {

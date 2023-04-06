@@ -1,4 +1,5 @@
 window.addEventListener('load', () => {
+    const logoutBtn = document.querySelector('#logout');
     const validationContainer = document.querySelector('#validationContainer');
     const loginForm = document.querySelector("#login_form");
 
@@ -18,16 +19,20 @@ window.addEventListener('load', () => {
         if (response.status === 200) {
             validationContainer.classList = 'valid';
             validationContainer.innerText = 'Success!';
-            setTimeout(async () => {
-                const responseText = await response.text()
-                document.open();
-                document.write(responseText)
-            }, 1000)
+            alert(await response.text());
 
         } else if (response.status === 401) {
             validationContainer.classList = 'invalid';
             validationContainer.innerText = 'Declined!';
+            alert(await response.text());
         }
 
     };
+
+    logoutBtn.addEventListener('click', async () => {
+        const response = await fetch('/logout');
+        if (response.status === 200) {
+            alert(await response.text());
+        }
+    })
 });

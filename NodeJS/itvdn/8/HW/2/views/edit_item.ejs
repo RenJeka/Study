@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('./partials/head'); %>
+        <title>edit</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <form>
+                <h3>Edit item!</h3>
+                <div>
+                    <label>Name: <input id="name" type="text" value="<%= name %>" /></label>
+                </div>
+                <div>
+                    <label>Description: <input id="description" type="text" value="<%= description %>"/></label>
+                </div>
+                <div>
+                    <label>Completed: <input id="completed" type="checkbox" <%= completed ? 'checked' : '' %>/></label>
+                </div>
+                <div>
+                    <a href="/edit" role="button" id="<%= id %>">Apply</a>
+                    <h5 style="color: red; font-weight: bold" id="errorMsg"></h5>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <%- include('./partials/head'); %>
+        <title>add</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <form>
+                <h3>Add item!</h3>
+                <div>
+                    <label>Name: <input type="text" /></label>
+                </div>
+                <div>
+                    <label>Description: <input type="text" /></label>
+                </div>
+                <div>
+                    <label>Completed: <input type="checkbox"/></label>
+                </div>
+                <div>
+                    <a href="/edit" role="button" id="btn">Apply</a>
+                    <h5 style="color: red; font-weight: bold" id="errorMsg"></h5>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

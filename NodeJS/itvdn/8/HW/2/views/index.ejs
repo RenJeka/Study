@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%- include('./partials/head'); %>
+    <title>App</title>
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>ToDo List</h1>
+      </header>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Completed</th>
+          </tr>
+        </thead>
+        <tbody>
+          <%- data %>
+        </tbody>
+      </table>
+      <div class="container">
+        <%- buttons ?  ' <a href="add" role="button">Add item!</a> \
+					     <a href="/" role="button">Done!</a>'
+                    :  ' <a href="edit" role="button">Edit items!</a>'
+        %>
+      </div>
+      <div class="container">
+        <p>Number of requests: <span><%- additionalInfo %> </span></p>
+      </div>
+    </main>
+
+  </body>
+  <script src="/javascripts/home.js"></script>
+</html>

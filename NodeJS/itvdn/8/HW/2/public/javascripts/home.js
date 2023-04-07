@@ -1,38 +1,24 @@
 window.addEventListener('load', () => {
-    var tbody = document.getElementsByTagName('tbody')[0];
+    const editBtn = document.querySelector('#edit_btn');
+    const removeBtn = document.querySelector('#remove_btn');
 
-    tbody.addEventListener('click', function(e) {
+    editBtn.addEventListener('click', async (event) => {
+        const itemId = event.target.dataset.itemId;
+        await fetch(`/edit/${itemId}`, {
+            method: 'GET'
+        });
+        location.href = '/edit/' + itemId;
+    });
 
+    removeBtn.addEventListener('click', async (event) => {
+        const itemId = event.target.dataset.itemId;
+        const result = await fetch(`/edit/${itemId}`, {
+            method: 'DELETE'
+        });
 
-        if (e.target.hasAttribute('id')) {
+        console.log('DELETE result: ', await result.text());
 
-            // if (e.target.classList.contains('edit')) {
-            //
-            //     // запрос для редактирования элемента
-            //     var xhr = new XMLHttpRequest();
-            //     xhr.open('GET', e.target.id);
-            //     xhr.send();
-            //
-            //     xhr.onload = function() {
-            //         // TODO: '/edit' instead http://localhost:8080/edit/
-            //         location.href = 'http://localhost:8080/edit/' + e.target.id;
-            //     }
-            //
-            // } else if (e.target.classList.contains('delete')) {
-            //     // запрос для редактирования элемента
-            //     var xhr = new XMLHttpRequest();
-            //
-            //     xhr.open('DELETE', 'edit/' + e.target.id);
-            //     xhr.send();
-            //     xhr.onload = function() {
-            //         // TODO: '/' instead http://localhost:8080
-            //         location.href = 'http://localhost:8080';
-            //         console.log('item deleted');
-            //     }
-            //
-            // }
-        }
-    })
+    });
 });
 
 

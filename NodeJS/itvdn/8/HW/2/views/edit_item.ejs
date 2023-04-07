@@ -19,11 +19,13 @@
                 <div>
                     <label>Completed: <input id="completed" type="checkbox" <%= completed ? 'checked' : '' %>/></label>
                 </div>
+                <input type="hidden" id="itemId" value="<%= id %>">
                 <div>
-                    <a href="/edit" role="button" id="<%= id %>">Apply</a>
-                    <h5 style="color: red; font-weight: bold" id="errorMsg"></h5>
+                    <button id="send_btn">Apply</button>
+                    <h5 id="errorMsg" class="error-message"></h5>
                 </div>
             </form>
         </div>
     </body>
+    <script src="/javascripts/editItem.js"></script>
 </html>

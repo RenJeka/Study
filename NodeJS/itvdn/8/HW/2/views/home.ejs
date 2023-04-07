@@ -12,13 +12,24 @@
       <table role="grid">
         <thead>
           <tr>
+            <th class="edit-column"></th>
             <th>Name</th>
             <th>Description</th>
             <th>Completed</th>
           </tr>
         </thead>
         <tbody>
-          <%- data %>
+          <tr>
+            <td class="edit-column edit-cell">
+              <button id="edit_btn" class="table-btn table-btn_edit" data-item-id="<%= data.id %>">edit</button>
+              <button id="remove_btn" class="table-btn table-btn_remove" data-item-id="<%= data.id %>">remove</button>
+            </td>
+            <td>
+              <%= data.name %>
+            </td>
+            <td><%= data.description %></td>
+            <td><%- data.completed ? 'yes' : 'no' %> </td>
+          </tr>
         </tbody>
       </table>
       <div class="container">

@@ -1,47 +1,38 @@
-window.onload = function() {
+window.addEventListener('load', () => {
 
-    // var btn = document.getElementById('btn');
-    // var errorContainer = document.getElementById('errorMsg');
-    // btn.onclick = sendData;
-    //
-    // function sendData(e) {
-    //     var xhr = new XMLHttpRequest();
-    //
-    //     xhr.open('POST','add/newItem');
-    //
-    //
-    //     var inputs = document.getElementsByTagName('input');
-    //
-    //     // валидация ввода пользователя
-    //     for (var i = 0; i < inputs.length - 1; i++) {
-    //
-    //         if (inputs[i].value == '') {
-    //
-    //             // обработка ошибок
-    //             errorContainer.innerHTML = 'Error! Empty Field!'
-    //             console.log('Empty Field!');
-    //             e.preventDefault();
-    //             return;
-    //
-    //         }
-    //     }
-    //
-    //     errorContainer.innerHTML = '';
-    //
-    //     var item = {
-    //         name: inputs[0].value,
-    //         description: inputs[1].value,
-    //         get completed () {
-    //             return inputs[2].checked ? 1 : 0
-    //         }
-    //     };
-    //
-    //     var data = JSON.stringify(item);
-    //
-    //     xhr.setRequestHeader('Content-Type', 'application/json');
-    //
-    //     xhr.send(data);
-    //
-    //
-    // }
-}
+    const sendBtn = document.querySelector('#send_btn');
+    // TODO: check requirenments for inputs
+    const errorContainer = document.querySelector('#errorMsg');
+    sendBtn.addEventListener('click', async (event) => {
+
+        event.preventDefault();
+        const inputs = document.querySelectorAll('input');
+        for (let input of inputs) {
+            console.dir(input);
+            console.log('value: ', input.value);
+        }
+
+        // TODO: Do with FormData
+        const formData = {
+            name: inputs[0].value,
+            description: inputs[1].value,
+            get completed() {
+                return inputs[2].checked ? 1 : 0
+            }
+        };
+
+        console.log('formData: ', formData);
+
+        const result = await fetch('add/newItem', {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+
+        console.log('fetch result: ', await result.text());
+
+    });
+
+});

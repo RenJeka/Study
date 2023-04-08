@@ -14,12 +14,7 @@ module.exports = {
                 console.log(colors.yellow(JSON.stringify(results)));
 
                 res.render('home', {
-                    data: {
-                        id: results[0].id,
-                        name: results[0].name,
-                        description: results[0].description,
-                        completed: results[0].completed
-                    },
+                    data: results,
                     additionalInfo: '',
                     buttons: false
                 });

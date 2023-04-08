@@ -1,7 +1,7 @@
+const queries = require("../database/queries");
 
 function showEditPage(req, res, next) {
-    console.log('req.params.id: ', req.params.id);
-    res.render('edit_item', {id: 999, name: 'item-test-1', description: 'item-description-1', completed: true});
+    queries.getItemByID(req, res);
 }
 
 function changeItem(req, res) {

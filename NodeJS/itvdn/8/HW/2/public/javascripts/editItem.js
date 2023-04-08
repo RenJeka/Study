@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
     const sendBtn = document.querySelector('#send_btn');
-    // TODO: check requirenments for inputs
+    // TODO: check requirements for inputs
     const errorContainer = document.querySelector('#errorMsg');
     sendBtn.addEventListener('click', async (event) => {
 

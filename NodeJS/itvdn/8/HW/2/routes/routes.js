@@ -11,7 +11,11 @@ router.get(['/', 'home', '/index.html'], homeController.showItemsPage);
 
 router.get('/auth', authController.showAuthPage);
 
-router.get('/add/newItem', addController.showAddPage);
+router.get('/add', addController.showAddPage);
+
+router.get('/add/newItem', addController.addNewItem);
+
+router.get('/edit', homeController.showItemsPage);
 
 router.get('/edit/:id', editController.showEditPage);
 

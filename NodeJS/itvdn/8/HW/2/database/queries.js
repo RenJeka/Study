@@ -14,11 +14,19 @@ module.exports = {
 
                 console.log(colors.yellow(JSON.stringify(results)));
 
-                res.render('home', {
-                    data: results,
-                    additionalInfo: '',
-                    buttons: false
-                });
+                if (req.url == '/') {
+                    res.render('home', {
+                        data: results,
+                        additionalInfo: '',
+                        buttons: false
+                    });
+                } else {
+                    res.render('home', {
+                        data: results,
+                        additionalInfo: '',
+                        buttons: true
+                    });
+                }
             });
         });
     },

@@ -49,5 +49,30 @@ module.exports = {
                 }
             });
         });
+    },
+
+    addItem: function (req, res) {
+        pool.getConnection((err, connection) => {
+            if (err) throw err;
+
+            // TODO: Do some check of req.body
+            const itemToAdd = {
+                name: req.body.name,
+                description: req.body.description,
+                completed: req.body.completed
+            };
+
+            // prepare query
+            const rawQuery = `INSERT INTO ??(name, description, completed)
+                                VALUES(?, ?, ?)`;
+            const inserts = [tableName, itemToAdd.name, itemToAdd.description, itemToAdd.completed];
+            const preparedQuery = mysql.format(rawQuery, inserts);
+
+            connection.query(preparedQuery, (error, results) => {
+                if (error) throw error;
+
+                res.status(201).end('Success!');
+            });
+        });
     }
 };

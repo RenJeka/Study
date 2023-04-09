@@ -13,7 +13,7 @@ router.get('/auth', authController.showAuthPage);
 
 router.get('/add', addController.showAddPage);
 
-router.get('/add/newItem', addController.addNewItem);
+router.post('/add/newItem', addController.addNewItem);
 
 router.get('/edit', homeController.showItemsPage);
 

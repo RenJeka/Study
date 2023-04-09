@@ -31,7 +31,9 @@ window.addEventListener('load', () => {
             body: JSON.stringify(formData)
         });
 
-        console.log('fetch result: ', await result.text());
+        if (result.status === 201 && (await result.text()).toLowerCase() === 'success!' ) {
+            location.href = '/';
+        }
 
     });
 

@@ -71,7 +71,26 @@ module.exports = {
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
-                res.status(201).end('Success!');
+                res.status(201).end('success');
+            });
+        });
+    },
+
+    deleteItemByID: function (req, res) {
+        pool.getConnection((err, connection) => {
+            if (err) throw err;
+            const itemId = req.params.id;
+            if (!itemId) throw new Error(`Item ID Not found , please provide correct item ID!`);
+
+            // prepare query
+            const rawQuery = "DELETE FROM ?? WHERE ?? = ?";
+            const inserts = [tableName, 'id', itemId];
+            const preparedQuery = mysql.format(rawQuery, inserts);
+
+            connection.query(preparedQuery, (error, results) => {
+                if (error) throw error;
+
+                res.status(200).end('deleted');
             });
         });
     }

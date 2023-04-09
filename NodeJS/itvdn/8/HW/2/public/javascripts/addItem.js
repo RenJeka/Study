@@ -31,7 +31,7 @@ window.addEventListener('load', () => {
             body: JSON.stringify(formData)
         });
 
-        if (result.status === 201 && (await result.text()).toLowerCase() === 'success!' ) {
+        if (result.status === 201 && (await result.text()).toLowerCase() === 'success' ) {
             location.href = '/';
         }
 

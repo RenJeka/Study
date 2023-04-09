@@ -19,7 +19,9 @@ window.addEventListener('load', () => {
                 method: 'DELETE'
             });
 
-            console.log('DELETE result: ', await result.text());
+            if ((result.status === 200 || result.status === 204) && (await result.text()).toLowerCase() === 'deleted') {
+                location.reload()
+            }
         });
     }
 });

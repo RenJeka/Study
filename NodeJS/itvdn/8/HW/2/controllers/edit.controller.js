@@ -12,9 +12,7 @@ function changeItem(req, res) {
 }
 
 function removeItem(req, res) {
-    console.log(`Item  ${req.params.id} removing...`);
-    res.end(`Item  ${req.params.id} removed`);
-    // queries.deleteItem(req, res);
+    queries.deleteItemByID(req, res)
 }
 
 module.exports = {

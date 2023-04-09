@@ -12,7 +12,7 @@ module.exports = {
             connection.query(`SELECT * from ${tableName}`, (error, results) => {
                 if (error) throw error;
 
-                console.log(colors.yellow(JSON.stringify(results)));
+                connection.release();
 
                 if (req.url == '/') {
                     res.render('home', {
@@ -44,6 +44,7 @@ module.exports = {
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
+                connection.release();
                 if (results.length === 1) {
                     res.render('edit_item', results[0]);
                 }
@@ -71,6 +72,7 @@ module.exports = {
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
+                connection.release();
                 res.status(201).end('success');
             });
         });
@@ -90,7 +92,43 @@ module.exports = {
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
+                connection.release();
                 res.status(200).end('deleted');
+            });
+        });
+    },
+
+    updateItemByID: function (req, res) {
+        pool.getConnection((err, connection) => {
+            if (err) throw err;
+            const itemId = req.params.id;
+            if (!itemId) throw new Error(`Item ID Not found , please provide correct item ID!`);
+
+            console.log(colors.yellow(JSON.stringify(req.body)));
+
+            if (parseInt(req.params.id) !== parseInt(req.body.id)) {
+                throw new Error("incorrectly passed ID. Please, check passed ID of item");
+            }
+
+            const itemToUpdate = {
+                id: req.body.id,
+                name: req.body.name,
+                description: req.body.description,
+                completed: req.body.completed
+            };
+
+            // prepare query
+            const rawQuery = `UPDATE ??
+                                SET name = ?, description = ?, completed = ?
+                                WHERE ?? = ?`;
+            const inserts = [tableName, itemToUpdate.name, itemToUpdate.description, itemToUpdate.completed, 'id', itemId];
+            const preparedQuery = mysql.format(rawQuery, inserts);
+
+            connection.query(rawQuery, inserts, (error, results) => {
+                if (error) throw error;
+
+                connection.release();
+                res.status(200).end('updated');
             });
         });
     }

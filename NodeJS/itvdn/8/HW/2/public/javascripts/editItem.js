@@ -17,9 +17,7 @@ window.addEventListener('load', () => {
         const formData = {
             name: inputs[0].value,
             description: inputs[1].value,
-            get completed() {
-                return inputs[2].checked ? 1 : 0
-            },
+            completed: inputs[2].checked ? 1 : 0,
             id: itemId
         };
 
@@ -33,7 +31,9 @@ window.addEventListener('load', () => {
             body: JSON.stringify(formData)
         });
 
-        console.log('fetch result: ', await result.text());
+        if ((result.status === 200 || result.status === 204) && (await result.text()).toLowerCase() === 'updated') {
+            location.href = '/';
+        }
 
     });
 });

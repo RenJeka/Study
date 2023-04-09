@@ -5,10 +5,7 @@ function showEditPage(req, res, next) {
 }
 
 function changeItem(req, res) {
-    console.log(`Item  ${req.params.id} changing...`);
-    res.end(`Item  ${req.params.id} changed`);
-
-    // queries.updateItem(req, res);
+    queries.updateItemByID(req, res);
 }
 
 function removeItem(req, res) {

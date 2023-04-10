@@ -5,15 +5,16 @@
     <title>App</title>
   </head>
   <body>
+    <header>
+      <h1>ToDo List</h1>
+    </header>
     <main class="container">
-      <header>
-        <h1>ToDo List</h1>
-      </header>
+
       <table role="grid">
         <thead>
           <tr>
-            <%- buttons ?  ' <th class="edit-column"></th>' :  ' '  %>
-
+            <%# buttons ?  ' <th class="edit-column"></th>' :  ' '  %>
+            <th class="edit-column"></th>
             <th>Name</th>
             <th>Description</th>
             <th>Completed</th>
@@ -24,12 +25,12 @@
         <% data.forEach((item) => { %>
           <tr>
 
-            <% if (buttons) { %>
-              <td class="edit-column edit-cell">
-                <button  class="table-btn table-btn_edit" data-item-id='<%= item.id %>'>edit</button>
-                <button  class="table-btn table-btn_remove" data-item-id="<%= item.id %>">remove</button>
+              <td class="edit-column">
+               <% if (buttons) { %>
+                <a  class="table-btn table-btn_edit icon-pencil" data-item-id='<%= item.id %>'></a>
+                <a  class="table-btn table-btn_remove icon-bin" data-item-id="<%= item.id %>"></a>
+               <% } %>
               </td>
-            <% } %>
 
             <td>
               <%= item.name %>

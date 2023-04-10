@@ -15,10 +15,10 @@ window.addEventListener('load', () => {
             body: JSON.stringify(value)
         });
 
-        if (response.status === 200) {
+        if (response.status === 200 && (await response.text()).toLowerCase() === 'logged') {
             validationContainer.classList = 'valid';
             validationContainer.innerText = 'Success!';
-            await response.text()
+            location.href = '/';
         } else if (response.status === 401) {
             validationContainer.classList = 'invalid';
             validationContainer.innerText = 'Declined!';

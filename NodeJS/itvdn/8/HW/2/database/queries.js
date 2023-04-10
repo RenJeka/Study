@@ -1,4 +1,4 @@
-const pool = require('./config');
+const pool = require('./config').pool;
 const colors = require('colors');
 const mysql = require("mysql");
 
@@ -17,13 +17,17 @@ module.exports = {
                 if (req.url == '/') {
                     res.render('home', {
                         data: results,
-                        additionalInfo: '',
+                        additionalInfo: {
+                            userName: req.session.userName
+                        },
                         buttons: false
                     });
                 } else {
                     res.render('home', {
                         data: results,
-                        additionalInfo: '',
+                        additionalInfo: {
+                            userName: req.session.userName
+                        },
                         buttons: true
                     });
                 }

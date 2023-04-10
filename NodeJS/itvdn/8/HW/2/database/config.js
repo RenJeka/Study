@@ -1,5 +1,7 @@
 const mysql = require('mysql');
-// const colors = require('colors');
+const colors = require('colors');
+const session = require('express-session');
+const MySQLStore = require('express-mysql-session')(session);
 
 const pool = mysql.createPool({
     connectionLimit : 10,
@@ -7,6 +9,18 @@ const pool = mysql.createPool({
     user            : 'root',
     password        : '123456',
     database        : 'testdb'
+});
+
+
+const sessionStore = new MySQLStore({}/* session store options */, pool);
+
+// Optionally use onReady() to get a promise that resolves when store is ready.
+sessionStore.onReady().then(() => {
+    // MySQL session store ready for use.
+    console.log(colors.red('MySQLStore ready'));
+}).catch(error => {
+    // Something went wrong.
+    console.error(error);
 });
 
 // pool.on('acquire', function (connection) {
@@ -24,4 +38,7 @@ const pool = mysql.createPool({
 // pool.on('release', function (connection) {
 //     console.log(colors.red('Connection %d released'), connection.threadId);
 // });
-module.exports = pool;
+module.exports = {
+    pool,
+    sessionStore
+};

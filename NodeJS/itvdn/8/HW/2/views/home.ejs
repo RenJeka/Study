@@ -6,7 +6,8 @@
   </head>
   <body>
     <header>
-      <h1>ToDo List</h1>
+      <h1>ToDo List for  <%= additionalInfo.userName %></h1>
+      <nav><li><a href="/logout">Logout</a></li></nav>
     </header>
     <main class="container">
 
@@ -48,10 +49,12 @@
                     :  ' <a href="edit" role="button">Edit items!</a>'
         %>
       </div>
-      <div class="container">
-        <p>Number of requests: <span><%- additionalInfo %> </span></p>
-      </div>
+<!--      <div class="container">-->
+<!--        <p>Number of requests: <span><%# additionalInfo. %> </span></p>-->
+<!--      </div>-->
     </main>
+
+
 
   </body>
   <script src="/javascripts/home.js"></script>

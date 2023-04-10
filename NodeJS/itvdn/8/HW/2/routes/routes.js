@@ -7,6 +7,7 @@ const addController = require('../controllers/add.controller');
 const editController = require('../controllers/edit.controller');
 
 /* GET home page. */
+
 router.get(['/', 'home', '/index.html'], homeController.showItemsPage);
 
 router.get('/auth', authController.showAuthPage);
@@ -24,5 +25,7 @@ router.put('/edit/:id', editController.changeItem);
 router.delete('/edit/:id', editController.removeItem);
 
 router.post('/login', authController.authorizeUser);
+
+router.get('/logout', authController.logout);
 
 module.exports = router;

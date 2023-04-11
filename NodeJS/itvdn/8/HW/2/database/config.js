@@ -13,15 +13,23 @@ const pool = mysql.createPool({
 });
 
 const tableName = 'nodejs_lesson_8';
+const tableColumns = {
+    id: 'id',
+    name: 'name',
+    description: 'description',
+    completed: 'completed',
+    username: 'username'
+};
 
 const createTableQuery = `CREATE TABLE ?? (
-    id int NOT NULL AUTO_INCREMENT,
-    name varchar(50) NOT NULL,
-    description varchar(200) DEFAULT NULL,
-    completed tinyint NOT NULL DEFAULT '0',
-    PRIMARY KEY (id),
-    UNIQUE KEY id_UNIQUE (id)
-) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='table for Nodejs lesson 8 from ITVDN';`
+                            ${tableColumns.id} int NOT NULL AUTO_INCREMENT,
+                            ${tableColumns.name} varchar(50) NOT NULL,
+                            ${tableColumns.description} varchar(200) DEFAULT NULL,
+                            ${tableColumns.completed} tinyint NOT NULL DEFAULT '0',
+                            ${tableColumns.username} varchar(100) NOT NULL,
+                            PRIMARY KEY (id),
+                            UNIQUE KEY id_UNIQUE (id)
+                        ) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='table for Nodejs lesson 8 from ITVDN';`
 
 const showTablesQuery = 'SHOW TABLES';
 
@@ -98,5 +106,6 @@ async function createTableIfNotExist(connection, tableName) {
 module.exports = {
     pool,
     sessionStore,
-    tableName
+    tableName,
+    tableColumns
 };

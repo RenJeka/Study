@@ -4,13 +4,28 @@ const mysql = require("mysql");
 
 const pool = config.pool;
 const tableName = config.tableName;
+const tColumns = config.tableColumns;
+
+const selectAllItemsQuery   = `SELECT * FROM ${tableName} WHERE ${tColumns.username} = ?`;
+const selectItemByIDQuery   = `SELECT * FROM ${tableName} WHERE ${tColumns.id} = ? AND ${tColumns.username} = ?`;
+const insertItemQuery       = `INSERT INTO ${tableName}(${tColumns.name}, ${tColumns.description}, ${tColumns.completed}, ${tColumns.username})
+                                VALUES(?, ?, ?, ?)`;
+const updateItemByIDQuery   = `UPDATE ${tableName}
+                                SET name = ?, description = ?, completed = ?
+                                WHERE ${tColumns.id} = ? AND ${tColumns.username} = ?`;
+const deleteItemByIDQuery   = `DELETE FROM ${tableName} WHERE ${tColumns.id} = ? AND ${tColumns.username} = ?`;
+
 
 module.exports = {
     getAllItems: function (req, res) {
         pool.getConnection((err, connection) => {
             if (err) throw err;
 
-            connection.query(`SELECT * from ${tableName}`, (error, results) => {
+            const preparedQuery = mysql.format(
+                selectAllItemsQuery,
+                [req.session.userName]
+            );
+            connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
                 connection.release();
@@ -41,11 +56,11 @@ module.exports = {
             if (err) throw err;
             const itemId = req.params.id;
             if (!itemId) throw new Error(`Item ID Not found , please provide correct item ID!`);
-            // prepare query
-            const rawQuery = "SELECT * FROM ?? WHERE ?? = ?";
-            const inserts = [tableName, 'id', itemId];
-            const preparedQuery = mysql.format(rawQuery, inserts);
 
+            const preparedQuery = mysql.format(
+                selectItemByIDQuery,
+                [itemId, req.session.userName]
+            );
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
@@ -68,11 +83,10 @@ module.exports = {
                 completed: req.body.completed
             };
 
-            // prepare query
-            const rawQuery = `INSERT INTO ??(name, description, completed)
-                                VALUES(?, ?, ?)`;
-            const inserts = [tableName, itemToAdd.name, itemToAdd.description, itemToAdd.completed];
-            const preparedQuery = mysql.format(rawQuery, inserts);
+            const preparedQuery = mysql.format(
+                insertItemQuery,
+                [itemToAdd.name, itemToAdd.description, itemToAdd.completed, req.session.userName]
+            );
 
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
@@ -89,11 +103,10 @@ module.exports = {
             const itemId = req.params.id;
             if (!itemId) throw new Error(`Item ID Not found , please provide correct item ID!`);
 
-            // prepare query
-            const rawQuery = "DELETE FROM ?? WHERE ?? = ?";
-            const inserts = [tableName, 'id', itemId];
-            const preparedQuery = mysql.format(rawQuery, inserts);
-
+            const preparedQuery = mysql.format(
+                deleteItemByIDQuery,
+                [itemId, req.session.userName]
+            );
             connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
@@ -122,14 +135,12 @@ module.exports = {
                 completed: req.body.completed
             };
 
-            // prepare query
-            const rawQuery = `UPDATE ??
-                                SET name = ?, description = ?, completed = ?
-                                WHERE ?? = ?`;
-            const inserts = [tableName, itemToUpdate.name, itemToUpdate.description, itemToUpdate.completed, 'id', itemId];
-            const preparedQuery = mysql.format(rawQuery, inserts);
+            const preparedQuery = mysql.format(
+                updateItemByIDQuery,
+                [itemToUpdate.name, itemToUpdate.description, itemToUpdate.completed, itemId, req.session.userName]
+            );
 
-            connection.query(rawQuery, inserts, (error, results) => {
+            connection.query(preparedQuery, (error, results) => {
                 if (error) throw error;
 
                 connection.release();

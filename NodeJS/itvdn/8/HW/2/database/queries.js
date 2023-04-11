@@ -1,8 +1,9 @@
-const pool = require('./config').pool;
+const config = require('./config');
 const colors = require('colors');
 const mysql = require("mysql");
 
-const tableName = 'nodejs_lesson_8';
+const pool = config.pool;
+const tableName = config.tableName;
 
 module.exports = {
     getAllItems: function (req, res) {

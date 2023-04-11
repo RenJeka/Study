@@ -2,6 +2,7 @@ const mysql = require('mysql');
 const colors = require('colors');
 const session = require('express-session');
 const MySQLStore = require('express-mysql-session')(session);
+const util = require('util');
 
 const pool = mysql.createPool({
     connectionLimit : 10,
@@ -11,17 +12,73 @@ const pool = mysql.createPool({
     database        : 'testdb'
 });
 
+const tableName = 'nodejs_lesson_8';
+
+const createTableQuery = `CREATE TABLE ?? (
+    id int NOT NULL AUTO_INCREMENT,
+    name varchar(50) NOT NULL,
+    description varchar(200) DEFAULT NULL,
+    completed tinyint NOT NULL DEFAULT '0',
+    PRIMARY KEY (id),
+    UNIQUE KEY id_UNIQUE (id)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='table for Nodejs lesson 8 from ITVDN';`
+
+const showTablesQuery = 'SHOW TABLES';
 
 const sessionStore = new MySQLStore({}/* session store options */, pool);
 
 // Optionally use onReady() to get a promise that resolves when store is ready.
-sessionStore.onReady().then(() => {
+sessionStore.onReady().then( async () => {
     // MySQL session store ready for use.
-    console.log(colors.red('MySQLStore ready'));
+    const getConnectionAsync = util.promisify(pool.getConnection).bind(pool);
+    const connection = await getConnectionAsync();
+    const closeConnectionAsync = util.promisify(connection.release).bind(connection);
+    await createTableIfNotExist(connection, tableName);
+    await closeConnectionAsync();
+
+
 }).catch(error => {
-    // Something went wrong.
     console.error(error);
 });
+
+async function createTableIfNotExist(connection, tableName) {
+    const sqlQueryAsync = util.promisify(connection.query).bind(connection);
+    if (await checkTable(sqlQueryAsync)) {
+        console.log(`Table "${tableName}" already exist!`);
+        return true;
+    } else {
+        await createTable(sqlQueryAsync, tableName);
+    }
+
+
+    async function checkTable(queryAsync) {
+        const existingTables = await getExistingTables(queryAsync);
+        return existingTables.indexOf(tableName) >= 0;queryAsync
+    }
+
+    async function getExistingTables(queryAsync) {
+        try {
+            return (await queryAsync(showTablesQuery))
+                .map(tableItem => Object.values(tableItem))
+                .flat();
+        } catch(error) {
+            console.log('Error while getting existing tables: ', error);
+        }
+    }
+
+    async function createTable(queryAsync, tableName) {
+        // prepare query
+        const inserts = [tableName];
+        const preparedQuery = mysql.format(createTableQuery, inserts);
+        try {
+            await queryAsync(preparedQuery)
+        } catch(error) {
+            console.log(`Error while creating table "${tableName}": `, error)
+        }
+
+    }
+
+}
 
 // pool.on('acquire', function (connection) {
 //     console.log(colors.red('Connection %d acquired'), connection.threadId);
@@ -40,5 +97,6 @@ sessionStore.onReady().then(() => {
 // });
 module.exports = {
     pool,
-    sessionStore
+    sessionStore,
+    tableName
 };

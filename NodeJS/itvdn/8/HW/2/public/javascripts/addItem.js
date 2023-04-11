@@ -1,28 +1,30 @@
 window.addEventListener('load', () => {
 
-    const sendBtn = document.querySelector('#send_btn');
-    // TODO: check requirenments for inputs
     const errorContainer = document.querySelector('#errorMsg');
-    sendBtn.addEventListener('click', async (event) => {
+    const addItemForm = document.querySelector("#add_item_form");
+    addItemForm.addEventListener('submit', async (event) => {
 
         event.preventDefault();
-        const inputs = document.querySelectorAll('input');
-        for (let input of inputs) {
-            console.dir(input);
-            console.log('value: ', input.value);
-        }
 
-        // TODO: Do with FormData
+        const formElements = event.target?.elements;
+
+        // Form validation
+        if (formElements.name.value.trim().length === 0) {
+            formElements.name.setAttribute('aria-invalid', 'true');
+            errorContainer.classList = 'invalid';
+            errorContainer.innerText = 'Please, fill all inputs!';
+            return;
+        }
+        formElements.name.setAttribute('aria-invalid', 'false');
+
         const formData = {
-            name: inputs[0].value,
-            description: inputs[1].value,
+            name: formElements.name?.value.trim(),
+            description: formElements.description?.value.trim(),
             get completed() {
-                return inputs[2].checked ? 1 : 0
+                return formElements.completed.checked ? 1 : 0
             }
         };
-
-        console.log('formData: ', formData);
-
+        
         const result = await fetch('add/newItem', {
             method: 'POST',
             headers: {

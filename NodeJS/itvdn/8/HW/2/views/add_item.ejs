@@ -8,19 +8,19 @@
 
     <body>
         <div class="container">
-            <form>
+            <form id="add_item_form">
                 <h3>Add item!</h3>
                 <div>
-                    <label>Name: <input type="text" required /></label>
+                    <label>Name: <input name="name" type="text" required /></label>
                 </div>
                 <div>
-                    <label>Description: <input type="text" required/></label>
+                    <label>Description: <input name="description" type="text"/></label>
                 </div>
                 <div>
-                    <label>Completed: <input type="checkbox"/></label>
+                    <label>Completed: <input name="completed" type="checkbox"/></label>
                 </div>
                 <div>
-                    <button id="send_btn">Apply</button>
+                    <button id="send_btn" type="submit">Apply</button>
                     <h5 id="errorMsg" class="error-message"></h5>
                 </div>
             </form>

@@ -76,12 +76,17 @@ module.exports = {
         pool.getConnection((err, connection) => {
             if (err) throw err;
 
-            // TODO: Do some check of req.body
             const itemToAdd = {
-                name: req.body.name,
-                description: req.body.description,
-                completed: req.body.completed
+                name: req.body.name?.toString().trim(),
+                description: req.body.description?.toString().trim(),
+                completed: parseInt(req.body.completed) ? 1 : 0
             };
+
+            // fields validate on server
+            if (!itemToAdd.name) {
+                res.status(400).end('Incorrect form data');
+                return;
+            }
 
             const preparedQuery = mysql.format(
                 insertItemQuery,
@@ -130,11 +135,15 @@ module.exports = {
 
             const itemToUpdate = {
                 id: req.body.id,
-                name: req.body.name,
-                description: req.body.description,
-                completed: req.body.completed
+                name: req.body.name?.toString().trim(),
+                description: req.body.description?.toString().trim(),
+                completed: parseInt(req.body.completed) ? 1 : 0
             };
 
+            if (!itemToUpdate.name) {
+                res.status(400).end('Incorrect form data');
+                return;
+            }
             const preparedQuery = mysql.format(
                 updateItemByIDQuery,
                 [itemToUpdate.name, itemToUpdate.description, itemToUpdate.completed, itemId, req.session.userName]

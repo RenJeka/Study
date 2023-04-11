@@ -8,20 +8,20 @@
 
     <body>
         <div class="container">
-            <form>
+            <form id="edit_item_form">
                 <h3>Edit item!</h3>
                 <div>
-                    <label>Name: <input id="name" type="text" value="<%= name %>" /></label>
+                    <label>Name: <input name="name" type="text" value="<%= name %>" required/></label>
                 </div>
                 <div>
-                    <label>Description: <input id="description" type="text" value="<%= description %>"/></label>
+                    <label>Description: <input name="description" type="text" value="<%= description %>"/></label>
                 </div>
                 <div>
-                    <label>Completed: <input id="completed" type="checkbox" <%= completed ? 'checked' : '' %>/></label>
+                    <label>Completed: <input name="completed" type="checkbox" <%= completed ? 'checked' : '' %>/></label>
                 </div>
-                <input type="hidden" id="itemId" value="<%= id %>">
+                <input type="hidden" name="itemId" value="<%= id %>">
                 <div>
-                    <button id="send_btn">Apply</button>
+                    <button id="send_btn" type="submit">Apply</button>
                     <h5 id="errorMsg" class="error-message"></h5>
                 </div>
             </form>

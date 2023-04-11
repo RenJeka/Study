@@ -1,6 +1,6 @@
 window.addEventListener('load', () => {
-    const editBtns = document.querySelectorAll('table > tbody > tr button.table-btn_edit');
-    const removeBtns = document.querySelectorAll('table > tbody > tr button.table-btn_remove');
+    const editBtns = document.querySelectorAll('table > tbody > tr .table-btn_edit');
+    const removeBtns = document.querySelectorAll('table > tbody > tr .table-btn_remove');
 
     for (const editBtn of editBtns) {
         editBtn.addEventListener('click', async (event) => {

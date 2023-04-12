@@ -12,20 +12,20 @@ router.get(['/', 'home', '/index.html'], homeController.showItemsPage);
 
 router.get('/auth', authController.showAuthPage);
 
+router.post('/auth', authController.authorizeUser);
+
+router.get('/logout', authController.logout);
+
+router.get('/editAll', homeController.showItemsPage);
+
 router.get('/add', addController.showAddPage);
 
-router.post('/add/newItem', addController.addNewItem);
-
-router.get('/edit', homeController.showItemsPage);
+router.post('/add', addController.addNewItem);
 
 router.get('/edit/:id', editController.showEditPage);
 
 router.put('/edit/:id', editController.changeItem);
 
 router.delete('/edit/:id', editController.removeItem);
-
-router.post('/login', authController.authorizeUser);
-
-router.get('/logout', authController.logout);
 
 module.exports = router;

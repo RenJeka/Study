@@ -10,10 +10,13 @@ const userAuthData = [
 
 function checkSession(req, res, next) {
 
-    if (req.originalUrl === '/login' && req.method === 'POST') {
+    if (
+        req.originalUrl === '/auth'
+    ) {
         next();
     } else if (!req.session.userName) {
-        showAuthPage(req, res);
+        res.redirect(307, '/auth');
+        // showAuthPage(req, res);
     } else if (isUserPresent(req.session.userName)){
         next();
     } else {
@@ -36,8 +39,7 @@ function authorizeUser(req, res, next) {
 
 function logout(req, res) {
     delete req.session.userName;
-    res.render('auth');
-
+    res.redirect(307,'/');
 }
 
 function handleSession(req) {

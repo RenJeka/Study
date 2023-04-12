@@ -25,7 +25,7 @@ window.addEventListener('load', () => {
             }
         };
         
-        const result = await fetch('add/newItem', {
+        const result = await fetch('/add', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json'

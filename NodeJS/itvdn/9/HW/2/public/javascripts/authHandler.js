@@ -7,7 +7,7 @@ window.addEventListener('load', () => {
         const authFormData = new FormData(event.target);
         const value = Object.fromEntries(authFormData.entries());
 
-        let response = await fetch('/login', {
+        let response = await fetch('/auth', {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

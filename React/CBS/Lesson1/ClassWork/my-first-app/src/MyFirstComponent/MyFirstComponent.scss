@@ -1,0 +1,49 @@
+p {
+  color: rgba(95, 95, 186, 0.58);
+}
+
+img {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.container {
+  width: 500px;
+}
+
+button {
+  width: 200px;
+  margin: 20px auto;
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: spin_clockwise infinite 20s linear;
+  }
+  .logo-reverse {
+    animation: spin_counterclockwise infinite 20s linear;
+  }
+}
+
+@keyframes spin_clockwise {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin_counterclockwise {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+

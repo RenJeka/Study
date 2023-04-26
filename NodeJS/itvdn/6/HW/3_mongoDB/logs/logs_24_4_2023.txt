@@ -1,0 +1,42 @@
+Registration : ::1; Time: 24.04.2023, 10:21:53; URL : /
+Data: {"login":"login-1","pass":"1111","repeat_pass":"1111","email":"login-1@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:27:29; URL : /
+Data: {"login":"login-2","pass":"2222","repeat_pass":"2222","email":"login-2@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:32:18; URL : /
+Data: {"login":"login-2","pass":"2222","repeat_pass":"2222","email":"login-2@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:39:37; URL : /
+Data: {"login":"login-3","pass":"3333","repeat_pass":"3333","email":"login-3@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:40:21; URL : /
+Data: {"login":"1","pass":"1","repeat_pass":"1","email":"123@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:41:42; URL : /
+Data: {"login":"login-5","pass":"5555","repeat_pass":"5555","email":"login-5@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:42:20; URL : /
+Data: {"login":"login-5","pass":"5555","repeat_pass":"5555","email":"login-5@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:42:55; URL : /
+Data: {"login":"login-5","pass":"login-5","repeat_pass":"login-5","email":"login-5@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:44:38; URL : /
+Data: {"login":"login-6","pass":"6666","repeat_pass":"6666","email":"login-6@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 10:50:55; URL : /
+Data: {"login":"login-7","pass":"7777","repeat_pass":"7777","email":"login-7@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 11:03:17; URL : /
+Data: {"login":"login-7","pass":"7777","repeat_pass":"7777","email":"login-7@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 11:04:19; URL : /
+Data: {"login":"login-8","pass":"8888","repeat_pass":"8888","email":"login-8@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 11:07:31; URL : /
+Data: {"login":"login-8","pass":"8888","repeat_pass":"8888","email":"login-8@gmail.com"}
+---------------------------
+Registration : ::1; Time: 24.04.2023, 11:10:42; URL : /
+Data: {"login":"login-8","pass":"8888","repeat_pass":"8888","email":"login-8@gmail.com"}
+---------------------------

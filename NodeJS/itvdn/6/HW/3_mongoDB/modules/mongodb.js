@@ -2,7 +2,7 @@ const MongoClient = require('mongodb').MongoClient;
 
 const _dbName = 'testJekaDB';
 const _dbCollection = 'nodejs_lesson_6';
-const mongoClient = new MongoClient('mongodb://localhost:27017/');
+const mongoClient = new MongoClient('mongodb://127.0.0.1:27017/');
 
 const db = mongoClient.db(_dbName);
 const collection = db.collection(_dbCollection);

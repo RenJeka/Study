@@ -1,19 +1,18 @@
-import "./MyFirstComponent.scss"
+import "./Lesson1Component.scss"
 import image from "../assets/images/reactLogo.png"
+import {images} from "../barrel"
 import React, {Component} from 'react';
 
 interface Props {
     myColor?: string;
     size?: number;
-    // children?: string | JSX.Element | JSX.Element[];
 }
 
 interface State {
     isRotationClockwise: boolean;
 }
 
-
-class MyFirstComponent extends Component<Props, State>{
+class Lesson1Component extends Component<Props, State>{
 
     constructor(props: Props) {
         super(props);
@@ -21,11 +20,6 @@ class MyFirstComponent extends Component<Props, State>{
             isRotationClockwise: true,
         };
     }
-
-    // public componentDidMount() {
-    //     this.props.isRotationClockwise.
-    //
-    // }
 
     public handleClick() {
         console.log(this);
@@ -41,14 +35,17 @@ class MyFirstComponent extends Component<Props, State>{
 
 
         return (
-            <div className={'container'}>
+            <div
+                className={'container'}
+                style={{backgroundImage:`url(${images.reactWallpaper})`}}
+            >
                 <>
                     {console.log(12345)}
                     <p
                         style={{color: myColor, fontSize: size}}
 
                     >This is MyFirstComponent!!</p>
-                    <img className={ isRotationClockwise ? 'logo' : 'logo-reverse'} src={image} alt=""/>
+                    <img className={ isRotationClockwise ? 'logo' : 'logo-reverse'} src={images.reactLogo} alt=""/>
                     <button onClick={this.handleClick.bind(this)}>Reverse rotation</button>
                 </>
             </div>
@@ -56,4 +53,4 @@ class MyFirstComponent extends Component<Props, State>{
     }
 }
 
-export default MyFirstComponent;
+export default Lesson1Component;

@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: rgba(81, 219, 217, 0.5);
+}
+
+h1 {
+    font-size: 24px;
+    color: chocolate;
+}
+
+a {
+    font-size: 16px;
+    color: green;
+}

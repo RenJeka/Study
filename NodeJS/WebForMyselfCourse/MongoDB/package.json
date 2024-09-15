@@ -1,0 +1,17 @@
+{
+  "name": "mongodb",
+  "version": "1.0.0",
+  "description": "first connection NodeJS to MongoDb",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "author": "yepetrushenko@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "7.0.1"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.21"
+  }
+}

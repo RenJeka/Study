@@ -1,0 +1,17 @@
+{
+  "name": "2",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node app",
+    "serve": "nodemon app",
+    "debug": "nodemon --inspect app"
+  },
+  "dependencies": {
+    "mysql": "2.18.1",
+    "restify": "11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "2.0.22"
+  }
+}

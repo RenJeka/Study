@@ -1,0 +1,7 @@
+<!--        TODO: RESOLVE  embedded-->
+            <%# buttons ?  '<td class="edit-column edit-cell"> \
+                              <button  class="table-btn table-btn_edit" data-item-id="<%= item.id %>">edit</button>
+                              <button  class="table-btn table-btn_remove" data-item-id="<%= item.id %>">remove</button>
+                            </td>'
+                        :  ' '
+            %>

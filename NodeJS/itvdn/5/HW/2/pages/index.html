@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Main</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Main page</h1>
+        <a href="/about.html">About</a>
+        <a href="/contacts.html">Contacts</a>
+        <br>
+        <img src="home.png" alt="home">
+<!--        <button id="btn_About">About</button>-->
+    </body>
+
+    <script !src="">
+        window.addEventListener('load', () => {
+            const btn_About = document.querySelector('#btn_About');
+            btn_About.addEventListener('click', () => {
+                fetch('about.html')
+                    .then(response => response.json())
+                    .then(response => console.log('response: ', response)
+                    )
+
+            });
+        });
+    </script>
+</html>

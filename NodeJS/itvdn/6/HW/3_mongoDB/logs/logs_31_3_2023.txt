@@ -1,0 +1,9 @@
+Registration : ::1; Time: 31.03.2023, 17:10:34; URL : /
+Data: {"login":"login","pass":"123","repeat_pass":"123","email":"test@gmail.com"}
+---------------------------
+Registration : ::1; Time: 31.03.2023, 17:19:49; URL : /
+Data: {"login":"test2","pass":"222","repeat_pass":"222","email":"test2@gmail.com"}
+---------------------------
+Registration : ::1; Time: 31.03.2023, 17:21:04; URL : /
+Data: {"login":"test3","pass":"333","repeat_pass":"333","email":"test3@gmail.com"}
+---------------------------

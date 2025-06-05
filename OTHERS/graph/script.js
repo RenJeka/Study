@@ -38,9 +38,9 @@ function generateRandomGraph(nodeCount) {
   const width = svg.clientWidth;
   const height = svg.clientHeight;
 
-  // Генерація вершин
-  for (let i = 0; i < nodeCount; i++) {
-    const angle = (2 * Math.PI * i) / nodeCount;
+  // Генерація вершин (id від 1)
+  for (let i = 1; i <= nodeCount; i++) {
+    const angle = (2 * Math.PI * (i - 1)) / nodeCount;
     const radius = Math.min(width, height) / 2 - 50;
     const x = width / 2 + radius * Math.cos(angle);
     const y = height / 2 + radius * Math.sin(angle);
@@ -48,9 +48,9 @@ function generateRandomGraph(nodeCount) {
     graph.adjacencyList[i] = [];
   }
 
-  // Генерація ребер з випадковими вагами
-  for (let i = 0; i < nodeCount; i++) {
-    for (let j = i + 1; j < nodeCount; j++) {
+  // Генерація ребер з випадковими вагами (id від 1)
+  for (let i = 1; i <= nodeCount; i++) {
+    for (let j = i + 1; j <= nodeCount; j++) {
       if (Math.random() < 0.15) {
         const weight = Math.floor(Math.random() * 10) + 1;
         graph.edges.push({ from: i, to: j, weight });
@@ -66,20 +66,18 @@ function generateRandomGraph(nodeCount) {
 function drawGraph() {
   // Оновлюємо ваги ребер залежно від відстані між вузлами
   for (const edge of graph.edges) {
-    const from = graph.nodes[edge.from];
-    const to = graph.nodes[edge.to];
-    // Євклідова відстань
+    const from = graph.nodes.find((n) => n.id === edge.from);
+    const to = graph.nodes.find((n) => n.id === edge.to);
     const dx = from.x - to.x;
     const dy = from.y - to.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
-    // Наприклад, вага = відстань / 20, округлена до цілого числа, мінімум 1
     edge.weight = Math.max(1, Math.round(distance / 20));
   }
 
   // Малюємо ребра
   for (const edge of graph.edges) {
-    const from = graph.nodes[edge.from];
-    const to = graph.nodes[edge.to];
+    const from = graph.nodes.find((n) => n.id === edge.from);
+    const to = graph.nodes.find((n) => n.id === edge.to);
 
     const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
     line.setAttribute("x1", from.x);
@@ -137,14 +135,13 @@ function drawGraph() {
 
 function startDragNode(e) {
   draggingNode = parseInt(e.target.getAttribute("data-id"));
-  const node = graph.nodes[draggingNode];
+  const node = graph.nodes.find((n) => n.id === draggingNode);
   offsetX = e.clientX - node.x;
   offsetY = e.clientY - node.y;
   svg.addEventListener("mousemove", dragNode);
   svg.addEventListener("mouseup", stopDragNode);
 
   // --- Move the circle and its label to the end of SVG (bring to front) ---
-  // Find the circle and its label (text) by data-id
   const circles = svg.querySelectorAll("circle");
   const texts = svg.querySelectorAll("text");
   let label = null;
@@ -154,17 +151,15 @@ function startDragNode(e) {
       break;
     }
   }
-  // Move circle and label to end of SVG
   svg.appendChild(e.target);
   if (label) svg.appendChild(label);
 }
 
 function dragNode(e) {
   if (draggingNode === null) return;
-  const node = graph.nodes[draggingNode];
+  const node = graph.nodes.find((n) => n.id === draggingNode);
   node.x = e.clientX - offsetX;
   node.y = e.clientY - offsetY;
-  // Перемальовуємо граф
   svg.innerHTML = "";
   drawGraph();
 }
@@ -185,18 +180,29 @@ function highlightNode(id, color) {
 }
 
 async function dijkstra(start, end) {
-  const dist = Array(graph.nodes.length).fill(Infinity);
-  const prev = Array(graph.nodes.length).fill(null);
+  // Перевірка наявності вузлів
+  const nodeIds = graph.nodes.map((n) => n.id);
+  if (!nodeIds.includes(start) || !nodeIds.includes(end)) {
+    log("Некоректні значення початкового або кінцевого вузла.");
+    return;
+  }
+
+  const dist = {};
+  const prev = {};
   const visited = new Set();
+  for (const node of graph.nodes) {
+    dist[node.id] = Infinity;
+    prev[node.id] = null;
+  }
   dist[start] = 0;
 
   while (visited.size < graph.nodes.length) {
     let u = null;
     let minDist = Infinity;
-    for (let i = 0; i < dist.length; i++) {
-      if (!visited.has(i) && dist[i] < minDist) {
-        u = i;
-        minDist = dist[i];
+    for (const node of graph.nodes) {
+      if (!visited.has(node.id) && dist[node.id] < minDist) {
+        u = node.id;
+        minDist = dist[node.id];
       }
     }
 
@@ -230,21 +236,18 @@ async function dijkstra(start, end) {
 }
 
 function updateAdjacencyWeights() {
-  // Оновлюємо ваги в adjacencyList згідно з поточними вагами ребер
   for (const edge of graph.edges) {
-    const from = edge.from;
-    const to = edge.to;
-    // Знаходимо нову вагу
-    const dx = graph.nodes[from].x - graph.nodes[to].x;
-    const dy = graph.nodes[from].y - graph.nodes[to].y;
+    const fromNode = graph.nodes.find((n) => n.id === edge.from);
+    const toNode = graph.nodes.find((n) => n.id === edge.to);
+    const dx = fromNode.x - toNode.x;
+    const dy = fromNode.y - toNode.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
     const newWeight = Math.max(1, Math.round(distance / 20));
-    // Оновлюємо у списку суміжності для обох напрямків (неорієнтований граф)
-    for (const neighbor of graph.adjacencyList[from]) {
-      if (neighbor.to === to) neighbor.weight = newWeight;
+    for (const neighbor of graph.adjacencyList[edge.from]) {
+      if (neighbor.to === edge.to) neighbor.weight = newWeight;
     }
-    for (const neighbor of graph.adjacencyList[to]) {
-      if (neighbor.to === from) neighbor.weight = newWeight;
+    for (const neighbor of graph.adjacencyList[edge.to]) {
+      if (neighbor.to === edge.from) neighbor.weight = newWeight;
     }
   }
 }
@@ -272,20 +275,8 @@ document.getElementById("generateGraph").addEventListener("click", () => {
 });
 
 document.getElementById("startPathSearch").addEventListener("click", () => {
-  const start = parseInt(startNodeInput.value) ?? 0;
-  const end = parseInt(endNodeInput.value) ?? graph.nodes.length - 1;
-  if (
-    isNaN(start) ||
-    isNaN(end) ||
-    start < 0 ||
-    end < 0 ||
-    start >= graph.nodes.length ||
-    end >= graph.nodes.length
-  ) {
-    log("Некоректні значення початкового або кінцевого вузла.");
-    return;
-  }
-
+  const start = parseInt(startNodeInput.value);
+  const end = parseInt(endNodeInput.value);
   clearLog();
   updateAdjacencyWeights();
   dijkstra(start, end);

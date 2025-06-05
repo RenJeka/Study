@@ -1,10 +1,18 @@
-// script.js
-
 const svg = document.getElementById("graph");
 const logDiv = document.getElementById("log");
 const nodeCountInput = document.getElementById("nodeCount");
 const startNodeInput = document.getElementById("startNode");
 const endNodeInput = document.getElementById("endNode");
+
+// Background image upload elements
+const graphContainer = document.getElementById("graphContainer");
+const bgImageInput = document.getElementById("bgImageInput");
+const uploadBgImageBtn = document.getElementById("uploadBgImage");
+
+// --- Drag & Drop for Nodes ---
+let draggingNode = null;
+let offsetX = 0;
+let offsetY = 0;
 
 let graph = { nodes: [], edges: [], adjacencyList: {} };
 
@@ -72,7 +80,7 @@ function drawGraph() {
     line.setAttribute("y1", from.y);
     line.setAttribute("x2", to.x);
     line.setAttribute("y2", to.y);
-    line.setAttribute("stroke", "#999");
+    line.setAttribute("stroke", "#1fad03");
     line.setAttribute("data-from", edge.from);
     line.setAttribute("data-to", edge.to);
     svg.appendChild(line);
@@ -83,8 +91,8 @@ function drawGraph() {
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     text.setAttribute("x", midX);
     text.setAttribute("y", midY);
-    text.setAttribute("fill", "black");
-    text.setAttribute("font-size", "12px");
+    text.setAttribute("fill", "#1fad03");
+    text.setAttribute("font-size", "14px");
     text.setAttribute("text-anchor", "middle");
     text.textContent = edge.weight;
     svg.appendChild(text);
@@ -96,9 +104,10 @@ function drawGraph() {
     text.setAttribute("x", node.x);
     text.setAttribute("y", node.y + 4);
     text.setAttribute("fill", "white");
-    text.setAttribute("font-size", "12px");
+    text.setAttribute("font-size", "14px");
+    text.setAttribute("font-weight", "bold");
     text.setAttribute("text-anchor", "middle");
-    text.setAttribute("fill", "#000");
+    text.setAttribute("fill", "#033fad");
     text.textContent = node.id;
     svg.appendChild(text);
 
@@ -119,11 +128,6 @@ function drawGraph() {
     circle.addEventListener("mousedown", startDragNode);
   }
 }
-
-// --- Drag & Drop Logic for Nodes ---
-let draggingNode = null;
-let offsetX = 0;
-let offsetY = 0;
 
 function startDragNode(e) {
   draggingNode = parseInt(e.target.getAttribute("data-id"));
@@ -239,6 +243,21 @@ function updateAdjacencyWeights() {
   }
 }
 
+// Background image upload logic
+uploadBgImageBtn.addEventListener("click", () => {
+  bgImageInput.click();
+});
+
+bgImageInput.addEventListener("change", (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = function (evt) {
+    graphContainer.style.backgroundImage = `url('${evt.target.result}')`;
+  };
+  reader.readAsDataURL(file);
+});
+
 // Обробники подій
 
 document.getElementById("generateGraph").addEventListener("click", () => {
@@ -251,7 +270,7 @@ document.getElementById("startPathSearch").addEventListener("click", () => {
   const end = parseInt(endNodeInput.value);
   if (!isNaN(start) && !isNaN(end)) {
     clearLog();
-    updateAdjacencyWeights(); // <--- Add this line
+    updateAdjacencyWeights();
     dijkstra(start, end);
   }
 });

@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>Обхід графа (DFS)</h1>
+    <h1>Пошук оптимального шляху за алгоритмом Дейкстри </h1>
     <h2>Навчальна демонстрація для учнів (7–11 класи)</h2>
   </header>
   <main>
@@ -16,16 +16,18 @@
       <div class="controlsContainer">
         <label   for="nodeCount">Кількість вершин:</label>
         <input type="number" id="nodeCount" min="5" max="50" value="15">
-        <input id="startNode" type="number" placeholder="Початкова вершина">
+        <input id="startNode" value="0" type="number" placeholder="Початкова вершина">
         <input id="endNode" type="number" placeholder="Кінцева вершина">
       </div>
       <div class="buttonContainer">
-        <button id="generateGraph">Згенерувати граф</button>
-        <button id="startPathSearch">Пошук найкоротшого шляху</button>
+        <button id="generateGraph">⭮ Перегенерувати граф</button>
+        <button id="startPathSearch">▶️Пошук найкоротшого шляху</button>
+        <input type="file" id="bgImageInput" accept="image/*" style="display:none;">
+        <button id="uploadBgImage">📥Завантажити зображення</button>
       </div>
     </section>
     <section id="graphContainer">
-      <svg id="graph" width="800" height="600"></svg>
+      <svg id="graph" width="1300" height="600"></svg>
     </section>
     <section id="logContainer">
       <h3>Лоґ обходу:</h3>

@@ -17,10 +17,15 @@ header, main {
 #graphContainer {
   position: relative;
   margin: auto;
-  width: 800px;
+  width: 1300px;
   height: 600px;
   background-color: #fff;
   border: 1px solid #ccc;
+  /* Add background image support */
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  user-select: none;
 }
 
 .controlsContainer {

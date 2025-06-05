@@ -9,12 +9,18 @@ const graphContainer = document.getElementById("graphContainer");
 const bgImageInput = document.getElementById("bgImageInput");
 const uploadBgImageBtn = document.getElementById("uploadBgImage");
 
+const DEFAULT_NODE_COUNT = 15;
+
 // --- Drag & Drop for Nodes ---
 let draggingNode = null;
 let offsetX = 0;
 let offsetY = 0;
 
 let graph = { nodes: [], edges: [], adjacencyList: {} };
+
+nodeCountInput.value = DEFAULT_NODE_COUNT;
+startNodeInput.value = 1;
+endNodeInput.value = DEFAULT_NODE_COUNT;
 
 function log(text) {
   logDiv.innerText += text + "\n";
@@ -266,13 +272,23 @@ document.getElementById("generateGraph").addEventListener("click", () => {
 });
 
 document.getElementById("startPathSearch").addEventListener("click", () => {
-  const start = parseInt(startNodeInput.value);
-  const end = parseInt(endNodeInput.value);
-  if (!isNaN(start) && !isNaN(end)) {
-    clearLog();
-    updateAdjacencyWeights();
-    dijkstra(start, end);
+  const start = parseInt(startNodeInput.value) ?? 0;
+  const end = parseInt(endNodeInput.value) ?? graph.nodes.length - 1;
+  if (
+    isNaN(start) ||
+    isNaN(end) ||
+    start < 0 ||
+    end < 0 ||
+    start >= graph.nodes.length ||
+    end >= graph.nodes.length
+  ) {
+    log("Некоректні значення початкового або кінцевого вузла.");
+    return;
   }
+
+  clearLog();
+  updateAdjacencyWeights();
+  dijkstra(start, end);
 });
 
 // Ініціалізація за замовчуванням

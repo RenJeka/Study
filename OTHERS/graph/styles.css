@@ -1,0 +1,70 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2f5;
+}
+
+header, main {
+  padding: 1rem;
+  text-align: center;
+}
+
+#controls {
+  margin: 1rem 0;
+}
+
+#graphContainer {
+  position: relative;
+  margin: auto;
+  width: 800px;
+  height: 600px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+}
+
+.controlsContainer {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.buttonContainer {
+  display: inline-block;
+  margin: 0 0.5rem;
+}
+
+.node {
+  fill: #3498db;
+  stroke: #2980b9;
+  stroke-width: 1;
+}
+
+.node.visited {
+  fill: #f39c12;
+}
+
+.node.current {
+  fill: #e74c3c;
+}
+
+.edge {
+  stroke: #95a5a6;
+  stroke-width: 2;
+}
+
+#logContainer {
+  margin-top: 1rem;
+}
+
+#log {
+  border: 1px solid #ccc;
+  padding: 0.5rem;
+  background-color: #fff;
+  font-family: monospace;
+  white-space: pre-wrap;
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+}

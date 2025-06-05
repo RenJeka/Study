@@ -50,6 +50,18 @@ function generateRandomGraph(nodeCount) {
 }
 
 function drawGraph() {
+  // Оновлюємо ваги ребер залежно від відстані між вузлами
+  for (const edge of graph.edges) {
+    const from = graph.nodes[edge.from];
+    const to = graph.nodes[edge.to];
+    // Євклідова відстань
+    const dx = from.x - to.x;
+    const dy = from.y - to.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    // Наприклад, вага = відстань / 20, округлена до цілого числа, мінімум 1
+    edge.weight = Math.max(1, Math.round(distance / 20));
+  }
+
   // Малюємо ребра
   for (const edge of graph.edges) {
     const from = graph.nodes[edge.from];

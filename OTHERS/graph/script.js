@@ -80,6 +80,16 @@ function drawGraph() {
 
   // Малюємо вершини
   for (const node of graph.nodes) {
+    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.setAttribute("x", node.x);
+    text.setAttribute("y", node.y + 4);
+    text.setAttribute("fill", "white");
+    text.setAttribute("font-size", "12px");
+    text.setAttribute("text-anchor", "middle");
+    text.setAttribute("fill", "#000");
+    text.textContent = node.id;
+    svg.appendChild(text);
+
     const circle = document.createElementNS(
       "http://www.w3.org/2000/svg",
       "circle"
@@ -88,21 +98,13 @@ function drawGraph() {
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", 15);
     circle.setAttribute("fill", "#3498db");
+    circle.setAttribute("fill-opacity", "0.5");
     circle.setAttribute("data-id", node.id);
     circle.style.cursor = "pointer";
     svg.appendChild(circle);
 
     // Додаємо drag & drop для переміщення вузлів
     circle.addEventListener("mousedown", startDragNode);
-
-    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
-    text.setAttribute("x", node.x);
-    text.setAttribute("y", node.y + 4);
-    text.setAttribute("fill", "white");
-    text.setAttribute("font-size", "12px");
-    text.setAttribute("text-anchor", "middle");
-    text.textContent = node.id;
-    svg.appendChild(text);
   }
 }
 
@@ -114,11 +116,25 @@ let offsetY = 0;
 function startDragNode(e) {
   draggingNode = parseInt(e.target.getAttribute("data-id"));
   const node = graph.nodes[draggingNode];
-  // Вираховуємо зміщення курсора від центру вузла
   offsetX = e.clientX - node.x;
   offsetY = e.clientY - node.y;
   svg.addEventListener("mousemove", dragNode);
   svg.addEventListener("mouseup", stopDragNode);
+
+  // --- Move the circle and its label to the end of SVG (bring to front) ---
+  // Find the circle and its label (text) by data-id
+  const circles = svg.querySelectorAll("circle");
+  const texts = svg.querySelectorAll("text");
+  let label = null;
+  for (const t of texts) {
+    if (t.textContent === String(draggingNode)) {
+      label = t;
+      break;
+    }
+  }
+  // Move circle and label to end of SVG
+  svg.appendChild(e.target);
+  if (label) svg.appendChild(label);
 }
 
 function dragNode(e) {

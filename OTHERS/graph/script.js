@@ -61,6 +61,8 @@ function drawGraph() {
     line.setAttribute("x2", to.x);
     line.setAttribute("y2", to.y);
     line.setAttribute("stroke", "#999");
+    line.setAttribute("data-from", edge.from);
+    line.setAttribute("data-to", edge.to);
     svg.appendChild(line);
 
     // Відображення ваги
@@ -87,7 +89,11 @@ function drawGraph() {
     circle.setAttribute("r", 15);
     circle.setAttribute("fill", "#3498db");
     circle.setAttribute("data-id", node.id);
+    circle.style.cursor = "pointer";
     svg.appendChild(circle);
+
+    // Додаємо drag & drop для переміщення вузлів
+    circle.addEventListener("mousedown", startDragNode);
 
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     text.setAttribute("x", node.x);
@@ -98,6 +104,37 @@ function drawGraph() {
     text.textContent = node.id;
     svg.appendChild(text);
   }
+}
+
+// --- Drag & Drop Logic for Nodes ---
+let draggingNode = null;
+let offsetX = 0;
+let offsetY = 0;
+
+function startDragNode(e) {
+  draggingNode = parseInt(e.target.getAttribute("data-id"));
+  const node = graph.nodes[draggingNode];
+  // Вираховуємо зміщення курсора від центру вузла
+  offsetX = e.clientX - node.x;
+  offsetY = e.clientY - node.y;
+  svg.addEventListener("mousemove", dragNode);
+  svg.addEventListener("mouseup", stopDragNode);
+}
+
+function dragNode(e) {
+  if (draggingNode === null) return;
+  const node = graph.nodes[draggingNode];
+  node.x = e.clientX - offsetX;
+  node.y = e.clientY - offsetY;
+  // Перемальовуємо граф
+  svg.innerHTML = "";
+  drawGraph();
+}
+
+function stopDragNode() {
+  draggingNode = null;
+  svg.removeEventListener("mousemove", dragNode);
+  svg.removeEventListener("mouseup", stopDragNode);
 }
 
 function highlightNode(id, color) {

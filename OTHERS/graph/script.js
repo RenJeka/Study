@@ -5,55 +5,69 @@ const NODE_COLOR_OPACITY = 0.5;
 const NODE_LABEL_FONT_SIZE = "14px";
 const NODE_LABEL_FONT_WEIGHT = "bold";
 const EDGE_LABEL_FONT_SIZE = "14px";
-const EDGE_PROBABILITY = 0.15; // Ймовірність додаткового ребра
-const EDGE_WEIGHT_DIVIDER = 20; // Чим більше, тим менша вага за ту ж відстань
+const EDGE_PROBABILITY = 0.15; // Probability of additional edge
+const EDGE_WEIGHT_DIVIDER = 20; // The higher, the lower the weight for the same distance
 const EDGE_WEIGHT_MIN = 1;
-const GRAPH_MARGIN = 50; // Відступ від краю SVG
+const GRAPH_MARGIN = 50; // Margin from SVG edge
 
+// === COLOR VARIABLES ===
 let nodeColor = "#3498db";
 let edgeColor = "#1fad03";
 let nodeLabelColor = "#1d2d4d"; // Darker than node color
 let edgeLabelColor = "#0e5a01"; // Darker than edge color
 
-// Color pickers
+// === DOM ELEMENTS ===
 const nodeColorPicker = document.getElementById("nodeColorPicker");
 const edgeColorPicker = document.getElementById("edgeColorPicker");
-
-// === DOM ELEMENTS ===
 const svg = document.getElementById("graph");
 const logDiv = document.getElementById("log");
 const nodeCountInput = document.getElementById("nodeCount");
 const startNodeInput = document.getElementById("startNode");
 const endNodeInput = document.getElementById("endNode");
 const startPathSearchBtn = document.getElementById("startPathSearch");
-
-// Background image upload elements
 const graphContainer = document.getElementById("graphContainer");
 const bgImageInput = document.getElementById("bgImageInput");
 const uploadBgImageBtn = document.getElementById("uploadBgImage");
 
-// --- Drag & Drop for Nodes ---
+// === DRAG & DROP STATE ===
 let draggingNode = null;
 let offsetX = 0;
 let offsetY = 0;
 
+// === GRAPH DATA STRUCTURE ===
 let graph = { nodes: [], edges: [], adjacencyList: {} };
 
+// === INITIAL FORM VALUES ===
 nodeCountInput.value = DEFAULT_NODE_COUNT;
 startNodeInput.value = "";
 endNodeInput.value = "";
 
-// Функція для логування
+// === UTILITY FUNCTIONS ===
+
+// Logging function
 function log(text) {
   logDiv.innerText += text + "\n";
 }
 
-// Функція для очищення логу
+// Clear log
 function clearLog() {
   logDiv.innerText = "";
 }
 
-// Генерація випадкового графа
+// Utility: get a darker color for text based on a hex color
+function getDarkerColor(hex, factor = 0.5) {
+  let r = parseInt(hex.substr(1, 2), 16);
+  let g = parseInt(hex.substr(3, 2), 16);
+  let b = parseInt(hex.substr(5, 2), 16);
+  r = Math.floor(r * factor);
+  g = Math.floor(g * factor);
+  b = Math.floor(b * factor);
+  return `rgb(${r},${g},${b})`;
+}
+
+// === GRAPH GENERATION ===
+
+// Generate a random connected graph
 function generateRandomGraph(nodeCount) {
   graph = { nodes: [], edges: [], adjacencyList: {} };
   svg.innerHTML = "";
@@ -62,7 +76,7 @@ function generateRandomGraph(nodeCount) {
   const width = svg.clientWidth;
   const height = svg.clientHeight;
 
-  // Генерація вершин (id від 1)
+  // Generate nodes (id from 1)
   for (let i = 1; i <= nodeCount; i++) {
     const angle = (2 * Math.PI * (i - 1)) / nodeCount;
     const radius = Math.min(width, height) / 2 - GRAPH_MARGIN;
@@ -72,10 +86,10 @@ function generateRandomGraph(nodeCount) {
     graph.adjacencyList[i] = [];
   }
 
-  // --- Гарантуємо зв'язність графа (створюємо остовне дерево) ---
+  // Ensure connectivity (build a spanning tree)
   for (let i = 2; i <= nodeCount; i++) {
-    // З'єднуємо кожну нову вершину з випадковою попередньою (i-1 або менше)
-    const j = Math.floor(1 + Math.random() * (i - 1)); // j від 1 до i-1
+    // Connect each new node to a random previous node (from 1 to i-1)
+    const j = Math.floor(1 + Math.random() * (i - 1));
     const from = i;
     const to = j;
     const dx = graph.nodes[from - 1].x - graph.nodes[to - 1].x;
@@ -87,13 +101,13 @@ function generateRandomGraph(nodeCount) {
     );
     graph.edges.push({ from, to, weight });
     graph.adjacencyList[from].push({ to, weight });
-    graph.adjacencyList[to].push({ to: from, weight }); // для неорієнтованого графа
+    graph.adjacencyList[to].push({ to: from, weight }); // For undirected graph
   }
 
-  // --- Додаємо додаткові випадкові ребра ---
+  // Add additional random edges
   for (let i = 1; i <= nodeCount; i++) {
     for (let j = i + 1; j <= nodeCount; j++) {
-      // Перевіряємо, чи вже існує ребро
+      // Check if edge already exists
       const exists = graph.edges.some(
         (e) => (e.from === i && e.to === j) || (e.from === j && e.to === i)
       );
@@ -107,7 +121,7 @@ function generateRandomGraph(nodeCount) {
         );
         graph.edges.push({ from: i, to: j, weight });
         graph.adjacencyList[i].push({ to: j, weight });
-        graph.adjacencyList[j].push({ to: i, weight }); // для неорієнтованого графа
+        graph.adjacencyList[j].push({ to: i, weight }); // For undirected graph
       }
     }
   }
@@ -115,20 +129,11 @@ function generateRandomGraph(nodeCount) {
   drawGraph();
 }
 
-// Utility to get a darker color for text
-function getDarkerColor(hex, factor = 0.5) {
-  let r = parseInt(hex.substr(1, 2), 16);
-  let g = parseInt(hex.substr(3, 2), 16);
-  let b = parseInt(hex.substr(5, 2), 16);
-  r = Math.floor(r * factor);
-  g = Math.floor(g * factor);
-  b = Math.floor(b * factor);
-  return `rgb(${r},${g},${b})`;
-}
+// === GRAPH DRAWING ===
 
-// Малюємо граф
+// Draw the graph (edges, weights, nodes)
 function drawGraph() {
-  // Оновлюємо ваги ребер залежно від відстані між вузлами
+  // Update edge weights based on current node positions
   for (const edge of graph.edges) {
     const from = graph.nodes.find((n) => n.id === edge.from);
     const to = graph.nodes.find((n) => n.id === edge.to);
@@ -141,7 +146,7 @@ function drawGraph() {
     );
   }
 
-  // Малюємо ребра
+  // Draw edges
   for (const edge of graph.edges) {
     const from = graph.nodes.find((n) => n.id === edge.from);
     const to = graph.nodes.find((n) => n.id === edge.to);
@@ -156,7 +161,7 @@ function drawGraph() {
     line.setAttribute("data-to", edge.to);
     svg.appendChild(line);
 
-    // Відображення ваги
+    // Draw edge weight label
     const midX = (from.x + to.x) / 2;
     const midY = (from.y + to.y) / 2;
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
@@ -169,7 +174,7 @@ function drawGraph() {
     svg.appendChild(text);
   }
 
-  // Малюємо вершини
+  // Draw nodes
   for (const node of graph.nodes) {
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     text.setAttribute("x", node.x);
@@ -194,11 +199,14 @@ function drawGraph() {
     circle.style.cursor = "pointer";
     svg.appendChild(circle);
 
-    // Додаємо drag & drop для переміщення вузлів
+    // Add drag & drop for moving nodes
     circle.addEventListener("mousedown", startDragNode);
   }
 }
 
+// === NODE DRAG & DROP ===
+
+// Start dragging a node
 function startDragNode(e) {
   draggingNode = parseInt(e.target.getAttribute("data-id"));
   const node = graph.nodes.find((n) => n.id === draggingNode);
@@ -207,8 +215,7 @@ function startDragNode(e) {
   svg.addEventListener("mousemove", dragNode);
   svg.addEventListener("mouseup", stopDragNode);
 
-  // --- Move the circle and its label to the end of SVG (bring to front) ---
-  const circles = svg.querySelectorAll("circle");
+  // Move the circle and its label to the end of SVG (bring to front)
   const texts = svg.querySelectorAll("text");
   let label = null;
   for (const t of texts) {
@@ -221,6 +228,7 @@ function startDragNode(e) {
   if (label) svg.appendChild(label);
 }
 
+// Drag node handler
 function dragNode(e) {
   if (draggingNode === null) return;
   const node = graph.nodes.find((n) => n.id === draggingNode);
@@ -230,12 +238,14 @@ function dragNode(e) {
   drawGraph();
 }
 
+// Stop dragging node
 function stopDragNode() {
   draggingNode = null;
   svg.removeEventListener("mousemove", dragNode);
   svg.removeEventListener("mouseup", stopDragNode);
 }
 
+// Highlight a node (used in Dijkstra)
 function highlightNode(id, color) {
   const circles = svg.querySelectorAll("circle");
   for (const c of circles) {
@@ -245,11 +255,14 @@ function highlightNode(id, color) {
   }
 }
 
+// === DIJKSTRA'S ALGORITHM ===
+
+// Dijkstra's shortest path algorithm with step-by-step visualization
 async function dijkstra(start, end) {
-  // Перевірка наявності вузлів
+  // Check if nodes exist
   const nodeIds = graph.nodes.map((n) => n.id);
   if (!nodeIds.includes(start) || !nodeIds.includes(end)) {
-    log("Некоректні значення початкового або кінцевого вузла.");
+    log("Invalid start or end node value.");
     return;
   }
 
@@ -263,9 +276,7 @@ async function dijkstra(start, end) {
   dist[start] = 0;
 
   startPathSearchBtn.disabled = true;
-  log(
-    `Починаємо пошук найкоротшого шляху від ${start} до ${end || "всіх вузлів"}`
-  );
+  log(`Starting shortest path search from ${start} to ${end || "all nodes"}`);
 
   while (visited.size < graph.nodes.length) {
     let u = null;
@@ -281,7 +292,7 @@ async function dijkstra(start, end) {
 
     visited.add(u);
     highlightNode(u, "#f39c12");
-    log(`Відвідано вершину ${u}`);
+    log(`Visited node ${u}`);
     await new Promise((r) => setTimeout(r, 500));
 
     for (const neighbor of graph.adjacencyList[u]) {
@@ -300,13 +311,16 @@ async function dijkstra(start, end) {
       path.unshift(u);
       u = prev[u];
     }
-    log(`Шлях: ${path.join(" → ")}`);
+    log(`Path: ${path.join(" → ")}`);
   } else {
-    log("Шлях не знайдено");
+    log("Path not found");
   }
   startPathSearchBtn.disabled = false;
 }
 
+// === EDGE WEIGHT UPDATE ===
+
+// Update adjacency list weights based on current node positions
 function updateAdjacencyWeights() {
   for (const edge of graph.edges) {
     const fromNode = graph.nodes.find((n) => n.id === edge.from);
@@ -314,7 +328,7 @@ function updateAdjacencyWeights() {
     const dx = fromNode.x - toNode.x;
     const dy = fromNode.y - toNode.y;
     const distance = Math.sqrt(dx * dx + dy * dy);
-    const newWeight = Math.max(1, Math.round(distance / 20));
+    const newWeight = Math.max(1, Math.round(distance / EDGE_WEIGHT_DIVIDER));
     for (const neighbor of graph.adjacencyList[edge.from]) {
       if (neighbor.to === edge.to) neighbor.weight = newWeight;
     }
@@ -324,7 +338,9 @@ function updateAdjacencyWeights() {
   }
 }
 
-// Background image upload logic
+// === BACKGROUND IMAGE UPLOAD ===
+
+// Handle background image upload
 uploadBgImageBtn.addEventListener("click", () => {
   bgImageInput.click();
 });
@@ -339,15 +355,17 @@ bgImageInput.addEventListener("change", (e) => {
   reader.readAsDataURL(file);
 });
 
-// Обробники подій
+// === EVENT HANDLERS ===
 
+// Generate new graph button
 document.getElementById("generateGraph").addEventListener("click", () => {
   const count = parseInt(nodeCountInput.value);
   if (count >= 5 && count <= 50) generateRandomGraph(count);
 });
 
+// Start Dijkstra search button
 startPathSearchBtn.addEventListener("click", () => {
-  // Скидаємо стиль .visited для всіх кіл
+  // Reset .visited and .current styles for all circles
   const circles = svg.querySelectorAll("circle");
   circles.forEach((c) => {
     c.classList.remove("visited");
@@ -355,7 +373,7 @@ startPathSearchBtn.addEventListener("click", () => {
     c.setAttribute("fill", nodeColor);
   });
 
-  // Якщо поле порожнє — використовуємо значення за замовчуванням
+  // Use default values if fields are empty
   let start = parseInt(startNodeInput.value);
   let end = parseInt(endNodeInput.value);
   if (isNaN(start)) start = 1;
@@ -365,20 +383,21 @@ startPathSearchBtn.addEventListener("click", () => {
   dijkstra(start, end);
 });
 
-// Color pickers event listeners
+// Node color picker
 nodeColorPicker.addEventListener("input", (e) => {
   nodeColor = e.target.value;
   nodeLabelColor = getDarkerColor(nodeColor, 0.5);
   drawGraph();
 });
 
+// Edge color picker
 edgeColorPicker.addEventListener("input", (e) => {
   edgeColor = e.target.value;
   edgeLabelColor = getDarkerColor(edgeColor, 0.5);
   drawGraph();
 });
 
-// Ініціалізація за замовчуванням
+// === INITIALIZATION ===
 window.onload = () => {
   generateRandomGraph(parseInt(nodeCountInput.value));
   startNodeInput.value = "";

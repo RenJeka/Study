@@ -1,18 +1,19 @@
 // === CONFIGURABLE CONSTANTS ===
 const DEFAULT_NODE_COUNT = 15;
 const NODE_RADIUS = 15;
-let NODE_COLOR = "#3498db";
-let EDGE_COLOR = "#1fad03";
 const NODE_COLOR_OPACITY = 0.5;
-let NODE_LABEL_COLOR = "#1d2d4d"; // Darker than node color
 const NODE_LABEL_FONT_SIZE = "14px";
 const NODE_LABEL_FONT_WEIGHT = "bold";
-let EDGE_LABEL_COLOR = "#0e5a01"; // Darker than edge color
 const EDGE_LABEL_FONT_SIZE = "14px";
 const EDGE_PROBABILITY = 0.15; // Ймовірність додаткового ребра
 const EDGE_WEIGHT_DIVIDER = 20; // Чим більше, тим менша вага за ту ж відстань
 const EDGE_WEIGHT_MIN = 1;
 const GRAPH_MARGIN = 50; // Відступ від краю SVG
+
+let nodeColor = "#3498db";
+let edgeColor = "#1fad03";
+let nodeLabelColor = "#1d2d4d"; // Darker than node color
+let edgeLabelColor = "#0e5a01"; // Darker than edge color
 
 // Color pickers
 const nodeColorPicker = document.getElementById("nodeColorPicker");
@@ -24,6 +25,7 @@ const logDiv = document.getElementById("log");
 const nodeCountInput = document.getElementById("nodeCount");
 const startNodeInput = document.getElementById("startNode");
 const endNodeInput = document.getElementById("endNode");
+const startPathSearchBtn = document.getElementById("startPathSearch");
 
 // Background image upload elements
 const graphContainer = document.getElementById("graphContainer");
@@ -38,17 +40,20 @@ let offsetY = 0;
 let graph = { nodes: [], edges: [], adjacencyList: {} };
 
 nodeCountInput.value = DEFAULT_NODE_COUNT;
-startNodeInput.value = 1;
-endNodeInput.value = DEFAULT_NODE_COUNT;
+startNodeInput.value = "";
+endNodeInput.value = "";
 
+// Функція для логування
 function log(text) {
   logDiv.innerText += text + "\n";
 }
 
+// Функція для очищення логу
 function clearLog() {
   logDiv.innerText = "";
 }
 
+// Генерація випадкового графа
 function generateRandomGraph(nodeCount) {
   graph = { nodes: [], edges: [], adjacencyList: {} };
   svg.innerHTML = "";
@@ -121,6 +126,7 @@ function getDarkerColor(hex, factor = 0.5) {
   return `rgb(${r},${g},${b})`;
 }
 
+// Малюємо граф
 function drawGraph() {
   // Оновлюємо ваги ребер залежно від відстані між вузлами
   for (const edge of graph.edges) {
@@ -145,7 +151,7 @@ function drawGraph() {
     line.setAttribute("y1", from.y);
     line.setAttribute("x2", to.x);
     line.setAttribute("y2", to.y);
-    line.setAttribute("stroke", EDGE_COLOR);
+    line.setAttribute("stroke", edgeColor);
     line.setAttribute("data-from", edge.from);
     line.setAttribute("data-to", edge.to);
     svg.appendChild(line);
@@ -156,7 +162,7 @@ function drawGraph() {
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     text.setAttribute("x", midX);
     text.setAttribute("y", midY);
-    text.setAttribute("fill", EDGE_LABEL_COLOR);
+    text.setAttribute("fill", edgeLabelColor);
     text.setAttribute("font-size", EDGE_LABEL_FONT_SIZE);
     text.setAttribute("text-anchor", "middle");
     text.textContent = edge.weight;
@@ -168,7 +174,7 @@ function drawGraph() {
     const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
     text.setAttribute("x", node.x);
     text.setAttribute("y", node.y + 4);
-    text.setAttribute("fill", NODE_LABEL_COLOR);
+    text.setAttribute("fill", nodeLabelColor);
     text.setAttribute("font-size", NODE_LABEL_FONT_SIZE);
     text.setAttribute("font-weight", NODE_LABEL_FONT_WEIGHT);
     text.setAttribute("text-anchor", "middle");
@@ -182,7 +188,7 @@ function drawGraph() {
     circle.setAttribute("cx", node.x);
     circle.setAttribute("cy", node.y);
     circle.setAttribute("r", NODE_RADIUS);
-    circle.setAttribute("fill", NODE_COLOR);
+    circle.setAttribute("fill", nodeColor);
     circle.setAttribute("fill-opacity", NODE_COLOR_OPACITY);
     circle.setAttribute("data-id", node.id);
     circle.style.cursor = "pointer";
@@ -256,6 +262,11 @@ async function dijkstra(start, end) {
   }
   dist[start] = 0;
 
+  startPathSearchBtn.disabled = true;
+  log(
+    `Починаємо пошук найкоротшого шляху від ${start} до ${end || "всіх вузлів"}`
+  );
+
   while (visited.size < graph.nodes.length) {
     let u = null;
     let minDist = Infinity;
@@ -293,6 +304,7 @@ async function dijkstra(start, end) {
   } else {
     log("Шлях не знайдено");
   }
+  startPathSearchBtn.disabled = false;
 }
 
 function updateAdjacencyWeights() {
@@ -334,9 +346,20 @@ document.getElementById("generateGraph").addEventListener("click", () => {
   if (count >= 5 && count <= 50) generateRandomGraph(count);
 });
 
-document.getElementById("startPathSearch").addEventListener("click", () => {
-  const start = parseInt(startNodeInput.value);
-  const end = parseInt(endNodeInput.value);
+startPathSearchBtn.addEventListener("click", () => {
+  // Скидаємо стиль .visited для всіх кіл
+  const circles = svg.querySelectorAll("circle");
+  circles.forEach((c) => {
+    c.classList.remove("visited");
+    c.classList.remove("current");
+    c.setAttribute("fill", nodeColor);
+  });
+
+  // Якщо поле порожнє — використовуємо значення за замовчуванням
+  let start = parseInt(startNodeInput.value);
+  let end = parseInt(endNodeInput.value);
+  if (isNaN(start)) start = 1;
+  if (isNaN(end)) end = parseInt(nodeCountInput.value);
   clearLog();
   updateAdjacencyWeights();
   dijkstra(start, end);
@@ -344,18 +367,20 @@ document.getElementById("startPathSearch").addEventListener("click", () => {
 
 // Color pickers event listeners
 nodeColorPicker.addEventListener("input", (e) => {
-  NODE_COLOR = e.target.value;
-  NODE_LABEL_COLOR = getDarkerColor(NODE_COLOR, 0.5);
+  nodeColor = e.target.value;
+  nodeLabelColor = getDarkerColor(nodeColor, 0.5);
   drawGraph();
 });
 
 edgeColorPicker.addEventListener("input", (e) => {
-  EDGE_COLOR = e.target.value;
-  EDGE_LABEL_COLOR = getDarkerColor(EDGE_COLOR, 0.5);
+  edgeColor = e.target.value;
+  edgeLabelColor = getDarkerColor(edgeColor, 0.5);
   drawGraph();
 });
 
 // Ініціалізація за замовчуванням
 window.onload = () => {
   generateRandomGraph(parseInt(nodeCountInput.value));
+  startNodeInput.value = "";
+  endNodeInput.value = "";
 };

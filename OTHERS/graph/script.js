@@ -219,6 +219,26 @@ async function dijkstra(start, end) {
   }
 }
 
+function updateAdjacencyWeights() {
+  // Оновлюємо ваги в adjacencyList згідно з поточними вагами ребер
+  for (const edge of graph.edges) {
+    const from = edge.from;
+    const to = edge.to;
+    // Знаходимо нову вагу
+    const dx = graph.nodes[from].x - graph.nodes[to].x;
+    const dy = graph.nodes[from].y - graph.nodes[to].y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const newWeight = Math.max(1, Math.round(distance / 20));
+    // Оновлюємо у списку суміжності для обох напрямків (неорієнтований граф)
+    for (const neighbor of graph.adjacencyList[from]) {
+      if (neighbor.to === to) neighbor.weight = newWeight;
+    }
+    for (const neighbor of graph.adjacencyList[to]) {
+      if (neighbor.to === from) neighbor.weight = newWeight;
+    }
+  }
+}
+
 // Обробники подій
 
 document.getElementById("generateGraph").addEventListener("click", () => {
@@ -231,6 +251,7 @@ document.getElementById("startPathSearch").addEventListener("click", () => {
   const end = parseInt(endNodeInput.value);
   if (!isNaN(start) && !isNaN(end)) {
     clearLog();
+    updateAdjacencyWeights(); // <--- Add this line
     dijkstra(start, end);
   }
 });

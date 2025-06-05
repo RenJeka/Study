@@ -48,11 +48,33 @@ function generateRandomGraph(nodeCount) {
     graph.adjacencyList[i] = [];
   }
 
-  // Генерація ребер з випадковими вагами (id від 1)
+  // --- Гарантуємо зв'язність графа (створюємо остовне дерево) ---
+  for (let i = 2; i <= nodeCount; i++) {
+    // З'єднуємо кожну нову вершину з випадковою попередньою (i-1 або менше)
+    const j = Math.floor(1 + Math.random() * (i - 1)); // j від 1 до i-1
+    const from = i;
+    const to = j;
+    const dx = graph.nodes[from - 1].x - graph.nodes[to - 1].x;
+    const dy = graph.nodes[from - 1].y - graph.nodes[to - 1].y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const weight = Math.max(1, Math.round(distance / 20));
+    graph.edges.push({ from, to, weight });
+    graph.adjacencyList[from].push({ to, weight });
+    graph.adjacencyList[to].push({ to: from, weight }); // для неорієнтованого графа
+  }
+
+  // --- Додаємо додаткові випадкові ребра ---
   for (let i = 1; i <= nodeCount; i++) {
     for (let j = i + 1; j <= nodeCount; j++) {
-      if (Math.random() < 0.15) {
-        const weight = Math.floor(Math.random() * 10) + 1;
+      // Перевіряємо, чи вже існує ребро
+      const exists = graph.edges.some(
+        (e) => (e.from === i && e.to === j) || (e.from === j && e.to === i)
+      );
+      if (!exists && Math.random() < 0.15) {
+        const dx = graph.nodes[i - 1].x - graph.nodes[j - 1].x;
+        const dy = graph.nodes[i - 1].y - graph.nodes[j - 1].y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        const weight = Math.max(1, Math.round(distance / 20));
         graph.edges.push({ from: i, to: j, weight });
         graph.adjacencyList[i].push({ to: j, weight });
         graph.adjacencyList[j].push({ to: i, weight }); // для неорієнтованого графа

@@ -1,104 +1,103 @@
 <!DOCTYPE html>
-<html lang="uk" data-theme="light">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Обхід графа (DFS) – Навчальна демонстрація</title>
+  <title>Graph Traversal (DFS) – Educational Demo</title>
   <link rel="stylesheet" href="pico.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Пошук оптимального шляху за алгоритмом Дейкстри</h1>
-    <h2>Навчальна демонстрація для учнів (7–11 класи)</h2>
+    <h1>Optimal Path Search with Dijkstra's Algorithm</h1>
+    <h2>Educational Demo for Students (Grades 7–11)</h2>
   </header>
   <main class="container">
     <form id="controls">
       <fieldset class="controlsContainer">
-        <label for="nodeCount">Кількість вершин (від 5 до 50):
+        <label for="nodeCount">Number of nodes (from 5 to 50):
           <input type="range" id="nodeCount" min="5" max="50" value="15">
           <output id="nodeCountOutput">15</output>
         </label>
 
-        <label for="startNode">Початкова вершина:
+        <label for="startNode">Start node:
           <input type="range" id="startNode" min="1" max="15" value="1">
           <output id="startNodeOutput">1</output>
         </label>
         
-        <label for="endNode">Кінцева вершина:
+        <label for="endNode">End node:
           <input type="range" id="endNode" min="1" max="15" value="15">
           <output id="endNodeOutput">15</output>
         </label>
 
-
-        <label for="nodeColorPicker">Колір вузлів:
+        <label for="nodeColorPicker">Node color:
           <input type="color" id="nodeColorPicker" value="#3498db">
         </label>
 
-        <label for="edgeColorPicker">Колір ребер:
+        <label for="edgeColorPicker">Edge color:
           <input type="color" id="edgeColorPicker" value="#1fad03">
         </label>
 
       </fieldset>
       <div class="buttonContainer">
-        <button type="button" id="generateGraph">⭮ Перегенерувати граф</button>
-        <button type="button" id="startPathSearch">▶️Пошук найкоротшого шляху</button>
+        <button type="button" id="generateGraph">⭮ Regenerate Graph</button>
+        <button type="button" id="startPathSearch">▶️Find Shortest Path</button>
         <input type="file" id="bgImageInput" accept="image/*" style="display:none;">
-        <button type="button" id="uploadBgImage">📥Завантажити зображення</button>
+        <button type="button" id="uploadBgImage">📥Upload Image</button>
       </div>
     </form>
     <section id="graphContainer">
       <svg id="graph" width="1200" height="600"></svg>
     </section>
     <section id="logContainer">
-      <h3>Лоґ обходу:</h3>
+      <h3>Traversal Log:</h3>
       <div id="log"></div>
     </section>
   </main>
   <!-- Info Button and Modal -->
-  <button id="infoBtn" aria-label="Додаткова інформація">ℹ️</button>
+  <button id="infoBtn" aria-label="More Information">ℹ️</button>
   <div id="infoModal" class="modal">
     <div class="modal-content">
       <span id="closeModal" class="close">&times;</span>
       <!-- Info content from description.md -->
       <div class="modal-body">
         <!-- Paste the content from description.md here, formatted as HTML -->
-        <h2>🎓 Інтерактивна візуалізація графа та демонстрація алгоритму Дейкстри</h2>
-        <p>Цей застосунок — <strong>тестовий навчальний проєкт</strong>, який демонструє можливості інтерактивної побудови графів та покрокового виконання алгоритму Дейкстри для знаходження найкоротшого шляху.</p>
+        <h2>🎓 Interactive Graph Visualization and Dijkstra's Algorithm Demo</h2>
+        <p>This application is a <strong>test educational project</strong> that demonstrates the possibilities of interactive graph construction and step-by-step execution of Dijkstra's algorithm for finding the shortest path.</p>
         <ul>
-          <li><strong>Мета застосунку</strong> — навчити учнів (7–11 класи) основам <strong>теорії графів</strong>, <strong>алгоритмів пошуку шляху</strong>, <strong>візуалізації зв'язків</strong>, а також розвивати логіку, просторове мислення та інтерес до програмування.</li>
-          <li>Проєкт був створений як приклад того, <strong>що можуть розробити старшокласники в рамках STREAM-освіти</strong>, поєднуючи інформатику, математику, логіку та графічні інтерфейси.</li>
+          <li><strong>Purpose of the application</strong> — to teach students (grades 7–11) the basics of <strong>graph theory</strong>, <strong>pathfinding algorithms</strong>, <strong>visualization of connections</strong>, as well as to develop logic, spatial thinking, and interest in programming.</li>
+          <li>The project was created as an example of <strong>what high school students can develop within STREAM education</strong>, combining computer science, mathematics, logic, and graphical interfaces.</li>
         </ul>
         <hr>
-        <h3>🔑 Основні можливості</h3>
+        <h3>🔑 Main Features</h3>
         <ul>
-          <li><strong>Генерація графів:</strong> випадкове створення завжди зв’язаного неорієнтованого графа з обраною кількістю вершин (від 5 до 50).</li>
-          <li><strong>Маніпуляція вершинами і ребрами:</strong> перетягування мишкою, автоматичні ваги ребер.</li>
-          <li><strong>Налаштування стилів:</strong> вибір кольорів вузлів і ребер.</li>
-          <li><strong>Фонове зображення:</strong> можна завантажити будь-яке зображення як фон графа.</li>
-          <li><strong>Візуалізація алгоритму Дейкстри:</strong> вибір початкової та кінцевої вершини, покрокова анімація, журнал дій.</li>
-          <li><strong>Інтерфейс користувача:</strong> адаптивні елементи управління, інформаційний журнал.</li>
+          <li><strong>Graph generation:</strong> random creation of an always connected undirected graph with a chosen number of nodes (from 5 to 50).</li>
+          <li><strong>Manipulation of nodes and edges:</strong> drag and drop with the mouse, automatic edge weights.</li>
+          <li><strong>Style customization:</strong> choose node and edge colors.</li>
+          <li><strong>Background image:</strong> you can upload any image as the graph background.</li>
+          <li><strong>Dijkstra's algorithm visualization:</strong> select start and end nodes, step-by-step animation, action log.</li>
+          <li><strong>User interface:</strong> adaptive controls, information log.</li>
         </ul>
         <hr>
-        <h3>🧭 Як користуватись</h3>
+        <h3>🧭 How to Use</h3>
         <ol>
-          <li>Оберіть <strong>кількість вершин</strong>.</li>
-          <li>За бажанням, вкажіть <strong>стартову і кінцеву вершину</strong>.</li>
-          <li>Налаштуйте <strong>кольори вершин та ребер</strong>.</li>
-          <li>Завантажте <strong>фон (необов’язково)</strong>.</li>
-          <li>Згенеруйте граф або змініть розташування вершин вручну.</li>
-          <li>Натисніть кнопку <strong>“Знайти найкоротший шлях”</strong>.</li>
-          <li>Перегляньте <strong>журнал обходу</strong> для аналізу результатів.</li>
+          <li>Select the <strong>number of nodes</strong>.</li>
+          <li>If desired, specify the <strong>start and end nodes</strong>.</li>
+          <li>Customize the <strong>colors of nodes and edges</strong>.</li>
+          <li>Upload a <strong>background (optional)</strong>.</li>
+          <li>Generate the graph or change the positions of nodes manually.</li>
+          <li>Click the <strong>“Find Shortest Path”</strong> button.</li>
+          <li>Check the <strong>traversal log</strong> to analyze the results.</li>
         </ol>
         <hr>
-        <h3>🧪 Технології</h3>
+        <h3>🧪 Technologies</h3>
         <ul>
           <li>HTML5, CSS3</li>
-          <li>JavaScript (без бібліотек)</li>
-          <li>SVG — для рендерингу графа</li>
+          <li>JavaScript (no libraries)</li>
+          <li>SVG — for graph rendering</li>
         </ul>
         <hr>
-        <p><em>Граф завжди залишається зв’язаним (відсутні ізольовані вершини). Ваги ребер змінюються залежно від позиції вершин. Застосунок ідеально підходить для демонстрацій на уроці, самостійного вивчення або учнівських проєктів у рамках STREAM.</em></p>
+        <p><em>The graph always remains connected (no isolated nodes). Edge weights change depending on node positions. The application is ideal for classroom demonstrations, self-study, or student projects within STREAM.</em></p>
       </div>
     </div>
   </div>

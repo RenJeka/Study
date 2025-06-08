@@ -19,7 +19,7 @@ export async function dijkstra(start, end) {
   // Check if nodes exist
   const nodeIds = graph.nodes.map((n) => n.id);
   if (!nodeIds.includes(start) || !nodeIds.includes(end)) {
-    log("Неправильне значення початкової або кінцевої вершини.");
+    log("Invalid value for start or end node.");
     return;
   }
 
@@ -33,9 +33,7 @@ export async function dijkstra(start, end) {
   dist[start] = 0;
 
   startPathSearchBtn.disabled = true;
-  log(
-    `Знаходження найкоротшого шляху з  ${start} по ${end || "останню"} вершину`
-  );
+  log(`Finding the shortest path from ${start} to ${end || "the last"} node`);
 
   while (visited.size < graph.nodes.length) {
     let u = null;
@@ -51,7 +49,7 @@ export async function dijkstra(start, end) {
 
     visited.add(u);
     highlightNode(u, "#f39c12");
-    log(`Пройдено вершину ${u}`);
+    log(`Visited node ${u}`);
     await new Promise((r) => setTimeout(r, 500));
 
     for (const neighbor of graph.adjacencyList[u]) {
@@ -70,9 +68,9 @@ export async function dijkstra(start, end) {
       path.unshift(u);
       u = prev[u];
     }
-    log(`Шлях: ${path.join(" → ")}`);
+    log(`Path: ${path.join(" → ")}`);
   } else {
-    log("Найкоротший шлях не знайдено.");
+    log("No shortest path found.");
   }
   startPathSearchBtn.disabled = false;
 }

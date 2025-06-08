@@ -120,3 +120,24 @@ window.onload = () => {
   setupBgImageUpload();
   setupColorPickers(nodeColorPicker, edgeColorPicker, getDarkerColor);
 };
+
+// Modal logic
+document.addEventListener("DOMContentLoaded", () => {
+  const infoBtn = document.getElementById("infoBtn");
+  const infoModal = document.getElementById("infoModal");
+  const closeModal = document.getElementById("closeModal");
+
+  infoBtn.addEventListener("click", () => {
+    infoModal.style.display = "flex";
+  });
+
+  closeModal.addEventListener("click", () => {
+    infoModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === infoModal) {
+      infoModal.style.display = "none";
+    }
+  });
+});

@@ -3,17 +3,10 @@ import { clearLog, getDarkerColor } from "./src/utils.js";
 import {
   generateRandomGraph,
   updateAdjacencyWeights,
-  drawGraph,
+  setupColorPickers,
 } from "./src/graph.js";
 
-import {
-  DEFAULT_NODE_COUNT,
-  setNodeColor,
-  setNodeLabelColor,
-  setEdgeColor,
-  setEdgeLabelColor,
-  getNodeColor,
-} from "./src/config.js";
+import { DEFAULT_NODE_COUNT, getNodeColor } from "./src/config.js";
 
 import { setupBgImageUpload } from "./src/bgImage.js";
 
@@ -114,19 +107,6 @@ startPathSearchBtn.addEventListener("click", () => {
   dijkstra(start, end);
 });
 
-// Node color picker
-nodeColorPicker.addEventListener("input", (e) => {
-  setNodeColor(e.target.value);
-  setNodeLabelColor(getDarkerColor(e.target.value, 0.5));
-  drawGraph();
-});
-
-edgeColorPicker.addEventListener("input", (e) => {
-  setEdgeColor(e.target.value);
-  setEdgeLabelColor(getDarkerColor(e.target.value, 0.5));
-  drawGraph();
-});
-
 // === INITIALIZATION ===
 window.onload = () => {
   startNodeInput.max = nodeCountInput.value;
@@ -138,4 +118,5 @@ window.onload = () => {
   endNodeOutput.value = endNodeInput.value;
   endNodeTouched = false;
   setupBgImageUpload();
+  setupColorPickers(nodeColorPicker, edgeColorPicker, getDarkerColor);
 };

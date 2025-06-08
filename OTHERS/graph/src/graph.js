@@ -13,6 +13,10 @@ import {
   NODE_LABEL_FONT_WEIGHT,
   NODE_RADIUS,
   NODE_COLOR_OPACITY,
+  setNodeColor,
+  setNodeLabelColor,
+  setEdgeColor,
+  setEdgeLabelColor,
 } from "./config.js";
 
 import { startDragNode } from "./drag.js";
@@ -174,4 +178,25 @@ function updateAdjacencyWeights() {
   }
 }
 
-export { graph, generateRandomGraph, drawGraph, updateAdjacencyWeights };
+// === COLOR PICKER HANDLERS ===
+function setupColorPickers(nodeColorPicker, edgeColorPicker, getDarkerColor) {
+  nodeColorPicker.addEventListener("input", (e) => {
+    setNodeColor(e.target.value);
+    setNodeLabelColor(getDarkerColor(e.target.value, 0.5));
+    drawGraph();
+  });
+
+  edgeColorPicker.addEventListener("input", (e) => {
+    setEdgeColor(e.target.value);
+    setEdgeLabelColor(getDarkerColor(e.target.value, 0.5));
+    drawGraph();
+  });
+}
+
+export {
+  graph,
+  generateRandomGraph,
+  drawGraph,
+  updateAdjacencyWeights,
+  setupColorPickers,
+};

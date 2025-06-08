@@ -1,16 +1,21 @@
 import { dijkstra } from "./src/dijkstra.js";
 import { clearLog, getDarkerColor } from "./src/utils.js";
-import { graph, generateRandomGraph, drawGraph } from "./src/graph.js";
+import {
+  generateRandomGraph,
+  updateAdjacencyWeights,
+  drawGraph,
+} from "./src/graph.js";
 
 import {
   DEFAULT_NODE_COUNT,
-  EDGE_WEIGHT_DIVIDER,
   setNodeColor,
   setNodeLabelColor,
   setEdgeColor,
   setEdgeLabelColor,
   getNodeColor,
 } from "./src/config.js";
+
+import { setupBgImageUpload } from "./src/bgImage.js";
 
 // === DOM ELEMENTS ===
 const nodeColorPicker = document.getElementById("nodeColorPicker");
@@ -20,9 +25,6 @@ const nodeCountInput = document.getElementById("nodeCount");
 const startNodeInput = document.getElementById("startNode");
 const endNodeInput = document.getElementById("endNode");
 const startPathSearchBtn = document.getElementById("startPathSearch");
-const graphContainer = document.getElementById("graphContainer");
-const bgImageInput = document.getElementById("bgImageInput");
-const uploadBgImageBtn = document.getElementById("uploadBgImage");
 const nodeCountOutput = document.getElementById("nodeCountOutput");
 const startNodeOutput = document.getElementById("startNodeOutput");
 const endNodeOutput = document.getElementById("endNodeOutput");
@@ -32,45 +34,29 @@ nodeCountInput.value = DEFAULT_NODE_COUNT;
 startNodeInput.value = "";
 endNodeInput.value = "";
 
-// Додаємо прапорець, чи користувач змінював endNode вручну
 let endNodeTouched = false;
 
 // === EDGE WEIGHT UPDATE ===
-
-// Update adjacency list weights based on current node positions
-function updateAdjacencyWeights() {
-  for (const edge of graph.edges) {
-    const fromNode = graph.nodes.find((n) => n.id === edge.from);
-    const toNode = graph.nodes.find((n) => n.id === edge.to);
-    const dx = fromNode.x - toNode.x;
-    const dy = fromNode.y - toNode.y;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-    const newWeight = Math.max(1, Math.round(distance / EDGE_WEIGHT_DIVIDER));
-    for (const neighbor of graph.adjacencyList[edge.from]) {
-      if (neighbor.to === edge.to) neighbor.weight = newWeight;
-    }
-    for (const neighbor of graph.adjacencyList[edge.to]) {
-      if (neighbor.to === edge.from) neighbor.weight = newWeight;
-    }
-  }
-}
 
 endNodeInput.addEventListener("input", function () {
   endNodeOutput.value = this.value;
   endNodeTouched = true;
 });
 
-// Синхронізація output з range
+// Syncronize node count output with input
 nodeCountInput.addEventListener("input", function () {
   nodeCountOutput.value = this.value;
-  // Оновлюємо межі для startNode та endNode
+
+  // Refresh max values for startNode and endNode
   startNodeInput.max = this.value;
   endNodeInput.max = this.value;
-  // Якщо поточне значення виходить за межі — підлаштовуємо
+
+  // If startNode or endNode exceeds new max, reset them to max
   if (+startNodeInput.value > +this.value) startNodeInput.value = this.value;
   if (+endNodeInput.value > +this.value) endNodeInput.value = this.value;
   startNodeOutput.value = startNodeInput.value;
-  // Якщо користувач не змінював endNode вручну — оновлюємо його значення автоматично
+
+  // If endNode was not touched, set it to the new max value
   if (!endNodeTouched) {
     endNodeInput.value = this.value;
     endNodeOutput.value = this.value;
@@ -79,7 +65,7 @@ nodeCountInput.addEventListener("input", function () {
   }
 });
 
-// Ініціалізація max для startNode та endNode при завантаженні сторінки
+// Initialize graph on page load
 window.onload = () => {
   startNodeInput.max = nodeCountInput.value;
   endNodeInput.max = nodeCountInput.value;
@@ -98,23 +84,6 @@ startNodeInput.addEventListener("input", function () {
 endNodeInput.addEventListener("input", function () {
   endNodeOutput.value = this.value;
   endNodeTouched = true;
-});
-
-// === BACKGROUND IMAGE UPLOAD ===
-
-// Handle background image upload
-uploadBgImageBtn.addEventListener("click", () => {
-  bgImageInput.click();
-});
-
-bgImageInput.addEventListener("change", (e) => {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function (evt) {
-    graphContainer.style.backgroundImage = `url('${evt.target.result}')`;
-  };
-  reader.readAsDataURL(file);
 });
 
 // === EVENT HANDLERS ===
@@ -168,4 +137,5 @@ window.onload = () => {
   startNodeOutput.value = startNodeInput.value;
   endNodeOutput.value = endNodeInput.value;
   endNodeTouched = false;
+  setupBgImageUpload();
 };

@@ -156,4 +156,22 @@ function generateRandomGraph(nodeCount) {
   drawGraph();
 }
 
-export { graph, generateRandomGraph, drawGraph };
+// Update adjacency list weights based on current node positions
+function updateAdjacencyWeights() {
+  for (const edge of graph.edges) {
+    const fromNode = graph.nodes.find((n) => n.id === edge.from);
+    const toNode = graph.nodes.find((n) => n.id === edge.to);
+    const dx = fromNode.x - toNode.x;
+    const dy = fromNode.y - toNode.y;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+    const newWeight = Math.max(1, Math.round(distance / EDGE_WEIGHT_DIVIDER));
+    for (const neighbor of graph.adjacencyList[edge.from]) {
+      if (neighbor.to === edge.to) neighbor.weight = newWeight;
+    }
+    for (const neighbor of graph.adjacencyList[edge.to]) {
+      if (neighbor.to === edge.from) neighbor.weight = newWeight;
+    }
+  }
+}
+
+export { graph, generateRandomGraph, drawGraph, updateAdjacencyWeights };

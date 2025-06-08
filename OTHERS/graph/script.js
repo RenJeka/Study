@@ -28,6 +28,9 @@ const startPathSearchBtn = document.getElementById("startPathSearch");
 const graphContainer = document.getElementById("graphContainer");
 const bgImageInput = document.getElementById("bgImageInput");
 const uploadBgImageBtn = document.getElementById("uploadBgImage");
+const nodeCountOutput = document.getElementById("nodeCountOutput");
+const startNodeOutput = document.getElementById("startNodeOutput");
+const endNodeOutput = document.getElementById("endNodeOutput");
 
 // === DRAG & DROP STATE ===
 let draggingNode = null;
@@ -41,6 +44,54 @@ let graph = { nodes: [], edges: [], adjacencyList: {} };
 nodeCountInput.value = DEFAULT_NODE_COUNT;
 startNodeInput.value = "";
 endNodeInput.value = "";
+
+// Додаємо прапорець, чи користувач змінював endNode вручну
+let endNodeTouched = false;
+
+endNodeInput.addEventListener("input", function () {
+  endNodeOutput.value = this.value;
+  endNodeTouched = true;
+});
+
+// Синхронізація output з range
+nodeCountInput.addEventListener("input", function () {
+  nodeCountOutput.value = this.value;
+  // Оновлюємо межі для startNode та endNode
+  startNodeInput.max = this.value;
+  endNodeInput.max = this.value;
+  // Якщо поточне значення виходить за межі — підлаштовуємо
+  if (+startNodeInput.value > +this.value) startNodeInput.value = this.value;
+  if (+endNodeInput.value > +this.value) endNodeInput.value = this.value;
+  startNodeOutput.value = startNodeInput.value;
+  // Якщо користувач не змінював endNode вручну — оновлюємо його значення автоматично
+  if (!endNodeTouched) {
+    endNodeInput.value = this.value;
+    endNodeOutput.value = this.value;
+  } else {
+    endNodeOutput.value = endNodeInput.value;
+  }
+});
+
+// Ініціалізація max для startNode та endNode при завантаженні сторінки
+window.onload = () => {
+  startNodeInput.max = nodeCountInput.value;
+  endNodeInput.max = nodeCountInput.value;
+  generateRandomGraph(parseInt(nodeCountInput.value));
+  startNodeInput.value = "1";
+  endNodeInput.value = nodeCountInput.value;
+  startNodeOutput.value = startNodeInput.value;
+  endNodeOutput.value = endNodeInput.value;
+  endNodeTouched = false;
+};
+
+startNodeInput.addEventListener("input", function () {
+  startNodeOutput.value = this.value;
+});
+
+endNodeInput.addEventListener("input", function () {
+  endNodeOutput.value = this.value;
+  endNodeTouched = true;
+});
 
 // === UTILITY FUNCTIONS ===
 
@@ -399,7 +450,12 @@ edgeColorPicker.addEventListener("input", (e) => {
 
 // === INITIALIZATION ===
 window.onload = () => {
+  startNodeInput.max = nodeCountInput.value;
+  endNodeInput.max = nodeCountInput.value;
   generateRandomGraph(parseInt(nodeCountInput.value));
-  startNodeInput.value = "";
-  endNodeInput.value = "";
+  startNodeInput.value = "1";
+  endNodeInput.value = nodeCountInput.value;
+  startNodeOutput.value = startNodeInput.value;
+  endNodeOutput.value = endNodeInput.value;
+  endNodeTouched = false;
 };

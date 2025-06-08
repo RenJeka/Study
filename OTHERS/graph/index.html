@@ -1,35 +1,52 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="uk" data-theme="light">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Обхід графа (DFS) – Навчальна демонстрація</title>
+  <link rel="stylesheet" href="pico.css" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <header>
-    <h1>Пошук оптимального шляху за алгоритмом Дейкстри </h1>
+    <h1>Пошук оптимального шляху за алгоритмом Дейкстри</h1>
     <h2>Навчальна демонстрація для учнів (7–11 класи)</h2>
   </header>
-  <main>
-    <section id="controls">
-      <div class="controlsContainer">
-        <label for="nodeCount">Кількість вершин (від 5 до 50):</label>
-        <input type="number" id="nodeCount" min="5" max="50">
-        <input id="startNode" type="number" placeholder="Початкова вершина">
-        <input id="endNode" type="number" placeholder="Кінцева вершина">
-        <label for="nodeColorPicker">Колір вузлів:</label>
-        <input type="color" id="nodeColorPicker" value="#3498db">
-        <label for="edgeColorPicker">Колір ребер:</label>
-        <input type="color" id="edgeColorPicker" value="#1fad03">
-      </div>
+  <main class="container">
+    <form id="controls">
+      <fieldset class="controlsContainer">
+        <label for="nodeCount">Кількість вершин (від 5 до 50):
+          <input type="range" id="nodeCount" min="5" max="50" value="15">
+          <output id="nodeCountOutput">15</output>
+        </label>
+
+        <label for="startNode">Початкова вершина:
+          <input type="range" id="startNode" min="1" max="15" value="1">
+          <output id="startNodeOutput">1</output>
+        </label>
+        
+        <label for="endNode">Кінцева вершина:
+          <input type="range" id="endNode" min="1" max="15" value="15">
+          <output id="endNodeOutput">15</output>
+        </label>
+
+
+        <label for="nodeColorPicker">Колір вузлів:
+          <input type="color" id="nodeColorPicker" value="#3498db">
+        </label>
+
+        <label for="edgeColorPicker">Колір ребер:
+          <input type="color" id="edgeColorPicker" value="#1fad03">
+        </label>
+
+      </fieldset>
       <div class="buttonContainer">
-        <button id="generateGraph">⭮ Перегенерувати граф</button>
-        <button id="startPathSearch">▶️Пошук найкоротшого шляху</button>
+        <button type="button" id="generateGraph">⭮ Перегенерувати граф</button>
+        <button type="button" id="startPathSearch">▶️Пошук найкоротшого шляху</button>
         <input type="file" id="bgImageInput" accept="image/*" style="display:none;">
-        <button id="uploadBgImage">📥Завантажити зображення</button>
+        <button type="button" id="uploadBgImage">📥Завантажити зображення</button>
       </div>
-    </section>
+    </form>
     <section id="graphContainer">
       <svg id="graph" width="1300" height="600"></svg>
     </section>

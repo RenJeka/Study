@@ -51,6 +51,51 @@ This project is an interactive educational tool for visualizing graphs and demon
 - JavaScript (Vanilla, no frameworks)
 - SVG for graph rendering
 
+## Installation & Running
+
+> **Note:** You must use a local server to run this project (opening `index.html` directly will not work due to browser security restrictions).
+
+### 1. Install dependencies
+
+Open a terminal in the project folder and run:
+
+```sh
+npm install
+```
+
+### 2. Build the bundle
+
+```sh
+npm run bundle
+```
+
+### 3. Start a local server
+
+You can use any static server. Here are some options:
+
+#### Using VS Code Live Server extension
+
+- Install the "Live Server" extension in VS Code.
+- Right-click `index.html` and select **Open with Live Server**.
+
+#### Using Node.js http-server
+
+```sh
+npx http-server .
+```
+
+#### Using Python (if installed)
+
+```sh
+python -m http.server
+```
+
+### 4. Open in your browser
+
+Go to [http://localhost:8080](http://localhost:8080) (or the port shown in your terminal).
+
+---
+
 ## Notes
 
 - The graph is always connected; there are no isolated nodes.

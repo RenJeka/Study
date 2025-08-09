@@ -43,17 +43,29 @@ export default function Post({postContent: serverPost}) {
     );
 }
 
-Post.getInitialProps = async ({query, req}) => {
+// Post.getInitialProps = async ({query, req}) => {
+//
+//     if (!req) {
+//         return { postContent: null }
+//     }
+//
+//     const response = await fetch(`http://localhost:4200/posts/${query.id}`);
+//     const postContent = await response.json();
+//
+//
+//     return {
+//         postContent
+//     }
+// }
 
-    if (!req) {
-        return { postContent: null }
-    }
+
+export async function getServerSideProps({ query }) {
 
     const response = await fetch(`http://localhost:4200/posts/${query.id}`);
     const postContent = await response.json();
 
 
     return {
-        postContent
+        props: postContent
     }
 }

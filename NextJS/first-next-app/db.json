@@ -15,5 +15,9 @@
       "title": "Woking of the Third Post",
       "content": "This is the content of the third post."
     }
-  ]
+  ],
+  "about": {
+    "title": "About Us",
+    "content": "This is the about page content."
+  }
 }

@@ -1,4 +1,12 @@
-export default function getById(req, res) {
+import { NextApiRequest } from "next";
+
+interface GetByIdNextApiRequest extends NextApiRequest {
+    query: {
+        id?: string;
+    };
+}
+
+export default function getById(req: GetByIdNextApiRequest, res) {
     // Check if the request method is GET
     if (req.method === 'GET') {
         // Send back the query parameters as JSON

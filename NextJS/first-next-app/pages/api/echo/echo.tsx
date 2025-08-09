@@ -1,4 +1,13 @@
-export default function handler(req, res) {
+import { NextApiRequest, NextApiResponse } from "next";
+
+interface MessageNextApiRequest extends NextApiRequest {
+    query: {
+        message?: string;
+        [key: string]: string | string[] | undefined;
+    };
+}
+
+export default function handler(req: MessageNextApiRequest, res: NextApiResponse) {
   // // Check if the request method is GET
   // if (req.method === 'GET') {
   //   // Send back the query parameters as JSON
@@ -9,7 +18,7 @@ export default function handler(req, res) {
   //   res.status(405).end(`Method ${req.method} Not Allowed`);
   // }
 
-    res.status = 200
+    res.status(200);
     res.setHeader('Content-Type', 'application/json');
     res.end(JSON.stringify({
         message: req.query.message || 'Hello, World!',

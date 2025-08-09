@@ -1,10 +1,16 @@
-import {useState, useEffect} from "react";
-
+import { useState, useEffect } from "react";
 import { MainLayout } from "../components/MainLayout";
 import styles from '../styles/posts.module.scss';
 import Link from "next/link";
+import { MyPost } from "../interfaces/post";
+import { NextPageContext } from "next";
 
-export default function Posts({ posts: serverPosts }) {
+
+interface PostsProps {
+    posts: MyPost[] | null;
+}
+
+export default function Posts({ posts: serverPosts }: PostsProps) {
 
     const [posts, setPosts] = useState(serverPosts);
 
@@ -47,14 +53,14 @@ export default function Posts({ posts: serverPosts }) {
     );
 }
 
-Posts.getInitialProps = async ({req}) => {
+Posts.getInitialProps = async ({req} : NextPageContext) => {
 
     if (!req) {
         return { posts: null };
     }
 
     const response = await fetch('http://localhost:4200/posts');
-    const posts = await response.json();
+    const posts: MyPost[] = await response.json();
 
     return {
         posts

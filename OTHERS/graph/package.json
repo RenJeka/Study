@@ -1,0 +1,16 @@
+{
+  "name": "graph",
+  "version": "1.0.0",
+  "description": "This project is an interactive educational tool for visualizing graphs and demonstrating Dijkstra's shortest path algorithm. It is designed for students (grades 7–11) and teachers to explore graph theory concepts in a visual and intuitive way.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "bundle": "mkdir dist 2>nul & del dist\\bundle.js 2>nul & esbuild script.js --bundle --outfile=dist/bundle.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "esbuild": "^0.25.5"
+  }
+}
